@@ -35,34 +35,34 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="j3s-SI-jUs">
                     <rect key="frame" x="46" y="419" width="322" height="327"/>
                     <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6G-Oc-V7n">
+                            <rect key="frame" x="0.0" y="0.0" width="322" height="73.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="facebook"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Jn-lP-bv7">
+                            <rect key="frame" x="0.0" y="73.5" width="322" height="73.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="kakao"/>
+                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTb-jK-HuU">
-                            <rect key="frame" x="0.0" y="0.0" width="322" height="70"/>
+                            <rect key="frame" x="0.0" y="147" width="322" height="70"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" image="apple"/>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-or-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlP-fG-MYt">
+                            <rect key="frame" x="0.0" y="217" width="322" height="33"/>
+                            <fontDescription key="fontDescription" type="italicSystem" pointSize="22"/>
+                            <color key="textColor" red="0.99410217999999995" green="0.93536430599999998" blue="0.9421345592" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeU-OF-aga">
-                            <rect key="frame" x="0.0" y="70" width="322" height="77"/>
+                            <rect key="frame" x="0.0" y="250" width="322" height="77"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" image="email"/>
                             <connections>
                                 <action selector="emailLoginButtonTapped:" destination="-1" eventType="touchUpInside" id="qtX-7T-gnb"/>
                             </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6G-Oc-V7n">
-                            <rect key="frame" x="0.0" y="147" width="322" height="73.5"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" image="facebook"/>
-                        </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-or-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlP-fG-MYt">
-                            <rect key="frame" x="0.0" y="220.5" width="322" height="33"/>
-                            <fontDescription key="fontDescription" type="italicSystem" pointSize="22"/>
-                            <color key="textColor" red="0.99410217999999995" green="0.93536430599999998" blue="0.9421345592" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Jn-lP-bv7">
-                            <rect key="frame" x="0.0" y="253.5" width="322" height="73.5"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" image="kakao"/>
                         </button>
                     </subviews>
                     <constraints>

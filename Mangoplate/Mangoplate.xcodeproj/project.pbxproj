@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA811D4B28391EE400CA29AF /* FirstSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */; };
+		FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */; };
+		FA811D4F2839299000CA29AF /* SecondSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */; };
+		FA811D502839299000CA29AF /* SecondSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA811D4E2839299000CA29AF /* SecondSignUpViewController.xib */; };
 		FAF609FD2838B6DE00B2CD48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF609FC2838B6DE00B2CD48 /* AppDelegate.swift */; };
 		FAF609FF2838B6DE00B2CD48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF609FE2838B6DE00B2CD48 /* SceneDelegate.swift */; };
 		FAF60A012838B6DE00B2CD48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF60A002838B6DE00B2CD48 /* ViewController.swift */; };
@@ -31,6 +35,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpViewController.swift; sourceTree = "<group>"; };
+		FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstSignUpViewController.xib; sourceTree = "<group>"; };
+		FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpViewController.swift; sourceTree = "<group>"; };
+		FA811D4E2839299000CA29AF /* SecondSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondSignUpViewController.xib; sourceTree = "<group>"; };
 		FAF609F92838B6DE00B2CD48 /* Mangoplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mangoplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF609FC2838B6DE00B2CD48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF609FE2838B6DE00B2CD48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +183,10 @@
 		FAF60A302838D03400B2CD48 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */,
+				FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */,
+				FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */,
+				FA811D4E2839299000CA29AF /* SecondSignUpViewController.xib */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -183,8 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				FAF60A322838D32800B2CD48 /* SignInHomeViewController.swift */,
-				FAF60A332838D32800B2CD48 /* SignInHomeViewController.xib */,
 				FAF60A362838E03B00B2CD48 /* EmailSignInViewController.swift */,
+				FAF60A332838D32800B2CD48 /* SignInHomeViewController.xib */,
 				FAF60A372838E03B00B2CD48 /* EmailSignInViewController.xib */,
 			);
 			path = SignIn;
@@ -249,10 +261,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF60A092838B6E000B2CD48 /* LaunchScreen.storyboard in Resources */,
+				FA811D502839299000CA29AF /* SecondSignUpViewController.xib in Resources */,
 				FAF60A352838D32800B2CD48 /* SignInHomeViewController.xib in Resources */,
 				FAF60A062838B6E000B2CD48 /* Assets.xcassets in Resources */,
 				FAF60A392838E03B00B2CD48 /* EmailSignInViewController.xib in Resources */,
 				FAF60A042838B6DE00B2CD48 /* Main.storyboard in Resources */,
+				FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,8 +289,10 @@
 				FAF60A2B2838CF2100B2CD48 /* UIFont.swift in Sources */,
 				FAF60A1C2838CE7F00B2CD48 /* Device.swift in Sources */,
 				FAF60A272838CF2100B2CD48 /* UIButton.swift in Sources */,
+				FA811D4F2839299000CA29AF /* SecondSignUpViewController.swift in Sources */,
 				FAF60A342838D32800B2CD48 /* SignInHomeViewController.swift in Sources */,
 				FAF60A382838E03B00B2CD48 /* EmailSignInViewController.swift in Sources */,
+				FA811D4B28391EE400CA29AF /* FirstSignUpViewController.swift in Sources */,
 				FAF609FF2838B6DE00B2CD48 /* SceneDelegate.swift in Sources */,
 				FAF60A1A2838CE5000B2CD48 /* IndicatorView.swift in Sources */,
 			);

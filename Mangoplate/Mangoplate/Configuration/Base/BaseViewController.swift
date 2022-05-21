@@ -20,6 +20,13 @@ class BaseViewController: UIViewController {
     self.navigationController?.navigationBar.tintColor = color
   }
   
+  func setNavigationTitleEmpty() {
+    self.navigationItem.title = ""
+  }
   
+  func setNavigationTitle(title: String, color: UIColor) {
+    self.navigationItem.title = title
+    self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: color]
+  }
   
 }

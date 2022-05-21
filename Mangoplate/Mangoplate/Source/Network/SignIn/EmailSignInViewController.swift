@@ -14,14 +14,21 @@ class EmailSignInViewController: BaseViewController {
   @IBOutlet weak var passwordTextField: UITextField!
   @IBOutlet weak var loginButton: UIButton!
   
+  // MARK: - LifeCycle
   override func viewDidLoad() {
     super.viewDidLoad()
     setUI()
   }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    setNavigationTitleEmpty()
+    setNavigationTintColor(color: .mainOrange)
+  }
 
+  // MARK: - Methods
   private func setUI() {
     setNavigationBarBackbuttonTitle(title: "이메일로 로그인")
-    setNavigationTintColor(color: .mainOrange)
     
     loginButton.layer.cornerRadius = 25
     loginButton.isEnabled = false
@@ -44,5 +51,10 @@ class EmailSignInViewController: BaseViewController {
       loginButton.setEnabledButtonColor()
     }
   }
-
+  
+  @IBAction func signUpButtonTapped(_ sender: UIButton) {
+    let vc = FirstSignUpViewController()
+    navigationController?.pushViewController(vc, animated: true)
+  }
+  
 }

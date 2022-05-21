@@ -9,10 +9,17 @@ import UIKit
 
 class SignInHomeViewController: BaseViewController {
 
+  // MARK: - LifeCycle
   override func viewDidLoad() {
     super.viewDidLoad()
   }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    setNavigationTitleEmpty()
+  }
 
+  // MARK: - Methods
   @IBAction func emailLoginButtonTapped(_ sender: UIButton) {
     let vc = EmailSignInViewController()
     navigationController?.pushViewController(vc, animated: true)
