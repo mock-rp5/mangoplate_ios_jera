@@ -13,6 +13,21 @@
 		FAF60A042838B6DE00B2CD48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF60A022838B6DE00B2CD48 /* Main.storyboard */; };
 		FAF60A062838B6E000B2CD48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF60A052838B6E000B2CD48 /* Assets.xcassets */; };
 		FAF60A092838B6E000B2CD48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF60A072838B6E000B2CD48 /* LaunchScreen.storyboard */; };
+		FAF60A172838CDEF00B2CD48 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF60A162838CDEF00B2CD48 /* BaseViewController.swift */; };
+		FAF60A1A2838CE5000B2CD48 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF60A192838CE5000B2CD48 /* IndicatorView.swift */; };
+		FAF60A1C2838CE7F00B2CD48 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF60A1B2838CE7F00B2CD48 /* Device.swift */; };
+		FAF60A272838CF2100B2CD48 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF60A202838CF2100B2CD48 /* UIButton.swift */; };
+		FAF60A282838CF2100B2CD48 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF60A212838CF2100B2CD48 /* Date.swift */; };
+		FAF60A292838CF2100B2CD48 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF60A222838CF2100B2CD48 /* UIColor.swift */; };
+		FAF60A2A2838CF2100B2CD48 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF60A232838CF2100B2CD48 /* String.swift */; };
+		FAF60A2B2838CF2100B2CD48 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF60A242838CF2100B2CD48 /* UIFont.swift */; };
+		FAF60A2C2838CF2100B2CD48 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF60A252838CF2100B2CD48 /* UINavigationBar.swift */; };
+		FAF60A2D2838CF2100B2CD48 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF60A262838CF2100B2CD48 /* UIViewController.swift */; };
+		FAF60A342838D32800B2CD48 /* SignInHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF60A322838D32800B2CD48 /* SignInHomeViewController.swift */; };
+		FAF60A352838D32800B2CD48 /* SignInHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF60A332838D32800B2CD48 /* SignInHomeViewController.xib */; };
+		FAF60A382838E03B00B2CD48 /* EmailSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF60A362838E03B00B2CD48 /* EmailSignInViewController.swift */; };
+		FAF60A392838E03B00B2CD48 /* EmailSignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF60A372838E03B00B2CD48 /* EmailSignInViewController.xib */; };
+		FAF60A3B2838E14600B2CD48 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF60A3A2838E14600B2CD48 /* UITextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +39,24 @@
 		FAF60A052838B6E000B2CD48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAF60A082838B6E000B2CD48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAF60A0A2838B6E000B2CD48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF60A122838CDCA00B2CD48 /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
+		FAF60A132838CDCB00B2CD48 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
+		FAF60A142838CDCB00B2CD48 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
+		FAF60A162838CDEF00B2CD48 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FAF60A192838CE5000B2CD48 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		FAF60A1B2838CE7F00B2CD48 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		FAF60A202838CF2100B2CD48 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		FAF60A212838CF2100B2CD48 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		FAF60A222838CF2100B2CD48 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		FAF60A232838CF2100B2CD48 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		FAF60A242838CF2100B2CD48 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		FAF60A252838CF2100B2CD48 /* UINavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
+		FAF60A262838CF2100B2CD48 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		FAF60A322838D32800B2CD48 /* SignInHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInHomeViewController.swift; sourceTree = "<group>"; };
+		FAF60A332838D32800B2CD48 /* SignInHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInHomeViewController.xib; sourceTree = "<group>"; };
+		FAF60A362838E03B00B2CD48 /* EmailSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignInViewController.swift; sourceTree = "<group>"; };
+		FAF60A372838E03B00B2CD48 /* EmailSignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailSignInViewController.xib; sourceTree = "<group>"; };
+		FAF60A3A2838E14600B2CD48 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +89,105 @@
 		FAF609FB2838B6DE00B2CD48 /* Mangoplate */ = {
 			isa = PBXGroup;
 			children = (
+				FAF60A2E2838CF8100B2CD48 /* Source */,
+				FAF60A182838CE1900B2CD48 /* Util */,
+				FAF60A102838CD8E00B2CD48 /* Configuration */,
 				FAF609FC2838B6DE00B2CD48 /* AppDelegate.swift */,
 				FAF609FE2838B6DE00B2CD48 /* SceneDelegate.swift */,
 				FAF60A002838B6DE00B2CD48 /* ViewController.swift */,
-				FAF60A022838B6DE00B2CD48 /* Main.storyboard */,
 				FAF60A052838B6E000B2CD48 /* Assets.xcassets */,
-				FAF60A072838B6E000B2CD48 /* LaunchScreen.storyboard */,
 				FAF60A0A2838B6E000B2CD48 /* Info.plist */,
 			);
 			path = Mangoplate;
+			sourceTree = "<group>";
+		};
+		FAF60A102838CD8E00B2CD48 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				FAF60A152838CDDF00B2CD48 /* Base */,
+				FAF60A112838CDB000B2CD48 /* Font */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		FAF60A112838CDB000B2CD48 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				FAF60A122838CDCA00B2CD48 /* NotoSansCJKkr-Bold.otf */,
+				FAF60A142838CDCB00B2CD48 /* NotoSansCJKkr-Medium.otf */,
+				FAF60A132838CDCB00B2CD48 /* NotoSansCJKkr-Regular.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		FAF60A152838CDDF00B2CD48 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FAF60A162838CDEF00B2CD48 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FAF60A182838CE1900B2CD48 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				FAF60A1F2838CF0500B2CD48 /* Extension */,
+				FAF60A192838CE5000B2CD48 /* IndicatorView.swift */,
+				FAF60A1B2838CE7F00B2CD48 /* Device.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		FAF60A1F2838CF0500B2CD48 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FAF60A212838CF2100B2CD48 /* Date.swift */,
+				FAF60A232838CF2100B2CD48 /* String.swift */,
+				FAF60A202838CF2100B2CD48 /* UIButton.swift */,
+				FAF60A222838CF2100B2CD48 /* UIColor.swift */,
+				FAF60A242838CF2100B2CD48 /* UIFont.swift */,
+				FAF60A252838CF2100B2CD48 /* UINavigationBar.swift */,
+				FAF60A262838CF2100B2CD48 /* UIViewController.swift */,
+				FAF60A3A2838E14600B2CD48 /* UITextField.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FAF60A2E2838CF8100B2CD48 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				FAF60A2F2838D02100B2CD48 /* Network */,
+				FAF60A072838B6E000B2CD48 /* LaunchScreen.storyboard */,
+				FAF60A022838B6DE00B2CD48 /* Main.storyboard */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		FAF60A2F2838D02100B2CD48 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FAF60A312838D2DA00B2CD48 /* SignIn */,
+				FAF60A302838D03400B2CD48 /* SignUp */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FAF60A302838D03400B2CD48 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		FAF60A312838D2DA00B2CD48 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				FAF60A322838D32800B2CD48 /* SignInHomeViewController.swift */,
+				FAF60A332838D32800B2CD48 /* SignInHomeViewController.xib */,
+				FAF60A362838E03B00B2CD48 /* EmailSignInViewController.swift */,
+				FAF60A372838E03B00B2CD48 /* EmailSignInViewController.xib */,
+			);
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +249,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF60A092838B6E000B2CD48 /* LaunchScreen.storyboard in Resources */,
+				FAF60A352838D32800B2CD48 /* SignInHomeViewController.xib in Resources */,
 				FAF60A062838B6E000B2CD48 /* Assets.xcassets in Resources */,
+				FAF60A392838E03B00B2CD48 /* EmailSignInViewController.xib in Resources */,
 				FAF60A042838B6DE00B2CD48 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,8 +264,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF60A012838B6DE00B2CD48 /* ViewController.swift in Sources */,
+				FAF60A172838CDEF00B2CD48 /* BaseViewController.swift in Sources */,
+				FAF60A2A2838CF2100B2CD48 /* String.swift in Sources */,
+				FAF60A3B2838E14600B2CD48 /* UITextField.swift in Sources */,
+				FAF60A2C2838CF2100B2CD48 /* UINavigationBar.swift in Sources */,
 				FAF609FD2838B6DE00B2CD48 /* AppDelegate.swift in Sources */,
+				FAF60A282838CF2100B2CD48 /* Date.swift in Sources */,
+				FAF60A292838CF2100B2CD48 /* UIColor.swift in Sources */,
+				FAF60A2D2838CF2100B2CD48 /* UIViewController.swift in Sources */,
+				FAF60A2B2838CF2100B2CD48 /* UIFont.swift in Sources */,
+				FAF60A1C2838CE7F00B2CD48 /* Device.swift in Sources */,
+				FAF60A272838CF2100B2CD48 /* UIButton.swift in Sources */,
+				FAF60A342838D32800B2CD48 /* SignInHomeViewController.swift in Sources */,
+				FAF60A382838E03B00B2CD48 /* EmailSignInViewController.swift in Sources */,
 				FAF609FF2838B6DE00B2CD48 /* SceneDelegate.swift in Sources */,
+				FAF60A1A2838CE5000B2CD48 /* IndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,9 +431,9 @@
 				INFOPLIST_FILE = Mangoplate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +443,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,9 +458,9 @@
 				INFOPLIST_FILE = Mangoplate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +470,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
