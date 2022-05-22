@@ -36,5 +36,7 @@ class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
     self.delegate = self
     
     UITabBar.appearance().tintColor = .mainOrange
+    UITabBar.appearance().isTranslucent = false
+    UITabBar.appearance().backgroundColor = .white
   }
 }

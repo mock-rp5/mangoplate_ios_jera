@@ -66,14 +66,14 @@
                     </constraints>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyx-yx-xdz">
-                    <rect key="frame" x="300.5" y="798.5" width="93.5" height="36.5"/>
+                    <rect key="frame" x="300.5" y="797" width="93.5" height="38"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain">
                         <attributedString key="attributedTitle">
                             <fragment content="건너뛰기">
                                 <attributes>
-                                    <font key="NSFont" size="20" name=".AppleSDGothicNeoI-Regular"/>
+                                    <font key="NSFont" metaFont="system" size="20"/>
                                 </attributes>
                             </fragment>
                         </attributedString>

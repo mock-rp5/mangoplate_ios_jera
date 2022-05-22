@@ -33,4 +33,11 @@ extension UIButton {
       self.backgroundColor = .mainLightGray
     }
   }
+  
+  func setRightImage(symbolName: String) {
+    var config = UIButton.Configuration.tinted()
+    config.image = UIImage(systemName: symbolName)
+    config.imagePlacement = .trailing
+    self.configuration = config
+  }
 }

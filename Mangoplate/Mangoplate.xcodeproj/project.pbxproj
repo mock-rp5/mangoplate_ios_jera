@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A46771D4B7A586133344DD1A /* Pods_Mangoplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6979BA6631E18AF3FCC36D51 /* Pods_Mangoplate.framework */; };
+		FA570AEB283A885300BA5049 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA570AE9283A885300BA5049 /* RestaurantCell.swift */; };
+		FA570AEC283A885300BA5049 /* RestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA570AEA283A885300BA5049 /* RestaurantCell.xib */; };
+		FA570AF5283A8BC200BA5049 /* BannerSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA570AF3283A8BC200BA5049 /* BannerSubCell.swift */; };
+		FA570AF6283A8BC200BA5049 /* BannerSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA570AF4283A8BC200BA5049 /* BannerSubCell.xib */; };
 		FA811D4B28391EE400CA29AF /* FirstSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */; };
 		FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */; };
 		FA811D4F2839299000CA29AF /* SecondSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */; };
@@ -23,6 +27,9 @@
 		FAD7C53C283A27080093AF35 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD7C53A283A27080093AF35 /* NewsViewController.xib */; };
 		FAD7C53F283A27130093AF35 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7C53D283A27130093AF35 /* MypageViewController.swift */; };
 		FAD7C540283A27130093AF35 /* MypageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD7C53E283A27130093AF35 /* MypageViewController.xib */; };
+		FAD7C542283A5A310093AF35 /* UINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7C541283A5A310093AF35 /* UINavigationItem.swift */; };
+		FAD7C546283A799B0093AF35 /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7C544283A799B0093AF35 /* BannerCell.swift */; };
+		FAD7C547283A799B0093AF35 /* BannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD7C545283A799B0093AF35 /* BannerCell.xib */; };
 		FAF609FD2838B6DE00B2CD48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF609FC2838B6DE00B2CD48 /* AppDelegate.swift */; };
 		FAF609FF2838B6DE00B2CD48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF609FE2838B6DE00B2CD48 /* SceneDelegate.swift */; };
 		FAF60A012838B6DE00B2CD48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF60A002838B6DE00B2CD48 /* ViewController.swift */; };
@@ -50,6 +57,10 @@
 		2500C2350EEC545DDEBD7695 /* Pods-Mangoplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mangoplate.release.xcconfig"; path = "Target Support Files/Pods-Mangoplate/Pods-Mangoplate.release.xcconfig"; sourceTree = "<group>"; };
 		6979BA6631E18AF3FCC36D51 /* Pods_Mangoplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mangoplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9554EF98F437EAEB7FCE8E /* Pods-Mangoplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mangoplate.debug.xcconfig"; path = "Target Support Files/Pods-Mangoplate/Pods-Mangoplate.debug.xcconfig"; sourceTree = "<group>"; };
+		FA570AE9283A885300BA5049 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
+		FA570AEA283A885300BA5049 /* RestaurantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantCell.xib; sourceTree = "<group>"; };
+		FA570AF3283A8BC200BA5049 /* BannerSubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSubCell.swift; sourceTree = "<group>"; };
+		FA570AF4283A8BC200BA5049 /* BannerSubCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerSubCell.xib; sourceTree = "<group>"; };
 		FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpViewController.swift; sourceTree = "<group>"; };
 		FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstSignUpViewController.xib; sourceTree = "<group>"; };
 		FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +76,9 @@
 		FAD7C53A283A27080093AF35 /* NewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
 		FAD7C53D283A27130093AF35 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		FAD7C53E283A27130093AF35 /* MypageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MypageViewController.xib; sourceTree = "<group>"; };
+		FAD7C541283A5A310093AF35 /* UINavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationItem.swift; sourceTree = "<group>"; };
+		FAD7C544283A799B0093AF35 /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
+		FAD7C545283A799B0093AF35 /* BannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCell.xib; sourceTree = "<group>"; };
 		FAF609F92838B6DE00B2CD48 /* Mangoplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mangoplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF609FC2838B6DE00B2CD48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF609FE2838B6DE00B2CD48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,9 +136,30 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FA570AF1283A8AC100BA5049 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				FAD7C544283A799B0093AF35 /* BannerCell.swift */,
+				FAD7C545283A799B0093AF35 /* BannerCell.xib */,
+				FA570AF3283A8BC200BA5049 /* BannerSubCell.swift */,
+				FA570AF4283A8BC200BA5049 /* BannerSubCell.xib */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		FA570AF2283A8AD000BA5049 /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				FA570AE9283A885300BA5049 /* RestaurantCell.swift */,
+				FA570AEA283A885300BA5049 /* RestaurantCell.xib */,
+			);
+			path = Restaurant;
+			sourceTree = "<group>";
+		};
 		FAD7C528283A23CA0093AF35 /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
+				FAD7C543283A79830093AF35 /* Cell */,
 				FAD7C529283A23F20093AF35 /* RestaurantViewController.swift */,
 				FAD7C52A283A23F20093AF35 /* RestaurantViewController.xib */,
 			);
@@ -165,6 +200,15 @@
 				FAD7C53E283A27130093AF35 /* MypageViewController.xib */,
 			);
 			path = Mypage;
+			sourceTree = "<group>";
+		};
+		FAD7C543283A79830093AF35 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA570AF2283A8AD000BA5049 /* Restaurant */,
+				FA570AF1283A8AC100BA5049 /* Banner */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		FAF609F02838B6DE00B2CD48 = {
@@ -249,6 +293,7 @@
 				FAF60A252838CF2100B2CD48 /* UINavigationBar.swift */,
 				FAF60A262838CF2100B2CD48 /* UIViewController.swift */,
 				FAF60A3A2838E14600B2CD48 /* UITextField.swift */,
+				FAD7C541283A5A310093AF35 /* UINavigationItem.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -359,6 +404,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA570AF6283A8BC200BA5049 /* BannerSubCell.xib in Resources */,
 				FAF60A092838B6E000B2CD48 /* LaunchScreen.storyboard in Resources */,
 				FA811D502839299000CA29AF /* SecondSignUpViewController.xib in Resources */,
 				FAD7C53C283A27080093AF35 /* NewsViewController.xib in Resources */,
@@ -367,10 +413,12 @@
 				FAF60A392838E03B00B2CD48 /* EmailSignInViewController.xib in Resources */,
 				FAD7C52C283A23F20093AF35 /* RestaurantViewController.xib in Resources */,
 				FAD7C540283A27130093AF35 /* MypageViewController.xib in Resources */,
+				FA570AEC283A885300BA5049 /* RestaurantCell.xib in Resources */,
 				FAF60A042838B6DE00B2CD48 /* Main.storyboard in Resources */,
 				FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */,
 				FAD7C534283A26F00093AF35 /* MangoPickViewController.xib in Resources */,
 				FAD7C538283A26FD0093AF35 /* WritingViewController.xib in Resources */,
+				FAD7C547283A799B0093AF35 /* BannerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,7 +473,9 @@
 			files = (
 				FAF60A012838B6DE00B2CD48 /* ViewController.swift in Sources */,
 				FAD7C533283A26F00093AF35 /* MangoPickViewController.swift in Sources */,
+				FA570AF5283A8BC200BA5049 /* BannerSubCell.swift in Sources */,
 				FAD7C53B283A27080093AF35 /* NewsViewController.swift in Sources */,
+				FAD7C546283A799B0093AF35 /* BannerCell.swift in Sources */,
 				FAD7C52B283A23F20093AF35 /* RestaurantViewController.swift in Sources */,
 				FAF60A172838CDEF00B2CD48 /* BaseViewController.swift in Sources */,
 				FAD7C5272839ED000093AF35 /* BaseTabBarController.swift in Sources */,
@@ -440,9 +490,11 @@
 				FAF60A2B2838CF2100B2CD48 /* UIFont.swift in Sources */,
 				FAD7C53F283A27130093AF35 /* MypageViewController.swift in Sources */,
 				FAF60A1C2838CE7F00B2CD48 /* Device.swift in Sources */,
+				FA570AEB283A885300BA5049 /* RestaurantCell.swift in Sources */,
 				FAF60A272838CF2100B2CD48 /* UIButton.swift in Sources */,
 				FA811D4F2839299000CA29AF /* SecondSignUpViewController.swift in Sources */,
 				FAF60A342838D32800B2CD48 /* SignInHomeViewController.swift in Sources */,
+				FAD7C542283A5A310093AF35 /* UINavigationItem.swift in Sources */,
 				FAF60A382838E03B00B2CD48 /* EmailSignInViewController.swift in Sources */,
 				FA811D4B28391EE400CA29AF /* FirstSignUpViewController.swift in Sources */,
 				FAF609FF2838B6DE00B2CD48 /* SceneDelegate.swift in Sources */,
