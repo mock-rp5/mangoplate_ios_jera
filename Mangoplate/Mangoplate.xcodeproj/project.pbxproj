@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A46771D4B7A586133344DD1A /* Pods_Mangoplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6979BA6631E18AF3FCC36D51 /* Pods_Mangoplate.framework */; };
 		FA811D4B28391EE400CA29AF /* FirstSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */; };
 		FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */; };
 		FA811D4F2839299000CA29AF /* SecondSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */; };
@@ -35,6 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2500C2350EEC545DDEBD7695 /* Pods-Mangoplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mangoplate.release.xcconfig"; path = "Target Support Files/Pods-Mangoplate/Pods-Mangoplate.release.xcconfig"; sourceTree = "<group>"; };
+		6979BA6631E18AF3FCC36D51 /* Pods_Mangoplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mangoplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A9554EF98F437EAEB7FCE8E /* Pods-Mangoplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mangoplate.debug.xcconfig"; path = "Target Support Files/Pods-Mangoplate/Pods-Mangoplate.debug.xcconfig"; sourceTree = "<group>"; };
 		FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpViewController.swift; sourceTree = "<group>"; };
 		FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstSignUpViewController.xib; sourceTree = "<group>"; };
 		FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpViewController.swift; sourceTree = "<group>"; };
@@ -72,17 +76,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46771D4B7A586133344DD1A /* Pods_Mangoplate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7AE0F8AE9C384A51351A7D10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6979BA6631E18AF3FCC36D51 /* Pods_Mangoplate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E41730932EA7BFF0A9B54460 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A9554EF98F437EAEB7FCE8E /* Pods-Mangoplate.debug.xcconfig */,
+				2500C2350EEC545DDEBD7695 /* Pods-Mangoplate.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FAF609F02838B6DE00B2CD48 = {
 			isa = PBXGroup;
 			children = (
 				FAF609FB2838B6DE00B2CD48 /* Mangoplate */,
 				FAF609FA2838B6DE00B2CD48 /* Products */,
+				E41730932EA7BFF0A9B54460 /* Pods */,
+				7AE0F8AE9C384A51351A7D10 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -209,9 +233,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAF60A0D2838B6E000B2CD48 /* Build configuration list for PBXNativeTarget "Mangoplate" */;
 			buildPhases = (
+				D575C0ACB25930487C57F978 /* [CP] Check Pods Manifest.lock */,
 				FAF609F52838B6DE00B2CD48 /* Sources */,
 				FAF609F62838B6DE00B2CD48 /* Frameworks */,
 				FAF609F72838B6DE00B2CD48 /* Resources */,
+				0650C5D072BC3B28017F2143 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -271,6 +297,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0650C5D072BC3B28017F2143 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mangoplate/Pods-Mangoplate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mangoplate/Pods-Mangoplate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mangoplate/Pods-Mangoplate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D575C0ACB25930487C57F978 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mangoplate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAF609F52838B6DE00B2CD48 /* Sources */ = {
@@ -438,11 +506,13 @@
 		};
 		FAF60A0E2838B6E000B2CD48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A9554EF98F437EAEB7FCE8E /* Pods-Mangoplate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9738W25PF4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mangoplate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -465,11 +535,13 @@
 		};
 		FAF60A0F2838B6E000B2CD48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2500C2350EEC545DDEBD7695 /* Pods-Mangoplate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9738W25PF4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mangoplate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
