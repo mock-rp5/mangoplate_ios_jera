@@ -59,5 +59,9 @@ class SignInHomeViewController: BaseViewController {
     }
   }
   
-
+  @IBAction func jumpButtonTapped(_ sender: Any) {
+    let tabBarVC = BaseTabBarController()
+    tabBarVC.modalPresentationStyle = .fullScreen
+    present(tabBarVC, animated: true)
+  }
 }

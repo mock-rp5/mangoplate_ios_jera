@@ -12,6 +12,17 @@
 		FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */; };
 		FA811D4F2839299000CA29AF /* SecondSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */; };
 		FA811D502839299000CA29AF /* SecondSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA811D4E2839299000CA29AF /* SecondSignUpViewController.xib */; };
+		FAD7C5272839ED000093AF35 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7C5262839ED000093AF35 /* BaseTabBarController.swift */; };
+		FAD7C52B283A23F20093AF35 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7C529283A23F20093AF35 /* RestaurantViewController.swift */; };
+		FAD7C52C283A23F20093AF35 /* RestaurantViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD7C52A283A23F20093AF35 /* RestaurantViewController.xib */; };
+		FAD7C533283A26F00093AF35 /* MangoPickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7C531283A26F00093AF35 /* MangoPickViewController.swift */; };
+		FAD7C534283A26F00093AF35 /* MangoPickViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD7C532283A26F00093AF35 /* MangoPickViewController.xib */; };
+		FAD7C537283A26FD0093AF35 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7C535283A26FD0093AF35 /* WritingViewController.swift */; };
+		FAD7C538283A26FD0093AF35 /* WritingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD7C536283A26FD0093AF35 /* WritingViewController.xib */; };
+		FAD7C53B283A27080093AF35 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7C539283A27080093AF35 /* NewsViewController.swift */; };
+		FAD7C53C283A27080093AF35 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD7C53A283A27080093AF35 /* NewsViewController.xib */; };
+		FAD7C53F283A27130093AF35 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7C53D283A27130093AF35 /* MypageViewController.swift */; };
+		FAD7C540283A27130093AF35 /* MypageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD7C53E283A27130093AF35 /* MypageViewController.xib */; };
 		FAF609FD2838B6DE00B2CD48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF609FC2838B6DE00B2CD48 /* AppDelegate.swift */; };
 		FAF609FF2838B6DE00B2CD48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF609FE2838B6DE00B2CD48 /* SceneDelegate.swift */; };
 		FAF60A012838B6DE00B2CD48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF60A002838B6DE00B2CD48 /* ViewController.swift */; };
@@ -43,6 +54,17 @@
 		FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstSignUpViewController.xib; sourceTree = "<group>"; };
 		FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpViewController.swift; sourceTree = "<group>"; };
 		FA811D4E2839299000CA29AF /* SecondSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondSignUpViewController.xib; sourceTree = "<group>"; };
+		FAD7C5262839ED000093AF35 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		FAD7C529283A23F20093AF35 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
+		FAD7C52A283A23F20093AF35 /* RestaurantViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantViewController.xib; sourceTree = "<group>"; };
+		FAD7C531283A26F00093AF35 /* MangoPickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangoPickViewController.swift; sourceTree = "<group>"; };
+		FAD7C532283A26F00093AF35 /* MangoPickViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MangoPickViewController.xib; sourceTree = "<group>"; };
+		FAD7C535283A26FD0093AF35 /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
+		FAD7C536283A26FD0093AF35 /* WritingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WritingViewController.xib; sourceTree = "<group>"; };
+		FAD7C539283A27080093AF35 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		FAD7C53A283A27080093AF35 /* NewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
+		FAD7C53D283A27130093AF35 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
+		FAD7C53E283A27130093AF35 /* MypageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MypageViewController.xib; sourceTree = "<group>"; };
 		FAF609F92838B6DE00B2CD48 /* Mangoplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mangoplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF609FC2838B6DE00B2CD48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF609FE2838B6DE00B2CD48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +120,51 @@
 				2500C2350EEC545DDEBD7695 /* Pods-Mangoplate.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FAD7C528283A23CA0093AF35 /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				FAD7C529283A23F20093AF35 /* RestaurantViewController.swift */,
+				FAD7C52A283A23F20093AF35 /* RestaurantViewController.xib */,
+			);
+			path = Restaurant;
+			sourceTree = "<group>";
+		};
+		FAD7C52D283A26650093AF35 /* MangoPick */ = {
+			isa = PBXGroup;
+			children = (
+				FAD7C531283A26F00093AF35 /* MangoPickViewController.swift */,
+				FAD7C532283A26F00093AF35 /* MangoPickViewController.xib */,
+			);
+			path = MangoPick;
+			sourceTree = "<group>";
+		};
+		FAD7C52E283A267E0093AF35 /* Writing */ = {
+			isa = PBXGroup;
+			children = (
+				FAD7C535283A26FD0093AF35 /* WritingViewController.swift */,
+				FAD7C536283A26FD0093AF35 /* WritingViewController.xib */,
+			);
+			path = Writing;
+			sourceTree = "<group>";
+		};
+		FAD7C52F283A268D0093AF35 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				FAD7C539283A27080093AF35 /* NewsViewController.swift */,
+				FAD7C53A283A27080093AF35 /* NewsViewController.xib */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		FAD7C530283A269D0093AF35 /* Mypage */ = {
+			isa = PBXGroup;
+			children = (
+				FAD7C53D283A27130093AF35 /* MypageViewController.swift */,
+				FAD7C53E283A27130093AF35 /* MypageViewController.xib */,
+			);
+			path = Mypage;
 			sourceTree = "<group>";
 		};
 		FAF609F02838B6DE00B2CD48 = {
@@ -156,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				FAF60A162838CDEF00B2CD48 /* BaseViewController.swift */,
+				FAD7C5262839ED000093AF35 /* BaseTabBarController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -200,6 +268,11 @@
 			children = (
 				FAF60A312838D2DA00B2CD48 /* SignIn */,
 				FAF60A302838D03400B2CD48 /* SignUp */,
+				FAD7C528283A23CA0093AF35 /* Restaurant */,
+				FAD7C52D283A26650093AF35 /* MangoPick */,
+				FAD7C52E283A267E0093AF35 /* Writing */,
+				FAD7C52F283A268D0093AF35 /* News */,
+				FAD7C530283A269D0093AF35 /* Mypage */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -288,11 +361,16 @@
 			files = (
 				FAF60A092838B6E000B2CD48 /* LaunchScreen.storyboard in Resources */,
 				FA811D502839299000CA29AF /* SecondSignUpViewController.xib in Resources */,
+				FAD7C53C283A27080093AF35 /* NewsViewController.xib in Resources */,
 				FAF60A352838D32800B2CD48 /* SignInHomeViewController.xib in Resources */,
 				FAF60A062838B6E000B2CD48 /* Assets.xcassets in Resources */,
 				FAF60A392838E03B00B2CD48 /* EmailSignInViewController.xib in Resources */,
+				FAD7C52C283A23F20093AF35 /* RestaurantViewController.xib in Resources */,
+				FAD7C540283A27130093AF35 /* MypageViewController.xib in Resources */,
 				FAF60A042838B6DE00B2CD48 /* Main.storyboard in Resources */,
 				FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */,
+				FAD7C534283A26F00093AF35 /* MangoPickViewController.xib in Resources */,
+				FAD7C538283A26FD0093AF35 /* WritingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,15 +424,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF60A012838B6DE00B2CD48 /* ViewController.swift in Sources */,
+				FAD7C533283A26F00093AF35 /* MangoPickViewController.swift in Sources */,
+				FAD7C53B283A27080093AF35 /* NewsViewController.swift in Sources */,
+				FAD7C52B283A23F20093AF35 /* RestaurantViewController.swift in Sources */,
 				FAF60A172838CDEF00B2CD48 /* BaseViewController.swift in Sources */,
+				FAD7C5272839ED000093AF35 /* BaseTabBarController.swift in Sources */,
 				FAF60A2A2838CF2100B2CD48 /* String.swift in Sources */,
 				FAF60A3B2838E14600B2CD48 /* UITextField.swift in Sources */,
 				FAF60A2C2838CF2100B2CD48 /* UINavigationBar.swift in Sources */,
 				FAF609FD2838B6DE00B2CD48 /* AppDelegate.swift in Sources */,
+				FAD7C537283A26FD0093AF35 /* WritingViewController.swift in Sources */,
 				FAF60A282838CF2100B2CD48 /* Date.swift in Sources */,
 				FAF60A292838CF2100B2CD48 /* UIColor.swift in Sources */,
 				FAF60A2D2838CF2100B2CD48 /* UIViewController.swift in Sources */,
 				FAF60A2B2838CF2100B2CD48 /* UIFont.swift in Sources */,
+				FAD7C53F283A27130093AF35 /* MypageViewController.swift in Sources */,
 				FAF60A1C2838CE7F00B2CD48 /* Device.swift in Sources */,
 				FAF60A272838CF2100B2CD48 /* UIButton.swift in Sources */,
 				FA811D4F2839299000CA29AF /* SecondSignUpViewController.swift in Sources */,
