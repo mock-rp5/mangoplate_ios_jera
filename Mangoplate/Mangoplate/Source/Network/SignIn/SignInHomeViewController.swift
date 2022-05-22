@@ -29,34 +29,28 @@ class SignInHomeViewController: BaseViewController {
   }
   
   @IBAction func kakaoLoginTapped(_ sender: UIButton) {
-    var checkKakaoAppSucceess: Bool?
-    // 카카오톡 설치 여부 확인
-    if UserApi.isKakaoTalkLoginAvailable() {
-      UserApi.shared.loginWithKakaoTalk { (oauthToken, error) in
-        if let error = error {
-          checkKakaoAppSucceess = false
-          print(error)
-        } else {
-          // 카카오톡 앱으로 로그인 성공
-          checkKakaoAppSucceess = true
-          print("loginWithKakaoTalk() success.")
-          
-          _ = oauthToken
-        }
+//    // 카카오톡 앱으로 로그인
+//    if UserApi.isKakaoTalkLoginAvailable() {
+//      UserApi.shared.loginWithKakaoTalk { (oauthToken, error) in
+//        if let error = error {
+//          print(error)
+//        } else {
+//          print("loginWithKakaoTalk() success.")
+//          _ = oauthToken
+//        }
+//      }
+//    }
+    
+    // 카카오 웹으로 로그인
+    UserApi.shared.loginWithKakaoAccount { (oauthToken, error) in
+      if let error = error {
+        print(error)
+      } else {
+        // 웹 브라우저 카카오 계정으로 로그인 성공
+        print("loginWithKakaoAccount() success.")
       }
     }
     
-    // 카카오 앱으로 로그인 실패한 경우만 웹으로 로그인
-    if checkKakaoAppSucceess == false {
-      UserApi.shared.loginWithKakaoAccount { (oauthToken, error) in
-        if let error = error {
-          print(error)
-        } else {
-          // 웹 브라우저 카카오 계정으로 로그인 성공
-          print("loginWithKakaoAccount() success.")
-        }
-      }
-    }
   }
   
   @IBAction func jumpButtonTapped(_ sender: Any) {

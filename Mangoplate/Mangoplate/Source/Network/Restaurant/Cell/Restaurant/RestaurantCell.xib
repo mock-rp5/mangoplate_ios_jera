@@ -57,7 +57,7 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Q2X-f7-3IM">
-                                <rect key="frame" x="72" y="57.5" width="12" height="9"/>
+                                <rect key="frame" x="67" y="57.5" width="12" height="9"/>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="12" id="Ird-ls-uhF"/>
@@ -65,7 +65,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jc-NO-Ddv">
-                                <rect key="frame" x="85" y="55" width="7" height="14"/>
+                                <rect key="frame" x="80" y="55" width="7" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -77,7 +77,7 @@
                             <constraint firstItem="gbJ-GM-yW7" firstAttribute="centerY" secondItem="7fo-iJ-vgp" secondAttribute="centerY" multiplier="0.4" id="B2G-QG-ZIG"/>
                             <constraint firstItem="tsJ-YM-GdV" firstAttribute="leading" secondItem="7fo-iJ-vgp" secondAttribute="leading" constant="4" id="CJS-s6-KHF"/>
                             <constraint firstItem="oyO-8B-pWA" firstAttribute="leading" secondItem="tsJ-YM-GdV" secondAttribute="trailing" constant="1" id="HcM-gX-Ynr"/>
-                            <constraint firstItem="Q2X-f7-3IM" firstAttribute="leading" secondItem="oyO-8B-pWA" secondAttribute="trailing" constant="15" id="KOb-nu-EKQ"/>
+                            <constraint firstItem="Q2X-f7-3IM" firstAttribute="leading" secondItem="oyO-8B-pWA" secondAttribute="trailing" constant="10" id="KOb-nu-EKQ"/>
                             <constraint firstItem="Tbq-o1-uo7" firstAttribute="centerY" secondItem="7fo-iJ-vgp" secondAttribute="centerY" multiplier="0.6" id="N7p-Sd-pq7"/>
                             <constraint firstItem="ply-Qp-A6R" firstAttribute="leading" secondItem="7fo-iJ-vgp" secondAttribute="leading" constant="4" id="NU3-a3-RwO"/>
                             <constraint firstItem="Q2X-f7-3IM" firstAttribute="centerY" secondItem="7fo-iJ-vgp" secondAttribute="centerY" multiplier="1.45" id="PUG-3z-5gh"/>
