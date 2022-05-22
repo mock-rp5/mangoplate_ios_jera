@@ -9,9 +9,18 @@ import UIKit
 
 class RestaurantCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+  @IBOutlet weak var restaurantImageView: UIImageView!
+  @IBOutlet weak var nameLabel: UILabel!
+  
+  @IBOutlet weak var locationLabel: UILabel!
+  @IBOutlet weak var ratingLabel: UILabel!
+  @IBOutlet weak var watchingCountLabel: UILabel!
+  @IBOutlet weak var reviewCountLabel: UILabel!
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    
+    watchingCountLabel.text = watchingCountLabel.text?.insertComma
+  }
 
 }

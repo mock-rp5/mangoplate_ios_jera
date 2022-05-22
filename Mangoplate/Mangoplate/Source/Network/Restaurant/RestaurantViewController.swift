@@ -20,6 +20,7 @@ class RestaurantViewController: BaseViewController {
     collectionView.delegate = self
     collectionView.dataSource = self
     collectionView.register(UINib(nibName: "BannerCell", bundle: .main), forCellWithReuseIdentifier: "bannerCell")
+    collectionView.register(UINib(nibName: "SortingCell", bundle: .main), forCellWithReuseIdentifier: "sortingCell")
     collectionView.register(UINib(nibName: "RestaurantCell", bundle: .main), forCellWithReuseIdentifier: "restaurantCell")
     
   }
@@ -37,13 +38,15 @@ class RestaurantViewController: BaseViewController {
 
 extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   func numberOfSections(in collectionView: UICollectionView) -> Int {
-    return 2
+    return 3
   }
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     switch section {
     case 0:
       return 1
     case 1:
+      return 1
+    case 2:
       return 4
     
     default:
@@ -58,8 +61,13 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
       guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bannerCell", for: indexPath)
               as? BannerCell else { return UICollectionViewCell() }
       return cell
-      
+    
     case 1:
+      guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sortingCell", for: indexPath)
+              as? SortingCell else { return UICollectionViewCell() }
+      return cell
+      
+    case 2:
       guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath)
               as? RestaurantCell else { return UICollectionViewCell() }
       return cell
@@ -70,14 +78,27 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
     }
   }
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    if indexPath.section == 0 {
+    switch indexPath.section {
+    case 0:
       return CGSize(width: collectionView.frame.size.width, height: 170)
-    }
-    else if indexPath.section == 1 {
-      return CGSize(width: collectionView.frame.size.width / 2, height: collectionView.frame.size.width / 2 + 100)
-    } else {
+      
+    case 1:
+      return CGSize(width: collectionView.frame.size.width, height: 130)
+      
+    case 2:
+      return CGSize(width: collectionView.frame.size.width / 2 - 20, height: collectionView.frame.size.width / 2 + 80)
+      
+    default:
       return CGSize(width: 100, height: 100)
     }
   }
   
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    if section == 2 {
+      return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    } else {
+      return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+  }
+
 }

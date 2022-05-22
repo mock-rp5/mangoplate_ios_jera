@@ -12,6 +12,8 @@
 		FA570AEC283A885300BA5049 /* RestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA570AEA283A885300BA5049 /* RestaurantCell.xib */; };
 		FA570AF5283A8BC200BA5049 /* BannerSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA570AF3283A8BC200BA5049 /* BannerSubCell.swift */; };
 		FA570AF6283A8BC200BA5049 /* BannerSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA570AF4283A8BC200BA5049 /* BannerSubCell.xib */; };
+		FA570AFA283A9E5100BA5049 /* SortingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA570AF8283A9E5100BA5049 /* SortingCell.swift */; };
+		FA570AFB283A9E5100BA5049 /* SortingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA570AF9283A9E5100BA5049 /* SortingCell.xib */; };
 		FA811D4B28391EE400CA29AF /* FirstSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */; };
 		FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */; };
 		FA811D4F2839299000CA29AF /* SecondSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */; };
@@ -61,6 +63,8 @@
 		FA570AEA283A885300BA5049 /* RestaurantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantCell.xib; sourceTree = "<group>"; };
 		FA570AF3283A8BC200BA5049 /* BannerSubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSubCell.swift; sourceTree = "<group>"; };
 		FA570AF4283A8BC200BA5049 /* BannerSubCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerSubCell.xib; sourceTree = "<group>"; };
+		FA570AF8283A9E5100BA5049 /* SortingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingCell.swift; sourceTree = "<group>"; };
+		FA570AF9283A9E5100BA5049 /* SortingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortingCell.xib; sourceTree = "<group>"; };
 		FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpViewController.swift; sourceTree = "<group>"; };
 		FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstSignUpViewController.xib; sourceTree = "<group>"; };
 		FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +160,15 @@
 			path = Restaurant;
 			sourceTree = "<group>";
 		};
+		FA570AF7283A9E3F00BA5049 /* Sorting */ = {
+			isa = PBXGroup;
+			children = (
+				FA570AF8283A9E5100BA5049 /* SortingCell.swift */,
+				FA570AF9283A9E5100BA5049 /* SortingCell.xib */,
+			);
+			path = Sorting;
+			sourceTree = "<group>";
+		};
 		FAD7C528283A23CA0093AF35 /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +218,7 @@
 		FAD7C543283A79830093AF35 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				FA570AF7283A9E3F00BA5049 /* Sorting */,
 				FA570AF2283A8AD000BA5049 /* Restaurant */,
 				FA570AF1283A8AC100BA5049 /* Banner */,
 			);
@@ -410,6 +424,7 @@
 				FAD7C53C283A27080093AF35 /* NewsViewController.xib in Resources */,
 				FAF60A352838D32800B2CD48 /* SignInHomeViewController.xib in Resources */,
 				FAF60A062838B6E000B2CD48 /* Assets.xcassets in Resources */,
+				FA570AFB283A9E5100BA5049 /* SortingCell.xib in Resources */,
 				FAF60A392838E03B00B2CD48 /* EmailSignInViewController.xib in Resources */,
 				FAD7C52C283A23F20093AF35 /* RestaurantViewController.xib in Resources */,
 				FAD7C540283A27130093AF35 /* MypageViewController.xib in Resources */,
@@ -484,6 +499,7 @@
 				FAF60A2C2838CF2100B2CD48 /* UINavigationBar.swift in Sources */,
 				FAF609FD2838B6DE00B2CD48 /* AppDelegate.swift in Sources */,
 				FAD7C537283A26FD0093AF35 /* WritingViewController.swift in Sources */,
+				FA570AFA283A9E5100BA5049 /* SortingCell.swift in Sources */,
 				FAF60A282838CF2100B2CD48 /* Date.swift in Sources */,
 				FAF60A292838CF2100B2CD48 /* UIColor.swift in Sources */,
 				FAF60A2D2838CF2100B2CD48 /* UIViewController.swift in Sources */,
