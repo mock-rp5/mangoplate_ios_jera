@@ -41,23 +41,24 @@ class SignUpDataManager {
             print(error.localizedDescription)
           }
         }
+  }
+  
+  func emailCheck(_ parameters: EmailCheckRequest, viewController: FirstSignUpViewController) {
     
+    AF.request("\(Constant.DEV_BASE_URL)/app/users/email-check", method: .get, parameters: parameters)
+      .validate()
+      .responseDecodable(of: SignUpResponse.self) { response in
+        switch response.result {
+        case .success(let response):
+          if response.isSuccess {
+            viewController.successEmailCheck()
+          } else {
+            viewController.failedEmailCheck(message: response.message)
+          }
 
-    
-//    AF.request("\(Constant.DEV_BASE_URL)/app/users/email-register", method: .post, parameters: parameters)
-//      .validate()
-//      .responseDecodable(of: SignUpResponse.self) { response in
-//        switch response.result {
-//        case .success(let response):
-//          if response.isSuccess, let result = response.result {
-//            viewController.successSignUp(result: result)
-//          } else {
-//            viewController.failedSignUp(message: response.message)
-//          }
-//
-//        case .failure(let error):
-//          print(error.localizedDescription)
-//        }
-//      }
+        case .failure(let error):
+          print(error.localizedDescription)
+        }
+      }
   }
 }

@@ -19,7 +19,8 @@ class FirstSignUpViewController: BaseViewController {
   @IBOutlet weak var passwordValidCheckLabel: UILabel!
   @IBOutlet weak var passwordSameCheckLabel: UILabel!
   
-  var checkEmailAuth: Bool = false
+  var checkEmailAuth: Bool = false // 이메일 인증 여부
+  var checkEmailDup: Bool = false // 이메일 중복 여부
   
   // MARK: - LifeCycle
   override func viewDidLoad() {
@@ -106,18 +107,24 @@ class FirstSignUpViewController: BaseViewController {
   }
   
   @objc func emailButtonTapped(_ sender: UIButton) {
-    if checkEmailAuth == false {
-      emailTextField.addBottomBorderWithColor(color: .mainLightGray, height: 1, width: 5)
-      emailCheckLabel.text = ""
-      
-      presentAlert(title: "이메일이 전송되었습니다.")
-      checkEmailAuth = true
-    } else {
-      emailTextField.addBottomBorderWithColor(color: .mainLightGray, height: 1, width: 5)
-      emailCheckLabel.text = ""
-      
-      presentAlert(title: "이미 인증되었습니다.")
+    emailTextField.addBottomBorderWithColor(color: .mainLightGray, height: 1, width: 5)
+    emailCheckLabel.text = ""
+    
+    guard let email = emailTextField.text else { return }
+    let emailCheckRequest = EmailCheckRequest(email: email)
+    
+    // 이메일 중복 체크
+    SignUpDataManager().emailCheck(emailCheckRequest, viewController: self)
+    
+    if checkEmailDup == true {
+      if checkEmailAuth == false {
+        presentAlert(title: "이메일이 전송되었습니다.")
+        checkEmailAuth = true // 이메일 인증 완료
+      } else {
+        presentAlert(title: "이미 인증되었습니다.")
+      }
     }
+    
   }
   
   @objc func nextButtonTapped(_ sender: UIButton) {
@@ -162,5 +169,21 @@ class FirstSignUpViewController: BaseViewController {
     print("xButtonTapped")
     self.navigationController?.popToRootViewController(animated: true)
   }
+}
 
+
+extension FirstSignUpViewController {
+  
+  func successEmailCheck() {
+    print("successEmailCheck")
+    checkEmailDup = true // 이메일 중복체크 통과
+  }
+  
+  func failedEmailCheck(message: String) {
+    print("failedEmailCheck")
+    checkEmailDup = false // 이메일 중복 발생
+    emailTextField.addBottomBorderWithColor(color: .mainOrange, height: 1, width: 5)
+    emailCheckLabel.text = message
+  }
+  
 }
