@@ -29,6 +29,7 @@ class SecondSignUpViewController: BaseViewController {
     setNavigationTintColor(color: .white)
     setNavigationTitle(title: "프로필 정보", color: .white)
     setNavigationBarBackbuttonTitle(title: "")
+    User.shared.profile = nil // 뒤로 갔다가 돌아오면 다시 nil
   }
   
   // MARK: - Methods
@@ -38,6 +39,8 @@ class SecondSignUpViewController: BaseViewController {
     nickNameTextField.addTarget(self, action: #selector(nicknameEditingChaged), for: .editingChanged)
     completeButton.addTarget(self, action: #selector(completeButtonTapped(_:)), for: .touchUpInside)
     profileImageView.layer.cornerRadius = 43
+    profileImageView.layer.borderColor = UIColor.white.cgColor
+    profileImageView.layer.borderWidth = 2
     
   }
   
@@ -77,10 +80,16 @@ class SecondSignUpViewController: BaseViewController {
       self.openCamera()
     }
     
+    let delete = UIAlertAction(title: "사진 삭제", style: .default) { (action) in
+      User.shared.profile = nil
+      self.profileImageView.image = UIImage(named: "defaultProfile")
+    }
+    
     let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
     alert.addAction(library)
     alert.addAction(camera)
     alert.addAction(cancel)
+    alert.addAction(delete)
     present(alert, animated: true)
   }
   
@@ -129,7 +138,7 @@ extension SecondSignUpViewController {
     self.navigationController?.popToRootViewController(animated: false)
     let vc = BaseTabBarController()
     vc.modalPresentationStyle = .fullScreen
-    present(vc, animated: true, completion: nil)
+    present(vc, animated: false, completion: nil)
   }
   
   func failedSignUp(message: String) {

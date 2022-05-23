@@ -27,15 +27,15 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="261"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47t-ky-1At">
-                            <rect key="frame" x="179" y="129" width="56" height="55"/>
+                            <rect key="frame" x="169.5" y="119" width="75" height="75"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="56" id="Oer-cc-ega"/>
-                                <constraint firstAttribute="height" constant="55" id="bQZ-e2-TYO"/>
+                                <constraint firstAttribute="width" constant="75" id="Oer-cc-ega"/>
+                                <constraint firstAttribute="height" constant="75" id="bQZ-e2-TYO"/>
                             </constraints>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" image="Image-1"/>
+                            <buttonConfiguration key="configuration" style="plain"/>
                         </button>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VJz-88-EQ9">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfile" translatesAutoresizingMaskIntoConstraints="NO" id="VJz-88-EQ9">
                             <rect key="frame" x="164.5" y="114" width="85" height="85"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="85" id="AK9-QE-nq5"/>
@@ -112,7 +112,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Image-1" width="98" height="90"/>
+        <image name="defaultProfile" width="66" height="66"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

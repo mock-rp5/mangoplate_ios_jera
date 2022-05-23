@@ -19,7 +19,6 @@ class FirstSignUpViewController: BaseViewController {
   @IBOutlet weak var passwordValidCheckLabel: UILabel!
   @IBOutlet weak var passwordSameCheckLabel: UILabel!
   
-  var checkEmailAuth: Bool = false // 이메일 인증 여부
   var checkEmailDup: Bool = false // 이메일 중복 여부
   
   // MARK: - LifeCycle
@@ -115,23 +114,13 @@ class FirstSignUpViewController: BaseViewController {
     
     // 이메일 중복 체크
     SignUpDataManager().emailCheck(emailCheckRequest, viewController: self)
-    
-    if checkEmailDup == true {
-      if checkEmailAuth == false {
-        presentAlert(title: "이메일이 전송되었습니다.")
-        checkEmailAuth = true // 이메일 인증 완료
-      } else {
-        presentAlert(title: "이미 인증되었습니다.")
-      }
-    }
-    
   }
   
   @objc func nextButtonTapped(_ sender: UIButton) {
     guard let password = passwordTextField.text else { return }
     
     // 이메일 인증을 하지 않은 경우
-    if checkEmailAuth == false {
+    if checkEmailDup == false {
       emailTextField.removeAllSubLayers()
       emailTextField.addBottomBorderWithColor(color: .mainOrange, height: 1, width: 5)
       emailCheckLabel.text = "이메일 인증을 해주세요."
@@ -152,7 +141,7 @@ class FirstSignUpViewController: BaseViewController {
     }
     
     // 이메일인증, 비밀번호 형식, 비밀번호 같게 입력한 경우
-    if checkEmailAuth == true,
+    if checkEmailDup == true,
        validPassword(password: password) == true,
        samePassword() == true {
       // 이메일, 비밀번호 저장
@@ -177,6 +166,7 @@ extension FirstSignUpViewController {
   func successEmailCheck() {
     print("successEmailCheck")
     checkEmailDup = true // 이메일 중복체크 통과
+    presentAlert(title: "이메일이 인증되었습니다.")
   }
   
   func failedEmailCheck(message: String) {
