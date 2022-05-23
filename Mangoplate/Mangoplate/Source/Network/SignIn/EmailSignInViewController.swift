@@ -34,8 +34,8 @@ class EmailSignInViewController: BaseViewController {
     loginButton.isEnabled = false
     loginButton.setEnabledButtonColor()
     
-    emailTextField.addBottomBorderWithColor(color: .mainLightGray, height: 1)
-    passwordTextField.addBottomBorderWithColor(color: .mainLightGray, height: 1)
+    emailTextField.addBottomBorderWithColor(color: .mainLightGray, height: 1, width: 40)
+    passwordTextField.addBottomBorderWithColor(color: .mainLightGray, height: 1, width: 40)
     
     emailTextField.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)
     passwordTextField.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)

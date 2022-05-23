@@ -29,8 +29,8 @@ class RestaurantViewController: BaseViewController {
   private func setNavigationBar() {
     self.navigationItem.setLeftsubTitleAndTitle(title: "전체지역", subTitle: "지금 보고있는 지역은")
     
-    let searchButton = self.navigationItem.setNavigationItemButton(nil, action: nil, symbolName: "magnifyingglass", tintColor: .darkGray)
-    let mapButton = self.navigationItem.setNavigationItemButton(nil, action: nil, symbolName: "map", tintColor: .darkGray)
+    let searchButton = self.navigationItem.setNavigationItemButton(nil, action: nil, symbolName: "magnifyingglass", imageName: nil, tintColor: .darkGray)
+    let mapButton = self.navigationItem.setNavigationItemButton(nil, action: nil, symbolName: "map", imageName: nil, tintColor: .darkGray)
     
     self.navigationItem.rightBarButtonItems = [mapButton, searchButton]
   }

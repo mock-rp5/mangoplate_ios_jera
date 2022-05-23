@@ -14,10 +14,15 @@
 		FA570AF6283A8BC200BA5049 /* BannerSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA570AF4283A8BC200BA5049 /* BannerSubCell.xib */; };
 		FA570AFA283A9E5100BA5049 /* SortingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA570AF8283A9E5100BA5049 /* SortingCell.swift */; };
 		FA570AFB283A9E5100BA5049 /* SortingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA570AF9283A9E5100BA5049 /* SortingCell.xib */; };
+		FA665A04283B4EBD00E807F1 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA665A03283B4EBD00E807F1 /* SignUpResponse.swift */; };
+		FA665A06283B561000E807F1 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA665A05283B561000E807F1 /* SignUpRequest.swift */; };
+		FA665A08283B596100E807F1 /* SignUpDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA665A07283B596100E807F1 /* SignUpDataManager.swift */; };
+		FA665A0A283B5A5E00E807F1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA665A09283B5A5E00E807F1 /* Constant.swift */; };
 		FA811D4B28391EE400CA29AF /* FirstSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */; };
 		FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */; };
 		FA811D4F2839299000CA29AF /* SecondSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */; };
 		FA811D502839299000CA29AF /* SecondSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA811D4E2839299000CA29AF /* SecondSignUpViewController.xib */; };
+		FABCF0A0283B5F70008D14F5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCF09F283B5F70008D14F5 /* User.swift */; };
 		FAD7C5272839ED000093AF35 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7C5262839ED000093AF35 /* BaseTabBarController.swift */; };
 		FAD7C52B283A23F20093AF35 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7C529283A23F20093AF35 /* RestaurantViewController.swift */; };
 		FAD7C52C283A23F20093AF35 /* RestaurantViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD7C52A283A23F20093AF35 /* RestaurantViewController.xib */; };
@@ -65,10 +70,15 @@
 		FA570AF4283A8BC200BA5049 /* BannerSubCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerSubCell.xib; sourceTree = "<group>"; };
 		FA570AF8283A9E5100BA5049 /* SortingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingCell.swift; sourceTree = "<group>"; };
 		FA570AF9283A9E5100BA5049 /* SortingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortingCell.xib; sourceTree = "<group>"; };
+		FA665A03283B4EBD00E807F1 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		FA665A05283B561000E807F1 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
+		FA665A07283B596100E807F1 /* SignUpDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDataManager.swift; sourceTree = "<group>"; };
+		FA665A09283B5A5E00E807F1 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpViewController.swift; sourceTree = "<group>"; };
 		FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstSignUpViewController.xib; sourceTree = "<group>"; };
 		FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpViewController.swift; sourceTree = "<group>"; };
 		FA811D4E2839299000CA29AF /* SecondSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondSignUpViewController.xib; sourceTree = "<group>"; };
+		FABCF09F283B5F70008D14F5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FAD7C5262839ED000093AF35 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		FAD7C529283A23F20093AF35 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		FAD7C52A283A23F20093AF35 /* RestaurantViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantViewController.xib; sourceTree = "<group>"; };
@@ -169,6 +179,38 @@
 			path = Sorting;
 			sourceTree = "<group>";
 		};
+		FA665A00283B4E4B00E807F1 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		FA665A01283B4E5B00E807F1 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FA665A03283B4EBD00E807F1 /* SignUpResponse.swift */,
+				FA665A05283B561000E807F1 /* SignUpRequest.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		FA665A0B283B5DBC00E807F1 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				FA665A07283B596100E807F1 /* SignUpDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		FA665A0C283B5F0E00E807F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FABCF09F283B5F70008D14F5 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FAD7C528283A23CA0093AF35 /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +305,7 @@
 			children = (
 				FAF60A152838CDDF00B2CD48 /* Base */,
 				FAF60A112838CDB000B2CD48 /* Font */,
+				FA665A09283B5A5E00E807F1 /* Constant.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -339,10 +382,13 @@
 		FAF60A302838D03400B2CD48 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				FA665A0C283B5F0E00E807F1 /* Model */,
 				FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */,
 				FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */,
 				FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */,
 				FA811D4E2839299000CA29AF /* SecondSignUpViewController.xib */,
+				FA665A0B283B5DBC00E807F1 /* DataManager */,
+				FA665A01283B4E5B00E807F1 /* Entity */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -350,6 +396,7 @@
 		FAF60A312838D2DA00B2CD48 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				FA665A00283B4E4B00E807F1 /* Entity */,
 				FAF60A322838D32800B2CD48 /* SignInHomeViewController.swift */,
 				FAF60A362838E03B00B2CD48 /* EmailSignInViewController.swift */,
 				FAF60A332838D32800B2CD48 /* SignInHomeViewController.xib */,
@@ -494,6 +541,7 @@
 				FAD7C52B283A23F20093AF35 /* RestaurantViewController.swift in Sources */,
 				FAF60A172838CDEF00B2CD48 /* BaseViewController.swift in Sources */,
 				FAD7C5272839ED000093AF35 /* BaseTabBarController.swift in Sources */,
+				FA665A0A283B5A5E00E807F1 /* Constant.swift in Sources */,
 				FAF60A2A2838CF2100B2CD48 /* String.swift in Sources */,
 				FAF60A3B2838E14600B2CD48 /* UITextField.swift in Sources */,
 				FAF60A2C2838CF2100B2CD48 /* UINavigationBar.swift in Sources */,
@@ -501,18 +549,22 @@
 				FAD7C537283A26FD0093AF35 /* WritingViewController.swift in Sources */,
 				FA570AFA283A9E5100BA5049 /* SortingCell.swift in Sources */,
 				FAF60A282838CF2100B2CD48 /* Date.swift in Sources */,
+				FA665A04283B4EBD00E807F1 /* SignUpResponse.swift in Sources */,
 				FAF60A292838CF2100B2CD48 /* UIColor.swift in Sources */,
+				FA665A06283B561000E807F1 /* SignUpRequest.swift in Sources */,
 				FAF60A2D2838CF2100B2CD48 /* UIViewController.swift in Sources */,
 				FAF60A2B2838CF2100B2CD48 /* UIFont.swift in Sources */,
 				FAD7C53F283A27130093AF35 /* MypageViewController.swift in Sources */,
 				FAF60A1C2838CE7F00B2CD48 /* Device.swift in Sources */,
 				FA570AEB283A885300BA5049 /* RestaurantCell.swift in Sources */,
+				FABCF0A0283B5F70008D14F5 /* User.swift in Sources */,
 				FAF60A272838CF2100B2CD48 /* UIButton.swift in Sources */,
 				FA811D4F2839299000CA29AF /* SecondSignUpViewController.swift in Sources */,
 				FAF60A342838D32800B2CD48 /* SignInHomeViewController.swift in Sources */,
 				FAD7C542283A5A310093AF35 /* UINavigationItem.swift in Sources */,
 				FAF60A382838E03B00B2CD48 /* EmailSignInViewController.swift in Sources */,
 				FA811D4B28391EE400CA29AF /* FirstSignUpViewController.swift in Sources */,
+				FA665A08283B596100E807F1 /* SignUpDataManager.swift in Sources */,
 				FAF609FF2838B6DE00B2CD48 /* SceneDelegate.swift in Sources */,
 				FAF60A1A2838CE5000B2CD48 /* IndicatorView.swift in Sources */,
 			);
@@ -667,6 +719,8 @@
 				DEVELOPMENT_TEAM = 9738W25PF4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mangoplate/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라로 사진 찍기";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "앨범에서 사진 선택";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -696,6 +750,8 @@
 				DEVELOPMENT_TEAM = 9738W25PF4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mangoplate/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라로 사진 찍기";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "앨범에서 사진 선택";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

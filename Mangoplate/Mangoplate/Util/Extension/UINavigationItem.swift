@@ -31,11 +31,18 @@ extension UINavigationItem {
   }
   
   // 네비게이션바에 버튼 생성
-  func setNavigationItemButton(_ target: Any?, action: Selector?, symbolName: String, tintColor: UIColor) -> UIBarButtonItem {
+  func setNavigationItemButton(_ target: Any?, action: Selector?, symbolName: String?, imageName: String?, tintColor: UIColor) -> UIBarButtonItem {
     let button = UIButton(type: .system)
-    button.setImage(UIImage(systemName: symbolName), for: .normal)
+    if let symbolName = symbolName {
+      button.setImage(UIImage(systemName: symbolName), for: .normal)
+    }
+   
+    if let imageName = imageName {
+      button.setImage(UIImage(named: imageName), for: .normal)
+    }
     
     if let action = action {
+      print("action")
       button.addTarget(target, action: action, for: .touchUpInside)
     }
     button.tintColor = tintColor

@@ -11,10 +11,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstSignUpViewController" customModule="Mangoplate" customModuleProvider="target">
             <connections>
                 <outlet property="emailButton" destination="bwg-Yz-mF3" id="Kar-qz-Wkc"/>
+                <outlet property="emailCheckLabel" destination="ss0-w8-oyd" id="bRT-Lq-E5B"/>
                 <outlet property="emailTextField" destination="8ch-pG-3el" id="y1t-0C-Psw"/>
                 <outlet property="nextButton" destination="75R-Xa-UMk" id="WXP-86-VEj"/>
-                <outlet property="passwordCheckTextField" destination="shN-Kb-RkW" id="sBt-DO-vPR"/>
+                <outlet property="passwordSameCheckLabel" destination="ZHR-lt-Ym7" id="A0N-Kx-zNX"/>
                 <outlet property="passwordTextField" destination="8s5-MA-gSf" id="mdK-jy-Mby"/>
+                <outlet property="passwordValidCheckLabel" destination="CQE-vL-raO" id="JMH-Ln-11k"/>
+                <outlet property="rePasswordTextField" destination="shN-Kb-RkW" id="sBt-DO-vPR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,7 +33,7 @@
                     <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwg-Yz-mF3">
-                    <rect key="frame" x="60" y="152.5" width="294" height="50"/>
+                    <rect key="frame" x="60" y="157.5" width="294" height="50"/>
                     <color key="backgroundColor" red="0.93333333330000001" green="0.47450980390000003" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="vCl-EV-yV7"/>
@@ -40,19 +43,19 @@
                     <buttonConfiguration key="configuration" style="plain" title="이메일 인증하기"/>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8s5-MA-gSf">
-                    <rect key="frame" x="30" y="252.5" width="354" height="17"/>
+                    <rect key="frame" x="30" y="257.5" width="354" height="17"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호 확인" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="shN-Kb-RkW">
-                    <rect key="frame" x="30" y="343.5" width="354" height="17"/>
+                    <rect key="frame" x="30" y="348.5" width="354" height="17"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최소 6~12자, 영문, 숫자 포함" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvC-yk-33R">
-                    <rect key="frame" x="30" y="289.5" width="130" height="14"/>
+                    <rect key="frame" x="30" y="294.5" width="130" height="14"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="11"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -67,18 +70,39 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="다음"/>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일 형식이 올바르지 않습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ss0-w8-oyd">
+                    <rect key="frame" x="251" y="132.5" width="133" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.93333339689999995" green="0.52156865600000002" blue="0.19607841970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호를 다시 확인해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQE-vL-raO">
+                    <rect key="frame" x="265.5" y="294.5" width="118.5" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.93333339689999995" green="0.52156865600000002" blue="0.19607841970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호가 일치 하지 않습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHR-lt-Ym7">
+                    <rect key="frame" x="259.5" y="385.5" width="124.5" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.93333339689999995" green="0.52156865600000002" blue="0.19607841970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="bwg-Yz-mF3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="1xI-82-Fqq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8s5-MA-gSf" secondAttribute="trailing" constant="30" id="2G4-HO-avV"/>
+                <constraint firstItem="ss0-w8-oyd" firstAttribute="top" secondItem="8ch-pG-3el" secondAttribute="bottom" constant="20" id="2Hc-TR-LgO"/>
                 <constraint firstItem="kvC-yk-33R" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="6uf-C1-E8N"/>
                 <constraint firstItem="shN-Kb-RkW" firstAttribute="top" secondItem="kvC-yk-33R" secondAttribute="bottom" constant="40" id="Dpj-e5-b6o"/>
                 <constraint firstItem="kvC-yk-33R" firstAttribute="top" secondItem="8s5-MA-gSf" secondAttribute="bottom" constant="20" id="ERQ-cR-sJf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="shN-Kb-RkW" secondAttribute="trailing" constant="30" id="Ef5-P7-EyH"/>
-                <constraint firstItem="bwg-Yz-mF3" firstAttribute="top" secondItem="8ch-pG-3el" secondAttribute="bottom" constant="40" id="N39-SG-Tgo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ss0-w8-oyd" secondAttribute="trailing" constant="30" id="IkU-kh-7qi"/>
+                <constraint firstItem="bwg-Yz-mF3" firstAttribute="top" secondItem="8ch-pG-3el" secondAttribute="bottom" constant="45" id="N39-SG-Tgo"/>
                 <constraint firstItem="shN-Kb-RkW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="O6Y-J4-7UV"/>
+                <constraint firstItem="CQE-vL-raO" firstAttribute="top" secondItem="8s5-MA-gSf" secondAttribute="bottom" constant="20" id="YAc-F5-BPN"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8ch-pG-3el" secondAttribute="trailing" constant="30" id="Z1H-MR-2nl"/>
                 <constraint firstItem="8s5-MA-gSf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="b7l-lf-X5s"/>
                 <constraint firstAttribute="bottom" secondItem="75R-Xa-UMk" secondAttribute="bottom" id="d7X-ps-N2G"/>
@@ -88,6 +112,9 @@
                 <constraint firstItem="8ch-pG-3el" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="lYU-Au-0or"/>
                 <constraint firstItem="8ch-pG-3el" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="ljN-h1-FHj"/>
                 <constraint firstItem="75R-Xa-UMk" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="n7D-Jk-ubN"/>
+                <constraint firstItem="ZHR-lt-Ym7" firstAttribute="top" secondItem="shN-Kb-RkW" secondAttribute="bottom" constant="20" id="nN9-6J-2BY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CQE-vL-raO" secondAttribute="trailing" constant="30" id="waz-N6-PdX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZHR-lt-Ym7" secondAttribute="trailing" constant="30" id="xet-Bc-Aly"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="105.80357142857143"/>
         </view>
