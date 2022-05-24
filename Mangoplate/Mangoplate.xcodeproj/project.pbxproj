@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A46771D4B7A586133344DD1A /* Pods_Mangoplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6979BA6631E18AF3FCC36D51 /* Pods_Mangoplate.framework */; };
+		FA37E91F283CC857003FAE07 /* KakaoLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37E91E283CC857003FAE07 /* KakaoLoginRequest.swift */; };
 		FA4C1CA8283C822C0089CDC8 /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C1CA7283C822C0089CDC8 /* SignInRequest.swift */; };
 		FA4C1CAA283C82370089CDC8 /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C1CA9283C82370089CDC8 /* SignInResponse.swift */; };
 		FA4C1CAD283C83130089CDC8 /* SignInDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C1CAC283C83130089CDC8 /* SignInDataManager.swift */; };
@@ -68,6 +69,7 @@
 		2500C2350EEC545DDEBD7695 /* Pods-Mangoplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mangoplate.release.xcconfig"; path = "Target Support Files/Pods-Mangoplate/Pods-Mangoplate.release.xcconfig"; sourceTree = "<group>"; };
 		6979BA6631E18AF3FCC36D51 /* Pods_Mangoplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mangoplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9554EF98F437EAEB7FCE8E /* Pods-Mangoplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mangoplate.debug.xcconfig"; path = "Target Support Files/Pods-Mangoplate/Pods-Mangoplate.debug.xcconfig"; sourceTree = "<group>"; };
+		FA37E91E283CC857003FAE07 /* KakaoLoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginRequest.swift; sourceTree = "<group>"; };
 		FA4C1CA7283C822C0089CDC8 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
 		FA4C1CA9283C82370089CDC8 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
 		FA4C1CAC283C83130089CDC8 /* SignInDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataManager.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			children = (
 				FA4C1CA7283C822C0089CDC8 /* SignInRequest.swift */,
 				FA4C1CA9283C82370089CDC8 /* SignInResponse.swift */,
+				FA37E91E283CC857003FAE07 /* KakaoLoginRequest.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				FA4C1CAA283C82370089CDC8 /* SignInResponse.swift in Sources */,
 				FA665A06283B561000E807F1 /* SignUpRequest.swift in Sources */,
 				FAF60A2D2838CF2100B2CD48 /* UIViewController.swift in Sources */,
+				FA37E91F283CC857003FAE07 /* KakaoLoginRequest.swift in Sources */,
 				FAF60A2B2838CF2100B2CD48 /* UIFont.swift in Sources */,
 				FAD7C53F283A27130093AF35 /* MypageViewController.swift in Sources */,
 				FAF60A1C2838CE7F00B2CD48 /* Device.swift in Sources */,

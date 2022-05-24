@@ -48,14 +48,24 @@ class SignInHomeViewController: BaseViewController {
       } else {
         // 웹 브라우저 카카오 계정으로 로그인 성공
         print("loginWithKakaoAccount() success.")
+        
+        let kakaoLoginRequest = KakaoLoginRequest(access_token: oauthToken?.accessToken ?? "")
+        SignInDataManger().kakaoLogin(kakaoLoginRequest, viewController: self)
       }
     }
-    
   }
   
   @IBAction func jumpButtonTapped(_ sender: Any) {
     let tabBarVC = BaseTabBarController()
     tabBarVC.modalPresentationStyle = .fullScreen
     present(tabBarVC, animated: true)
+  }
+}
+
+extension SignInHomeViewController {
+  func successKakaoLogin() {
+    let vc = BaseTabBarController()
+    vc.modalPresentationStyle = .fullScreen
+    present(vc, animated: true)
   }
 }

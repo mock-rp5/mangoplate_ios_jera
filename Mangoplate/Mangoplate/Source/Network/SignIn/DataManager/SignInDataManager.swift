@@ -10,6 +10,8 @@ import UIKit
 import Alamofire
 
 class SignInDataManger {
+  
+  // 이메일 로그인
   func signIn(_ parameters: SignInRequest, viewController: EmailSignInViewController) {
     
     AF.request("\(Constant.DEV_BASE_URL)/app/users/email-login", method: .post, parameters: parameters)
@@ -27,7 +29,23 @@ class SignInDataManger {
         case .failure(let error):
           print(error.localizedDescription)
         }
+      }
+  }
+  
+  // 카카오 로그인
+  func kakaoLogin(_ parameters: KakaoLoginRequest, viewController: SignInHomeViewController) {
+    AF.request("\(Constant.DEV_BASE_URL)/app/users/kakao-login", method: .post, parameters: parameters)
+      .validate()
+      .responseDecodable(of: SignInResponse.self) { response in
+        switch response.result {
+        case .success(let response):
+          if response.isSuccess {
+            viewController.successKakaoLogin()
+          }
         
+        case .failure(let error):
+          print(error.localizedDescription)
+        }
       }
   }
 }
