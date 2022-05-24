@@ -7,22 +7,13 @@
 
 import Foundation
 
-//  {
-//      "isSuccess": true,
-//      "code": 1000,
-//      "message": "성공",
-//      "result": {
-//          "userId": 9
-//      }
-//  }
-
 struct SignUpResponse: Codable {
   var isSuccess: Bool
   var code: Int
   var message: String
-  var result: Result?
+  var result: SignUpResult?
 }
 
-struct Result: Codable {
+struct SignUpResult: Codable {
   var userId: Int
 }

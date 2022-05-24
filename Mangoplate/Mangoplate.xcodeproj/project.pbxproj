@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A46771D4B7A586133344DD1A /* Pods_Mangoplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6979BA6631E18AF3FCC36D51 /* Pods_Mangoplate.framework */; };
+		FA4C1CA8283C822C0089CDC8 /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C1CA7283C822C0089CDC8 /* SignInRequest.swift */; };
+		FA4C1CAA283C82370089CDC8 /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C1CA9283C82370089CDC8 /* SignInResponse.swift */; };
+		FA4C1CAD283C83130089CDC8 /* SignInDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C1CAC283C83130089CDC8 /* SignInDataManager.swift */; };
 		FA570AEB283A885300BA5049 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA570AE9283A885300BA5049 /* RestaurantCell.swift */; };
 		FA570AEC283A885300BA5049 /* RestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA570AEA283A885300BA5049 /* RestaurantCell.xib */; };
 		FA570AF5283A8BC200BA5049 /* BannerSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA570AF3283A8BC200BA5049 /* BannerSubCell.swift */; };
@@ -65,6 +68,9 @@
 		2500C2350EEC545DDEBD7695 /* Pods-Mangoplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mangoplate.release.xcconfig"; path = "Target Support Files/Pods-Mangoplate/Pods-Mangoplate.release.xcconfig"; sourceTree = "<group>"; };
 		6979BA6631E18AF3FCC36D51 /* Pods_Mangoplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mangoplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9554EF98F437EAEB7FCE8E /* Pods-Mangoplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mangoplate.debug.xcconfig"; path = "Target Support Files/Pods-Mangoplate/Pods-Mangoplate.debug.xcconfig"; sourceTree = "<group>"; };
+		FA4C1CA7283C822C0089CDC8 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
+		FA4C1CA9283C82370089CDC8 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
+		FA4C1CAC283C83130089CDC8 /* SignInDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataManager.swift; sourceTree = "<group>"; };
 		FA570AE9283A885300BA5049 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		FA570AEA283A885300BA5049 /* RestaurantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantCell.xib; sourceTree = "<group>"; };
 		FA570AF3283A8BC200BA5049 /* BannerSubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSubCell.swift; sourceTree = "<group>"; };
@@ -152,6 +158,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FA4C1CAB283C83000089CDC8 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C1CAC283C83130089CDC8 /* SignInDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		FA570AF1283A8AC100BA5049 /* Banner */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +198,8 @@
 		FA665A00283B4E4B00E807F1 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				FA4C1CA7283C822C0089CDC8 /* SignInRequest.swift */,
+				FA4C1CA9283C82370089CDC8 /* SignInResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -399,11 +415,12 @@
 		FAF60A312838D2DA00B2CD48 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				FA665A00283B4E4B00E807F1 /* Entity */,
 				FAF60A322838D32800B2CD48 /* SignInHomeViewController.swift */,
 				FAF60A362838E03B00B2CD48 /* EmailSignInViewController.swift */,
 				FAF60A332838D32800B2CD48 /* SignInHomeViewController.xib */,
 				FAF60A372838E03B00B2CD48 /* EmailSignInViewController.xib */,
+				FA4C1CAB283C83000089CDC8 /* DataManager */,
+				FA665A00283B4E4B00E807F1 /* Entity */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -543,6 +560,7 @@
 				FAD7C546283A799B0093AF35 /* BannerCell.swift in Sources */,
 				FABCF0A2283BDE5D008D14F5 /* EmailCheckRequest.swift in Sources */,
 				FAD7C52B283A23F20093AF35 /* RestaurantViewController.swift in Sources */,
+				FA4C1CA8283C822C0089CDC8 /* SignInRequest.swift in Sources */,
 				FAF60A172838CDEF00B2CD48 /* BaseViewController.swift in Sources */,
 				FAD7C5272839ED000093AF35 /* BaseTabBarController.swift in Sources */,
 				FA665A0A283B5A5E00E807F1 /* Constant.swift in Sources */,
@@ -555,6 +573,7 @@
 				FAF60A282838CF2100B2CD48 /* Date.swift in Sources */,
 				FA665A04283B4EBD00E807F1 /* SignUpResponse.swift in Sources */,
 				FAF60A292838CF2100B2CD48 /* UIColor.swift in Sources */,
+				FA4C1CAA283C82370089CDC8 /* SignInResponse.swift in Sources */,
 				FA665A06283B561000E807F1 /* SignUpRequest.swift in Sources */,
 				FAF60A2D2838CF2100B2CD48 /* UIViewController.swift in Sources */,
 				FAF60A2B2838CF2100B2CD48 /* UIFont.swift in Sources */,
@@ -565,6 +584,7 @@
 				FAF60A272838CF2100B2CD48 /* UIButton.swift in Sources */,
 				FA811D4F2839299000CA29AF /* SecondSignUpViewController.swift in Sources */,
 				FAF60A342838D32800B2CD48 /* SignInHomeViewController.swift in Sources */,
+				FA4C1CAD283C83130089CDC8 /* SignInDataManager.swift in Sources */,
 				FAD7C542283A5A310093AF35 /* UINavigationItem.swift in Sources */,
 				FAF60A382838E03B00B2CD48 /* EmailSignInViewController.swift in Sources */,
 				FA811D4B28391EE400CA29AF /* FirstSignUpViewController.swift in Sources */,

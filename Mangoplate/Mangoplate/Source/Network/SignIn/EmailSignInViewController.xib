@@ -10,8 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmailSignInViewController" customModule="Mangoplate" customModuleProvider="target">
             <connections>
+                <outlet property="emailCheckLabel" destination="Xdc-I0-INh" id="n1M-BP-ube"/>
                 <outlet property="emailTextField" destination="dJL-Td-fuL" id="G5l-RD-leu"/>
                 <outlet property="loginButton" destination="YgK-YR-GnG" id="Hey-gQ-sg0"/>
+                <outlet property="passwordCheckLabel" destination="ddf-kV-qAo" id="2gC-eI-U6c"/>
                 <outlet property="passwordTextField" destination="GnR-1f-xN5" id="2nc-qT-9Kh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -32,6 +34,12 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                 </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdc-I0-INh">
+                    <rect key="frame" x="384" y="176.5" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.93333339689999995" green="0.52156865600000002" blue="0.19607841970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgK-YR-GnG">
                     <rect key="frame" x="50" y="273.5" width="314" height="50"/>
                     <color key="backgroundColor" red="0.93333333333333335" green="0.47450980392156861" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -41,6 +49,9 @@
                     <color key="tintColor" red="0.99410217999999995" green="0.93536430599999998" blue="0.9421345592" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="로그인"/>
+                    <connections>
+                        <action selector="loginButtonTapped:" destination="-1" eventType="touchUpInside" id="UzU-kC-taz"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fL-de-cku">
                     <rect key="frame" x="214" y="338.5" width="108" height="28"/>
@@ -80,20 +91,30 @@
                     <color key="textColor" systemColor="systemGrayColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddf-kV-qAo">
+                    <rect key="frame" x="384" y="233.5" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.93333339689999995" green="0.52156865600000002" blue="0.19607841970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="dJL-Td-fuL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="DGS-Kh-se5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ddf-kV-qAo" secondAttribute="trailing" constant="30" id="F4u-ro-z6w"/>
                 <constraint firstItem="i6d-k1-nQZ" firstAttribute="top" secondItem="YgK-YR-GnG" secondAttribute="bottom" constant="15" id="I69-IT-42E"/>
                 <constraint firstItem="eer-eQ-J4w" firstAttribute="top" secondItem="YgK-YR-GnG" secondAttribute="bottom" constant="15" id="K5t-rk-KGy"/>
                 <constraint firstItem="4fL-de-cku" firstAttribute="top" secondItem="YgK-YR-GnG" secondAttribute="bottom" constant="15" id="Nfk-xe-Sm6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YgK-YR-GnG" secondAttribute="trailing" constant="50" id="R81-vl-Q8D"/>
+                <constraint firstItem="Xdc-I0-INh" firstAttribute="top" secondItem="dJL-Td-fuL" secondAttribute="bottom" constant="20" id="U4D-Rg-Xf1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GnR-1f-xN5" secondAttribute="trailing" constant="30" id="UQ9-yx-Fmx"/>
                 <constraint firstItem="GnR-1f-xN5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="VD0-Ew-7AT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dJL-Td-fuL" secondAttribute="trailing" constant="30" id="WkA-gT-j7x"/>
                 <constraint firstItem="dJL-Td-fuL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Wsm-Av-eoJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Xdc-I0-INh" secondAttribute="trailing" constant="30" id="ePd-0c-oeo"/>
                 <constraint firstItem="YgK-YR-GnG" firstAttribute="top" secondItem="GnR-1f-xN5" secondAttribute="bottom" constant="60" id="fMv-tL-tCH"/>
+                <constraint firstItem="ddf-kV-qAo" firstAttribute="top" secondItem="GnR-1f-xN5" secondAttribute="bottom" constant="20" id="kYQ-Fi-0LJ"/>
                 <constraint firstItem="i6d-k1-nQZ" firstAttribute="leading" secondItem="eer-eQ-J4w" secondAttribute="trailing" constant="5" id="nZ2-uT-H23"/>
                 <constraint firstItem="i6d-k1-nQZ" firstAttribute="centerX" secondItem="YgK-YR-GnG" secondAttribute="centerX" id="o8X-rW-qUO"/>
                 <constraint firstItem="4fL-de-cku" firstAttribute="leading" secondItem="i6d-k1-nQZ" secondAttribute="trailing" constant="5" id="rwO-Dd-c6r"/>

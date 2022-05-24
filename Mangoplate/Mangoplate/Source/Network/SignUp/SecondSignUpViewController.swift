@@ -132,7 +132,7 @@ extension SecondSignUpViewController: UIImagePickerControllerDelegate, UINavigat
 
 // MARK: - API
 extension SecondSignUpViewController {
-  func successSignUp(result: Result) {
+  func successSignUp(result: SignUpResult) {
     print("SignUpSuccess")
     print(result.userId)
     self.navigationController?.popToRootViewController(animated: false)

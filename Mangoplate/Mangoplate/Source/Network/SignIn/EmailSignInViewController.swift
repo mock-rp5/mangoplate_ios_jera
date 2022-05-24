@@ -13,6 +13,8 @@ class EmailSignInViewController: BaseViewController {
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
   @IBOutlet weak var loginButton: UIButton!
+  @IBOutlet weak var emailCheckLabel: UILabel!
+  @IBOutlet weak var passwordCheckLabel: UILabel!
   
   // MARK: - LifeCycle
   override func viewDidLoad() {
@@ -24,6 +26,8 @@ class EmailSignInViewController: BaseViewController {
     super.viewWillAppear(animated)
     setNavigationTitleEmpty()
     setNavigationTintColor(color: .mainOrange)
+    emailCheckLabel.text = ""
+    passwordCheckLabel.text = ""
   }
 
   // MARK: - Methods
@@ -33,7 +37,7 @@ class EmailSignInViewController: BaseViewController {
     loginButton.layer.cornerRadius = 25
     loginButton.isEnabled = false
     loginButton.setEnabledButtonColor()
-    
+   
     emailTextField.addBottomBorderWithColor(color: .mainLightGray, height: 1, width: 40)
     passwordTextField.addBottomBorderWithColor(color: .mainLightGray, height: 1, width: 40)
     
@@ -41,8 +45,8 @@ class EmailSignInViewController: BaseViewController {
     passwordTextField.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)
   }
   
+  // MARK: Actions
   @objc func textFieldEditingChanged(_ sender: UITextField) {
-    print("textFieldValueChanged")
     if emailTextField.text?.isExists == true, passwordTextField.text?.isExists == true{
       loginButton.isEnabled = true
       loginButton.setEnabledButtonColor()
@@ -57,4 +61,48 @@ class EmailSignInViewController: BaseViewController {
     navigationController?.pushViewController(vc, animated: true)
   }
   
+  @IBAction func loginButtonTapped(_ sender: UIButton) {
+    guard let email = emailTextField.text else { return }
+    guard let password = passwordTextField.text else { return }
+    let signInRequest = SignInRequest(email: email, password: password)
+    SignInDataManger().signIn(signInRequest, viewController: self)
+  }
+}
+
+extension EmailSignInViewController {
+  func successSignIn(jwtKey: String) {
+    emailTextField.removeAllSubLayers()
+    emailTextField.addBottomBorderWithColor(color: .mainOrange, height: 1, width: 5)
+    
+    passwordTextField.removeAllSubLayers()
+    passwordTextField.addBottomBorderWithColor(color: .mainOrange, height: 1, width: 5)
+    
+    emailCheckLabel.text = ""
+    passwordCheckLabel.text = ""
+    
+    UserDefaults.standard.set(jwtKey, forKey: "jwtKey") // jwtKey 기기에 저장
+    print(jwtKey)
+    
+    let vc = BaseTabBarController()
+    vc.modalPresentationStyle = .fullScreen
+    present(vc, animated: false)
+  }
+  
+  func failedSignIn(message: String, code: Int) {
+    print("failedSignIn")
+    print(code)
+    // 이메일을 입력하지 않았거나 계정이 없는경우
+    if code == 2011 || code == 3003 {
+      emailTextField.removeAllSubLayers()
+      emailTextField.addBottomBorderWithColor(color: .mainOrange, height: 1, width: 5)
+      emailCheckLabel.text = message
+    }
+    
+    // 비밀번호를 입력하지 않거나 데이터베이스 에러가 발생한 경우
+    else if code == 2012 || code == 4000 {
+      passwordTextField.removeAllSubLayers()
+      passwordTextField.addBottomBorderWithColor(color: .mainOrange, height: 1, width: 5)
+      passwordCheckLabel.text = message
+    }
+  }
 }
