@@ -74,7 +74,6 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
       
     default:
       return UICollectionViewCell()
-    
     }
   }
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
