@@ -69,6 +69,10 @@
 		FAF60A382838E03B00B2CD48 /* EmailSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF60A362838E03B00B2CD48 /* EmailSignInViewController.swift */; };
 		FAF60A392838E03B00B2CD48 /* EmailSignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF60A372838E03B00B2CD48 /* EmailSignInViewController.xib */; };
 		FAF60A3B2838E14600B2CD48 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF60A3A2838E14600B2CD48 /* UITextField.swift */; };
+		FAF8FED0283DFD5100AE74AF /* MyPageSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF8FECE283DFD5100AE74AF /* MyPageSettingsViewController.swift */; };
+		FAF8FED1283DFD5100AE74AF /* MyPageSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF8FECF283DFD5100AE74AF /* MyPageSettingsViewController.xib */; };
+		FAF8FED8283E143600AE74AF /* MyPageSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF8FED6283E143600AE74AF /* MyPageSettingsCell.swift */; };
+		FAF8FED9283E143600AE74AF /* MyPageSettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF8FED7283E143600AE74AF /* MyPageSettingsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,6 +145,10 @@
 		FAF60A362838E03B00B2CD48 /* EmailSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignInViewController.swift; sourceTree = "<group>"; };
 		FAF60A372838E03B00B2CD48 /* EmailSignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailSignInViewController.xib; sourceTree = "<group>"; };
 		FAF60A3A2838E14600B2CD48 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		FAF8FECE283DFD5100AE74AF /* MyPageSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingsViewController.swift; sourceTree = "<group>"; };
+		FAF8FECF283DFD5100AE74AF /* MyPageSettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageSettingsViewController.xib; sourceTree = "<group>"; };
+		FAF8FED6283E143600AE74AF /* MyPageSettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingsCell.swift; sourceTree = "<group>"; };
+		FAF8FED7283E143600AE74AF /* MyPageSettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageSettingsCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,9 +186,11 @@
 				FA37E921283CD043003FAE07 /* MyPageProfileCell.swift */,
 				FA37E925283CF606003FAE07 /* MyPageMainCell.swift */,
 				FA1DE1DE283CFE0300A7EAEC /* MyPageTimelineCell.swift */,
+				FAF8FED6283E143600AE74AF /* MyPageSettingsCell.swift */,
 				FA37E922283CD043003FAE07 /* MyPageProfileCell.xib */,
 				FA37E926283CF606003FAE07 /* MyPageMainCell.xib */,
 				FA1DE1DF283CFE0300A7EAEC /* MyPageTimelineCell.xib */,
+				FAF8FED7283E143600AE74AF /* MyPageSettingsCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -298,9 +308,8 @@
 		FAD7C530283A269D0093AF35 /* Mypage */ = {
 			isa = PBXGroup;
 			children = (
+				FAF8FECD283DFD3100AE74AF /* Controller */,
 				FA37E920283CD01C003FAE07 /* Cell */,
-				FAD7C53D283A27130093AF35 /* MypageViewController.swift */,
-				FAD7C53E283A27130093AF35 /* MypageViewController.xib */,
 			);
 			path = Mypage;
 			sourceTree = "<group>";
@@ -454,6 +463,17 @@
 			path = SignIn;
 			sourceTree = "<group>";
 		};
+		FAF8FECD283DFD3100AE74AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAD7C53D283A27130093AF35 /* MypageViewController.swift */,
+				FAF8FECE283DFD5100AE74AF /* MyPageSettingsViewController.swift */,
+				FAD7C53E283A27130093AF35 /* MypageViewController.xib */,
+				FAF8FECF283DFD5100AE74AF /* MyPageSettingsViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -522,9 +542,11 @@
 				FAF60A062838B6E000B2CD48 /* Assets.xcassets in Resources */,
 				FA570AFB283A9E5100BA5049 /* SortingCell.xib in Resources */,
 				FAF60A392838E03B00B2CD48 /* EmailSignInViewController.xib in Resources */,
+				FAF8FED1283DFD5100AE74AF /* MyPageSettingsViewController.xib in Resources */,
 				FA1DE1E1283CFE0300A7EAEC /* MyPageTimelineCell.xib in Resources */,
 				FAD7C52C283A23F20093AF35 /* RestaurantViewController.xib in Resources */,
 				FA37E924283CD043003FAE07 /* MyPageProfileCell.xib in Resources */,
+				FAF8FED9283E143600AE74AF /* MyPageSettingsCell.xib in Resources */,
 				FAD7C540283A27130093AF35 /* MypageViewController.xib in Resources */,
 				FA570AEC283A885300BA5049 /* RestaurantCell.xib in Resources */,
 				FAF60A042838B6DE00B2CD48 /* Main.storyboard in Resources */,
@@ -612,6 +634,7 @@
 				FAF60A2D2838CF2100B2CD48 /* UIViewController.swift in Sources */,
 				FA37E91F283CC857003FAE07 /* KakaoLoginRequest.swift in Sources */,
 				FAF60A2B2838CF2100B2CD48 /* UIFont.swift in Sources */,
+				FAF8FED8283E143600AE74AF /* MyPageSettingsCell.swift in Sources */,
 				FAD7C53F283A27130093AF35 /* MypageViewController.swift in Sources */,
 				FAF60A1C2838CE7F00B2CD48 /* Device.swift in Sources */,
 				FA570AEB283A885300BA5049 /* RestaurantCell.swift in Sources */,
@@ -620,6 +643,7 @@
 				FA811D4F2839299000CA29AF /* SecondSignUpViewController.swift in Sources */,
 				FAF60A342838D32800B2CD48 /* SignInHomeViewController.swift in Sources */,
 				FA4C1CAD283C83130089CDC8 /* SignInDataManager.swift in Sources */,
+				FAF8FED0283DFD5100AE74AF /* MyPageSettingsViewController.swift in Sources */,
 				FAD7C542283A5A310093AF35 /* UINavigationItem.swift in Sources */,
 				FAF60A382838E03B00B2CD48 /* EmailSignInViewController.swift in Sources */,
 				FA811D4B28391EE400CA29AF /* FirstSignUpViewController.swift in Sources */,

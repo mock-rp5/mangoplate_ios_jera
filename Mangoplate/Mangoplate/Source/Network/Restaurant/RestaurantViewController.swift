@@ -27,6 +27,7 @@ class RestaurantViewController: BaseViewController {
   
   // MARK: - Methods
   private func setNavigationBar() {
+    self.navigationController?.navigationBar.isTransparent = true
     self.navigationItem.setLeftsubTitleAndTitle(title: "전체지역", subTitle: "지금 보고있는 지역은")
     
     let searchButton = self.navigationItem.setNavigationItemButton(nil, action: nil, symbolName: "magnifyingglass", imageName: nil, tintColor: .darkGray)
@@ -85,7 +86,7 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
       return CGSize(width: collectionView.frame.size.width, height: 130)
       
     case 2:
-      return CGSize(width: collectionView.frame.size.width / 2 - 20, height: collectionView.frame.size.width / 2 + 80)
+      return CGSize(width: collectionView.frame.size.width / 2 - 15, height: collectionView.frame.size.width / 2 + 80)
       
     default:
       return CGSize(width: 100, height: 100)

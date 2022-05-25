@@ -18,6 +18,9 @@ class BaseTabBarController: TabmanViewController {
   let newsVC = NewsViewController()
   let mypageVC = MypageViewController()
   
+  static let tabBar = TMBar.TabBar()
+  static let lineBar = TMBar.LineBar()
+  
   var viewControllers: [UIViewController] = []
   let titles = ["맛집찾기", "망고픽", "", "소식", "내정보"]
   let images = ["tabbar1", "tabbar2", "tabbar3", "tabbar4", "tabbar5"]
@@ -43,22 +46,31 @@ class BaseTabBarController: TabmanViewController {
     self.isScrollEnabled = false
     
     // 커스텀 탭바
-    let tabBar = TMBar.TabBar()
-    tabBar.backgroundView.style = .blur(style: .light)
-    tabBar.buttons.customize { button in
+    BaseTabBarController.tabBar.backgroundView.style = .blur(style: .light)
+    BaseTabBarController.tabBar.buttons.customize { button in
       button.tintColor = .mainLightGray
       button.selectedTintColor = .mainOrange
       button.font = UIFont.systemFont(ofSize: 10 , weight: .semibold)
     }
     
     // 라인바
-    let lineBar = TMBar.LineBar()
-    lineBar.indicator.tintColor = .mainOrange
-    lineBar.backgroundColor = .mainLightGray
+    BaseTabBarController.lineBar.indicator.tintColor = .mainOrange
+    BaseTabBarController.lineBar.backgroundColor = .mainLightGray
    
-    addBar(tabBar, dataSource: self, at: .bottom)
-    addBar(lineBar, dataSource: self, at: .bottom)
+    addBar(BaseTabBarController.tabBar, dataSource: self, at: .bottom)
+    addBar(BaseTabBarController.lineBar, dataSource: self, at: .bottom)
   }
+  
+  static func hideTabBar() {
+    BaseTabBarController.lineBar.isHidden = true
+    BaseTabBarController.tabBar.isHidden = true
+  }
+  
+  static func showTabBar() {
+    BaseTabBarController.lineBar.isHidden = false
+    BaseTabBarController.tabBar.isHidden = false
+  }
+  
 }
 
 // MARK: - PageboyViewControllerDataSource, TMBarDataSource

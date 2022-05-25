@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MypageViewController: UIViewController {
+class MypageViewController: BaseViewController {
 
   // MARK: - Properties
   @IBOutlet weak var myPageTableView: UITableView!
@@ -37,8 +37,15 @@ class MypageViewController: UIViewController {
     setUI()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    BaseTabBarController.showTabBar()
+    setNavigationTitle(title: "", color: .clear)
+  }
+  
   // MARK: - Methods
   private func setUI() {
+    self.navigationController?.navigationBar.isTransparent = true
     let bellButton = navigationItem.setNavigationItemButton(nil, action: nil, symbolName: "bell", imageName: nil, tintColor: .darkGray)
     self.navigationItem.rightBarButtonItems = [bellButton]
     
@@ -115,6 +122,16 @@ extension MypageViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
     view.backgroundColor = .mainLightGray2
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    // 설정 셀 클릭
+    if indexPath.section == 5 {
+      BaseTabBarController.hideTabBar()  // 탭바 숨김
+      let vc = MyPageSettingsViewController()
+      self.navigationController?.pushViewController(vc, animated: true)
+    }
   }
   
   
