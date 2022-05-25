@@ -24,6 +24,8 @@
 		FA570AF6283A8BC200BA5049 /* BannerSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA570AF4283A8BC200BA5049 /* BannerSubCell.xib */; };
 		FA570AFA283A9E5100BA5049 /* SortingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA570AF8283A9E5100BA5049 /* SortingCell.swift */; };
 		FA570AFB283A9E5100BA5049 /* SortingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA570AF9283A9E5100BA5049 /* SortingCell.xib */; };
+		FA5C5C75283E61CE0071C7BF /* TopListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5C5C73283E61CE0071C7BF /* TopListCell.swift */; };
+		FA5C5C76283E61CE0071C7BF /* TopListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5C5C74283E61CE0071C7BF /* TopListCell.xib */; };
 		FA665A04283B4EBD00E807F1 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA665A03283B4EBD00E807F1 /* SignUpResponse.swift */; };
 		FA665A06283B561000E807F1 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA665A05283B561000E807F1 /* SignUpRequest.swift */; };
 		FA665A08283B596100E807F1 /* SignUpDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA665A07283B596100E807F1 /* SignUpDataManager.swift */; };
@@ -105,6 +107,8 @@
 		FA570AF4283A8BC200BA5049 /* BannerSubCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerSubCell.xib; sourceTree = "<group>"; };
 		FA570AF8283A9E5100BA5049 /* SortingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingCell.swift; sourceTree = "<group>"; };
 		FA570AF9283A9E5100BA5049 /* SortingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortingCell.xib; sourceTree = "<group>"; };
+		FA5C5C73283E61CE0071C7BF /* TopListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListCell.swift; sourceTree = "<group>"; };
+		FA5C5C74283E61CE0071C7BF /* TopListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopListCell.xib; sourceTree = "<group>"; };
 		FA665A03283B4EBD00E807F1 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
 		FA665A05283B561000E807F1 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
 		FA665A07283B596100E807F1 /* SignUpDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDataManager.swift; sourceTree = "<group>"; };
@@ -522,8 +526,10 @@
 			children = (
 				FAF8FEE9283E280F00AE74AF /* EATDealCell.swift */,
 				FAF8FEED283E38D800AE74AF /* StoryCell.swift */,
+				FA5C5C73283E61CE0071C7BF /* TopListCell.swift */,
 				FAF8FEEA283E280F00AE74AF /* EATDealCell.xib */,
 				FAF8FEEE283E38D800AE74AF /* StoryCell.xib */,
+				FA5C5C74283E61CE0071C7BF /* TopListCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -610,6 +616,7 @@
 				FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */,
 				FAD7C534283A26F00093AF35 /* MangoPickViewController.xib in Resources */,
 				FAF8FEF0283E38D800AE74AF /* StoryCell.xib in Resources */,
+				FA5C5C76283E61CE0071C7BF /* TopListCell.xib in Resources */,
 				FAF8FEDE283E1A9C00AE74AF /* EATDealViewController.xib in Resources */,
 				FAD7C538283A26FD0093AF35 /* WritingViewController.xib in Resources */,
 				FAF8FEE2283E1AAA00AE74AF /* StoryViewController.xib in Resources */,
@@ -685,6 +692,7 @@
 				FAF60A2C2838CF2100B2CD48 /* UINavigationBar.swift in Sources */,
 				FA37E923283CD043003FAE07 /* MyPageProfileCell.swift in Sources */,
 				FA37E927283CF606003FAE07 /* MyPageMainCell.swift in Sources */,
+				FA5C5C75283E61CE0071C7BF /* TopListCell.swift in Sources */,
 				FAF609FD2838B6DE00B2CD48 /* AppDelegate.swift in Sources */,
 				FAD7C537283A26FD0093AF35 /* WritingViewController.swift in Sources */,
 				FA570AFA283A9E5100BA5049 /* SortingCell.swift in Sources */,
