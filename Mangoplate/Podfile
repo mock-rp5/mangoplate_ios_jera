@@ -8,6 +8,7 @@ target 'Mangoplate' do
   pod 'KakaoSDKAuth' # 카카오 로그인
   pod 'KakaoSDKUser'
   pod 'SnapKit'
+  pod 'Tabman'
   # Pods for Mangoplate
 
 end

@@ -7,15 +7,23 @@
 
 import Foundation
 import UIKit
+import Tabman
+import Pageboy
 
-class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
-  
+class BaseTabBarController: TabmanViewController {
+  // MARK: - Properties
   let restaurantVC = RestaurantViewController()
   let mangoPickVC = MangoPickViewController()
   let writingVC = WritingViewController()
   let newsVC = NewsViewController()
   let mypageVC = MypageViewController()
   
+  var viewControllers: [UIViewController] = []
+  let titles = ["맛집찾기", "망고픽", "", "소식", "내정보"]
+  let images = ["tabbar1", "tabbar2", "tabbar3", "tabbar4", "tabbar5"]
+  let selectedImages = ["select_tabbar1", "select_tabbar2", "", "select_tabbar4", "select_tabbar5"]
+  
+  // MARK: LifeCycle
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -25,18 +33,54 @@ class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
     let fourthVC = UINavigationController(rootViewController: newsVC)
     let fifthVC = UINavigationController(rootViewController: mypageVC)
     
-    firstVC.tabBarItem = UITabBarItem(title: "맛집찾기", image: UIImage(named: "tabbar1"), selectedImage: UIImage(named: "select_tabbar1"))
-    secondVC.tabBarItem = UITabBarItem(title: "망고픽", image: UIImage(named: "tabbar2"), selectedImage: UIImage(named: "select_tabbar2"))
-    thirdVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "tabbar3"), selectedImage: nil)
-    fourthVC.tabBarItem = UITabBarItem(title: "소식", image: UIImage(named: "tabbar4"), selectedImage: UIImage(named: "select_tabbar4"))
-    fifthVC.tabBarItem = UITabBarItem(title: "내정보", image: UIImage(named: "tabbar5"), selectedImage: UIImage(named: "select_tabbar5"))
+    viewControllers.append(firstVC)
+    viewControllers.append(secondVC)
+    viewControllers.append(thirdVC)
+    viewControllers.append(fourthVC)
+    viewControllers.append(fifthVC)
     
+    self.dataSource = self
+    self.isScrollEnabled = false
     
-    self.viewControllers = [firstVC, secondVC, thirdVC, fourthVC, fifthVC]
-    self.delegate = self
+    // 커스텀 탭바
+    let tabBar = TMBar.TabBar()
+    tabBar.backgroundView.style = .blur(style: .light)
+    tabBar.buttons.customize { button in
+      button.tintColor = .mainLightGray
+      button.selectedTintColor = .mainOrange
+      button.font = UIFont.systemFont(ofSize: 10 , weight: .semibold)
+    }
     
-    UITabBar.appearance().tintColor = .mainOrange
-    UITabBar.appearance().isTranslucent = false
-    UITabBar.appearance().backgroundColor = .white
+    // 라인바
+    let lineBar = TMBar.LineBar()
+    lineBar.indicator.tintColor = .mainOrange
+    lineBar.backgroundColor = .mainLightGray
+   
+    addBar(tabBar, dataSource: self, at: .bottom)
+    addBar(lineBar, dataSource: self, at: .bottom)
   }
+}
+
+// MARK: - PageboyViewControllerDataSource, TMBarDataSource
+extension BaseTabBarController: PageboyViewControllerDataSource, TMBarDataSource {
+  func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
+    return viewControllers.count
+  }
+  
+  func viewController(for pageboyViewController: PageboyViewController, at index: PageboyViewController.PageIndex) -> UIViewController? {
+    return viewControllers[index]
+  }
+  
+  func defaultPage(for pageboyViewController: PageboyViewController) -> PageboyViewController.Page? {
+    return nil
+  }
+  
+  func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
+    let item = TMBarItem(title: titles[index])
+    item.image = UIImage(named: images[index])
+    item.selectedImage = UIImage(named: selectedImages[index])
+    return item
+  }
+  
+  
 }
