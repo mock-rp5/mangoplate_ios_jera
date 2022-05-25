@@ -73,6 +73,12 @@
 		FAF8FED1283DFD5100AE74AF /* MyPageSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF8FECF283DFD5100AE74AF /* MyPageSettingsViewController.xib */; };
 		FAF8FED8283E143600AE74AF /* MyPageSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF8FED6283E143600AE74AF /* MyPageSettingsCell.swift */; };
 		FAF8FED9283E143600AE74AF /* MyPageSettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF8FED7283E143600AE74AF /* MyPageSettingsCell.xib */; };
+		FAF8FEDD283E1A9C00AE74AF /* EATDealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF8FEDB283E1A9C00AE74AF /* EATDealViewController.swift */; };
+		FAF8FEDE283E1A9C00AE74AF /* EATDealViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF8FEDC283E1A9C00AE74AF /* EATDealViewController.xib */; };
+		FAF8FEE1283E1AAA00AE74AF /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF8FEDF283E1AAA00AE74AF /* StoryViewController.swift */; };
+		FAF8FEE2283E1AAA00AE74AF /* StoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF8FEE0283E1AAA00AE74AF /* StoryViewController.xib */; };
+		FAF8FEE5283E1AB600AE74AF /* TopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF8FEE3283E1AB600AE74AF /* TopListViewController.swift */; };
+		FAF8FEE6283E1AB600AE74AF /* TopListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF8FEE4283E1AB600AE74AF /* TopListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,6 +155,12 @@
 		FAF8FECF283DFD5100AE74AF /* MyPageSettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageSettingsViewController.xib; sourceTree = "<group>"; };
 		FAF8FED6283E143600AE74AF /* MyPageSettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingsCell.swift; sourceTree = "<group>"; };
 		FAF8FED7283E143600AE74AF /* MyPageSettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageSettingsCell.xib; sourceTree = "<group>"; };
+		FAF8FEDB283E1A9C00AE74AF /* EATDealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EATDealViewController.swift; sourceTree = "<group>"; };
+		FAF8FEDC283E1A9C00AE74AF /* EATDealViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EATDealViewController.xib; sourceTree = "<group>"; };
+		FAF8FEDF283E1AAA00AE74AF /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
+		FAF8FEE0283E1AAA00AE74AF /* StoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryViewController.xib; sourceTree = "<group>"; };
+		FAF8FEE3283E1AB600AE74AF /* TopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListViewController.swift; sourceTree = "<group>"; };
+		FAF8FEE4283E1AB600AE74AF /* TopListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,9 +283,8 @@
 		FAD7C528283A23CA0093AF35 /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
+				FAF8FEE7283E1B9200AE74AF /* Controller */,
 				FAD7C543283A79830093AF35 /* Cell */,
-				FAD7C529283A23F20093AF35 /* RestaurantViewController.swift */,
-				FAD7C52A283A23F20093AF35 /* RestaurantViewController.xib */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";
@@ -281,8 +292,7 @@
 		FAD7C52D283A26650093AF35 /* MangoPick */ = {
 			isa = PBXGroup;
 			children = (
-				FAD7C531283A26F00093AF35 /* MangoPickViewController.swift */,
-				FAD7C532283A26F00093AF35 /* MangoPickViewController.xib */,
+				FAF8FEDA283E1A6600AE74AF /* Controller */,
 			);
 			path = MangoPick;
 			sourceTree = "<group>";
@@ -474,6 +484,30 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		FAF8FEDA283E1A6600AE74AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAD7C531283A26F00093AF35 /* MangoPickViewController.swift */,
+				FAF8FEDB283E1A9C00AE74AF /* EATDealViewController.swift */,
+				FAF8FEDF283E1AAA00AE74AF /* StoryViewController.swift */,
+				FAF8FEE3283E1AB600AE74AF /* TopListViewController.swift */,
+				FAD7C532283A26F00093AF35 /* MangoPickViewController.xib */,
+				FAF8FEDC283E1A9C00AE74AF /* EATDealViewController.xib */,
+				FAF8FEE0283E1AAA00AE74AF /* StoryViewController.xib */,
+				FAF8FEE4283E1AB600AE74AF /* TopListViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FAF8FEE7283E1B9200AE74AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAD7C529283A23F20093AF35 /* RestaurantViewController.swift */,
+				FAD7C52A283A23F20093AF35 /* RestaurantViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -542,6 +576,7 @@
 				FAF60A062838B6E000B2CD48 /* Assets.xcassets in Resources */,
 				FA570AFB283A9E5100BA5049 /* SortingCell.xib in Resources */,
 				FAF60A392838E03B00B2CD48 /* EmailSignInViewController.xib in Resources */,
+				FAF8FEE6283E1AB600AE74AF /* TopListViewController.xib in Resources */,
 				FAF8FED1283DFD5100AE74AF /* MyPageSettingsViewController.xib in Resources */,
 				FA1DE1E1283CFE0300A7EAEC /* MyPageTimelineCell.xib in Resources */,
 				FAD7C52C283A23F20093AF35 /* RestaurantViewController.xib in Resources */,
@@ -553,7 +588,9 @@
 				FA37E928283CF606003FAE07 /* MyPageMainCell.xib in Resources */,
 				FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */,
 				FAD7C534283A26F00093AF35 /* MangoPickViewController.xib in Resources */,
+				FAF8FEDE283E1A9C00AE74AF /* EATDealViewController.xib in Resources */,
 				FAD7C538283A26FD0093AF35 /* WritingViewController.xib in Resources */,
+				FAF8FEE2283E1AAA00AE74AF /* StoryViewController.xib in Resources */,
 				FAD7C547283A799B0093AF35 /* BannerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,6 +650,7 @@
 				FAD7C53B283A27080093AF35 /* NewsViewController.swift in Sources */,
 				FAD7C546283A799B0093AF35 /* BannerCell.swift in Sources */,
 				FABCF0A2283BDE5D008D14F5 /* EmailCheckRequest.swift in Sources */,
+				FAF8FEE1283E1AAA00AE74AF /* StoryViewController.swift in Sources */,
 				FAD7C52B283A23F20093AF35 /* RestaurantViewController.swift in Sources */,
 				FA4C1CA8283C822C0089CDC8 /* SignInRequest.swift in Sources */,
 				FAF60A172838CDEF00B2CD48 /* BaseViewController.swift in Sources */,
@@ -643,6 +681,8 @@
 				FA811D4F2839299000CA29AF /* SecondSignUpViewController.swift in Sources */,
 				FAF60A342838D32800B2CD48 /* SignInHomeViewController.swift in Sources */,
 				FA4C1CAD283C83130089CDC8 /* SignInDataManager.swift in Sources */,
+				FAF8FEE5283E1AB600AE74AF /* TopListViewController.swift in Sources */,
+				FAF8FEDD283E1A9C00AE74AF /* EATDealViewController.swift in Sources */,
 				FAF8FED0283DFD5100AE74AF /* MyPageSettingsViewController.swift in Sources */,
 				FAD7C542283A5A310093AF35 /* UINavigationItem.swift in Sources */,
 				FAF60A382838E03B00B2CD48 /* EmailSignInViewController.swift in Sources */,
