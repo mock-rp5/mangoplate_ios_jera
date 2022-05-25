@@ -123,3 +123,35 @@
 </div>
 </details>
 
+
+
+
+</br>
+<details>
+<summary>5일차_2022.05.25 (수)</summary>
+<div markdown="1">
+
+```
+1. 구현한 기능
+	- 탭바 위에 주황 바가 따라다니는 커스텀 탭바 구현(1차 피드백 요구사항) (100%)
+	- 내정보 - 설정 UI (100%)
+	- 망고픽 - EAT딜 UI (100%)
+	- 망고픽 - 스토리 UI (100%)
+	- 망고픽 - Top리스트 UI (100%)
+
+2. 발생한 이슈
+	- 주황색 뷰가 따라다니는 커스텀 탭바 구현
+		- Tabman 라이브러리의 LineBar 사용
+	
+	- 커스텀 탭바라 hidesBottomBarWhenPushed가 동작하지 않음
+		- BaseTabBarController에 탭바를 static으로 선언해 외부에서 접근하여 hide할 수 있게 구현
+	
+	- ImageView의 이미지가 밝은 경우, 위에 올린 흰색 글씨가 보이지 않음
+		- ImageView밑에 검정 UIView를 깔고 ImageView에 alpha를 조절하여 어둡게 바꿈
+
+```
+<img width="200" src="./image/5-1.png"> <img width="200" src="./image/5-2.png"> <img width="200" src="./image/5-3.png"> <img width="200" src="./image/5-4.png"> 
+
+</div>
+</details>
+
