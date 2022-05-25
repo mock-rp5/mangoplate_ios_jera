@@ -16,8 +16,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="355" height="245"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EATDealImageView2" translatesAutoresizingMaskIntoConstraints="NO" id="sqa-Df-Iyt">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8hi-UY-l7Q">
+                        <rect key="frame" x="0.0" y="0.0" width="355" height="160"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EATDealImageView2" translatesAutoresizingMaskIntoConstraints="NO" id="sqa-Df-Iyt">
                         <rect key="frame" x="0.0" y="0.0" width="355" height="159.5"/>
+                        <color key="backgroundColor" red="0.21666399750000001" green="0.21880918560000001" blue="0.21880918560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[위치] 식당이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdJ-kX-4y1">
                         <rect key="frame" x="10" y="172.5" width="118" height="23"/>
@@ -91,8 +96,12 @@
                     <constraint firstItem="8pP-DZ-0BN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5RO-un-jDV"/>
                     <constraint firstItem="hpv-wz-TiN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="0.79" id="6Cu-iR-tcg"/>
                     <constraint firstItem="jRd-ES-hzH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="CE5-bH-12a"/>
+                    <constraint firstItem="8hi-UY-l7Q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="MTY-SU-exU"/>
+                    <constraint firstItem="8hi-UY-l7Q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="PvF-cO-pSv"/>
                     <constraint firstItem="8pP-DZ-0BN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Rhn-An-Iyf"/>
                     <constraint firstAttribute="trailing" secondItem="IVg-gi-0L6" secondAttribute="trailing" constant="15" id="VXJ-fz-kqD"/>
+                    <constraint firstItem="8hi-UY-l7Q" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.653061" id="Zaw-xc-vkq"/>
+                    <constraint firstAttribute="trailing" secondItem="8hi-UY-l7Q" secondAttribute="trailing" id="ZpR-co-vRJ"/>
                     <constraint firstItem="sqa-Df-Iyt" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.65" id="aAc-hS-lQC"/>
                     <constraint firstAttribute="trailing" secondItem="Thc-Av-Hq3" secondAttribute="trailing" constant="15" id="ecO-n2-cnB"/>
                     <constraint firstItem="hpv-wz-TiN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eg4-3H-Wko"/>
@@ -113,7 +122,7 @@
                 <outlet property="salePriceLabel" destination="Thc-Av-Hq3" id="Ulv-ig-afb"/>
                 <outlet property="titleLabel" destination="fdJ-kX-4y1" id="zgE-Nu-ERU"/>
             </connections>
-            <point key="canvasLocation" x="132.60869565217394" y="153.68303571428569"/>
+            <point key="canvasLocation" x="132.60869565217394" y="153.01339285714286"/>
         </tableViewCell>
     </objects>
     <resources>

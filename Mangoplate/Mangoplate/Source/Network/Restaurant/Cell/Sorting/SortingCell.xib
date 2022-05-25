@@ -12,17 +12,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sortingCell" id="gTV-IL-0wX" customClass="SortingCell" customModule="Mangoplate" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="363" height="125"/>
+            <rect key="frame" x="0.0" y="0.0" width="363" height="118"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="363" height="125"/>
+                <rect key="frame" x="0.0" y="0.0" width="363" height="118"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rBt-cP-xEb">
-                        <rect key="frame" x="0.0" y="0.0" width="363" height="37.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="363" height="47"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdn-yh-7cM">
-                                <rect key="frame" x="12" y="3.5" width="71.5" height="31"/>
+                                <rect key="frame" x="12" y="8" width="71.5" height="31"/>
                                 <color key="tintColor" systemColor="systemGrayColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -38,7 +38,7 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFS-hL-gFo">
-                                <rect key="frame" x="219.5" y="6.5" width="67.5" height="25"/>
+                                <rect key="frame" x="219.5" y="11" width="67.5" height="25"/>
                                 <color key="backgroundColor" red="0.86274516580000005" green="0.86666667460000002" blue="0.86666667460000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="dNT-TK-rqM"/>
@@ -57,7 +57,7 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6QT-2g-F9h">
-                                <rect key="frame" x="295" y="6.5" width="58" height="25"/>
+                                <rect key="frame" x="295" y="11" width="58" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="E9v-lo-rJj"/>
                                 </constraints>
@@ -86,7 +86,7 @@
                         </constraints>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reviewBanner" translatesAutoresizingMaskIntoConstraints="NO" id="IP7-GN-rwv">
-                        <rect key="frame" x="0.0" y="37.5" width="363" height="87.5"/>
+                        <rect key="frame" x="0.0" y="47" width="363" height="71"/>
                     </imageView>
                 </subviews>
             </view>
@@ -96,17 +96,17 @@
                 <constraint firstItem="rBt-cP-xEb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Dbs-7X-xjm"/>
                 <constraint firstAttribute="trailing" secondItem="rBt-cP-xEb" secondAttribute="trailing" id="HId-XW-1MB"/>
                 <constraint firstItem="IP7-GN-rwv" firstAttribute="top" secondItem="rBt-cP-xEb" secondAttribute="bottom" id="gpa-sg-ofZ"/>
-                <constraint firstItem="IP7-GN-rwv" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.7" id="hE9-qE-biE"/>
+                <constraint firstItem="IP7-GN-rwv" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.6" id="hE9-qE-biE"/>
                 <constraint firstAttribute="trailing" secondItem="IP7-GN-rwv" secondAttribute="trailing" id="oOe-gO-3aL"/>
-                <constraint firstItem="rBt-cP-xEb" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.3" id="phW-D5-kiq"/>
+                <constraint firstItem="rBt-cP-xEb" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.4" id="phW-D5-kiq"/>
                 <constraint firstItem="rBt-cP-xEb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wML-Tx-fnN"/>
             </constraints>
-            <size key="customSize" width="363" height="125"/>
+            <size key="customSize" width="363" height="118"/>
             <connections>
                 <outlet property="filterButton" destination="6QT-2g-F9h" id="M6k-Ku-ltl"/>
                 <outlet property="locationButton" destination="bFS-hL-gFo" id="7AD-8Y-kCL"/>
             </connections>
-            <point key="canvasLocation" x="358.69565217391306" y="146.98660714285714"/>
+            <point key="canvasLocation" x="358.69565217391306" y="144.64285714285714"/>
         </collectionViewCell>
     </objects>
     <resources>

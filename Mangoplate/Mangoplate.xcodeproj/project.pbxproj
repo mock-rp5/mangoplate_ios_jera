@@ -81,6 +81,8 @@
 		FAF8FEE6283E1AB600AE74AF /* TopListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF8FEE4283E1AB600AE74AF /* TopListViewController.xib */; };
 		FAF8FEEB283E280F00AE74AF /* EATDealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF8FEE9283E280F00AE74AF /* EATDealCell.swift */; };
 		FAF8FEEC283E280F00AE74AF /* EATDealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF8FEEA283E280F00AE74AF /* EATDealCell.xib */; };
+		FAF8FEEF283E38D800AE74AF /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF8FEED283E38D800AE74AF /* StoryCell.swift */; };
+		FAF8FEF0283E38D800AE74AF /* StoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF8FEEE283E38D800AE74AF /* StoryCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -165,6 +167,8 @@
 		FAF8FEE4283E1AB600AE74AF /* TopListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopListViewController.xib; sourceTree = "<group>"; };
 		FAF8FEE9283E280F00AE74AF /* EATDealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EATDealCell.swift; sourceTree = "<group>"; };
 		FAF8FEEA283E280F00AE74AF /* EATDealCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EATDealCell.xib; sourceTree = "<group>"; };
+		FAF8FEED283E38D800AE74AF /* StoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
+		FAF8FEEE283E38D800AE74AF /* StoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -517,7 +521,9 @@
 			isa = PBXGroup;
 			children = (
 				FAF8FEE9283E280F00AE74AF /* EATDealCell.swift */,
+				FAF8FEED283E38D800AE74AF /* StoryCell.swift */,
 				FAF8FEEA283E280F00AE74AF /* EATDealCell.xib */,
+				FAF8FEEE283E38D800AE74AF /* StoryCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -603,6 +609,7 @@
 				FA37E928283CF606003FAE07 /* MyPageMainCell.xib in Resources */,
 				FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */,
 				FAD7C534283A26F00093AF35 /* MangoPickViewController.xib in Resources */,
+				FAF8FEF0283E38D800AE74AF /* StoryCell.xib in Resources */,
 				FAF8FEDE283E1A9C00AE74AF /* EATDealViewController.xib in Resources */,
 				FAD7C538283A26FD0093AF35 /* WritingViewController.xib in Resources */,
 				FAF8FEE2283E1AAA00AE74AF /* StoryViewController.xib in Resources */,
@@ -662,6 +669,7 @@
 				FAF60A012838B6DE00B2CD48 /* ViewController.swift in Sources */,
 				FAD7C533283A26F00093AF35 /* MangoPickViewController.swift in Sources */,
 				FA570AF5283A8BC200BA5049 /* BannerSubCell.swift in Sources */,
+				FAF8FEEF283E38D800AE74AF /* StoryCell.swift in Sources */,
 				FAD7C53B283A27080093AF35 /* NewsViewController.swift in Sources */,
 				FAD7C546283A799B0093AF35 /* BannerCell.swift in Sources */,
 				FABCF0A2283BDE5D008D14F5 /* EmailCheckRequest.swift in Sources */,
