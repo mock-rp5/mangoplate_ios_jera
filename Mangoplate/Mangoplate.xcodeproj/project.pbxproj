@@ -79,6 +79,8 @@
 		FAF8FEE2283E1AAA00AE74AF /* StoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF8FEE0283E1AAA00AE74AF /* StoryViewController.xib */; };
 		FAF8FEE5283E1AB600AE74AF /* TopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF8FEE3283E1AB600AE74AF /* TopListViewController.swift */; };
 		FAF8FEE6283E1AB600AE74AF /* TopListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF8FEE4283E1AB600AE74AF /* TopListViewController.xib */; };
+		FAF8FEEB283E280F00AE74AF /* EATDealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF8FEE9283E280F00AE74AF /* EATDealCell.swift */; };
+		FAF8FEEC283E280F00AE74AF /* EATDealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF8FEEA283E280F00AE74AF /* EATDealCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -161,6 +163,8 @@
 		FAF8FEE0283E1AAA00AE74AF /* StoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryViewController.xib; sourceTree = "<group>"; };
 		FAF8FEE3283E1AB600AE74AF /* TopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListViewController.swift; sourceTree = "<group>"; };
 		FAF8FEE4283E1AB600AE74AF /* TopListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopListViewController.xib; sourceTree = "<group>"; };
+		FAF8FEE9283E280F00AE74AF /* EATDealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EATDealCell.swift; sourceTree = "<group>"; };
+		FAF8FEEA283E280F00AE74AF /* EATDealCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EATDealCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				FAF8FEDA283E1A6600AE74AF /* Controller */,
+				FAF8FEE8283E27EE00AE74AF /* Cell */,
 			);
 			path = MangoPick;
 			sourceTree = "<group>";
@@ -508,6 +513,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		FAF8FEE8283E27EE00AE74AF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FAF8FEE9283E280F00AE74AF /* EATDealCell.swift */,
+				FAF8FEEA283E280F00AE74AF /* EATDealCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -582,6 +596,7 @@
 				FAD7C52C283A23F20093AF35 /* RestaurantViewController.xib in Resources */,
 				FA37E924283CD043003FAE07 /* MyPageProfileCell.xib in Resources */,
 				FAF8FED9283E143600AE74AF /* MyPageSettingsCell.xib in Resources */,
+				FAF8FEEC283E280F00AE74AF /* EATDealCell.xib in Resources */,
 				FAD7C540283A27130093AF35 /* MypageViewController.xib in Resources */,
 				FA570AEC283A885300BA5049 /* RestaurantCell.xib in Resources */,
 				FAF60A042838B6DE00B2CD48 /* Main.storyboard in Resources */,
@@ -656,6 +671,7 @@
 				FAF60A172838CDEF00B2CD48 /* BaseViewController.swift in Sources */,
 				FAD7C5272839ED000093AF35 /* BaseTabBarController.swift in Sources */,
 				FA665A0A283B5A5E00E807F1 /* Constant.swift in Sources */,
+				FAF8FEEB283E280F00AE74AF /* EATDealCell.swift in Sources */,
 				FAF60A2A2838CF2100B2CD48 /* String.swift in Sources */,
 				FAF60A3B2838E14600B2CD48 /* UITextField.swift in Sources */,
 				FAF60A2C2838CF2100B2CD48 /* UINavigationBar.swift in Sources */,

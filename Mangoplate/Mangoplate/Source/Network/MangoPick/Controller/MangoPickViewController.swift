@@ -38,8 +38,8 @@ class MangoPickViewController: TabmanViewController {
     bar.buttons.customize { button in
       button.tintColor = .lightGray
       button.selectedTintColor = .mainOrange
-      button.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-      button.selectedFont = UIFont.systemFont(ofSize: 18, weight: .semibold)
+      button.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+      button.selectedFont = UIFont.systemFont(ofSize: 16, weight: .semibold)
     }
     
     bar.indicator.weight = .custom(value: 2)
