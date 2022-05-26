@@ -28,12 +28,20 @@ class RestaurantViewController: BaseViewController {
   // MARK: - Methods
   private func setNavigationBar() {
     self.navigationController?.navigationBar.isTransparent = true
-    self.navigationItem.setLeftsubTitleAndTitle(title: "전체지역", subTitle: "지금 보고있는 지역은")
+    self.navigationItem.setLeftsubTitleAndTitle(title: "전체지역", subTitle: "지금 보고있는 지역은", target: self, action: #selector(navigationTitleTapped))
     
     let searchButton = self.navigationItem.setNavigationItemButton(nil, action: nil, symbolName: "magnifyingglass", imageName: nil, tintColor: .darkGray)
     let mapButton = self.navigationItem.setNavigationItemButton(nil, action: nil, symbolName: "map", imageName: nil, tintColor: .darkGray)
     
     self.navigationItem.rightBarButtonItems = [mapButton, searchButton]
+  }
+  
+  @objc func navigationTitleTapped(_ sender: UIButton) {
+    let vc = AreasViewController()
+    vc.modalPresentationStyle = .overCurrentContext
+    //vc.modalTransitionStyle = .crossDissolve
+   // BaseTabBarController.hideTabBar()
+    self.present(vc, animated: true)
   }
 }
 
@@ -102,3 +110,4 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
   }
 
 }
+

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserDeleteViewController" customModule="Mangoplate" customModuleProvider="target">
+            <connections>
+                <outlet property="deleteButton" destination="hD7-L0-Nwh" id="r2S-1g-bjJ"/>
+                <outlet property="nickNameView" destination="Aiq-US-Y9O" id="4jg-Md-mAU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="checkButtons" destination="Mv6-93-h9L" collectionClass="NSMutableArray" id="0nR-Ck-iYn"/>
+                <outletCollection property="checkButtons" destination="pKP-G9-f27" collectionClass="NSMutableArray" id="En1-19-Iir"/>
+                <outletCollection property="checkButtons" destination="GXK-md-wGD" collectionClass="NSMutableArray" id="CH3-rm-toE"/>
+                <outletCollection property="checkButtons" destination="ZUk-vK-NgR" collectionClass="NSMutableArray" id="vxr-Q5-yjq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7m-xU-cla">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jbp-Ro-IWy">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="791.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aiq-US-Y9O">
+                                    <rect key="frame" x="20" y="30" width="374" height="150"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfile" translatesAutoresizingMaskIntoConstraints="NO" id="gpe-U6-8kQ">
+                                            <rect key="frame" x="157" y="30" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="Qpr-rl-1F4"/>
+                                                <constraint firstAttribute="height" constant="60" id="eMx-bg-hE1"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkE-tv-TOX">
+                                            <rect key="frame" x="166" y="110" width="42" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4E-0D-1XZ">
+                                            <rect key="frame" x="78" y="110" width="28" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                            <color key="textColor" red="0.28101267730000001" green="0.28379498110000001" blue="0.28379498110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                    <constraints>
+                                        <constraint firstItem="MkE-tv-TOX" firstAttribute="centerX" secondItem="Aiq-US-Y9O" secondAttribute="centerX" id="An0-7z-87k"/>
+                                        <constraint firstItem="gpe-U6-8kQ" firstAttribute="centerX" secondItem="Aiq-US-Y9O" secondAttribute="centerX" id="FTt-Tb-68Z"/>
+                                        <constraint firstItem="MkE-tv-TOX" firstAttribute="top" secondItem="gpe-U6-8kQ" secondAttribute="bottom" constant="20" id="GGq-CS-fOO"/>
+                                        <constraint firstItem="MkE-tv-TOX" firstAttribute="leading" secondItem="x4E-0D-1XZ" secondAttribute="trailing" constant="60" id="WvB-q3-GAe"/>
+                                        <constraint firstAttribute="height" constant="150" id="XPC-Xr-yOh"/>
+                                        <constraint firstItem="gpe-U6-8kQ" firstAttribute="centerY" secondItem="Aiq-US-Y9O" secondAttribute="centerY" multiplier="0.8" id="kka-UE-Tbv"/>
+                                        <constraint firstItem="x4E-0D-1XZ" firstAttribute="centerY" secondItem="MkE-tv-TOX" secondAttribute="centerY" id="wqZ-NH-9nF"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원 탈퇴 전 아래의 내용을 꼭 확인해 주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blK-Ei-BS4">
+                                    <rect key="frame" x="74" y="206" width="266" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" systemColor="systemRedColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mv6-93-h9L">
+                                    <rect key="frame" x="20" y="270" width="20" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="579-MR-5be"/>
+                                        <constraint firstAttribute="width" constant="20" id="a1S-5Q-edP"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="checkmark.circle.fill" catalog="system"/>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCS-RN-hfZ">
+                                    <rect key="frame" x="50" y="270" width="334" height="107.5"/>
+                                    <string key="text">회원 탈퇴 시, 회원 정보 및 서비스 이용 기록은 모두 삭제되며, 삭제된 데이터는 복구가 불가능합니다. 다만 법령에 의하여 보관해야 하는 경우 또는 회사 내부 정책에 의하여 보관해야 하는 정보는 탈퇴 후에도 일정 기간 보관됩니다. 자세한 사항은 개인정보처리방침에서 확인 하실 수 있습니다.</string>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKP-G9-f27">
+                                    <rect key="frame" x="20" y="411" width="20" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="CWp-8v-kBr"/>
+                                        <constraint firstAttribute="width" constant="20" id="Wyw-lf-iwI"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="checkmark.circle.fill" catalog="system"/>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원 탈퇴 후 재가입하더라도 탈퇴 전의 회원 정보 및 서비스 이용 기록은 복구되지 않습니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqr-Y7-Wv5">
+                                    <rect key="frame" x="50" y="411" width="334" height="36"/>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXK-md-wGD">
+                                    <rect key="frame" x="20" y="481" width="20" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="20" id="G8L-Nj-aE1"/>
+                                        <constraint firstAttribute="height" constant="20" id="i5t-UE-eaG"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="checkmark.circle.fill" catalog="system"/>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7s-wl-t0a">
+                                    <rect key="frame" x="50" y="481" width="334" height="90"/>
+                                    <string key="text">회원을 탈퇴하더라도 망고 플레이트 서비스에 대한 기록한 리뷰와 댓글 마이리슽 등의 게시물은 삭제되지 않습니다. 회원을 탈퇴하면, 개인정보가 삭제되어 게시물을 수정하거나 삭제할 수 없으니 게시물 삭제가 필요한 회원은 게시물 삭제 후 탈퇴 신청하시기 바랍니다.</string>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUk-vK-NgR">
+                                    <rect key="frame" x="20" y="606" width="20" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="3gJ-pl-mGK"/>
+                                        <constraint firstAttribute="width" constant="20" id="UdY-8D-jsi"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="checkmark.circle.fill" catalog="system"/>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원 탈퇴 후에는 만료된 EAT딜 환불이 불가능합니다. 탈퇴 전에 환불 신청을 해주세요." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhD-6g-gr5">
+                                    <rect key="frame" x="50" y="606" width="334" height="36"/>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hD7-L0-Nwh">
+                                    <rect key="frame" x="50" y="691.5" width="314" height="50"/>
+                                    <color key="backgroundColor" red="0.93333333330000001" green="0.47450980390000003" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="GBc-nt-jXn"/>
+                                    </constraints>
+                                    <color key="tintColor" red="0.99410217999999995" green="0.93536430599999998" blue="0.9421345592" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="회원탈퇴"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="GhD-6g-gr5" secondAttribute="trailing" constant="30" id="0LC-HP-LKf"/>
+                                <constraint firstAttribute="bottom" secondItem="hD7-L0-Nwh" secondAttribute="bottom" constant="50" id="2fw-dC-z9V"/>
+                                <constraint firstItem="Jqr-Y7-Wv5" firstAttribute="leading" secondItem="pKP-G9-f27" secondAttribute="trailing" constant="10" id="3xc-Li-XkS"/>
+                                <constraint firstItem="hD7-L0-Nwh" firstAttribute="top" secondItem="GhD-6g-gr5" secondAttribute="bottom" constant="49.5" id="465-jt-sch"/>
+                                <constraint firstItem="ZUk-vK-NgR" firstAttribute="top" secondItem="GXK-md-wGD" secondAttribute="bottom" constant="105" id="6MM-XV-I5w"/>
+                                <constraint firstItem="xCS-RN-hfZ" firstAttribute="leading" secondItem="Mv6-93-h9L" secondAttribute="trailing" constant="10" id="6vM-ZS-VD3"/>
+                                <constraint firstItem="p7s-wl-t0a" firstAttribute="leading" secondItem="GXK-md-wGD" secondAttribute="trailing" constant="10" id="7Fr-77-aQj"/>
+                                <constraint firstItem="Mv6-93-h9L" firstAttribute="top" secondItem="Aiq-US-Y9O" secondAttribute="bottom" constant="90" id="DOz-pX-rUl"/>
+                                <constraint firstAttribute="trailing" secondItem="Aiq-US-Y9O" secondAttribute="trailing" constant="20" id="DyC-c0-c0A"/>
+                                <constraint firstItem="Aiq-US-Y9O" firstAttribute="leading" secondItem="Jbp-Ro-IWy" secondAttribute="leading" constant="20" id="EWB-9C-GXq"/>
+                                <constraint firstItem="Aiq-US-Y9O" firstAttribute="top" secondItem="Jbp-Ro-IWy" secondAttribute="top" constant="30" id="HBl-Cs-Qca"/>
+                                <constraint firstAttribute="trailing" secondItem="hD7-L0-Nwh" secondAttribute="trailing" constant="50" id="Iok-e7-0c8"/>
+                                <constraint firstItem="blK-Ei-BS4" firstAttribute="top" secondItem="Aiq-US-Y9O" secondAttribute="bottom" constant="26" id="LSo-tN-1gi"/>
+                                <constraint firstItem="pKP-G9-f27" firstAttribute="leading" secondItem="Jbp-Ro-IWy" secondAttribute="leading" constant="20" symbolic="YES" id="NNl-Y5-ccc"/>
+                                <constraint firstItem="GXK-md-wGD" firstAttribute="top" secondItem="pKP-G9-f27" secondAttribute="bottom" constant="50" id="PaN-Bo-k4o"/>
+                                <constraint firstItem="Mv6-93-h9L" firstAttribute="leading" secondItem="Jbp-Ro-IWy" secondAttribute="leading" constant="20" id="Qrf-WA-PSv"/>
+                                <constraint firstItem="pKP-G9-f27" firstAttribute="top" secondItem="Mv6-93-h9L" secondAttribute="bottom" constant="121" id="RTz-IN-78p"/>
+                                <constraint firstItem="hD7-L0-Nwh" firstAttribute="leading" secondItem="Jbp-Ro-IWy" secondAttribute="leading" constant="50" id="T3v-O3-i2l"/>
+                                <constraint firstAttribute="trailing" secondItem="xCS-RN-hfZ" secondAttribute="trailing" constant="30" id="VMK-Xz-8t1"/>
+                                <constraint firstItem="GXK-md-wGD" firstAttribute="leading" secondItem="Jbp-Ro-IWy" secondAttribute="leading" constant="20" id="dqw-b2-xcv"/>
+                                <constraint firstAttribute="trailing" secondItem="p7s-wl-t0a" secondAttribute="trailing" constant="30" id="fGB-8C-4iC"/>
+                                <constraint firstItem="blK-Ei-BS4" firstAttribute="centerX" secondItem="Jbp-Ro-IWy" secondAttribute="centerX" id="fOO-pL-jTw"/>
+                                <constraint firstItem="Jqr-Y7-Wv5" firstAttribute="top" secondItem="pKP-G9-f27" secondAttribute="top" id="jLd-SO-Wzi"/>
+                                <constraint firstItem="xCS-RN-hfZ" firstAttribute="top" secondItem="Mv6-93-h9L" secondAttribute="top" id="lEi-Kc-xVg"/>
+                                <constraint firstItem="GhD-6g-gr5" firstAttribute="leading" secondItem="ZUk-vK-NgR" secondAttribute="trailing" constant="10" id="mFy-QI-stT"/>
+                                <constraint firstItem="ZUk-vK-NgR" firstAttribute="leading" secondItem="Jbp-Ro-IWy" secondAttribute="leading" constant="20" id="nNl-Gg-DhO"/>
+                                <constraint firstAttribute="trailing" secondItem="Jqr-Y7-Wv5" secondAttribute="trailing" constant="30" id="nyV-R2-rXx"/>
+                                <constraint firstItem="p7s-wl-t0a" firstAttribute="top" secondItem="GXK-md-wGD" secondAttribute="top" id="rMX-HK-qqG"/>
+                                <constraint firstItem="GhD-6g-gr5" firstAttribute="top" secondItem="ZUk-vK-NgR" secondAttribute="top" id="yPG-Q7-7de"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Jbp-Ro-IWy" firstAttribute="top" secondItem="c2h-gY-5LC" secondAttribute="top" id="3iW-06-bja"/>
+                        <constraint firstItem="Jbp-Ro-IWy" firstAttribute="width" secondItem="Jh6-Vo-7MX" secondAttribute="width" id="Alm-rE-9a2"/>
+                        <constraint firstItem="Jbp-Ro-IWy" firstAttribute="bottom" secondItem="c2h-gY-5LC" secondAttribute="bottom" id="CEQ-dV-Db5"/>
+                        <constraint firstItem="Jbp-Ro-IWy" firstAttribute="leading" secondItem="c2h-gY-5LC" secondAttribute="leading" id="b2e-9E-8br"/>
+                        <constraint firstItem="Jbp-Ro-IWy" firstAttribute="trailing" secondItem="c2h-gY-5LC" secondAttribute="trailing" id="oHC-OD-M68"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="c2h-gY-5LC"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Jh6-Vo-7MX"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="z7m-xU-cla" secondAttribute="trailing" id="RGG-YM-Qd6"/>
+                <constraint firstItem="z7m-xU-cla" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="U8O-Kr-rT2"/>
+                <constraint firstItem="z7m-xU-cla" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="boT-PT-pQd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="z7m-xU-cla" secondAttribute="bottom" id="fEi-sz-mOH"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="61.607142857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="defaultProfile" width="66" height="66"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

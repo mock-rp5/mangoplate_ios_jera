@@ -26,6 +26,11 @@ class MyPageSettingsViewController: BaseViewController {
     settingsTableView.delegate = self
     settingsTableView.dataSource = self
   }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    setNavigationTitle(title: "", color: .mainLightGray)
+  }
 }
 
 extension MyPageSettingsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -69,7 +74,9 @@ extension MyPageSettingsViewController: UITableViewDelegate, UITableViewDataSour
       print("로그아웃")
     }
     else if indexPath.section == 4 {
-      print("회원탈퇴")
+      let vc = UserDeleteViewController()
+      vc.modalPresentationStyle = .fullScreen
+      self.navigationController?.pushViewController(vc, animated: true)
     }
   }
   

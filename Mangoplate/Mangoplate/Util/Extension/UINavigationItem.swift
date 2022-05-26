@@ -11,13 +11,14 @@ import SnapKit
 extension UINavigationItem {
   
   // 네비게이션바의 오른쪽에 부제목, 제목의 타이틀 달아줌
-  func setLeftsubTitleAndTitle(title: String, subTitle: String) {
+  func setLeftsubTitleAndTitle(title: String, subTitle: String, target: Any, action: Selector) {
     let titleText = "\(subTitle)\n\(title)"
     
     let titleButton = UIButton()
     titleButton.titleLabel?.lineBreakMode = .byWordWrapping // 버튼 줄바꿈 활성화
     titleButton.tintColor = .black
     titleButton.imageView?.image = UIImage(systemName: "magnifyingglass")
+    titleButton.addTarget(target, action: action, for: .touchUpInside)
     
     let subTitleFontSize = UIFont.systemFont(ofSize: 12, weight: .light)
     let titleFontSize = UIFont.systemFont(ofSize: 17, weight: .medium)
