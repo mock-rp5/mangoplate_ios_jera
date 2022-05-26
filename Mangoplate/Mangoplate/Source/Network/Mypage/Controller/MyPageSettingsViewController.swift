@@ -71,7 +71,10 @@ extension MyPageSettingsViewController: UITableViewDelegate, UITableViewDataSour
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     if indexPath.section == 3 {
-      print("로그아웃")
+      self.navigationController?.popToRootViewController(animated: false)
+      let rootVC = UINavigationController(rootViewController: SignInHomeViewController())
+      rootVC.modalPresentationStyle = .fullScreen
+      present(rootVC, animated: true)
     }
     else if indexPath.section == 4 {
       let vc = UserDeleteViewController()

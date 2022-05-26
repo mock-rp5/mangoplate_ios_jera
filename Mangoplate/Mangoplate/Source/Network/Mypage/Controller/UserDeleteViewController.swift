@@ -9,11 +9,13 @@ import UIKit
 
 class UserDeleteViewController: BaseViewController {
 
+  // MARK: - Properties
   @IBOutlet weak var nickNameView: UIView!
   @IBOutlet var checkButtons: [UIButton]!
   @IBOutlet weak var deleteButton: UIButton!
   var checks: [Bool] = [false, false, false, false] // 체크 버튼 상태
   
+  // MARK: - LifeCycle
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -21,6 +23,7 @@ class UserDeleteViewController: BaseViewController {
     deleteButton.isEnabled = false
     deleteButton.setEnabledButtonColor()
     deleteButton.layer.cornerRadius = 25
+    deleteButton.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
     
     nickNameView.layer.cornerRadius = 10
     
@@ -29,8 +32,9 @@ class UserDeleteViewController: BaseViewController {
     }
   }
   
+  // MARK: - Methods
+  // 체크 버튼 클릭
   @objc func checkButtonTapped(_ sender: UIButton) {
-    
     guard let index = checkButtons.firstIndex(of: sender) else { return }
     
     if sender.tintColor == .mainOrange {
@@ -41,13 +45,34 @@ class UserDeleteViewController: BaseViewController {
       checks[index] = true
     }
     
-    print(checks)
-    
+    // 체크 버튼 모두 클릭되면 탈퇴 버튼 활성화
     if checks.allSatisfy({$0 == true}) {
       deleteButton.isEnabled = true
+      deleteButton.setEnabledButtonColor()
+    } else {
+      deleteButton.isEnabled = false
       deleteButton.setEnabledButtonColor()
     }
   }
   
+  @objc func deleteButtonTapped(_ sender: UIButton) {
+    MyPageDataManager().deleteUser(viewController: self)
+  }
+}
 
+// MARK: - API
+extension UserDeleteViewController {
+  // 회원 탈퇴 API
+  func successDeleteUser(message: String) {
+    UserDefaults.standard.removeObject(forKey: "jwtKey") // 기기에 저장된 키 삭제
+    self.presentBottomAlert(message: message)
+    self.navigationController?.popToRootViewController(animated: false)
+    let rootVC = UINavigationController(rootViewController: SignInHomeViewController())
+    rootVC.modalPresentationStyle = .fullScreen
+    present(rootVC, animated: true)
+  }
+  
+  func failedDeleteUser(message: String) {
+    self.presentBottomAlert(message: message)
+  }
 }

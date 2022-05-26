@@ -143,6 +143,6 @@ extension SecondSignUpViewController {
   
   func failedSignUp(message: String) {
     print("failedSignUp")
-    print(message)
+    self.presentBottomAlert(message: message)
   }
 }

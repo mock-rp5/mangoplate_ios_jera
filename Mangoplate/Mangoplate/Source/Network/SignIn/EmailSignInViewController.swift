@@ -79,9 +79,9 @@ extension EmailSignInViewController {
     
     emailCheckLabel.text = ""
     passwordCheckLabel.text = ""
-    
+    print("login jwtKey = \(jwtKey)")
     UserDefaults.standard.set(jwtKey, forKey: "jwtKey") // jwtKey 기기에 저장
-    print(jwtKey)
+    print("UserDefaults jwtKey- \(Constant.HEADERS)")
     
     let vc = BaseTabBarController()
     vc.modalPresentationStyle = .fullScreen
@@ -91,8 +91,8 @@ extension EmailSignInViewController {
   func failedSignIn(message: String, code: Int) {
     print("failedSignIn")
     print(code)
-    // 이메일을 입력하지 않았거나 계정이 없는경우
-    if code == 2011 || code == 3003 {
+    // 이메일을 입력하지 않았거나 계정이 없거나 탈퇴한 회원인 경우
+    if code == 2011 || code == 3003 || code == 3005{
       emailTextField.removeAllSubLayers()
       emailTextField.addBottomBorderWithColor(color: .mainOrange, height: 1, width: 5)
       emailCheckLabel.text = message
