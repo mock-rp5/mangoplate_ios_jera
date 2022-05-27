@@ -31,7 +31,7 @@ class RestaurantViewController: BaseViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    RestaurantDataManager().getAreas(viewController: self)
+   // RestaurantDataManager().getAreas(viewController: self)
     
   }
   

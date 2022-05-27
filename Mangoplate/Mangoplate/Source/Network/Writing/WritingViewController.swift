@@ -8,9 +8,15 @@
 import UIKit
 
 class WritingViewController: UIViewController {
+  
+  let transition = CircularTransition()
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    
   }
   
+  @IBAction func cancelButtonTapped(_ sender: Any) {
+    self.dismiss(animated: true, completion: nil)
+  }
 }
