@@ -26,3 +26,9 @@ struct DetailArea: Codable {
   let detailAreaId: Int
   let detailAreaName: String
 }
+
+class SharedAreaResults {
+  static let shared = SharedAreaResults()
+  var areaResults: [AreasResult]?
+  var pageIndex: Int?
+}

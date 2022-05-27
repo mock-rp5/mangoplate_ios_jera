@@ -9,7 +9,7 @@ import Alamofire
 import UIKit
 
 class RestaurantDataManager {
-  func getAreas(viewController: AreasViewController) {
+  func getAreas(viewController: RestaurantViewController) {
     AF.request("\(Constant.DEV_BASE_URL)/app/areas", method: .get, headers: Constant.HEADERS)
       .validate()
       .responseDecodable(of: AreasResponse.self) { response in
@@ -17,14 +17,15 @@ class RestaurantDataManager {
         case .success(let result):
           if result.isSuccess {
             viewController.showIndicator()
-            viewController.successGetAreas(areasResult: result.result)
+            viewController.successGetAreas(areaResults: result.result)
             viewController.dismissIndicator()
           } else {
-            //viewController.failedEmailCheck(message: response.message)
+            viewController.failedGetAreas(message: result.message)
           }
 
         case .failure(let error):
-          print(error.localizedDescription)
+          
+          print("getAreas eror: \(error.localizedDescription)")
         }
       }
   }

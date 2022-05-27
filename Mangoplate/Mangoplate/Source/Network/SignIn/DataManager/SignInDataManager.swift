@@ -21,12 +21,15 @@ class SignInDataManger {
         case .success(let response):
           if response.isSuccess {
             if let jwt = response.result?.jwt {
+              viewController.showIndicator()
               viewController.successSignIn(jwtKey: jwt)
+              viewController.dismissIndicator()
             }
           } else {
             viewController.failedSignIn(message: response.message, code: response.code)
           }
         case .failure(let error):
+          viewController.presentAlert(title: "일시적 오류가 발생했습니다. 잠시 후 다시 시도해주세요.")
           print(error.localizedDescription)
         }
       }

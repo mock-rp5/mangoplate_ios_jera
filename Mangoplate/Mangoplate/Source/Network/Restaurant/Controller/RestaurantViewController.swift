@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol AreaResultProtocol {
+  func dataSend(areaResult: [AreasResult])
+}
+
 class RestaurantViewController: BaseViewController {
 
   // MARK: - Properties
@@ -15,6 +19,7 @@ class RestaurantViewController: BaseViewController {
   // MARK: - LifeCycle
   override func viewDidLoad() {
     super.viewDidLoad()
+
     setNavigationBar()
     
     collectionView.delegate = self
@@ -22,7 +27,11 @@ class RestaurantViewController: BaseViewController {
     collectionView.register(UINib(nibName: "BannerCell", bundle: .main), forCellWithReuseIdentifier: "bannerCell")
     collectionView.register(UINib(nibName: "SortingCell", bundle: .main), forCellWithReuseIdentifier: "sortingCell")
     collectionView.register(UINib(nibName: "RestaurantCell", bundle: .main), forCellWithReuseIdentifier: "restaurantCell")
-
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    RestaurantDataManager().getAreas(viewController: self)
     
   }
   
@@ -111,4 +120,18 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
   }
 
 }
+
+// MARK : - API
+extension RestaurantViewController {
+  func successGetAreas(areaResults: [AreasResult]) {
+    print("successGetAreas")
+    SharedAreaResults.shared.areaResults = areaResults
+  }
+  
+  func failedGetAreas(message: String) {
+    print("failedGetAreas")
+    self.presentBottomAlert(message: message)
+  }
+}
+
 
