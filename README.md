@@ -206,3 +206,38 @@
 </div>
 </details>
 
+</br>
+<details>
+<summary>7일차_2022.05.27 (금)</summary>
+<div markdown="1">
+
+```
+1. 구현한 기능
+	- 내 위치 UI & 기능 구현(80%) 
+	- plus탭 애니메이션 구현 (100%)
+
+2. 발생한 이슈
+	- 서버가 4회 이상 끊김
+		- 서버 개발자분이 계속 재시작 해주셨지만 자꾸 끊겨 API 연동은 포기하고 UI 구현
+
+	- half 모달
+		- 반은 투명한 버튼, 반은 uiView로 구성
+
+	- half 모달 안에 탭바를 넣어야 함
+		- VC안에 child로 VC만듦 (https://hyunsikwon.github.io/ios/iOS-ChildViewControllers/)
+
+	- 지역선택뷰는 VC -> half VC -> tabBar VC -> Cell 형태라 매우 복잡한 구조로 되어 있어 데이터 전달에 어려움 겪음
+		- NotificationCenter 사용해 데이터 전달 
+		- 지역선택 뷰가 복잡에 지역 조회 API 연동 우선순위 미룸
+
+	- plus탭을 누르면 페이지 이동은 하지 않고 VC를 present하며 circle애니메이션 동작
+		- PageboyViewControllerDataSource에서 2번째 탭은 nil리턴
+		- circle 애니메이션 참고 (https://www.youtube.com/watch?v=B9sH_VxPPo4)
+
+
+
+```
+<img width="200" src="./image/7-1.png"> <img width="200" src="./image/7-2.gif"> 
+
+</div>
+</details>
