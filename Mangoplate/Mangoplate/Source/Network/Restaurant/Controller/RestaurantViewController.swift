@@ -22,6 +22,7 @@ class RestaurantViewController: BaseViewController {
     collectionView.register(UINib(nibName: "BannerCell", bundle: .main), forCellWithReuseIdentifier: "bannerCell")
     collectionView.register(UINib(nibName: "SortingCell", bundle: .main), forCellWithReuseIdentifier: "sortingCell")
     collectionView.register(UINib(nibName: "RestaurantCell", bundle: .main), forCellWithReuseIdentifier: "restaurantCell")
+
     
   }
   
@@ -39,8 +40,8 @@ class RestaurantViewController: BaseViewController {
   @objc func navigationTitleTapped(_ sender: UIButton) {
     let vc = AreasViewController()
     vc.modalPresentationStyle = .overCurrentContext
-    //vc.modalTransitionStyle = .crossDissolve
-   // BaseTabBarController.hideTabBar()
+    vc.modalTransitionStyle = .crossDissolve
+    BaseTabBarController.hideTabBar()
     self.present(vc, animated: true)
   }
 }

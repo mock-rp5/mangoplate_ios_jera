@@ -8,23 +8,24 @@
 import Alamofire
 import UIKit
 
-class RestaurantManager {
-  func getAreas(viewController: UIViewController) {
+class RestaurantDataManager {
+  func getAreas(viewController: AreasViewController) {
     AF.request("\(Constant.DEV_BASE_URL)/app/areas", method: .get, headers: Constant.HEADERS)
       .validate()
       .responseDecodable(of: AreasResponse.self) { response in
-        print(response)
-//        switch response.result {
-//        case .success(let response):
-//          if response.isSuccess {
-//            viewController.successEmailCheck()
-//          } else {
-//            viewController.failedEmailCheck(message: response.message)
-//          }
-//
-//        case .failure(let error):
-//          print(error.localizedDescription)
-//        }
+        switch response.result {
+        case .success(let result):
+          if result.isSuccess {
+            viewController.showIndicator()
+            viewController.successGetAreas(areasResult: result.result)
+            viewController.dismissIndicator()
+          } else {
+            //viewController.failedEmailCheck(message: response.message)
+          }
+
+        case .failure(let error):
+          print(error.localizedDescription)
+        }
       }
   }
 }

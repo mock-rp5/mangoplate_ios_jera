@@ -26,6 +26,12 @@
 		FA570AF6283A8BC200BA5049 /* BannerSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA570AF4283A8BC200BA5049 /* BannerSubCell.xib */; };
 		FA570AFA283A9E5100BA5049 /* SortingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA570AF8283A9E5100BA5049 /* SortingCell.swift */; };
 		FA570AFB283A9E5100BA5049 /* SortingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA570AF9283A9E5100BA5049 /* SortingCell.xib */; };
+		FA597E0828408AE00072CA47 /* DetailAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA597E0628408AE00072CA47 /* DetailAreaViewController.swift */; };
+		FA597E0928408AE00072CA47 /* DetailAreaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA597E0728408AE00072CA47 /* DetailAreaViewController.xib */; };
+		FA597E0C2840BDF40072CA47 /* AreaTabmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA597E0A2840BDF40072CA47 /* AreaTabmanViewController.swift */; };
+		FA597E0D2840BDF40072CA47 /* AreaTabmanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA597E0B2840BDF40072CA47 /* AreaTabmanViewController.xib */; };
+		FA597E132840CC980072CA47 /* AreaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA597E112840CC980072CA47 /* AreaCell.swift */; };
+		FA597E142840CC980072CA47 /* AreaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA597E122840CC980072CA47 /* AreaCell.xib */; };
 		FA5C5C75283E61CE0071C7BF /* TopListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5C5C73283E61CE0071C7BF /* TopListCell.swift */; };
 		FA5C5C76283E61CE0071C7BF /* TopListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5C5C74283E61CE0071C7BF /* TopListCell.xib */; };
 		FA600B0B283F47320044F5BA /* RestaurantDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA600B0A283F47320044F5BA /* RestaurantDataManager.swift */; };
@@ -117,6 +123,12 @@
 		FA570AF4283A8BC200BA5049 /* BannerSubCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerSubCell.xib; sourceTree = "<group>"; };
 		FA570AF8283A9E5100BA5049 /* SortingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingCell.swift; sourceTree = "<group>"; };
 		FA570AF9283A9E5100BA5049 /* SortingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortingCell.xib; sourceTree = "<group>"; };
+		FA597E0628408AE00072CA47 /* DetailAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAreaViewController.swift; sourceTree = "<group>"; };
+		FA597E0728408AE00072CA47 /* DetailAreaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailAreaViewController.xib; sourceTree = "<group>"; };
+		FA597E0A2840BDF40072CA47 /* AreaTabmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaTabmanViewController.swift; sourceTree = "<group>"; };
+		FA597E0B2840BDF40072CA47 /* AreaTabmanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AreaTabmanViewController.xib; sourceTree = "<group>"; };
+		FA597E112840CC980072CA47 /* AreaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaCell.swift; sourceTree = "<group>"; };
+		FA597E122840CC980072CA47 /* AreaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AreaCell.xib; sourceTree = "<group>"; };
 		FA5C5C73283E61CE0071C7BF /* TopListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListCell.swift; sourceTree = "<group>"; };
 		FA5C5C74283E61CE0071C7BF /* TopListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopListCell.xib; sourceTree = "<group>"; };
 		FA600B0A283F47320044F5BA /* RestaurantDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDataManager.swift; sourceTree = "<group>"; };
@@ -274,6 +286,37 @@
 			path = Sorting;
 			sourceTree = "<group>";
 		};
+		FA597E0E2840CC340072CA47 /* Area */ = {
+			isa = PBXGroup;
+			children = (
+				FA597E0F2840CC430072CA47 /* Controller */,
+			);
+			path = Area;
+			sourceTree = "<group>";
+		};
+		FA597E0F2840CC430072CA47 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA597E102840CC860072CA47 /* Cell */,
+				FA617A58283F83C500F8E59C /* AreasViewController.swift */,
+				FA597E0A2840BDF40072CA47 /* AreaTabmanViewController.swift */,
+				FA597E0628408AE00072CA47 /* DetailAreaViewController.swift */,
+				FA617A59283F83C500F8E59C /* AreasViewController.xib */,
+				FA597E0B2840BDF40072CA47 /* AreaTabmanViewController.xib */,
+				FA597E0728408AE00072CA47 /* DetailAreaViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA597E102840CC860072CA47 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA597E112840CC980072CA47 /* AreaCell.swift */,
+				FA597E122840CC980072CA47 /* AreaCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		FA600B0C283F47380044F5BA /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +388,7 @@
 		FAD7C528283A23CA0093AF35 /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
+				FA597E0E2840CC340072CA47 /* Area */,
 				FAF8FEE7283E1B9200AE74AF /* Controller */,
 				FAD7C543283A79830093AF35 /* Cell */,
 				FA600B0C283F47380044F5BA /* Entity */,
@@ -571,8 +615,6 @@
 			children = (
 				FAD7C529283A23F20093AF35 /* RestaurantViewController.swift */,
 				FAD7C52A283A23F20093AF35 /* RestaurantViewController.xib */,
-				FA617A58283F83C500F8E59C /* AreasViewController.swift */,
-				FA617A59283F83C500F8E59C /* AreasViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -656,6 +698,7 @@
 				FAD7C53C283A27080093AF35 /* NewsViewController.xib in Resources */,
 				FAF60A352838D32800B2CD48 /* SignInHomeViewController.xib in Resources */,
 				FAF60A062838B6E000B2CD48 /* Assets.xcassets in Resources */,
+				FA597E0D2840BDF40072CA47 /* AreaTabmanViewController.xib in Resources */,
 				FA570AFB283A9E5100BA5049 /* SortingCell.xib in Resources */,
 				FA617A5F283F9D3F00F8E59C /* UserDeleteViewController.xib in Resources */,
 				FAF60A392838E03B00B2CD48 /* EmailSignInViewController.xib in Resources */,
@@ -671,6 +714,7 @@
 				FA570AEC283A885300BA5049 /* RestaurantCell.xib in Resources */,
 				FAF60A042838B6DE00B2CD48 /* Main.storyboard in Resources */,
 				FA37E928283CF606003FAE07 /* MyPageMainCell.xib in Resources */,
+				FA597E142840CC980072CA47 /* AreaCell.xib in Resources */,
 				FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */,
 				FAD7C534283A26F00093AF35 /* MangoPickViewController.xib in Resources */,
 				FAF8FEF0283E38D800AE74AF /* StoryCell.xib in Resources */,
@@ -678,6 +722,7 @@
 				FAF8FEDE283E1A9C00AE74AF /* EATDealViewController.xib in Resources */,
 				FAD7C538283A26FD0093AF35 /* WritingViewController.xib in Resources */,
 				FAF8FEE2283E1AAA00AE74AF /* StoryViewController.xib in Resources */,
+				FA597E0928408AE00072CA47 /* DetailAreaViewController.xib in Resources */,
 				FAD7C547283A799B0093AF35 /* BannerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -747,6 +792,7 @@
 				FAD7C5272839ED000093AF35 /* BaseTabBarController.swift in Sources */,
 				FA665A0A283B5A5E00E807F1 /* Constant.swift in Sources */,
 				FAF8FEEB283E280F00AE74AF /* EATDealCell.swift in Sources */,
+				FA597E132840CC980072CA47 /* AreaCell.swift in Sources */,
 				FAF60A2A2838CF2100B2CD48 /* String.swift in Sources */,
 				FAF60A3B2838E14600B2CD48 /* UITextField.swift in Sources */,
 				FA617A5A283F83C500F8E59C /* AreasViewController.swift in Sources */,
@@ -765,6 +811,7 @@
 				FAF60A2D2838CF2100B2CD48 /* UIViewController.swift in Sources */,
 				FA37E91F283CC857003FAE07 /* KakaoLoginRequest.swift in Sources */,
 				FAF60A2B2838CF2100B2CD48 /* UIFont.swift in Sources */,
+				FA597E0C2840BDF40072CA47 /* AreaTabmanViewController.swift in Sources */,
 				FA600B0B283F47320044F5BA /* RestaurantDataManager.swift in Sources */,
 				FAF8FED8283E143600AE74AF /* MyPageSettingsCell.swift in Sources */,
 				FAD7C53F283A27130093AF35 /* MypageViewController.swift in Sources */,
@@ -778,6 +825,7 @@
 				FA4FA610283FBAB500DD836A /* DeleteUserResponse.swift in Sources */,
 				FAF8FEE5283E1AB600AE74AF /* TopListViewController.swift in Sources */,
 				FAF8FEDD283E1A9C00AE74AF /* EATDealViewController.swift in Sources */,
+				FA597E0828408AE00072CA47 /* DetailAreaViewController.swift in Sources */,
 				FAF8FED0283DFD5100AE74AF /* MyPageSettingsViewController.swift in Sources */,
 				FAD7C542283A5A310093AF35 /* UINavigationItem.swift in Sources */,
 				FAF60A382838E03B00B2CD48 /* EmailSignInViewController.swift in Sources */,
