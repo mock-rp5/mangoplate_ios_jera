@@ -12,6 +12,8 @@
             <connections>
                 <outlet property="deleteButton" destination="hD7-L0-Nwh" id="r2S-1g-bjJ"/>
                 <outlet property="nickNameView" destination="Aiq-US-Y9O" id="4jg-Md-mAU"/>
+                <outlet property="nicknameLabel" destination="MkE-tv-TOX" id="lf7-l8-B4i"/>
+                <outlet property="profileImageView" destination="gpe-U6-8kQ" id="bFq-o5-CWI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="checkButtons" destination="Mv6-93-h9L" collectionClass="NSMutableArray" id="0nR-Ck-iYn"/>
                 <outletCollection property="checkButtons" destination="pKP-G9-f27" collectionClass="NSMutableArray" id="En1-19-Iir"/>

@@ -10,16 +10,18 @@ import UIKit
 class UserDeleteViewController: BaseViewController {
 
   // MARK: - Properties
+  @IBOutlet weak var nicknameLabel: UILabel!
   @IBOutlet weak var nickNameView: UIView!
+  @IBOutlet weak var profileImageView: UIImageView!
   @IBOutlet var checkButtons: [UIButton]!
   @IBOutlet weak var deleteButton: UIButton!
   var checks: [Bool] = [false, false, false, false] // 체크 버튼 상태
-  
   // MARK: - LifeCycle
   override func viewDidLoad() {
     super.viewDidLoad()
     
     setNavigationBarBackbuttonTitle(title: "회원탈퇴")
+    profileImageView.layer.cornerRadius = 30
     deleteButton.isEnabled = false
     deleteButton.setEnabledButtonColor()
     deleteButton.layer.cornerRadius = 25
@@ -30,6 +32,11 @@ class UserDeleteViewController: BaseViewController {
     for button in checkButtons {
       button.addTarget(self, action: #selector(checkButtonTapped(_:)), for: .touchUpInside)
     }
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    MyPageDataManager().getUser(viewController: self)
   }
   
   // MARK: - Methods
@@ -73,6 +80,19 @@ extension UserDeleteViewController {
   }
   
   func failedDeleteUser(message: String) {
+    self.presentBottomAlert(message: message)
+  }
+  
+  // 회원 조회 API
+  func successGetUser(user: GetUserResult) {
+    self.nicknameLabel.text = user.userName
+    
+    if let stringUrl = user.userProfileImg {
+      self.profileImageView.load(urlString: stringUrl)
+    }
+  }
+  
+  func failedGetUser(message: String) {
     self.presentBottomAlert(message: message)
   }
 }

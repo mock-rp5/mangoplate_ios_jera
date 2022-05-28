@@ -28,8 +28,43 @@ class MyPageDataManager {
         case .failure(let error):
           print(error.localizedDescription)
         }
-        
       }
-      
   }
+  
+  func getUser(viewController: UIViewController) {
+    AF.request("\(Constant.DEV_BASE_URL)/app/users", method: .get, headers: Constant.HEADERS)
+      .validate()
+      .responseDecodable(of: GetUserResponse.self) { response in
+        switch response.result {
+        case .success(let result):
+          
+          // MyPageVC에서 회원 정보 조회
+          if viewController is MypageViewController {
+            let vc = viewController as? MypageViewController
+            if result.isSuccess {
+              if let user = result.result?.first {
+                vc?.successGetUser(user: user)
+              } else {
+                vc?.failedGetUser(message: result.message)
+              }
+            }
+          }
+          
+          // UserDeleteVC 에서 회원 정보 조회
+          else if viewController is UserDeleteViewController {
+            let vc = viewController as? UserDeleteViewController
+            if result.isSuccess {
+              if let user = result.result?.first {
+                vc?.successGetUser(user: user)
+              } else {
+                vc?.failedGetUser(message: result.message)
+              }
+            }
+          }
+          
+        case .failure(let error):
+          print("getUser failure \(error.localizedDescription)")
+        }
+      }
+    }
 }

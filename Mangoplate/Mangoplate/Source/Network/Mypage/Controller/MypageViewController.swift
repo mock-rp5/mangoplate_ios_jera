@@ -30,11 +30,14 @@ class MypageViewController: BaseViewController {
     ["mypage8"]
   ]
   
+  var user: GetUserResult?
+  
   
   // MARK: - LifeCycle
   override func viewDidLoad() {
     super.viewDidLoad()
     setUI()
+    MyPageDataManager().getUser(viewController: self)
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -82,6 +85,16 @@ extension MypageViewController: UITableViewDelegate, UITableViewDataSource {
     case 0:
       guard let cell =  myPageTableView.dequeueReusableCell(withIdentifier: "MyPageProfileCell") as? MyPageProfileCell else {
         return UITableViewCell() }
+      
+      if let user = user {
+        cell.nickNameLabel.text = user.userName
+        cell.followerLabel.text = String(user.follower)
+        cell.followingLabel.text = String(user.following)
+        // 프로필 사진이 있으면 넣어줌
+        if let stringUrl = user.userProfileImg {
+          cell.profileImageView.load(urlString: stringUrl)
+        }
+      }
       return cell
     case 3:
       guard let cell = myPageTableView.dequeueReusableCell(withIdentifier: "MyPageTimelineCell") as? MyPageTimelineCell else { return UITableViewCell() }
@@ -133,6 +146,18 @@ extension MypageViewController: UITableViewDelegate, UITableViewDataSource {
       self.navigationController?.pushViewController(vc, animated: true)
     }
   }
+}
+
+// MARK: - API
+extension MypageViewController {
+  // 회원 조회
+  func successGetUser(user: GetUserResult) {
+    self.user = user
+    print(user)
+    myPageTableView.reloadData()
+  }
   
-  
+  func failedGetUser(message: String) {
+    self.presentBottomAlert(message: message)
+  }
 }
