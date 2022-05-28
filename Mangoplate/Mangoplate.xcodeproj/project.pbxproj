@@ -38,6 +38,7 @@
 		FA5C5C76283E61CE0071C7BF /* TopListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5C5C74283E61CE0071C7BF /* TopListCell.xib */; };
 		FA600B0B283F47320044F5BA /* RestaurantDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA600B0A283F47320044F5BA /* RestaurantDataManager.swift */; };
 		FA600B0F283F47790044F5BA /* AreasResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA600B0E283F47790044F5BA /* AreasResponse.swift */; };
+		FA60386C28425BC500C0DFC4 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60386B28425BC500C0DFC4 /* UIImageView.swift */; };
 		FA617A5A283F83C500F8E59C /* AreasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA617A58283F83C500F8E59C /* AreasViewController.swift */; };
 		FA617A5B283F83C500F8E59C /* AreasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA617A59283F83C500F8E59C /* AreasViewController.xib */; };
 		FA617A5E283F9D3F00F8E59C /* UserDeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA617A5C283F9D3F00F8E59C /* UserDeleteViewController.swift */; };
@@ -52,6 +53,8 @@
 		FA811D502839299000CA29AF /* SecondSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA811D4E2839299000CA29AF /* SecondSignUpViewController.xib */; };
 		FA829C6328424057009BB780 /* LocationAgreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA829C6128424057009BB780 /* LocationAgreeViewController.swift */; };
 		FA829C6428424057009BB780 /* LocationAgreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA829C6228424057009BB780 /* LocationAgreeViewController.xib */; };
+		FA829C66284251CB009BB780 /* RestaurantRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA829C65284251CB009BB780 /* RestaurantRequest.swift */; };
+		FA829C6828425780009BB780 /* RestaurantResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA829C6728425780009BB780 /* RestaurantResponse.swift */; };
 		FABCF0A0283B5F70008D14F5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCF09F283B5F70008D14F5 /* User.swift */; };
 		FABCF0A2283BDE5D008D14F5 /* EmailCheckRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCF0A1283BDE5C008D14F5 /* EmailCheckRequest.swift */; };
 		FAD7C5272839ED000093AF35 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7C5262839ED000093AF35 /* BaseTabBarController.swift */; };
@@ -139,6 +142,7 @@
 		FA5C5C74283E61CE0071C7BF /* TopListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopListCell.xib; sourceTree = "<group>"; };
 		FA600B0A283F47320044F5BA /* RestaurantDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDataManager.swift; sourceTree = "<group>"; };
 		FA600B0E283F47790044F5BA /* AreasResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreasResponse.swift; sourceTree = "<group>"; };
+		FA60386B28425BC500C0DFC4 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		FA617A58283F83C500F8E59C /* AreasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreasViewController.swift; sourceTree = "<group>"; };
 		FA617A59283F83C500F8E59C /* AreasViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AreasViewController.xib; sourceTree = "<group>"; };
 		FA617A5C283F9D3F00F8E59C /* UserDeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDeleteViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 		FA811D4E2839299000CA29AF /* SecondSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondSignUpViewController.xib; sourceTree = "<group>"; };
 		FA829C6128424057009BB780 /* LocationAgreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAgreeViewController.swift; sourceTree = "<group>"; };
 		FA829C6228424057009BB780 /* LocationAgreeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationAgreeViewController.xib; sourceTree = "<group>"; };
+		FA829C65284251CB009BB780 /* RestaurantRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRequest.swift; sourceTree = "<group>"; };
+		FA829C6728425780009BB780 /* RestaurantResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantResponse.swift; sourceTree = "<group>"; };
 		FABCF09F283B5F70008D14F5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FABCF0A1283BDE5C008D14F5 /* EmailCheckRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckRequest.swift; sourceTree = "<group>"; };
 		FAD7C5262839ED000093AF35 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
@@ -339,6 +345,8 @@
 			isa = PBXGroup;
 			children = (
 				FA600B0E283F47790044F5BA /* AreasResponse.swift */,
+				FA829C65284251CB009BB780 /* RestaurantRequest.swift */,
+				FA829C6728425780009BB780 /* RestaurantResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -546,6 +554,7 @@
 				FAF60A262838CF2100B2CD48 /* UIViewController.swift */,
 				FAF60A3A2838E14600B2CD48 /* UITextField.swift */,
 				FAD7C541283A5A310093AF35 /* UINavigationItem.swift */,
+				FA60386B28425BC500C0DFC4 /* UIImageView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -813,6 +822,7 @@
 				FA4C3B7B2841112D003AFEF2 /* NotificationName.swift in Sources */,
 				FAD7C5272839ED000093AF35 /* BaseTabBarController.swift in Sources */,
 				FA665A0A283B5A5E00E807F1 /* Constant.swift in Sources */,
+				FA60386C28425BC500C0DFC4 /* UIImageView.swift in Sources */,
 				FAF8FEEB283E280F00AE74AF /* EATDealCell.swift in Sources */,
 				FA597E132840CC980072CA47 /* AreaCell.swift in Sources */,
 				FAF60A2A2838CF2100B2CD48 /* String.swift in Sources */,
@@ -832,6 +842,7 @@
 				FA4C1CAA283C82370089CDC8 /* SignInResponse.swift in Sources */,
 				FA665A06283B561000E807F1 /* SignUpRequest.swift in Sources */,
 				FAF60A2D2838CF2100B2CD48 /* UIViewController.swift in Sources */,
+				FA829C66284251CB009BB780 /* RestaurantRequest.swift in Sources */,
 				FA37E91F283CC857003FAE07 /* KakaoLoginRequest.swift in Sources */,
 				FAF60A2B2838CF2100B2CD48 /* UIFont.swift in Sources */,
 				FA597E0C2840BDF40072CA47 /* AreaTabmanViewController.swift in Sources */,
@@ -839,6 +850,7 @@
 				FAF8FED8283E143600AE74AF /* MyPageSettingsCell.swift in Sources */,
 				FAD7C53F283A27130093AF35 /* MypageViewController.swift in Sources */,
 				FAF60A1C2838CE7F00B2CD48 /* Device.swift in Sources */,
+				FA829C6828425780009BB780 /* RestaurantResponse.swift in Sources */,
 				FA570AEB283A885300BA5049 /* RestaurantCell.swift in Sources */,
 				FABCF0A0283B5F70008D14F5 /* User.swift in Sources */,
 				FAF60A272838CF2100B2CD48 /* UIButton.swift in Sources */,

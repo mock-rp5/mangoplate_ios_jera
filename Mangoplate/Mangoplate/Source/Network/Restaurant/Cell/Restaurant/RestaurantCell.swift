@@ -22,5 +22,13 @@ class RestaurantCell: UICollectionViewCell {
     
     watchingCountLabel.text = watchingCountLabel.text?.insertComma
   }
+  
+  override func prepareForReuse() {
+    locationLabel.text = "위치"
+    ratingLabel.text = "5.0"
+    watchingCountLabel.text = "0"
+    reviewCountLabel.text = "0"
+    restaurantImageView.image = UIImage(named: "noImage")
+  }
 
 }

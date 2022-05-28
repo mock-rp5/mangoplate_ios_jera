@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import Alamofire
 
 protocol AreaResultProtocol {
   func dataSend(areaResult: [AreasResult])
@@ -17,6 +18,7 @@ class RestaurantViewController: BaseViewController {
   // MARK: - Properties
   @IBOutlet weak var collectionView: UICollectionView!
   var locationManager = CLLocationManager()
+  var resturants: [RestaurantResult]?
   
   // MARK: - LifeCycle
   override func viewDidLoad() {
@@ -35,6 +37,10 @@ class RestaurantViewController: BaseViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
    // RestaurantDataManager().getAreas(viewController: self)
+    
+    // 강남 지역만 가져와서 보여줌
+    let restuarantRequest = RestaurantRequest(page: nil, pagesize: nil, area: "1", detailarea: nil, x: nil, y: nil)
+    RestaurantDataManager().getRestaurant(parameters: restuarantRequest, viewController: self)
     
   }
   
@@ -58,7 +64,7 @@ class RestaurantViewController: BaseViewController {
   // MARK: - Methods
   private func setNavigationBar() {
     self.navigationController?.navigationBar.isTransparent = true
-    self.navigationItem.setLeftsubTitleAndTitle(title: "전체지역", subTitle: "지금 보고있는 지역은", target: self, action: #selector(navigationTitleTapped))
+    self.navigationItem.setLeftsubTitleAndTitle(title: "서울-강남", subTitle: "지금 보고있는 지역은", target: self, action: #selector(navigationTitleTapped))
     
     let searchButton = self.navigationItem.setNavigationItemButton(nil, action: nil, symbolName: "magnifyingglass", imageName: nil, tintColor: .darkGray)
     let mapButton = self.navigationItem.setNavigationItemButton(nil, action: nil, symbolName: "map", imageName: nil, tintColor: .darkGray)
@@ -88,7 +94,11 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
     case 1:
       return 1
     case 2:
-      return 4
+      if let resturants = resturants {
+        return resturants.count
+      } else {
+        return 4
+      }
     
     default:
       return 1
@@ -109,8 +119,23 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
       return cell
       
     case 2:
+      // 맛집 리스트 셀
       guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath)
               as? RestaurantCell else { return UICollectionViewCell() }
+      if let restaurants = resturants {
+        cell.nameLabel.text = restaurants[indexPath.row].storeName
+        cell.locationLabel.text = restaurants[indexPath.row].areaName
+        cell.ratingLabel.text = restaurants[indexPath.row].score
+        cell.reviewCountLabel.text = String(restaurants[indexPath.row].reviewCount)
+        
+        // 이미지가 있으면 섬네일 넣음
+        if let urlString = restaurants[indexPath.row].thumbnailImgUrl {
+          cell.restaurantImageView.load(urlString: urlString)
+        } else {
+          cell.restaurantImageView.image = UIImage(named: "noImage")
+        }
+        
+      }
       return cell
       
     default:
@@ -126,7 +151,7 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
       return CGSize(width: collectionView.frame.size.width, height: 130)
       
     case 2:
-      return CGSize(width: collectionView.frame.size.width / 2 - 15, height: collectionView.frame.size.width / 2 + 80)
+      return CGSize(width: collectionView.frame.size.width / 2 - 15, height: collectionView.frame.size.width / 2 + 40)
       
     default:
       return CGSize(width: 100, height: 100)
@@ -144,6 +169,8 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
 
 // MARK : - API
 extension RestaurantViewController {
+  
+  // 지역 get
   func successGetAreas(areaResults: [AreasResult]) {
     print("successGetAreas")
     SharedAreaResults.shared.areaResults = areaResults
@@ -153,6 +180,14 @@ extension RestaurantViewController {
     print("failedGetAreas")
     self.presentBottomAlert(message: message)
   }
+  
+  // 식당 get
+  func successGetRestaurants(restaurantResult: [RestaurantResult]) {
+    print("successGetRestaurants")
+    self.resturants = restaurantResult
+    collectionView.reloadData()
+  }
 }
+
 
 
