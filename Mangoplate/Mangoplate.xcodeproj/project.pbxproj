@@ -50,6 +50,8 @@
 		FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */; };
 		FA811D4F2839299000CA29AF /* SecondSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */; };
 		FA811D502839299000CA29AF /* SecondSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA811D4E2839299000CA29AF /* SecondSignUpViewController.xib */; };
+		FA829C6328424057009BB780 /* LocationAgreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA829C6128424057009BB780 /* LocationAgreeViewController.swift */; };
+		FA829C6428424057009BB780 /* LocationAgreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA829C6228424057009BB780 /* LocationAgreeViewController.xib */; };
 		FABCF0A0283B5F70008D14F5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCF09F283B5F70008D14F5 /* User.swift */; };
 		FABCF0A2283BDE5D008D14F5 /* EmailCheckRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCF0A1283BDE5C008D14F5 /* EmailCheckRequest.swift */; };
 		FAD7C5272839ED000093AF35 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7C5262839ED000093AF35 /* BaseTabBarController.swift */; };
@@ -149,6 +151,8 @@
 		FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstSignUpViewController.xib; sourceTree = "<group>"; };
 		FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpViewController.swift; sourceTree = "<group>"; };
 		FA811D4E2839299000CA29AF /* SecondSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondSignUpViewController.xib; sourceTree = "<group>"; };
+		FA829C6128424057009BB780 /* LocationAgreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAgreeViewController.swift; sourceTree = "<group>"; };
+		FA829C6228424057009BB780 /* LocationAgreeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationAgreeViewController.xib; sourceTree = "<group>"; };
 		FABCF09F283B5F70008D14F5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FABCF0A1283BDE5C008D14F5 /* EmailCheckRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckRequest.swift; sourceTree = "<group>"; };
 		FAD7C5262839ED000093AF35 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
@@ -313,9 +317,11 @@
 				FA617A58283F83C500F8E59C /* AreasViewController.swift */,
 				FA597E0A2840BDF40072CA47 /* AreaTabmanViewController.swift */,
 				FA597E0628408AE00072CA47 /* DetailAreaViewController.swift */,
+				FA829C6128424057009BB780 /* LocationAgreeViewController.swift */,
 				FA617A59283F83C500F8E59C /* AreasViewController.xib */,
 				FA597E0B2840BDF40072CA47 /* AreaTabmanViewController.xib */,
 				FA597E0728408AE00072CA47 /* DetailAreaViewController.xib */,
+				FA829C6228424057009BB780 /* LocationAgreeViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -716,6 +722,7 @@
 				FA570AFB283A9E5100BA5049 /* SortingCell.xib in Resources */,
 				FA617A5F283F9D3F00F8E59C /* UserDeleteViewController.xib in Resources */,
 				FAF60A392838E03B00B2CD48 /* EmailSignInViewController.xib in Resources */,
+				FA829C6428424057009BB780 /* LocationAgreeViewController.xib in Resources */,
 				FAF8FEE6283E1AB600AE74AF /* TopListViewController.xib in Resources */,
 				FAF8FED1283DFD5100AE74AF /* MyPageSettingsViewController.xib in Resources */,
 				FA1DE1E1283CFE0300A7EAEC /* MyPageTimelineCell.xib in Resources */,
@@ -844,6 +851,7 @@
 				FA597E0828408AE00072CA47 /* DetailAreaViewController.swift in Sources */,
 				FAF8FED0283DFD5100AE74AF /* MyPageSettingsViewController.swift in Sources */,
 				FAD7C542283A5A310093AF35 /* UINavigationItem.swift in Sources */,
+				FA829C6328424057009BB780 /* LocationAgreeViewController.swift in Sources */,
 				FAF60A382838E03B00B2CD48 /* EmailSignInViewController.swift in Sources */,
 				FA811D4B28391EE400CA29AF /* FirstSignUpViewController.swift in Sources */,
 				FA665A08283B596100E807F1 /* SignUpDataManager.swift in Sources */,
@@ -1004,6 +1012,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mangoplate/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "카메라로 사진 찍기";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "앱을 열때마다 위치정보 가져오기 허용";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "앨범에서 사진 선택";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1035,6 +1044,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mangoplate/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "카메라로 사진 찍기";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "앱을 열때마다 위치정보 가져오기 허용";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "앨범에서 사진 선택";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

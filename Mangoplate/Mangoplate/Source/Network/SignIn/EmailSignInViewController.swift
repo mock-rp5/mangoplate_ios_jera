@@ -83,7 +83,8 @@ extension EmailSignInViewController {
     UserDefaults.standard.set(jwtKey, forKey: "jwtKey") // jwtKey 기기에 저장
     print("UserDefaults jwtKey- \(Constant.HEADERS)")
     
-    let vc = BaseTabBarController()
+    // 위치 동의 뷰로 이동
+    let vc = LocationAgreeViewController()
     vc.modalPresentationStyle = .fullScreen
     present(vc, animated: false)
   }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 protocol AreaResultProtocol {
   func dataSend(areaResult: [AreasResult])
@@ -15,12 +16,14 @@ class RestaurantViewController: BaseViewController {
 
   // MARK: - Properties
   @IBOutlet weak var collectionView: UICollectionView!
+  var locationManager = CLLocationManager()
   
   // MARK: - LifeCycle
   override func viewDidLoad() {
     super.viewDidLoad()
 
     setNavigationBar()
+    setLocation()
     
     collectionView.delegate = self
     collectionView.dataSource = self
@@ -35,6 +38,23 @@ class RestaurantViewController: BaseViewController {
     
   }
   
+  private func setLocation() {
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    if CLLocationManager.locationServicesEnabled() {
+      print("위치서비스 on상태")
+      locationManager.startUpdatingLocation()
+    } else {
+      print("위치서비스 off상태")
+    }
+  }
+  
+  private func getLocation() {
+    let coor = locationManager.location?.coordinate
+    let latitude = coor?.latitude
+    let longtitude = coor?.longitude
+    print(latitude, longtitude)
+  }
+  
   // MARK: - Methods
   private func setNavigationBar() {
     self.navigationController?.navigationBar.isTransparent = true
@@ -47,6 +67,8 @@ class RestaurantViewController: BaseViewController {
   }
   
   @objc func navigationTitleTapped(_ sender: UIButton) {
+    getLocation() // 현재 위치정보 가져옴
+    
     let vc = AreasViewController()
     vc.modalPresentationStyle = .overCurrentContext
     vc.modalTransitionStyle = .crossDissolve
@@ -118,7 +140,6 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
       return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
   }
-
 }
 
 // MARK : - API
