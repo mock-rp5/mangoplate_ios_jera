@@ -37,19 +37,19 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVg-gi-0L6">
-                        <rect key="frame" x="272" y="90" width="68" height="16"/>
+                        <rect key="frame" x="272" y="89.5" width="68" height="17"/>
                         <attributedString key="attributedText">
                             <fragment content="할인 전 가격">
                                 <attributes>
                                     <color key="NSColor" red="0.94901961089999998" green="0.9529411793" blue="0.9529411793" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <font key="NSFont" size="14" name=".AppleSDGothicNeoI-Regular"/>
+                                    <font key="NSFont" metaFont="system" size="14"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="할인 가격" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thc-Av-Hq3">
-                        <rect key="frame" x="269.5" y="109" width="70.5" height="23"/>
+                        <rect key="frame" x="269.5" y="109.5" width="70.5" height="23"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                         <color key="textColor" red="0.94901961089999998" green="0.9529411793" blue="0.9529411793" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
@@ -116,8 +116,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="dicountLabel" destination="36r-C7-IW2" id="LZw-ey-dSH"/>
                 <outlet property="foodImageView" destination="sqa-Df-Iyt" id="yPX-Wo-dlE"/>
                 <outlet property="menuLabel" destination="jRd-ES-hzH" id="V3V-RP-KKn"/>
+                <outlet property="newView" destination="hpv-wz-TiN" id="9VL-pj-JEN"/>
                 <outlet property="priceLabel" destination="IVg-gi-0L6" id="Ny2-A6-iaG"/>
                 <outlet property="salePriceLabel" destination="Thc-Av-Hq3" id="Ulv-ig-afb"/>
                 <outlet property="titleLabel" destination="fdJ-kX-4y1" id="zgE-Nu-ERU"/>

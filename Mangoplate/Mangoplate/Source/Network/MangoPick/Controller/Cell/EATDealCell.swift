@@ -14,6 +14,9 @@ class EATDealCell: UITableViewCell {
   @IBOutlet weak var salePriceLabel: UILabel!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var menuLabel: UILabel!
+  @IBOutlet weak var dicountLabel: UILabel!
+  @IBOutlet weak var newView: UIView!
+  
   
   override func awakeFromNib() {
     super.awakeFromNib()

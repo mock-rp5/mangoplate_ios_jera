@@ -39,6 +39,8 @@
 		FA600B0B283F47320044F5BA /* RestaurantDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA600B0A283F47320044F5BA /* RestaurantDataManager.swift */; };
 		FA600B0F283F47790044F5BA /* AreasResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA600B0E283F47790044F5BA /* AreasResponse.swift */; };
 		FA60386C28425BC500C0DFC4 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60386B28425BC500C0DFC4 /* UIImageView.swift */; };
+		FA6038702842658A00C0DFC4 /* EATDealResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60386F2842658A00C0DFC4 /* EATDealResponse.swift */; };
+		FA6038722842660100C0DFC4 /* MangoPickDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6038712842660100C0DFC4 /* MangoPickDataManager.swift */; };
 		FA617A5A283F83C500F8E59C /* AreasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA617A58283F83C500F8E59C /* AreasViewController.swift */; };
 		FA617A5B283F83C500F8E59C /* AreasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA617A59283F83C500F8E59C /* AreasViewController.xib */; };
 		FA617A5E283F9D3F00F8E59C /* UserDeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA617A5C283F9D3F00F8E59C /* UserDeleteViewController.swift */; };
@@ -143,6 +145,8 @@
 		FA600B0A283F47320044F5BA /* RestaurantDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDataManager.swift; sourceTree = "<group>"; };
 		FA600B0E283F47790044F5BA /* AreasResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreasResponse.swift; sourceTree = "<group>"; };
 		FA60386B28425BC500C0DFC4 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		FA60386F2842658A00C0DFC4 /* EATDealResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EATDealResponse.swift; sourceTree = "<group>"; };
+		FA6038712842660100C0DFC4 /* MangoPickDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangoPickDataManager.swift; sourceTree = "<group>"; };
 		FA617A58283F83C500F8E59C /* AreasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreasViewController.swift; sourceTree = "<group>"; };
 		FA617A59283F83C500F8E59C /* AreasViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AreasViewController.xib; sourceTree = "<group>"; };
 		FA617A5C283F9D3F00F8E59C /* UserDeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDeleteViewController.swift; sourceTree = "<group>"; };
@@ -359,6 +363,22 @@
 			path = DataManager;
 			sourceTree = "<group>";
 		};
+		FA60386D2842655C00C0DFC4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FA60386F2842658A00C0DFC4 /* EATDealResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		FA60386E2842656C00C0DFC4 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				FA6038712842660100C0DFC4 /* MangoPickDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		FA617A60283FAC2800F8E59C /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,7 +446,6 @@
 			isa = PBXGroup;
 			children = (
 				FAF8FEDA283E1A6600AE74AF /* Controller */,
-				FAF8FEE8283E27EE00AE74AF /* Cell */,
 			);
 			path = MangoPick;
 			sourceTree = "<group>";
@@ -627,6 +646,7 @@
 		FAF8FEDA283E1A6600AE74AF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FAF8FEE8283E27EE00AE74AF /* Cell */,
 				FAD7C531283A26F00093AF35 /* MangoPickViewController.swift */,
 				FAF8FEDB283E1A9C00AE74AF /* EATDealViewController.swift */,
 				FAF8FEDF283E1AAA00AE74AF /* StoryViewController.swift */,
@@ -635,6 +655,8 @@
 				FAF8FEDC283E1A9C00AE74AF /* EATDealViewController.xib */,
 				FAF8FEE0283E1AAA00AE74AF /* StoryViewController.xib */,
 				FAF8FEE4283E1AB600AE74AF /* TopListViewController.xib */,
+				FA60386D2842655C00C0DFC4 /* Entity */,
+				FA60386E2842656C00C0DFC4 /* DataManager */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -858,12 +880,14 @@
 				FAF60A342838D32800B2CD48 /* SignInHomeViewController.swift in Sources */,
 				FA4C1CAD283C83130089CDC8 /* SignInDataManager.swift in Sources */,
 				FA4FA610283FBAB500DD836A /* DeleteUserResponse.swift in Sources */,
+				FA6038702842658A00C0DFC4 /* EATDealResponse.swift in Sources */,
 				FAF8FEE5283E1AB600AE74AF /* TopListViewController.swift in Sources */,
 				FAF8FEDD283E1A9C00AE74AF /* EATDealViewController.swift in Sources */,
 				FA597E0828408AE00072CA47 /* DetailAreaViewController.swift in Sources */,
 				FAF8FED0283DFD5100AE74AF /* MyPageSettingsViewController.swift in Sources */,
 				FAD7C542283A5A310093AF35 /* UINavigationItem.swift in Sources */,
 				FA829C6328424057009BB780 /* LocationAgreeViewController.swift in Sources */,
+				FA6038722842660100C0DFC4 /* MangoPickDataManager.swift in Sources */,
 				FAF60A382838E03B00B2CD48 /* EmailSignInViewController.swift in Sources */,
 				FA811D4B28391EE400CA29AF /* FirstSignUpViewController.swift in Sources */,
 				FA665A08283B596100E807F1 /* SignUpDataManager.swift in Sources */,
