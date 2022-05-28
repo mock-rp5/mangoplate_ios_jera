@@ -22,6 +22,7 @@
 		FA4C3B7E2841388C003AFEF2 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C3B7D2841388C003AFEF2 /* CircularTransition.swift */; };
 		FA4FA60E283FBA0E00DD836A /* MyPageDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FA60D283FBA0E00DD836A /* MyPageDataManager.swift */; };
 		FA4FA610283FBAB500DD836A /* DeleteUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FA60F283FBAB500DD836A /* DeleteUserResponse.swift */; };
+		FA551B6828426FD3009ADB01 /* StoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA551B6728426FD3009ADB01 /* StoryResponse.swift */; };
 		FA570AEB283A885300BA5049 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA570AE9283A885300BA5049 /* RestaurantCell.swift */; };
 		FA570AEC283A885300BA5049 /* RestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA570AEA283A885300BA5049 /* RestaurantCell.xib */; };
 		FA570AF5283A8BC200BA5049 /* BannerSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA570AF3283A8BC200BA5049 /* BannerSubCell.swift */; };
@@ -128,6 +129,7 @@
 		FA4C3B7D2841388C003AFEF2 /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 		FA4FA60D283FBA0E00DD836A /* MyPageDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageDataManager.swift; sourceTree = "<group>"; };
 		FA4FA60F283FBAB500DD836A /* DeleteUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserResponse.swift; sourceTree = "<group>"; };
+		FA551B6728426FD3009ADB01 /* StoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryResponse.swift; sourceTree = "<group>"; };
 		FA570AE9283A885300BA5049 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		FA570AEA283A885300BA5049 /* RestaurantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantCell.xib; sourceTree = "<group>"; };
 		FA570AF3283A8BC200BA5049 /* BannerSubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSubCell.swift; sourceTree = "<group>"; };
@@ -367,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				FA60386F2842658A00C0DFC4 /* EATDealResponse.swift */,
+				FA551B6728426FD3009ADB01 /* StoryResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -886,6 +889,7 @@
 				FA597E0828408AE00072CA47 /* DetailAreaViewController.swift in Sources */,
 				FAF8FED0283DFD5100AE74AF /* MyPageSettingsViewController.swift in Sources */,
 				FAD7C542283A5A310093AF35 /* UINavigationItem.swift in Sources */,
+				FA551B6828426FD3009ADB01 /* StoryResponse.swift in Sources */,
 				FA829C6328424057009BB780 /* LocationAgreeViewController.swift in Sources */,
 				FA6038722842660100C0DFC4 /* MangoPickDataManager.swift in Sources */,
 				FAF60A382838E03B00B2CD48 /* EmailSignInViewController.swift in Sources */,

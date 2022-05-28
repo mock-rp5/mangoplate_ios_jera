@@ -11,7 +11,7 @@ struct EATDealResponse: Codable {
   let isSuccess: Bool
   let code: Int
   let message: String
-  let result: [EATDealResult]
+  let result: [EATDealResult]?
 }
 
 struct EATDealResult: Codable {

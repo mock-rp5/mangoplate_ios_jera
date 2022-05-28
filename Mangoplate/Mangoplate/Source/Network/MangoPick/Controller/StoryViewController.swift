@@ -10,6 +10,7 @@ import UIKit
 class StoryViewController: UIViewController {
 
   @IBOutlet weak var storyCollectionView: UICollectionView!
+  var stories: [StoryResult]?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -17,17 +18,36 @@ class StoryViewController: UIViewController {
     storyCollectionView.register(UINib(nibName: "StoryCell", bundle: .main), forCellWithReuseIdentifier: "StoryCell")
     storyCollectionView.dataSource = self
     storyCollectionView.delegate = self
+    
+    MangoPickDataManager().getStory(viewController: self)
   }
 }
 
 extension StoryViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 10
+    if let stories = stories {
+      return stories.count
+    } else {
+      return 10
+    }
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard let cell = storyCollectionView.dequeueReusableCell(withReuseIdentifier: "StoryCell", for: indexPath)
             as? StoryCell else { return UICollectionViewCell() }
+    
+    if let stories = stories {
+      cell.mainTitleLabel.text = stories[indexPath.row].storyTitle
+      cell.subTitleLabel.text = stories[indexPath.row].storySubTitle
+      
+      // 이미지가 있으면 섬네일 넣음
+      if let urlString = stories[indexPath.row].storythumbnailUrl {
+        cell.storyImageView.load(urlString: urlString)
+      } else {
+        cell.storyImageView.image = UIImage(named: "noImage")
+      }
+    }
+    
     return cell
   }
   
@@ -44,4 +64,16 @@ extension StoryViewController: UICollectionViewDelegate, UICollectionViewDataSou
     return CGSize(width: width, height: width)
   }
   
+}
+
+// MARK: - API
+extension StoryViewController {
+  func successGetStory(results: [StoryResult]) {
+    self.stories = results
+    self.storyCollectionView.reloadData()
+  }
+  
+  func failedGetStory(message: String) {
+    self.presentBottomAlert(message: message)
+  }
 }

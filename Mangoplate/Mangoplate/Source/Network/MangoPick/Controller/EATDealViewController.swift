@@ -79,4 +79,8 @@ extension EATDealViewController {
     self.eatDeals = results
     eatDealTableView.reloadData()
   }
+  
+  func failedGetEATDeal(message: String) {
+    self.presentBottomAlert(message: message)
+  }
 }

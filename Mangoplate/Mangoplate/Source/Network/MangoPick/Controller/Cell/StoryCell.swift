@@ -9,9 +9,9 @@ import UIKit
 
 class StoryCell: UICollectionViewCell {
 
-  @IBOutlet weak var holicPickImageView: UIImageView!
   @IBOutlet weak var subTitleLabel: UILabel!
   @IBOutlet weak var mainTitleLabel: UILabel!
+  @IBOutlet weak var storyImageView: UIImageView!
   
   override func awakeFromNib() {
     super.awakeFromNib()
