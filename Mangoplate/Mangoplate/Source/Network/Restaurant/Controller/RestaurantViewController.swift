@@ -64,7 +64,7 @@ class RestaurantViewController: BaseViewController {
   // MARK: - Methods
   private func setNavigationBar() {
     self.navigationController?.navigationBar.isTransparent = true
-    self.navigationItem.setLeftsubTitleAndTitle(title: "서울-강남", subTitle: "지금 보고있는 지역은", target: self, action: #selector(navigationTitleTapped))
+    self.navigationItem.setLeftsubTitleAndTitle(title: "서울-강남∨", subTitle: "지금 보고있는 지역은", target: self, action: #selector(navigationTitleTapped))
     
     let searchButton = self.navigationItem.setNavigationItemButton(nil, action: nil, symbolName: "magnifyingglass", imageName: nil, tintColor: .darkGray)
     let mapButton = self.navigationItem.setNavigationItemButton(nil, action: nil, symbolName: "map", imageName: nil, tintColor: .darkGray)

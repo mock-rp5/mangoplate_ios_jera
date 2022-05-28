@@ -20,4 +20,5 @@ struct TopListResult: Codable {
   let topListTitle, topListSubTitle: String
   let topListThumbnailUrl: String?
   let viewCount: Int
+  let createDate: String
 }

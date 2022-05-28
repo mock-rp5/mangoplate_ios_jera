@@ -42,6 +42,7 @@ extension TopListViewController: UICollectionViewDelegate, UICollectionViewDataS
       cell.subTitleLabel.text = topLists[indexPath.row].topListSubTitle
       cell.mainTitleLabel.text = topLists[indexPath.row].topListTitle
       cell.watchingLabel.text = String(topLists[indexPath.row].viewCount).insertComma
+      cell.timeLabel.text = topLists[indexPath.row].createDate
       
       // 이미지가 있으면 섬네일 넣음
       if let urlString = topLists[indexPath.row].topListThumbnailUrl {
