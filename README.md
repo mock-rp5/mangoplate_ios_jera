@@ -228,7 +228,7 @@
 
 	- 지역선택뷰는 VC -> half VC -> tabBar VC -> Cell 형태라 매우 복잡한 구조로 되어 있어 데이터 전달에 어려움 겪음
 		- NotificationCenter 사용해 데이터 전달 
-		- 지역선택 뷰가 복잡에 지역 조회 API 연동 우선순위 미룸
+		- 지역선택 뷰가 복잡해서 지역 조회 API 연동 우선순위 미룸
 
 	- plus탭을 누르면 페이지 이동은 하지 않고 VC를 present하며 circle애니메이션 동작
 		- PageboyViewControllerDataSource에서 2번째 탭은 nil리턴
@@ -241,3 +241,48 @@
 
 </div>
 </details>
+
+
+</br>
+<details>
+<summary>8일차_2022.05.28 (토)</summary>
+<div markdown="1">
+
+```
+1. 구현한 기능
+
+	- 맛집찾기 - 식당목록 조회 API (80%) (지역별로 조회 구현 예정)
+	- 망고픽 - EAT딜 조회 API (100%)
+	- 망고픽 - 스토리 조회 API (100%)
+	- 망고픽 - Top리스트 조회 API (100%)
+	- 내정보 - 회원 조회 API (100%)
+
+2. 발생한 이슈
+
+	- 어제 발생 했던 서버 끊김 현상, 서버 개발자분이 지역 조회 API를 만들 때 DB서버랑 연결을 해제를 제대로 안해줘서 생긴 문제라고 함
+		-> 해결!
+	
+	- 회원 조회 API는 내정보뷰와 탈퇴뷰에서 둘 다 씀
+		-> API를 호출하는 VC의 타입을 UIViewController로 두고 타입 체크를 해서 각각 API 성공함수 호출함
+
+	- 망고픽 - 스토리탭에서 홀릭픽 마크가 가운데 정렬이 안됨
+		-> 서버에서 주는 이미지를 보니 가로로 긴데 스토리 셀은 정사각형이라 비율이 안맞아서 문제
+		-> 급한건 아니니 시간날 때 수정해달라고 서버 개발자분에게 요청
+
+	- 식당 셀의 글씨가 길어서 평점을 밀려 셀이 나오지 않음
+		-> 평점의 Compression Resistance priority를 높여줘서 해결
+
+
+3. API 변동사항
+
+	- 식당 조회 API에 조회수 정보 요구 -> 바로 추가해주심!
+	- Top리스트 조회 API 날짜 정보 요구 -> 바로 추가
+
+
+
+```
+<img width="150" src="./image/8-1.png"> <img width="150" src="./image/8-2.png"><img width="150" src="./image/8-3.png"> <img width="150" src="./image/8-4.png"><img width="150" src="./image/8-5.png"> <img width="150" src="./image/8-6.png"> 
+
+</div>
+</details>
+
