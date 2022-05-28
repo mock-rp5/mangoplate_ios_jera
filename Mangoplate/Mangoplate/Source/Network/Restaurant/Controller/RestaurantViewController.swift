@@ -127,6 +127,7 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
         cell.locationLabel.text = restaurants[indexPath.row].areaName
         cell.ratingLabel.text = restaurants[indexPath.row].score
         cell.reviewCountLabel.text = String(restaurants[indexPath.row].reviewCount)
+        cell.watchingCountLabel.text = String(restaurants[indexPath.row].viewCount).insertComma
         
         // 이미지가 있으면 섬네일 넣음
         if let urlString = restaurants[indexPath.row].thumbnailImgUrl {

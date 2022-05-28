@@ -9,6 +9,8 @@ import Foundation
 import Alamofire
 
 class MangoPickDataManager {
+  
+  // EAT딜 조회
   func getEATDeal(viewController: EATDealViewController) {
     AF.request("\(Constant.DEV_BASE_URL)/app/mangopicks/eatdeal", method: .get, headers: Constant.HEADERS)
       .validate()
@@ -29,6 +31,7 @@ class MangoPickDataManager {
       }
   }
   
+  // 스토리 조회
   func getStory(viewController: StoryViewController) {
     AF.request("\(Constant.DEV_BASE_URL)/app/mangopicks/story", method: .get, headers: Constant.HEADERS)
       .validate()
@@ -41,6 +44,27 @@ class MangoPickDataManager {
             viewController.dismissIndicator()
           } else {
             viewController.failedGetStory(message: result.message)
+          }
+          
+        case .failure(let error):
+          print("getEATDeal failure \(error.localizedDescription)")
+        }
+      }
+  }
+  
+  // Top리스트 조회
+  func getTopList(viewController: TopListViewController) {
+    AF.request("\(Constant.DEV_BASE_URL)/app/mangopicks/toplist", method: .get, headers: Constant.HEADERS)
+      .validate()
+      .responseDecodable(of: TopListResponse.self) { response in
+        switch response.result {
+        case .success(let result):
+          if result.isSuccess {
+            viewController.showIndicator()
+            viewController.successGetTopList(results: result.result ?? [])
+            viewController.dismissIndicator()
+          } else {
+            viewController.failedGetTopList(message: result.message)
           }
           
         case .failure(let error):

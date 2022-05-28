@@ -23,6 +23,7 @@
 		FA4FA60E283FBA0E00DD836A /* MyPageDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FA60D283FBA0E00DD836A /* MyPageDataManager.swift */; };
 		FA4FA610283FBAB500DD836A /* DeleteUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FA60F283FBAB500DD836A /* DeleteUserResponse.swift */; };
 		FA551B6828426FD3009ADB01 /* StoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA551B6728426FD3009ADB01 /* StoryResponse.swift */; };
+		FA551B6A2842807F009ADB01 /* TopListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA551B692842807F009ADB01 /* TopListResponse.swift */; };
 		FA570AEB283A885300BA5049 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA570AE9283A885300BA5049 /* RestaurantCell.swift */; };
 		FA570AEC283A885300BA5049 /* RestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA570AEA283A885300BA5049 /* RestaurantCell.xib */; };
 		FA570AF5283A8BC200BA5049 /* BannerSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA570AF3283A8BC200BA5049 /* BannerSubCell.swift */; };
@@ -130,6 +131,7 @@
 		FA4FA60D283FBA0E00DD836A /* MyPageDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageDataManager.swift; sourceTree = "<group>"; };
 		FA4FA60F283FBAB500DD836A /* DeleteUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserResponse.swift; sourceTree = "<group>"; };
 		FA551B6728426FD3009ADB01 /* StoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryResponse.swift; sourceTree = "<group>"; };
+		FA551B692842807F009ADB01 /* TopListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListResponse.swift; sourceTree = "<group>"; };
 		FA570AE9283A885300BA5049 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		FA570AEA283A885300BA5049 /* RestaurantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantCell.xib; sourceTree = "<group>"; };
 		FA570AF3283A8BC200BA5049 /* BannerSubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSubCell.swift; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 			children = (
 				FA60386F2842658A00C0DFC4 /* EATDealResponse.swift */,
 				FA551B6728426FD3009ADB01 /* StoryResponse.swift */,
+				FA551B692842807F009ADB01 /* TopListResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -839,6 +842,7 @@
 				FAD7C53B283A27080093AF35 /* NewsViewController.swift in Sources */,
 				FA617A5E283F9D3F00F8E59C /* UserDeleteViewController.swift in Sources */,
 				FAD7C546283A799B0093AF35 /* BannerCell.swift in Sources */,
+				FA551B6A2842807F009ADB01 /* TopListResponse.swift in Sources */,
 				FABCF0A2283BDE5D008D14F5 /* EmailCheckRequest.swift in Sources */,
 				FAF8FEE1283E1AAA00AE74AF /* StoryViewController.swift in Sources */,
 				FAD7C52B283A23F20093AF35 /* RestaurantViewController.swift in Sources */,

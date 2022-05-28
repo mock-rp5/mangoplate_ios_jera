@@ -21,10 +21,7 @@ class EATDealViewController: UIViewController {
     eatDealTableView.register(UINib(nibName: "EATDealCell", bundle: .main), forCellReuseIdentifier: "EATDealCell")
     eatDealTableView.dataSource = self
     eatDealTableView.delegate = self
-  }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
+    
     MangoPickDataManager().getEATDeal(viewController: self)
   }
 }

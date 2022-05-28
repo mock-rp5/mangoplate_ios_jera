@@ -15,18 +15,19 @@ struct RestaurantResponse: Codable {
 }
 
 struct RestaurantResult: Codable {
-    let storeId: Int
-    let storeName: String
-    let areaId: Int
-    let areaName: String
-    let detailAreaId: Int
-    let detailAreaName: String
-    let foodTypeId: Int
-    let foodTypeName: String
-    let detailFoodTypeId: Int
-    let detailFoodTypeName: String
-    let reviewCount: Int
-    let thumbnailImgUrl: String?
-    let score: String?
-    let isValidatedScore: Int
+  let storeId: Int
+  let storeName: String
+  let areaId: Int
+  let areaName: String
+  let detailAreaId: Int
+  let detailAreaName: String
+  let foodTypeId: Int
+  let foodTypeName: String
+  let detailFoodTypeId: Int
+  let detailFoodTypeName: String
+  let reviewCount: Int
+  let thumbnailImgUrl: String?
+  let score: String?
+  let isValidatedScore: Int
+  let viewCount: Int
 }

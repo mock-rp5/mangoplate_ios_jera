@@ -84,7 +84,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikI-FZ-adi">
-                                <rect key="frame" x="267" y="0.0" width="19" height="18"/>
+                                <rect key="frame" x="267" y="1.5" width="19" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="Tu4-0H-Ub2"/>
                                     <constraint firstAttribute="width" constant="19" id="lp2-q2-cyK"/>
@@ -98,7 +98,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ikI-FZ-adi" secondAttribute="trailing" constant="8" id="9Kq-fe-edu"/>
                             <constraint firstItem="zFE-qf-JwK" firstAttribute="top" secondItem="KEh-Gs-wTi" secondAttribute="bottom" constant="2.5" id="Pa0-lY-3cm"/>
-                            <constraint firstItem="ikI-FZ-adi" firstAttribute="top" secondItem="NHm-9I-tEK" secondAttribute="top" id="fjm-BF-iIR"/>
+                            <constraint firstItem="ikI-FZ-adi" firstAttribute="top" secondItem="NHm-9I-tEK" secondAttribute="top" constant="1.5" id="fjm-BF-iIR"/>
                             <constraint firstItem="KEh-Gs-wTi" firstAttribute="leading" secondItem="NHm-9I-tEK" secondAttribute="leading" constant="5" id="fl0-gh-f3V"/>
                             <constraint firstItem="zFE-qf-JwK" firstAttribute="leading" secondItem="NHm-9I-tEK" secondAttribute="leading" constant="5" id="raA-Kq-Adb"/>
                             <constraint firstItem="KEh-Gs-wTi" firstAttribute="centerY" secondItem="NHm-9I-tEK" secondAttribute="centerY" multiplier="0.6" id="vdL-B4-vZb"/>
