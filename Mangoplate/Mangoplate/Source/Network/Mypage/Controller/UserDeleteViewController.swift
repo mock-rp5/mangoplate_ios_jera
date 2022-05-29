@@ -19,7 +19,7 @@ class UserDeleteViewController: BaseViewController {
   // MARK: - LifeCycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    showIndicator()
     setNavigationBarBackbuttonTitle(title: "회원탈퇴")
     profileImageView.layer.cornerRadius = 30
     deleteButton.isEnabled = false
@@ -90,6 +90,7 @@ extension UserDeleteViewController {
     if let stringUrl = user.userProfileImg {
       self.profileImageView.load(urlString: stringUrl)
     }
+    dismissIndicator()
   }
   
   func failedGetUser(message: String) {

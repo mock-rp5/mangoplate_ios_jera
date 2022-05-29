@@ -37,6 +37,7 @@ class MypageViewController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setUI()
+    showIndicator()
     MyPageDataManager().getUser(viewController: self)
   }
   
@@ -155,9 +156,11 @@ extension MypageViewController {
     self.user = user
     print(user)
     myPageTableView.reloadData()
+    dismissIndicator()
   }
   
   func failedGetUser(message: String) {
     self.presentBottomAlert(message: message)
+    dismissIndicator()
   }
 }

@@ -18,9 +18,7 @@ class MangoPickDataManager {
         switch response.result {
         case .success(let result):
           if result.isSuccess {
-            viewController.showIndicator()
             viewController.succeessGetEATDeal(results: result.result ?? [])
-            viewController.dismissIndicator()
           } else {
             viewController.failedGetEATDeal(message: result.message)
           }
@@ -39,9 +37,7 @@ class MangoPickDataManager {
         switch response.result {
         case .success(let result):
           if result.isSuccess {
-            viewController.showIndicator()
             viewController.successGetStory(results: result.result ?? [])
-            viewController.dismissIndicator()
           } else {
             viewController.failedGetStory(message: result.message)
           }
@@ -60,9 +56,7 @@ class MangoPickDataManager {
         switch response.result {
         case .success(let result):
           if result.isSuccess {
-            viewController.showIndicator()
             viewController.successGetTopList(results: result.result ?? [])
-            viewController.dismissIndicator()
           } else {
             viewController.failedGetTopList(message: result.message)
           }

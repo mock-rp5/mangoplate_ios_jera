@@ -18,6 +18,7 @@ class TopListViewController: UIViewController {
     topListCollectionView.delegate = self
     topListCollectionView.dataSource = self
     
+    showIndicator()
     MangoPickDataManager().getTopList(viewController: self)
   }
 
@@ -28,7 +29,7 @@ extension TopListViewController: UICollectionViewDelegate, UICollectionViewDataS
     if let topLists = topLists {
       return topLists.count
     } else {
-      return 2
+      return 0
     }
   }
   
@@ -72,9 +73,11 @@ extension TopListViewController {
   func successGetTopList(results: [TopListResult]) {
     self.topLists = results
     topListCollectionView.reloadData()
+    dismissIndicator()
   }
   
   func failedGetTopList(message: String) {
     self.presentBottomAlert(message: message)
+    dismissIndicator()
   }
 }

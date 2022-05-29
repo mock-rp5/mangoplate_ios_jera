@@ -17,9 +17,7 @@ class RestaurantDataManager {
         switch response.result {
         case .success(let result):
           if result.isSuccess {
-            viewController.showIndicator()
             viewController.successGetAreas(areaResults: result.result)
-            viewController.dismissIndicator()
           } else {
             viewController.failedGetAreas(message: result.message)
           }
@@ -39,9 +37,7 @@ class RestaurantDataManager {
         switch response.result {
         case .success(let result):
           if result.isSuccess {
-            viewController.showIndicator()
             viewController.successGetRestaurants(restaurantResult: result.result ?? [])
-            viewController.dismissIndicator()
           }
         case .failure(let error):
           print("getRestaurant failure \(error.localizedDescription)")

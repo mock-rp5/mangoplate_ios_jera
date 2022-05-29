@@ -42,6 +42,7 @@ class RestaurantViewController: BaseViewController {
     super.viewWillAppear(animated)
    // RestaurantDataManager().getAreas(viewController: self)
     setNavigationTitle(title: "", color: .black)
+    showIndicator()
     
     // 첫 화면은 강남 지역만 가져와서 보여줌
     if locationServicesEnabled {
@@ -184,9 +185,7 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
         // 이미지가 있으면 섬네일 넣음
         if let urlString = restaurants[indexPath.row].thumbnailImgUrl {
           DispatchQueue.main.async {
-            self.showIndicator()
             cell.restaurantImageView.load(urlString: urlString)
-            self.dismissIndicator()
           }
           
         } else {
@@ -247,11 +246,13 @@ extension RestaurantViewController {
   func successGetAreas(areaResults: [AreasResult]) {
     print("successGetAreas")
     SharedAreaResults.shared.areaResults = areaResults
+    dismissIndicator()
   }
   
   func failedGetAreas(message: String) {
     print("failedGetAreas")
     self.presentBottomAlert(message: message)
+    dismissIndicator()
   }
   
   // 식당 get
@@ -259,6 +260,7 @@ extension RestaurantViewController {
     print("successGetRestaurants")
     self.resturants = restaurantResult
     collectionView.reloadData()
+    dismissIndicator()
   }
 }
 

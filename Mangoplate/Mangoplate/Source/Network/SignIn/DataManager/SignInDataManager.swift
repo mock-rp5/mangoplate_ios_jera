@@ -21,9 +21,7 @@ class SignInDataManger {
         case .success(let response):
           if response.isSuccess {
             if let jwt = response.result?.jwt {
-              viewController.showIndicator()
               viewController.successSignIn(jwtKey: jwt)
-              viewController.dismissIndicator()
             }
           } else {
             viewController.failedSignIn(message: response.message, code: response.code)

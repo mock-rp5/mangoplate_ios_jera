@@ -19,6 +19,7 @@ class StoryViewController: UIViewController {
     storyCollectionView.dataSource = self
     storyCollectionView.delegate = self
     
+    showIndicator()
     MangoPickDataManager().getStory(viewController: self)
   }
 }
@@ -28,7 +29,7 @@ extension StoryViewController: UICollectionViewDelegate, UICollectionViewDataSou
     if let stories = stories {
       return stories.count
     } else {
-      return 2
+      return 0
     }
   }
   
@@ -71,9 +72,11 @@ extension StoryViewController {
   func successGetStory(results: [StoryResult]) {
     self.stories = results
     self.storyCollectionView.reloadData()
+    dismissIndicator()
   }
   
   func failedGetStory(message: String) {
     self.presentBottomAlert(message: message)
+    dismissIndicator()
   }
 }

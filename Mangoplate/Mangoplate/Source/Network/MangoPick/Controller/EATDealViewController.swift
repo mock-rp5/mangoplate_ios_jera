@@ -22,6 +22,7 @@ class EATDealViewController: UIViewController {
     eatDealTableView.dataSource = self
     eatDealTableView.delegate = self
     
+    showIndicator()
     MangoPickDataManager().getEATDeal(viewController: self)
   }
 }
@@ -31,7 +32,7 @@ extension EATDealViewController: UITableViewDelegate, UITableViewDataSource {
     if let eatDeals = eatDeals {
       return eatDeals.count
     } else {
-      return 2
+      return 0
     }
   }
   
@@ -75,9 +76,11 @@ extension EATDealViewController {
   func succeessGetEATDeal(results: [EATDealResult]) {
     self.eatDeals = results
     eatDealTableView.reloadData()
+    dismissIndicator()
   }
   
   func failedGetEATDeal(message: String) {
     self.presentBottomAlert(message: message)
+    dismissIndicator()
   }
 }
