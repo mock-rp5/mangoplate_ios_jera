@@ -28,7 +28,7 @@ class RestaurantCell: UICollectionViewCell {
     ratingLabel.text = "5.0"
     watchingCountLabel.text = "0"
     reviewCountLabel.text = "0"
-    restaurantImageView.image = UIImage(named: "noImage")
+    restaurantImageView.image = nil
   }
 
 }

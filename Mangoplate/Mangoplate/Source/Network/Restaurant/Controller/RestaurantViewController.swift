@@ -19,6 +19,8 @@ class RestaurantViewController: BaseViewController {
   @IBOutlet weak var collectionView: UICollectionView!
   var locationManager = CLLocationManager()
   var resturants: [RestaurantResult]?
+  var latitude: Double?
+  var longtitude: Double?
   
   // MARK: - LifeCycle
   override func viewDidLoad() {
@@ -37,11 +39,14 @@ class RestaurantViewController: BaseViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
    // RestaurantDataManager().getAreas(viewController: self)
+    setNavigationTitle(title: "", color: .black)
     
-    // 강남 지역만 가져와서 보여줌
+    // 첫 화면은 강남 지역만 가져와서 보여줌
     let restuarantRequest = RestaurantRequest(page: nil, pagesize: nil, area: "1", detailarea: nil, x: nil, y: nil)
     RestaurantDataManager().getRestaurant(parameters: restuarantRequest, viewController: self)
     
+    // 지역 선택 시, 선택한 지역과 nvigationTitle 받아올 NotificationCenter 등록
+    NotificationCenter.default.addObserver(self, selector: #selector(didRecieveAreasString), name: .selectAreaString, object: nil)
   }
   
   private func setLocation() {
@@ -55,17 +60,16 @@ class RestaurantViewController: BaseViewController {
   }
   
   private func getLocation() {
- //   let coor = locationManager.location?.coordinate
-//    let latitude = coor?.latitude
-//    let longtitude = coor?.longitude
-    //print(latitude, longtitude)
+    let coor = locationManager.location?.coordinate
+    latitude = coor?.latitude
+    longtitude = coor?.longitude
+    print(latitude, longtitude)
   }
   
   // MARK: - Methods
   private func setNavigationBar() {
-    setNavigationTitle(title: "", color: .black)
     self.navigationController?.navigationBar.isTransparent = true
-    self.navigationItem.setLeftsubTitleAndTitle(title: "서울-강남∨", subTitle: "지금 보고있는 지역은", target: self, action: #selector(navigationTitleTapped))
+    self.navigationItem.setLeftsubTitleAndTitle(title: "서울-강남 ∨", subTitle: "지금 보고있는 지역은", target: self, action: #selector(navigationTitleTapped))
     
     let searchButton = self.navigationItem.setNavigationItemButton(nil, action: nil, symbolName: "magnifyingglass", imageName: nil, tintColor: .darkGray, width: 25, height: 25)
     let mapButton = self.navigationItem.setNavigationItemButton(nil, action: nil, symbolName: "map", imageName: nil, tintColor: .darkGray, width: 25, height: 25)
@@ -79,8 +83,28 @@ class RestaurantViewController: BaseViewController {
     let vc = AreasViewController()
     vc.modalPresentationStyle = .overCurrentContext
     vc.modalTransitionStyle = .crossDissolve
+  
     BaseTabBarController.hideTabBar()
     self.present(vc, animated: true)
+  }
+  
+  // 선택한 지역과 navigaionTitle 받아옴
+  @objc func didRecieveAreasString(_ notication: Notification) {
+    let data = notication.object as! String
+    let datas = data.split(separator: "|") // |를 기준으로 데이터 자름
+    let restuarantRequest: RestaurantRequest
+    
+    print(datas)
+    self.navigationItem.setLeftsubTitleAndTitle(title: String(datas[2]), subTitle: "지금 보고있는 지역은", target: self, action: #selector(navigationTitleTapped))
+    
+    if datas[1] == "0" { // 전체지역 선택했으면 상세지역은 보내지 않음
+      restuarantRequest = RestaurantRequest(page: nil, pagesize: nil, area: String(datas[0]), detailarea: nil, x: nil, y: nil)
+    } else {
+      restuarantRequest = RestaurantRequest(page: nil, pagesize: nil, area: String(datas[0]), detailarea: String(datas[1]), x: nil, y: nil)
+    }
+    
+    // 선택한 지역들 조회
+    RestaurantDataManager().getRestaurant(parameters: restuarantRequest, viewController: self)
   }
 }
 

@@ -10,4 +10,5 @@ import Foundation
 extension Notification.Name {
   static let pageIndex = Notification.Name("pageIndex")
   static let selectedDetailAreas = Notification.Name("selectedDetailAreas")
+  static let selectAreaString = Notification.Name("selectAreaString")
 }

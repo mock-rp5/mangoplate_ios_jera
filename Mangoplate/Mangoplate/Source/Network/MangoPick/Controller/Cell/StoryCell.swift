@@ -16,5 +16,9 @@ class StoryCell: UICollectionViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
   }
+  
+  override func prepareForReuse() {
+    storyImageView.image = nil
+  }
 
 }

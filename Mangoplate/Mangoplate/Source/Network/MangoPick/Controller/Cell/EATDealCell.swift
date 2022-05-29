@@ -24,6 +24,10 @@ class EATDealCell: UITableViewCell {
     priceLabel.attributedText = priceLabel.text?.strikeThrough()
     salePriceLabel.text = setPriceText(price: "15000")
   }
+  
+  override func prepareForReuse() {
+    foodImageView.image = nil
+  }
 
   override func setSelected(_ selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)

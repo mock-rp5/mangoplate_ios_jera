@@ -11,12 +11,18 @@ class DetailRestaurantViewController: BaseViewController {
 
   @IBOutlet weak var detailRestaurantCollectionView: UICollectionView!
   var navigationTitle: String?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setNavigaionItem()
     detailRestaurantCollectionView.register(UINib(nibName: "FirstRestaurantDetailCell", bundle: .main), forCellWithReuseIdentifier: "FirstRestaurantDetailCell")
     detailRestaurantCollectionView.delegate = self
     detailRestaurantCollectionView.dataSource = self
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    BaseTabBarController.showTabBar()
   }
   
   func setNavigaionItem() {

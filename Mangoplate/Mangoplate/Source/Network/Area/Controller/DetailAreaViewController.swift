@@ -13,14 +13,16 @@ class DetailAreaViewController: UIViewController {
   @IBOutlet weak var areaCollectionView: UICollectionView!
   var areaResults: [AreasResult] = []
   var pageIndex: Int = 0
-  var detailAreas = [["전체", "가로수길", "강남역", "강동구", "개포/수서/일원", "관악구", "교대/서초", "구로구"],
+  var areas = ["서울-강남", "서울-강북", "경기도", "인천", "대구", "부산", "제주", "대전", "광주", "강원도", "경상남도", "경상북도", "전라남도", "전라북도", "충청남도", "충청북도", "울산", "세종", "일본", "중국", "아시아", "유럽", "미국", "캐나다", "중남미", "오세아니아", "해외기타"]
+  var detailAreas = [["전체", "가로수길", "강남역", "강동구", "개포/수서/일원",
+                      "관악구", "교대/서초", "구로구"],
                       ["전체", "건대/군자/광진", "광화문", "노원구", "대학로/혜화", "동대문구", "동부이촌동", "마포/공덕"],
                     ["전체", "가평군", "고양시", "과천시", "광명시", "광주시", "구리시", "군포시"]]
   
   var isSelectedCell = [[false, false, false, false, false, false, false, false],
                              [false, false, false, false, false, false, false, false],
                            [false, false, false, false, false, false, false, false]]
-  
+ 
   override func viewDidLoad() {
     super.viewDidLoad()
     applyButton.layer.cornerRadius = 15
@@ -52,17 +54,37 @@ class DetailAreaViewController: UIViewController {
   }
   
   @objc func applyButtonTapped(_ sender: UIButton) {
-    var detailArea = ""
+    let area = pageIndex // 선택한 전체지역
+    var detailArea = "" // 선택한 상세지역
+    var navigationTitle = "" // 선택한 지역들을 보여주는 title
+    var detailCount = 0 // 선택한 상세지역 개수
     
     for (index, value) in isSelectedCell[pageIndex].enumerated() {
       if value == true { // 선택된 셀이라면
+        if detailArea == "" { // navigaionTitle 선택한 상세지역 앞부분만 담음
+          navigationTitle = detailAreas[area][index]
+        }
+        detailCount += 1
         detailArea += "\(index),"
       }
     }
     detailArea = detailArea.substring(from: 0,to: detailArea.count - 1) // 맨뒤에 , 자름 (ex) 1,2,3)
     
-    let areaAndDetailArea = [String(pageIndex), detailArea] // 지역인덱스, 상세지역인덱스 저장
-    print(areaAndDetailArea)
+  
+    
+    
+    // 상세지역 선택에서 전체를 선택했다면 지역만 보냄
+    if isSelectedCell[pageIndex][0] {
+      navigationTitle = "\(areas[area]) ∨"
+    } else { // 전체 선택 안했다면 navigaionTitle에 "고양시 외 0곳" 같이 붙임
+     navigationTitle += " 외 \(String(detailCount-1))곳 ∨"
+    }
+    
+    let selectAreaString = "\(area+1)|\(detailArea)|\(navigationTitle)"
+    
+    // 선택한 지역들과 navgationTitle NotificationCenter로 보냄
+    NotificationCenter.default.post(name: .selectAreaString, object: selectAreaString)
+   
     dismiss(animated: true, completion: nil)
     BaseTabBarController.showTabBar()
   }

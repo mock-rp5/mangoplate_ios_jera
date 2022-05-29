@@ -20,5 +20,9 @@ class TopListCell: UICollectionViewCell {
     super.awakeFromNib()
     watchingLabel.text = watchingLabel.text?.insertComma
   }
+  
+  override func prepareForReuse() {
+    foodImageView.image = nil
+  }
 
 }
