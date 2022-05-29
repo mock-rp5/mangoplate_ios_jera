@@ -15,6 +15,8 @@
 		FA37E924283CD043003FAE07 /* MyPageProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA37E922283CD043003FAE07 /* MyPageProfileCell.xib */; };
 		FA37E927283CF606003FAE07 /* MyPageMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37E925283CF606003FAE07 /* MyPageMainCell.swift */; };
 		FA37E928283CF606003FAE07 /* MyPageMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA37E926283CF606003FAE07 /* MyPageMainCell.xib */; };
+		FA3F3E442843778800CE48B9 /* TasteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F3E422843778800CE48B9 /* TasteCell.swift */; };
+		FA3F3E452843778800CE48B9 /* TasteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3F3E432843778800CE48B9 /* TasteCell.xib */; };
 		FA4C1CA8283C822C0089CDC8 /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C1CA7283C822C0089CDC8 /* SignInRequest.swift */; };
 		FA4C1CAA283C82370089CDC8 /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C1CA9283C82370089CDC8 /* SignInResponse.swift */; };
 		FA4C1CAD283C83130089CDC8 /* SignInDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C1CAC283C83130089CDC8 /* SignInDataManager.swift */; };
@@ -60,6 +62,8 @@
 		FA666BCF28434B6100DAB919 /* HolicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA666BCD28434B6100DAB919 /* HolicViewController.xib */; };
 		FA666BD3284356DC00DAB919 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA666BD1284356DC00DAB919 /* NewsCell.swift */; };
 		FA666BD4284356DC00DAB919 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA666BD2284356DC00DAB919 /* NewsCell.xib */; };
+		FA666BD7284366B200DAB919 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA666BD5284366B200DAB919 /* ImageCell.swift */; };
+		FA666BD8284366B200DAB919 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA666BD6284366B200DAB919 /* ImageCell.xib */; };
 		FA811D4B28391EE400CA29AF /* FirstSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */; };
 		FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */; };
 		FA811D4F2839299000CA29AF /* SecondSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */; };
@@ -132,6 +136,8 @@
 		FA37E922283CD043003FAE07 /* MyPageProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageProfileCell.xib; sourceTree = "<group>"; };
 		FA37E925283CF606003FAE07 /* MyPageMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMainCell.swift; sourceTree = "<group>"; };
 		FA37E926283CF606003FAE07 /* MyPageMainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageMainCell.xib; sourceTree = "<group>"; };
+		FA3F3E422843778800CE48B9 /* TasteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteCell.swift; sourceTree = "<group>"; };
+		FA3F3E432843778800CE48B9 /* TasteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TasteCell.xib; sourceTree = "<group>"; };
 		FA4C1CA7283C822C0089CDC8 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
 		FA4C1CA9283C82370089CDC8 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
 		FA4C1CAC283C83130089CDC8 /* SignInDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataManager.swift; sourceTree = "<group>"; };
@@ -177,6 +183,8 @@
 		FA666BCD28434B6100DAB919 /* HolicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HolicViewController.xib; sourceTree = "<group>"; };
 		FA666BD1284356DC00DAB919 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		FA666BD2284356DC00DAB919 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
+		FA666BD5284366B200DAB919 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		FA666BD6284366B200DAB919 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpViewController.swift; sourceTree = "<group>"; };
 		FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstSignUpViewController.xib; sourceTree = "<group>"; };
 		FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpViewController.swift; sourceTree = "<group>"; };
@@ -476,7 +484,11 @@
 			isa = PBXGroup;
 			children = (
 				FA666BD1284356DC00DAB919 /* NewsCell.swift */,
+				FA666BD5284366B200DAB919 /* ImageCell.swift */,
+				FA3F3E422843778800CE48B9 /* TasteCell.swift */,
 				FA666BD2284356DC00DAB919 /* NewsCell.xib */,
+				FA666BD6284366B200DAB919 /* ImageCell.xib */,
+				FA3F3E432843778800CE48B9 /* TasteCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -797,6 +809,7 @@
 				FA811D502839299000CA29AF /* SecondSignUpViewController.xib in Resources */,
 				FA666BCB28434B5000DAB919 /* FollowingViewController.xib in Resources */,
 				FAD7C53C283A27080093AF35 /* NewsViewController.xib in Resources */,
+				FA3F3E452843778800CE48B9 /* TasteCell.xib in Resources */,
 				FA666BD4284356DC00DAB919 /* NewsCell.xib in Resources */,
 				FAF60A352838D32800B2CD48 /* SignInHomeViewController.xib in Resources */,
 				FAF60A062838B6E000B2CD48 /* Assets.xcassets in Resources */,
@@ -815,6 +828,7 @@
 				FAF8FEEC283E280F00AE74AF /* EATDealCell.xib in Resources */,
 				FA617A5B283F83C500F8E59C /* AreasViewController.xib in Resources */,
 				FAD7C540283A27130093AF35 /* MypageViewController.xib in Resources */,
+				FA666BD8284366B200DAB919 /* ImageCell.xib in Resources */,
 				FA570AEC283A885300BA5049 /* RestaurantCell.xib in Resources */,
 				FAF60A042838B6DE00B2CD48 /* Main.storyboard in Resources */,
 				FA37E928283CF606003FAE07 /* MyPageMainCell.xib in Resources */,
@@ -940,6 +954,8 @@
 				FA4C1CAD283C83130089CDC8 /* SignInDataManager.swift in Sources */,
 				FA4FA610283FBAB500DD836A /* DeleteUserResponse.swift in Sources */,
 				FA6038702842658A00C0DFC4 /* EATDealResponse.swift in Sources */,
+				FA3F3E442843778800CE48B9 /* TasteCell.swift in Sources */,
+				FA666BD7284366B200DAB919 /* ImageCell.swift in Sources */,
 				FAF8FEE5283E1AB600AE74AF /* TopListViewController.swift in Sources */,
 				FAF8FEDD283E1A9C00AE74AF /* EATDealViewController.swift in Sources */,
 				FA597E0828408AE00072CA47 /* DetailAreaViewController.swift in Sources */,

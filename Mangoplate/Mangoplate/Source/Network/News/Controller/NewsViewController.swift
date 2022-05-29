@@ -47,6 +47,8 @@ class NewsViewController: TabmanViewController {
     bar.indicator.tintColor = .mainOrange
     
     addBar(bar, dataSource: self, at: .top)
+    
+    self.isScrollEnabled = false
   }
   
   @objc func navigationTitleTapped(_ sender: UIButton) {
