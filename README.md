@@ -250,7 +250,7 @@
 
 ```
 1. 구현한 기능
-
+	- 위치동의 UI & 현재 위치 가져오기 (100%)
 	- 맛집찾기 - 식당목록 조회 API (80%) (지역별로 조회 구현 예정)
 	- 망고픽 - EAT딜 조회 API (100%)
 	- 망고픽 - 스토리 조회 API (100%)
@@ -281,8 +281,49 @@
 
 
 ```
-<img width="150" src="./image/8-1.png"> <img width="150" src="./image/8-2.png"><img width="150" src="./image/8-3.png"> <img width="150" src="./image/8-4.png"><img width="150" src="./image/8-5.png"> <img width="150" src="./image/8-6.png"> 
+<img width="150" src="./image/8-1.png"> <img width="150" src="./image/8-2.png"><img width="150" src="./image/8-3.png"> <img width="150" src="./image/8-4.png"><img width="150" src="./image/8-5.png"> <img width="150" src="./image/8-6.png"> <img width="150" src="./image/8-7.png"> 
 
 </div>
 </details>
+
+
+
+
+
+</br>
+<details>
+<summary>9일차_2022.05.29 (일)</summary>
+<div markdown="1">
+
+```
+1. 구현한 기능
+	- 소식탭 UI (90%) (소식-홀릭 탭의 홀릭 설명 추가 예정)
+	- 식당 상세 정보 UI (50%) (현재 식당 사진, 정보, 메뉴 구현)
+	- 맛집찾기 - 선택한 지역으로 식당 검색 기능 (100%)
+	- 맛집찾기 - 현재 내위치와 식당과의 거리 (100%) 
+
+2. 발생한 이슈
+
+	- 지역선택뷰에서 선택한 지역을 맛집찾기뷰에 보내줘야 함
+		- delgate패턴으로 구현 : 지역선택뷰가 탭맨이 있어서 뷰안에 뷰가 있는 구조라 vc.delgate = self 가 안됨 -> 실패
+		- NotificationCenter 사용해서 object로 선택 지역 정보를 전달해 구현
+
+	- 소식탭의 게시글 속 사진, 식당 상세 정보의 식당 사진과 메뉴 사진
+		- collectionView cell 안에 collectionView를 넣어서 구현
+
+
+3. API 변동사항
+
+	- 소식탭 관련 리뷰 조회 API 먼저 구현 요구
+	- 리뷰 조회 API는 지역별 조회말고 평가별 조회(맛있다/괜찮다/별로) 구현 요구
+
+
+
+```
+<img width="150" src="./image/9-1.png"> <img width="150" src="./image/9-2.png"><img width="150" src="./image/9-3.png"> <img width="150" src="./image/9-4.png">
+
+</div>
+</details>
+
+
 
