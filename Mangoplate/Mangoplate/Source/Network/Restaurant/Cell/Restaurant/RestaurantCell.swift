@@ -16,6 +16,7 @@ class RestaurantCell: UICollectionViewCell {
   @IBOutlet weak var ratingLabel: UILabel!
   @IBOutlet weak var watchingCountLabel: UILabel!
   @IBOutlet weak var reviewCountLabel: UILabel!
+  @IBOutlet weak var distanceLabel: UILabel!
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -29,6 +30,7 @@ class RestaurantCell: UICollectionViewCell {
     watchingCountLabel.text = "0"
     reviewCountLabel.text = "0"
     restaurantImageView.image = nil
+    distanceLabel.text = ""
   }
 
 }

@@ -30,4 +30,5 @@ struct RestaurantResult: Codable {
   let score: String?
   let isValidatedScore: Int
   let viewCount: Int
+  let distance: Float?
 }

@@ -28,7 +28,7 @@ extension TopListViewController: UICollectionViewDelegate, UICollectionViewDataS
     if let topLists = topLists {
       return topLists.count
     } else {
-      return 10
+      return 2
     }
   }
   

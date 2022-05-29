@@ -19,8 +19,9 @@ class RestaurantViewController: BaseViewController {
   @IBOutlet weak var collectionView: UICollectionView!
   var locationManager = CLLocationManager()
   var resturants: [RestaurantResult]?
-  var latitude: Double?
-  var longtitude: Double?
+  var latitude: Float?
+  var longtitude: Float?
+  var locationServicesEnabled = false
   
   // MARK: - LifeCycle
   override func viewDidLoad() {
@@ -34,6 +35,7 @@ class RestaurantViewController: BaseViewController {
     collectionView.register(UINib(nibName: "BannerCell", bundle: .main), forCellWithReuseIdentifier: "bannerCell")
     collectionView.register(UINib(nibName: "SortingCell", bundle: .main), forCellWithReuseIdentifier: "sortingCell")
     collectionView.register(UINib(nibName: "RestaurantCell", bundle: .main), forCellWithReuseIdentifier: "restaurantCell")
+    getLocation()
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -42,8 +44,14 @@ class RestaurantViewController: BaseViewController {
     setNavigationTitle(title: "", color: .black)
     
     // 첫 화면은 강남 지역만 가져와서 보여줌
-    let restuarantRequest = RestaurantRequest(page: nil, pagesize: nil, area: "1", detailarea: nil, x: nil, y: nil)
-    RestaurantDataManager().getRestaurant(parameters: restuarantRequest, viewController: self)
+    if locationServicesEnabled {
+      let restuarantRequest = RestaurantRequest(page: nil, pagesize: nil, area: "1", detailarea: nil, x: latitude, y: longtitude)
+      RestaurantDataManager().getRestaurant(parameters: restuarantRequest, viewController: self)
+    } else {
+      let restuarantRequest = RestaurantRequest(page: nil, pagesize: nil, area: "1", detailarea: nil, x: nil, y: nil)
+      RestaurantDataManager().getRestaurant(parameters: restuarantRequest, viewController: self)
+    }
+    
     
     // 지역 선택 시, 선택한 지역과 nvigationTitle 받아올 NotificationCenter 등록
     NotificationCenter.default.addObserver(self, selector: #selector(didRecieveAreasString), name: .selectAreaString, object: nil)
@@ -53,17 +61,18 @@ class RestaurantViewController: BaseViewController {
     locationManager.desiredAccuracy = kCLLocationAccuracyBest
     if CLLocationManager.locationServicesEnabled() {
       print("위치서비스 on상태")
+      locationServicesEnabled = true
       locationManager.startUpdatingLocation()
     } else {
+      locationServicesEnabled = false
       print("위치서비스 off상태")
     }
   }
   
   private func getLocation() {
     let coor = locationManager.location?.coordinate
-    latitude = coor?.latitude
-    longtitude = coor?.longitude
-    print(latitude, longtitude)
+    latitude = Float(coor?.latitude ?? 37.5273165780626)
+    longtitude = Float(coor?.longitude ?? 127.03523742986329)
   }
   
   // MARK: - Methods
@@ -97,10 +106,23 @@ class RestaurantViewController: BaseViewController {
     print(datas)
     self.navigationItem.setLeftsubTitleAndTitle(title: String(datas[2]), subTitle: "지금 보고있는 지역은", target: self, action: #selector(navigationTitleTapped))
     
-    if datas[1] == "0" { // 전체지역 선택했으면 상세지역은 보내지 않음
-      restuarantRequest = RestaurantRequest(page: nil, pagesize: nil, area: String(datas[0]), detailarea: nil, x: nil, y: nil)
-    } else {
-      restuarantRequest = RestaurantRequest(page: nil, pagesize: nil, area: String(datas[0]), detailarea: String(datas[1]), x: nil, y: nil)
+    // 전체지역 선택했으면 상세지역은 보내지 않음
+    if datas[1] == "0" {
+      // 위치 서비스 동의한 상태면 위치도 같이 보냄
+      if locationServicesEnabled {
+        restuarantRequest = RestaurantRequest(page: nil, pagesize: nil, area: String(datas[0]), detailarea: nil, x: latitude, y: longtitude)
+      } else {
+        restuarantRequest = RestaurantRequest(page: nil, pagesize: nil, area: String(datas[0]), detailarea: nil, x: nil, y: nil)
+      }
+    }
+    
+    // 전체 지역 선택하지 않았으면
+    else {
+      if locationServicesEnabled {
+        restuarantRequest = RestaurantRequest(page: nil, pagesize: nil, area: String(datas[0]), detailarea: String(datas[1]), x: latitude, y: longtitude)
+      } else {
+        restuarantRequest = RestaurantRequest(page: nil, pagesize: nil, area: String(datas[0]), detailarea: String(datas[1]), x: nil, y: nil)
+      }
     }
     
     // 선택한 지역들 조회
@@ -153,6 +175,11 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
         cell.ratingLabel.text = restaurants[indexPath.row].score
         cell.reviewCountLabel.text = String(restaurants[indexPath.row].reviewCount)
         cell.watchingCountLabel.text = String(restaurants[indexPath.row].viewCount).insertComma
+        
+        if let distance = restaurants[indexPath.row].distance {
+          cell.distanceLabel.text = "\(String(distance))km"
+        }
+        
         
         // 이미지가 있으면 섬네일 넣음
         if let urlString = restaurants[indexPath.row].thumbnailImgUrl {

@@ -28,7 +28,7 @@ extension StoryViewController: UICollectionViewDelegate, UICollectionViewDataSou
     if let stories = stories {
       return stories.count
     } else {
-      return 10
+      return 2
     }
   }
   

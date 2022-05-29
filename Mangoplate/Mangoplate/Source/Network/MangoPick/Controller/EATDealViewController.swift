@@ -31,7 +31,7 @@ extension EATDealViewController: UITableViewDelegate, UITableViewDataSource {
     if let eatDeals = eatDeals {
       return eatDeals.count
     } else {
-      return 6
+      return 2
     }
   }
   

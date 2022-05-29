@@ -70,12 +70,19 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jn-CJ-Ql8">
+                                <rect key="frame" x="53" y="36.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gbJ-GM-yW7" firstAttribute="leading" secondItem="7fo-iJ-vgp" secondAttribute="leading" constant="5" id="Agy-pG-AHh"/>
                             <constraint firstItem="gbJ-GM-yW7" firstAttribute="centerY" secondItem="7fo-iJ-vgp" secondAttribute="centerY" multiplier="0.45" id="B2G-QG-ZIG"/>
                             <constraint firstItem="tsJ-YM-GdV" firstAttribute="leading" secondItem="7fo-iJ-vgp" secondAttribute="leading" constant="4" id="CJS-s6-KHF"/>
+                            <constraint firstItem="7jn-CJ-Ql8" firstAttribute="centerY" secondItem="ply-Qp-A6R" secondAttribute="centerY" id="ENK-XN-glT"/>
                             <constraint firstItem="oyO-8B-pWA" firstAttribute="leading" secondItem="tsJ-YM-GdV" secondAttribute="trailing" constant="1" id="HcM-gX-Ynr"/>
                             <constraint firstItem="Q2X-f7-3IM" firstAttribute="leading" secondItem="oyO-8B-pWA" secondAttribute="trailing" constant="10" id="KOb-nu-EKQ"/>
                             <constraint firstItem="Tbq-o1-uo7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gbJ-GM-yW7" secondAttribute="trailing" constant="10" id="MzB-sV-PZ9"/>
@@ -84,6 +91,7 @@
                             <constraint firstItem="Q2X-f7-3IM" firstAttribute="centerY" secondItem="7fo-iJ-vgp" secondAttribute="centerY" multiplier="1.45" id="PUG-3z-5gh"/>
                             <constraint firstItem="ply-Qp-A6R" firstAttribute="centerY" secondItem="7fo-iJ-vgp" secondAttribute="centerY" id="QVZ-9E-OMj"/>
                             <constraint firstItem="oyO-8B-pWA" firstAttribute="centerY" secondItem="7fo-iJ-vgp" secondAttribute="centerY" multiplier="1.45" id="ehe-dX-DbB"/>
+                            <constraint firstItem="7jn-CJ-Ql8" firstAttribute="leading" secondItem="ply-Qp-A6R" secondAttribute="trailing" constant="7.5" id="gBt-7d-Zna"/>
                             <constraint firstAttribute="trailing" secondItem="Tbq-o1-uo7" secondAttribute="trailing" constant="8" id="ksv-MX-eaA"/>
                             <constraint firstItem="9jc-NO-Ddv" firstAttribute="centerY" secondItem="7fo-iJ-vgp" secondAttribute="centerY" multiplier="1.45" id="rbq-dJ-E7I"/>
                             <constraint firstItem="9jc-NO-Ddv" firstAttribute="leading" secondItem="Q2X-f7-3IM" secondAttribute="trailing" constant="1" id="tkd-aI-n4O"/>
@@ -119,6 +127,7 @@
             </constraints>
             <size key="customSize" width="258" height="139"/>
             <connections>
+                <outlet property="distanceLabel" destination="7jn-CJ-Ql8" id="bTV-eK-AKu"/>
                 <outlet property="locationLabel" destination="ply-Qp-A6R" id="6jP-Kd-Oqp"/>
                 <outlet property="nameLabel" destination="gbJ-GM-yW7" id="juA-Mp-99f"/>
                 <outlet property="ratingLabel" destination="Tbq-o1-uo7" id="8Pa-oq-pd0"/>
