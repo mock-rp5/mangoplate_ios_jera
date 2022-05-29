@@ -20,7 +20,10 @@ open class IndicatorView {
         self.containerView.backgroundColor = .clear
         
         self.containerView.addSubview(self.activityIndicator)
-        UIApplication.shared.windows.first?.addSubview(self.containerView)
+      let scenes = UIApplication.shared.connectedScenes
+      let windowScene = scenes.first as? UIWindowScene
+      let firstWindow = windowScene?.windows.first
+      firstWindow!.addSubview(self.containerView)
     }
     
     open func showIndicator() {

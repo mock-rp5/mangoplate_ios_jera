@@ -55,10 +55,10 @@ class RestaurantViewController: BaseViewController {
   }
   
   private func getLocation() {
-    let coor = locationManager.location?.coordinate
-    let latitude = coor?.latitude
-    let longtitude = coor?.longitude
-    print(latitude, longtitude)
+ //   let coor = locationManager.location?.coordinate
+//    let latitude = coor?.latitude
+//    let longtitude = coor?.longitude
+    //print(latitude, longtitude)
   }
   
   // MARK: - Methods
@@ -131,7 +131,12 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
         
         // 이미지가 있으면 섬네일 넣음
         if let urlString = restaurants[indexPath.row].thumbnailImgUrl {
-          cell.restaurantImageView.load(urlString: urlString)
+          DispatchQueue.main.async {
+            self.showIndicator()
+            cell.restaurantImageView.load(urlString: urlString)
+            self.dismissIndicator()
+          }
+          
         } else {
           cell.restaurantImageView.image = UIImage(named: "noImage")
         }
@@ -152,7 +157,7 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
       return CGSize(width: collectionView.frame.size.width, height: 130)
       
     case 2:
-      return CGSize(width: collectionView.frame.size.width / 2 - 15, height: collectionView.frame.size.width / 2 + 40)
+      return CGSize(width: collectionView.frame.size.width / 2 - 15, height: collectionView.frame.size.width / 2 + 45)
       
     default:
       return CGSize(width: 100, height: 100)

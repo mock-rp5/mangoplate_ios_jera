@@ -53,7 +53,10 @@ extension UIViewController {
     
     // MARK: UIWindow의 rootViewController를 변경하여 화면전환
     func changeRootViewController(_ viewControllerToPresent: UIViewController) {
-        if let window = UIApplication.shared.windows.first {
+      let scenes = UIApplication.shared.connectedScenes
+      let windowScene = scenes.first as? UIWindowScene
+      let fisrtWindow = windowScene?.windows.first
+        if let window = fisrtWindow {
             window.rootViewController = viewControllerToPresent
             UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil)
         } else {
