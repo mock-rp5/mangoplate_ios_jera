@@ -49,7 +49,7 @@ class MypageViewController: BaseViewController {
   // MARK: - Methods
   private func setUI() {
     self.navigationController?.navigationBar.isTransparent = true
-    let bellButton = navigationItem.setNavigationItemButton(nil, action: nil, symbolName: "bell", imageName: nil, tintColor: .darkGray)
+    let bellButton = navigationItem.setNavigationItemButton(nil, action: nil, symbolName: "bell", imageName: nil, tintColor: .darkGray, width: 25, height: 25)
     self.navigationItem.rightBarButtonItems = [bellButton]
     
     myPageTableView.delegate = self

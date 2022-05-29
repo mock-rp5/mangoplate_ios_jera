@@ -32,7 +32,7 @@ extension UINavigationItem {
   }
   
   // 네비게이션바에 버튼 생성
-  func setNavigationItemButton(_ target: Any?, action: Selector?, symbolName: String?, imageName: String?, tintColor: UIColor) -> UIBarButtonItem {
+  func setNavigationItemButton(_ target: Any?, action: Selector?, symbolName: String?, imageName: String?, tintColor: UIColor, width: Int, height: Int) -> UIBarButtonItem {
     let button = UIButton(type: .system)
     if let symbolName = symbolName {
       button.setImage(UIImage(systemName: symbolName), for: .normal)
@@ -50,8 +50,8 @@ extension UINavigationItem {
     
     let barButtonItem = UIBarButtonItem(customView: button)
     barButtonItem.customView?.snp.makeConstraints { make in
-      make.width.equalTo(25)
-      make.height.equalTo(25)
+      make.width.equalTo(width)
+      make.height.equalTo(height)
     }
     return barButtonItem
   }

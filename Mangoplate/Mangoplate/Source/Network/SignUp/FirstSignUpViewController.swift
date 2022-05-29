@@ -59,7 +59,7 @@ class FirstSignUpViewController: BaseViewController {
     passwordSameCheckLabel.text = ""
     passwordValidCheckLabel.text = ""
     
-    let searchButton = self.navigationItem.setNavigationItemButton(nil, action: #selector(xButtonTapped(_:)), symbolName: nil, imageName: "xButton", tintColor: .darkGray)
+    let searchButton = self.navigationItem.setNavigationItemButton(nil, action: #selector(xButtonTapped(_:)), symbolName: nil, imageName: "xButton", tintColor: .darkGray, width: 25, height: 25)
     self.navigationItem.rightBarButtonItem = searchButton
   }
   

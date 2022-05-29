@@ -63,11 +63,12 @@ class RestaurantViewController: BaseViewController {
   
   // MARK: - Methods
   private func setNavigationBar() {
+    setNavigationTitle(title: "", color: .black)
     self.navigationController?.navigationBar.isTransparent = true
     self.navigationItem.setLeftsubTitleAndTitle(title: "서울-강남∨", subTitle: "지금 보고있는 지역은", target: self, action: #selector(navigationTitleTapped))
     
-    let searchButton = self.navigationItem.setNavigationItemButton(nil, action: nil, symbolName: "magnifyingglass", imageName: nil, tintColor: .darkGray)
-    let mapButton = self.navigationItem.setNavigationItemButton(nil, action: nil, symbolName: "map", imageName: nil, tintColor: .darkGray)
+    let searchButton = self.navigationItem.setNavigationItemButton(nil, action: nil, symbolName: "magnifyingglass", imageName: nil, tintColor: .darkGray, width: 25, height: 25)
+    let mapButton = self.navigationItem.setNavigationItemButton(nil, action: nil, symbolName: "map", imageName: nil, tintColor: .darkGray, width: 25, height: 25)
     
     self.navigationItem.rightBarButtonItems = [mapButton, searchButton]
   }
@@ -170,6 +171,21 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
     } else {
       return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    if indexPath.section == 2 {
+      let vc = DetailRestaurantViewController()
+      vc.modalPresentationStyle = .fullScreen
+      
+      if let restaurants = resturants {
+        vc.navigationTitle = restaurants[indexPath.row].storeName
+      }
+     
+      BaseTabBarController.hideTabBar()
+      self.navigationController?.pushViewController(vc, animated: true)
+    }
+   
   }
 }
 

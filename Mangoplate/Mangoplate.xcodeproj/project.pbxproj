@@ -17,6 +17,12 @@
 		FA37E928283CF606003FAE07 /* MyPageMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA37E926283CF606003FAE07 /* MyPageMainCell.xib */; };
 		FA3F3E442843778800CE48B9 /* TasteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F3E422843778800CE48B9 /* TasteCell.swift */; };
 		FA3F3E452843778800CE48B9 /* TasteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3F3E432843778800CE48B9 /* TasteCell.xib */; };
+		FA3F3E4828438C7500CE48B9 /* DetailRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F3E4628438C7500CE48B9 /* DetailRestaurantViewController.swift */; };
+		FA3F3E4928438C7500CE48B9 /* DetailRestaurantViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3F3E4728438C7500CE48B9 /* DetailRestaurantViewController.xib */; };
+		FA3F3E4D2843951800CE48B9 /* FirstRestaurantDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F3E4B2843951800CE48B9 /* FirstRestaurantDetailCell.swift */; };
+		FA3F3E4E2843951800CE48B9 /* FirstRestaurantDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3F3E4C2843951800CE48B9 /* FirstRestaurantDetailCell.xib */; };
+		FA3F3E512843AEB300CE48B9 /* RestaurantImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F3E4F2843AEB300CE48B9 /* RestaurantImageCell.swift */; };
+		FA3F3E522843AEB300CE48B9 /* RestaurantImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3F3E502843AEB300CE48B9 /* RestaurantImageCell.xib */; };
 		FA4C1CA8283C822C0089CDC8 /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C1CA7283C822C0089CDC8 /* SignInRequest.swift */; };
 		FA4C1CAA283C82370089CDC8 /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C1CA9283C82370089CDC8 /* SignInResponse.swift */; };
 		FA4C1CAD283C83130089CDC8 /* SignInDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C1CAC283C83130089CDC8 /* SignInDataManager.swift */; };
@@ -138,6 +144,12 @@
 		FA37E926283CF606003FAE07 /* MyPageMainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageMainCell.xib; sourceTree = "<group>"; };
 		FA3F3E422843778800CE48B9 /* TasteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteCell.swift; sourceTree = "<group>"; };
 		FA3F3E432843778800CE48B9 /* TasteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TasteCell.xib; sourceTree = "<group>"; };
+		FA3F3E4628438C7500CE48B9 /* DetailRestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRestaurantViewController.swift; sourceTree = "<group>"; };
+		FA3F3E4728438C7500CE48B9 /* DetailRestaurantViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailRestaurantViewController.xib; sourceTree = "<group>"; };
+		FA3F3E4B2843951800CE48B9 /* FirstRestaurantDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRestaurantDetailCell.swift; sourceTree = "<group>"; };
+		FA3F3E4C2843951800CE48B9 /* FirstRestaurantDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstRestaurantDetailCell.xib; sourceTree = "<group>"; };
+		FA3F3E4F2843AEB300CE48B9 /* RestaurantImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantImageCell.swift; sourceTree = "<group>"; };
+		FA3F3E502843AEB300CE48B9 /* RestaurantImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantImageCell.xib; sourceTree = "<group>"; };
 		FA4C1CA7283C822C0089CDC8 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
 		FA4C1CA9283C82370089CDC8 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
 		FA4C1CAC283C83130089CDC8 /* SignInDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataManager.swift; sourceTree = "<group>"; };
@@ -295,6 +307,17 @@
 				FA617A61283FAC3100F8E59C /* DataManager */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		FA3F3E4A284394E400CE48B9 /* DetailRestaurant */ = {
+			isa = PBXGroup;
+			children = (
+				FA3F3E4B2843951800CE48B9 /* FirstRestaurantDetailCell.swift */,
+				FA3F3E4C2843951800CE48B9 /* FirstRestaurantDetailCell.xib */,
+				FA3F3E4F2843AEB300CE48B9 /* RestaurantImageCell.swift */,
+				FA3F3E502843AEB300CE48B9 /* RestaurantImageCell.xib */,
+			);
+			path = DetailRestaurant;
 			sourceTree = "<group>";
 		};
 		FA4C1CAB283C83000089CDC8 /* DataManager */ = {
@@ -542,6 +565,7 @@
 		FAD7C543283A79830093AF35 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				FA3F3E4A284394E400CE48B9 /* DetailRestaurant */,
 				FA570AF7283A9E3F00BA5049 /* Sorting */,
 				FA570AF2283A8AD000BA5049 /* Restaurant */,
 				FA570AF1283A8AC100BA5049 /* Banner */,
@@ -726,7 +750,9 @@
 			isa = PBXGroup;
 			children = (
 				FAD7C529283A23F20093AF35 /* RestaurantViewController.swift */,
+				FA3F3E4628438C7500CE48B9 /* DetailRestaurantViewController.swift */,
 				FAD7C52A283A23F20093AF35 /* RestaurantViewController.xib */,
+				FA3F3E4728438C7500CE48B9 /* DetailRestaurantViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -810,6 +836,8 @@
 				FA666BCB28434B5000DAB919 /* FollowingViewController.xib in Resources */,
 				FAD7C53C283A27080093AF35 /* NewsViewController.xib in Resources */,
 				FA3F3E452843778800CE48B9 /* TasteCell.xib in Resources */,
+				FA3F3E522843AEB300CE48B9 /* RestaurantImageCell.xib in Resources */,
+				FA3F3E4928438C7500CE48B9 /* DetailRestaurantViewController.xib in Resources */,
 				FA666BD4284356DC00DAB919 /* NewsCell.xib in Resources */,
 				FAF60A352838D32800B2CD48 /* SignInHomeViewController.xib in Resources */,
 				FAF60A062838B6E000B2CD48 /* Assets.xcassets in Resources */,
@@ -833,6 +861,7 @@
 				FAF60A042838B6DE00B2CD48 /* Main.storyboard in Resources */,
 				FA37E928283CF606003FAE07 /* MyPageMainCell.xib in Resources */,
 				FA597E142840CC980072CA47 /* AreaCell.xib in Resources */,
+				FA3F3E4E2843951800CE48B9 /* FirstRestaurantDetailCell.xib in Resources */,
 				FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */,
 				FAD7C534283A26F00093AF35 /* MangoPickViewController.xib in Resources */,
 				FAF8FEF0283E38D800AE74AF /* StoryCell.xib in Resources */,
@@ -905,6 +934,7 @@
 				FA617A5E283F9D3F00F8E59C /* UserDeleteViewController.swift in Sources */,
 				FAD7C546283A799B0093AF35 /* BannerCell.swift in Sources */,
 				FA666BCE28434B6100DAB919 /* HolicViewController.swift in Sources */,
+				FA3F3E512843AEB300CE48B9 /* RestaurantImageCell.swift in Sources */,
 				FA551B6A2842807F009ADB01 /* TopListResponse.swift in Sources */,
 				FABCF0A2283BDE5D008D14F5 /* EmailCheckRequest.swift in Sources */,
 				FAF8FEE1283E1AAA00AE74AF /* StoryViewController.swift in Sources */,
@@ -919,6 +949,7 @@
 				FAF8FEEB283E280F00AE74AF /* EATDealCell.swift in Sources */,
 				FA597E132840CC980072CA47 /* AreaCell.swift in Sources */,
 				FAF60A2A2838CF2100B2CD48 /* String.swift in Sources */,
+				FA3F3E4D2843951800CE48B9 /* FirstRestaurantDetailCell.swift in Sources */,
 				FAF60A3B2838E14600B2CD48 /* UITextField.swift in Sources */,
 				FA617A5A283F83C500F8E59C /* AreasViewController.swift in Sources */,
 				FAF60A2C2838CF2100B2CD48 /* UINavigationBar.swift in Sources */,
@@ -960,6 +991,7 @@
 				FAF8FEDD283E1A9C00AE74AF /* EATDealViewController.swift in Sources */,
 				FA597E0828408AE00072CA47 /* DetailAreaViewController.swift in Sources */,
 				FAF8FED0283DFD5100AE74AF /* MyPageSettingsViewController.swift in Sources */,
+				FA3F3E4828438C7500CE48B9 /* DetailRestaurantViewController.swift in Sources */,
 				FAD7C542283A5A310093AF35 /* UINavigationItem.swift in Sources */,
 				FA551B6828426FD3009ADB01 /* StoryResponse.swift in Sources */,
 				FA829C6328424057009BB780 /* LocationAgreeViewController.swift in Sources */,

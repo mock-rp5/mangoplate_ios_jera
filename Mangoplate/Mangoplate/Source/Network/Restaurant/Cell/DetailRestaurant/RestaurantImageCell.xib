@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RestaurantImageCell" id="gTV-IL-0wX" customClass="RestaurantImageCell" customModule="Mangoplate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="196" height="177"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="196" height="177"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o17-pG-AJa">
+                        <rect key="frame" x="0.0" y="0.0" width="196" height="177"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="o17-pG-AJa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="5vR-Cy-5k9"/>
+                <constraint firstAttribute="trailing" secondItem="o17-pG-AJa" secondAttribute="trailing" id="GPl-kw-foT"/>
+                <constraint firstItem="o17-pG-AJa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Rg1-Qm-aJy"/>
+                <constraint firstAttribute="bottom" secondItem="o17-pG-AJa" secondAttribute="bottom" id="aUW-sL-zY6"/>
+            </constraints>
+            <size key="customSize" width="196" height="177"/>
+            <connections>
+                <outlet property="restaurantImageView" destination="o17-pG-AJa" id="9eC-V8-bmE"/>
+            </connections>
+            <point key="canvasLocation" x="237.68115942028987" y="151.00446428571428"/>
+        </collectionViewCell>
+    </objects>
+</document>
