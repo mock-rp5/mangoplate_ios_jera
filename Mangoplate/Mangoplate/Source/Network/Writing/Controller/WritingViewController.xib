@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lh-ob-YPY">
-                    <rect key="frame" x="178" y="777" width="35" height="35"/>
+                    <rect key="frame" x="187.5" y="821" width="35" height="35"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="35" id="2ec-Y5-1yW"/>
                         <constraint firstAttribute="height" constant="35" id="woQ-bF-1LN"/>
@@ -39,7 +39,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBc-O9-Tte">
-                    <rect key="frame" x="18" y="511" width="154" height="68"/>
+                    <rect key="frame" x="18" y="555" width="154" height="68"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="154" id="Oos-bl-twj"/>
                     </constraints>
@@ -50,7 +50,7 @@
                     </buttonConfiguration>
                 </button>
                 <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEp-yM-5Sp">
-                    <rect key="frame" x="18" y="589" width="154" height="64"/>
+                    <rect key="frame" x="18" y="633" width="154" height="64"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="154" id="wef-tb-Npn"/>
                     </constraints>
@@ -61,7 +61,7 @@
                     </buttonConfiguration>
                 </button>
                 <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqe-LK-Gjp">
-                    <rect key="frame" x="20" y="663" width="192" height="64"/>
+                    <rect key="frame" x="20" y="707" width="192" height="64"/>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="0.90462024009999997" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="writing4" title="식당 등록하기">
@@ -69,7 +69,7 @@
                     </buttonConfiguration>
                 </button>
                 <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3D-uJ-qOD">
-                    <rect key="frame" x="19" y="441" width="210" height="60"/>
+                    <rect key="frame" x="19" y="485" width="210" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="210" id="wk4-7s-UXd"/>
                     </constraints>
@@ -89,8 +89,8 @@
                 <constraint firstItem="Qqe-LK-Gjp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.56" id="8ZR-pf-wep"/>
                 <constraint firstItem="WBc-O9-Tte" firstAttribute="top" secondItem="O3D-uJ-qOD" secondAttribute="bottom" constant="10" id="9Ps-aX-FXU"/>
                 <constraint firstItem="Qqe-LK-Gjp" firstAttribute="top" secondItem="lEp-yM-5Sp" secondAttribute="bottom" constant="10" id="cDl-1Z-3ir"/>
-                <constraint firstItem="8lh-ob-YPY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.945" id="mGe-ul-qg0"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8lh-ob-YPY" secondAttribute="bottom" constant="50" id="nJz-wX-DB7"/>
+                <constraint firstItem="8lh-ob-YPY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.99" id="mGe-ul-qg0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8lh-ob-YPY" secondAttribute="bottom" constant="6" id="nJz-wX-DB7"/>
                 <constraint firstItem="O3D-uJ-qOD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.6" id="unj-vz-O3L"/>
                 <constraint firstItem="lEp-yM-5Sp" firstAttribute="top" secondItem="WBc-O9-Tte" secondAttribute="bottom" constant="10" id="wQQ-Qv-uW8"/>
             </constraints>

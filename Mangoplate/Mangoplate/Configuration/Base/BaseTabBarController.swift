@@ -60,12 +60,9 @@ class BaseTabBarController: TabmanViewController {
         button.addTarget(self, action: #selector(self.plusButtonTapped), for: .touchUpInside)
       }
     }
-    
-   
-    
     // 라인바
     BaseTabBarController.lineBar.indicator.tintColor = .mainOrange
-    BaseTabBarController.lineBar.backgroundColor = .mainLightGray
+    BaseTabBarController.lineBar.backgroundColor = .systemGray2
    
     addBar(BaseTabBarController.tabBar, dataSource: self, at: .bottom)
     addBar(BaseTabBarController.lineBar, dataSource: self, at: .bottom)
@@ -74,7 +71,8 @@ class BaseTabBarController: TabmanViewController {
   
   @objc func plusButtonTapped(_ sender: Any) {
     print("plusButtonTapped")
-    let vc = WritingViewController()
+    let vc = UINavigationController(rootViewController: WritingViewController())
+    //let vc = WritingViewController()
     vc.transitioningDelegate = self
     vc.modalPresentationStyle = .overCurrentContext
     present(vc, animated: true)

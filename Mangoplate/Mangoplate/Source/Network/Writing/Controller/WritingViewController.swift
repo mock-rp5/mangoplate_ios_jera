@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WritingViewController: UIViewController {
+class WritingViewController: BaseViewController {
   
   let transition = CircularTransition()
 
@@ -18,10 +18,16 @@ class WritingViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    reviewButton.addTarget(self, action: #selector(reviewButtonTapped), for: .touchUpInside)
    
   }
   
-  // 버튼 페이드인 애니메이션 
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    setNavigationTitle(title: "", color: .mainOrange)
+  }
+  
+  // 버튼 페이드인 애니메이션
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     UIView.animate(withDuration: 0.05, animations: ({
@@ -44,5 +50,11 @@ class WritingViewController: UIViewController {
   
   @IBAction func cancelButtonTapped(_ sender: Any) {
     self.dismiss(animated: true, completion: nil)
+  }
+  
+  @objc func reviewButtonTapped(_ sender: UIButton) {
+    let vc = ReviewWritingViewController()
+    vc.modalPresentationStyle = .fullScreen
+    self.navigationController?.pushViewController(vc, animated: true)
   }
 }

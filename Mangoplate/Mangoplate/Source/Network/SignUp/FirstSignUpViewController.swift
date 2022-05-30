@@ -59,8 +59,8 @@ class FirstSignUpViewController: BaseViewController {
     passwordSameCheckLabel.text = ""
     passwordValidCheckLabel.text = ""
     
-    let searchButton = self.navigationItem.setNavigationItemButton(nil, action: #selector(xButtonTapped(_:)), symbolName: nil, imageName: "xButton", tintColor: .darkGray, width: 25, height: 25)
-    self.navigationItem.rightBarButtonItem = searchButton
+    let cancelButton = self.navigationItem.setNavigationItemButton(self, action: #selector(xButtonTapped(_:)), symbolName: nil, imageName: "xButton", tintColor: .darkGray, width: 25, height: 25)
+    self.navigationItem.rightBarButtonItem = cancelButton
   }
   
   // 최소 6~12자 영문, 숫자 포함하는 체크하는 정규 표현식

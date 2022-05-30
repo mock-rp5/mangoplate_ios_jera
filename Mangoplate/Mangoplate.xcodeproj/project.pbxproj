@@ -77,6 +77,10 @@
 		FA785C2E2844D6EC00E88303 /* SecondRestaurantDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA785C2C2844D6EC00E88303 /* SecondRestaurantDetailCell.xib */; };
 		FA785C312844E8AD00E88303 /* ThirdRestaurantDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C2F2844E8AD00E88303 /* ThirdRestaurantDetailCell.swift */; };
 		FA785C322844E8AD00E88303 /* ThirdRestaurantDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA785C302844E8AD00E88303 /* ThirdRestaurantDetailCell.xib */; };
+		FA785C362845146700E88303 /* ReviewWritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C342845146700E88303 /* ReviewWritingViewController.swift */; };
+		FA785C372845146700E88303 /* ReviewWritingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA785C352845146700E88303 /* ReviewWritingViewController.xib */; };
+		FA785C3B2845151C00E88303 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C392845151C00E88303 /* StoreCell.swift */; };
+		FA785C3C2845151C00E88303 /* StoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA785C3A2845151C00E88303 /* StoreCell.xib */; };
 		FA811D4B28391EE400CA29AF /* FirstSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */; };
 		FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */; };
 		FA811D4F2839299000CA29AF /* SecondSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */; };
@@ -211,6 +215,10 @@
 		FA785C2C2844D6EC00E88303 /* SecondRestaurantDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondRestaurantDetailCell.xib; sourceTree = "<group>"; };
 		FA785C2F2844E8AD00E88303 /* ThirdRestaurantDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdRestaurantDetailCell.swift; sourceTree = "<group>"; };
 		FA785C302844E8AD00E88303 /* ThirdRestaurantDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdRestaurantDetailCell.xib; sourceTree = "<group>"; };
+		FA785C342845146700E88303 /* ReviewWritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWritingViewController.swift; sourceTree = "<group>"; };
+		FA785C352845146700E88303 /* ReviewWritingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewWritingViewController.xib; sourceTree = "<group>"; };
+		FA785C392845151C00E88303 /* StoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
+		FA785C3A2845151C00E88303 /* StoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreCell.xib; sourceTree = "<group>"; };
 		FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpViewController.swift; sourceTree = "<group>"; };
 		FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstSignUpViewController.xib; sourceTree = "<group>"; };
 		FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpViewController.swift; sourceTree = "<group>"; };
@@ -551,6 +559,27 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		FA785C332845143800E88303 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA785C382845150500E88303 /* Cell */,
+				FAD7C535283A26FD0093AF35 /* WritingViewController.swift */,
+				FA785C342845146700E88303 /* ReviewWritingViewController.swift */,
+				FAD7C536283A26FD0093AF35 /* WritingViewController.xib */,
+				FA785C352845146700E88303 /* ReviewWritingViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA785C382845150500E88303 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA785C392845151C00E88303 /* StoreCell.swift */,
+				FA785C3A2845151C00E88303 /* StoreCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		FAD7C528283A23CA0093AF35 /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
@@ -573,9 +602,8 @@
 		FAD7C52E283A267E0093AF35 /* Writing */ = {
 			isa = PBXGroup;
 			children = (
+				FA785C332845143800E88303 /* Controller */,
 				FA4C3B7C2841387F003AFEF2 /* Class */,
-				FAD7C535283A26FD0093AF35 /* WritingViewController.swift */,
-				FAD7C536283A26FD0093AF35 /* WritingViewController.xib */,
 			);
 			path = Writing;
 			sourceTree = "<group>";
@@ -876,6 +904,7 @@
 				FA3F3E522843AEB300CE48B9 /* RestaurantImageCell.xib in Resources */,
 				FA3F3E4928438C7500CE48B9 /* DetailRestaurantViewController.xib in Resources */,
 				FA666BD4284356DC00DAB919 /* NewsCell.xib in Resources */,
+				FA785C372845146700E88303 /* ReviewWritingViewController.xib in Resources */,
 				FAF60A352838D32800B2CD48 /* SignInHomeViewController.xib in Resources */,
 				FAF60A062838B6E000B2CD48 /* Assets.xcassets in Resources */,
 				FA597E0D2840BDF40072CA47 /* AreaTabmanViewController.xib in Resources */,
@@ -905,6 +934,7 @@
 				FAF8FEF0283E38D800AE74AF /* StoryCell.xib in Resources */,
 				FA5C5C76283E61CE0071C7BF /* TopListCell.xib in Resources */,
 				FAF8FEDE283E1A9C00AE74AF /* EATDealViewController.xib in Resources */,
+				FA785C3C2845151C00E88303 /* StoreCell.xib in Resources */,
 				FAD7C538283A26FD0093AF35 /* WritingViewController.xib in Resources */,
 				FA666BC728434B4300DAB919 /* AllViewController.xib in Resources */,
 				FAF8FEE2283E1AAA00AE74AF /* StoryViewController.xib in Resources */,
@@ -1010,6 +1040,7 @@
 				FA4C1CAA283C82370089CDC8 /* SignInResponse.swift in Sources */,
 				FA665A06283B561000E807F1 /* SignUpRequest.swift in Sources */,
 				FAF60A2D2838CF2100B2CD48 /* UIViewController.swift in Sources */,
+				FA785C3B2845151C00E88303 /* StoreCell.swift in Sources */,
 				FA829C66284251CB009BB780 /* RestaurantRequest.swift in Sources */,
 				FA37E91F283CC857003FAE07 /* KakaoLoginRequest.swift in Sources */,
 				FAF60A2B2838CF2100B2CD48 /* UIFont.swift in Sources */,
@@ -1035,6 +1066,7 @@
 				FA597E0828408AE00072CA47 /* DetailAreaViewController.swift in Sources */,
 				FAF8FED0283DFD5100AE74AF /* MyPageSettingsViewController.swift in Sources */,
 				FA3F3E4828438C7500CE48B9 /* DetailRestaurantViewController.swift in Sources */,
+				FA785C362845146700E88303 /* ReviewWritingViewController.swift in Sources */,
 				FAD7C542283A5A310093AF35 /* UINavigationItem.swift in Sources */,
 				FA551B6828426FD3009ADB01 /* StoryResponse.swift in Sources */,
 				FA785C2D2844D6EC00E88303 /* SecondRestaurantDetailCell.swift in Sources */,
