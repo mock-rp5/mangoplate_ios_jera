@@ -36,15 +36,9 @@ class RestaurantViewController: BaseViewController {
     collectionView.register(UINib(nibName: "SortingCell", bundle: .main), forCellWithReuseIdentifier: "sortingCell")
     collectionView.register(UINib(nibName: "RestaurantCell", bundle: .main), forCellWithReuseIdentifier: "restaurantCell")
     getLocation()
-  }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-   // RestaurantDataManager().getAreas(viewController: self)
-    setNavigationTitle(title: "", color: .black)
-    showIndicator()
     
     // 첫 화면은 강남 지역만 가져와서 보여줌
+    showIndicator()
     if locationServicesEnabled {
       let restuarantRequest = RestaurantRequest(page: nil, pagesize: nil, area: "1", detailarea: nil, x: latitude, y: longtitude)
       RestaurantDataManager().getRestaurant(parameters: restuarantRequest, viewController: self)
@@ -53,9 +47,15 @@ class RestaurantViewController: BaseViewController {
       RestaurantDataManager().getRestaurant(parameters: restuarantRequest, viewController: self)
     }
     
-    
     // 지역 선택 시, 선택한 지역과 nvigationTitle 받아올 NotificationCenter 등록
     NotificationCenter.default.addObserver(self, selector: #selector(didRecieveAreasString), name: .selectAreaString, object: nil)
+    
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+   // RestaurantDataManager().getAreas(viewController: self)
+    setNavigationTitle(title: "", color: .black)
   }
   
   private func setLocation() {
@@ -127,6 +127,7 @@ class RestaurantViewController: BaseViewController {
     }
     
     // 선택한 지역들 조회
+    showIndicator()
     RestaurantDataManager().getRestaurant(parameters: restuarantRequest, viewController: self)
   }
 }

@@ -10,6 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WritingViewController" customModule="Mangoplate" customModuleProvider="target">
             <connections>
+                <outlet property="beenButton" destination="WBc-O9-Tte" id="L1a-3b-YSV"/>
+                <outlet property="eatDealButton" destination="O3D-uJ-qOD" id="roZ-kD-49A"/>
+                <outlet property="reviewButton" destination="lEp-yM-5Sp" id="wGk-e9-KBU"/>
+                <outlet property="storeButton" destination="Qqe-LK-Gjp" id="2gG-NQ-HcF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,7 +38,7 @@
                         <action selector="cancelButtonTapped:" destination="-1" eventType="touchUpInside" id="hv4-cu-T1E"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBc-O9-Tte">
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBc-O9-Tte">
                     <rect key="frame" x="18" y="511" width="154" height="68"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="154" id="Oos-bl-twj"/>
@@ -45,7 +49,7 @@
                         <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="21"/>
                     </buttonConfiguration>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEp-yM-5Sp">
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEp-yM-5Sp">
                     <rect key="frame" x="18" y="589" width="154" height="64"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="154" id="wef-tb-Npn"/>
@@ -56,7 +60,7 @@
                         <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="21"/>
                     </buttonConfiguration>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqe-LK-Gjp">
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqe-LK-Gjp">
                     <rect key="frame" x="20" y="663" width="192" height="64"/>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="0.90462024009999997" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="Button"/>
@@ -64,7 +68,7 @@
                         <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="21"/>
                     </buttonConfiguration>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3D-uJ-qOD">
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3D-uJ-qOD">
                     <rect key="frame" x="19" y="441" width="210" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="210" id="wk4-7s-UXd"/>
