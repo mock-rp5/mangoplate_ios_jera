@@ -105,6 +105,7 @@
             <connections>
                 <outlet property="filterButton" destination="6QT-2g-F9h" id="M6k-Ku-ltl"/>
                 <outlet property="locationButton" destination="bFS-hL-gFo" id="7AD-8Y-kCL"/>
+                <outlet property="sortButton" destination="Kdn-yh-7cM" id="tpI-a3-2eK"/>
             </connections>
             <point key="canvasLocation" x="358.69565217391306" y="144.64285714285714"/>
         </collectionViewCell>

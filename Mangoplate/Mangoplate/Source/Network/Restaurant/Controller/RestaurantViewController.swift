@@ -130,6 +130,16 @@ class RestaurantViewController: BaseViewController {
     showIndicator()
     RestaurantDataManager().getRestaurant(parameters: restuarantRequest, viewController: self)
   }
+  
+  // 정렬 버튼 클릭
+  @objc func sortButtonTapped(_ sender: UIButton) {
+    let vc = SortViewController()
+    vc.modalPresentationStyle = .overCurrentContext
+    vc.modalTransitionStyle = .crossDissolve
+    BaseTabBarController.hideTabBar()
+    present(vc, animated: true)
+  }
+  
 }
 
 extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -165,6 +175,7 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
     case 1:
       guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sortingCell", for: indexPath)
               as? SortingCell else { return UICollectionViewCell() }
+      cell.sortButton.addTarget(self, action: #selector(sortButtonTapped), for: .touchUpInside)
       return cell
       
     case 2:

@@ -11,6 +11,7 @@ class SortingCell: UICollectionViewCell {
 
   @IBOutlet weak var locationButton: UIButton!
   @IBOutlet weak var filterButton: UIButton!
+  @IBOutlet weak var sortButton: UIButton!
   
   override func awakeFromNib() {
     super.awakeFromNib()

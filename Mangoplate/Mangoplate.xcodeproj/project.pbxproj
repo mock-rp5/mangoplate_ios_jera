@@ -81,6 +81,8 @@
 		FA785C372845146700E88303 /* ReviewWritingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA785C352845146700E88303 /* ReviewWritingViewController.xib */; };
 		FA785C3B2845151C00E88303 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C392845151C00E88303 /* StoreCell.swift */; };
 		FA785C3C2845151C00E88303 /* StoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA785C3A2845151C00E88303 /* StoreCell.xib */; };
+		FA785C3F2845235E00E88303 /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C3D2845235E00E88303 /* SortViewController.swift */; };
+		FA785C402845235E00E88303 /* SortViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA785C3E2845235E00E88303 /* SortViewController.xib */; };
 		FA811D4B28391EE400CA29AF /* FirstSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */; };
 		FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */; };
 		FA811D4F2839299000CA29AF /* SecondSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */; };
@@ -219,6 +221,8 @@
 		FA785C352845146700E88303 /* ReviewWritingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewWritingViewController.xib; sourceTree = "<group>"; };
 		FA785C392845151C00E88303 /* StoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
 		FA785C3A2845151C00E88303 /* StoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreCell.xib; sourceTree = "<group>"; };
+		FA785C3D2845235E00E88303 /* SortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewController.swift; sourceTree = "<group>"; };
+		FA785C3E2845235E00E88303 /* SortViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortViewController.xib; sourceTree = "<group>"; };
 		FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpViewController.swift; sourceTree = "<group>"; };
 		FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstSignUpViewController.xib; sourceTree = "<group>"; };
 		FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpViewController.swift; sourceTree = "<group>"; };
@@ -816,8 +820,10 @@
 			children = (
 				FAD7C529283A23F20093AF35 /* RestaurantViewController.swift */,
 				FA3F3E4628438C7500CE48B9 /* DetailRestaurantViewController.swift */,
+				FA785C3D2845235E00E88303 /* SortViewController.swift */,
 				FAD7C52A283A23F20093AF35 /* RestaurantViewController.xib */,
 				FA3F3E4728438C7500CE48B9 /* DetailRestaurantViewController.xib */,
+				FA785C3E2845235E00E88303 /* SortViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -895,6 +901,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA785C402845235E00E88303 /* SortViewController.xib in Resources */,
 				FA570AF6283A8BC200BA5049 /* BannerSubCell.xib in Resources */,
 				FAF60A092838B6E000B2CD48 /* LaunchScreen.storyboard in Resources */,
 				FA811D502839299000CA29AF /* SecondSignUpViewController.xib in Resources */,
@@ -1040,6 +1047,7 @@
 				FA4C1CAA283C82370089CDC8 /* SignInResponse.swift in Sources */,
 				FA665A06283B561000E807F1 /* SignUpRequest.swift in Sources */,
 				FAF60A2D2838CF2100B2CD48 /* UIViewController.swift in Sources */,
+				FA785C3F2845235E00E88303 /* SortViewController.swift in Sources */,
 				FA785C3B2845151C00E88303 /* StoreCell.swift in Sources */,
 				FA829C66284251CB009BB780 /* RestaurantRequest.swift in Sources */,
 				FA37E91F283CC857003FAE07 /* KakaoLoginRequest.swift in Sources */,
