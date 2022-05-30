@@ -281,7 +281,7 @@
 
 
 ```
-<img width="150" src="./image/8-1.png"> <img width="150" src="./image/8-2.png"><img width="150" src="./image/8-3.png"> <img width="150" src="./image/8-4.png"><img width="150" src="./image/8-5.png"> <img width="150" src="./image/8-6.png"> <img width="150" src="./image/8-7.png"> 
+<img width="200" src="./image/8-1.png"> <img width="200" src="./image/8-2.png"> <img width="200" src="./image/8-3.png"> <img width="200" src="./image/8-4.png"> <img width="200" src="./image/8-5.png"> <img width="200" src="./image/8-6.png"> <img width="200" src="./image/8-7.png"> 
 
 </div>
 </details>
@@ -320,7 +320,73 @@
 
 
 ```
-<img width="150" src="./image/9-1.png"> <img width="150" src="./image/9-2.png"><img width="150" src="./image/9-3.png"> <img width="150" src="./image/9-4.png">
+<img width="200" src="./image/9-1.png"> <img width="200" src="./image/9-2.png"> <img width="200" src="./image/9-3.png"> <img width="200" src="./image/9-4.png">
+
+</div>
+</details>
+
+
+
+
+
+
+</br>
+<details>
+<summary>10일차_2022.05.30 (월)</summary>
+<div markdown="1">
+
+```
+1. 구현한 기능
+
+	- 소식 - 피드 조회 API : 평가별로 조회 가능 (95%) (식당이름만 서버에서 보내주는걸로 API 수정하면 됨)
+	
+	- 식당 상세 - 리뷰, 관련 Top리스트, 스토리, 주변 식당 셀 (100%)
+
+	- plus탭 - 누르면 버튼들 페이드인 애니메이션 (100%)
+
+	- plus탭 - 리뷰 쓰기 식당 목록 UI (100%)
+
+	- 맛집 찾기 - 정렬 선택 UI (100%)
+	
+
+2. 발생한 이슈
+
+	- 소식탭에 cell안에 있는 맛있다/괜찮다/별로 버튼의 이벤트를 처리해줘야함
+
+    	- NotificationCenter : 버튼의 backgorundColor, borderColor,  이미지, tintColor 모두 변경해줘야하는데 
+		버튼 클릭 시, 실행할 함수는 sender를 UIButton 이 아니라 
+		Notification으로 받기 때문에 구현하기 힘들다고 판단 -> 사용x
+
+    	- Delegate 패턴 :  파라미터로 UIButton을 보내주며 프로토콜 채택한 함수내에서  버튼 UI 처리 -> 해결
+
+
+	- 상세지역 검색하면 전체지역으로 나옴 
+
+		- 처음엔 데이터가 잘못된 줄 알았으나 API명세서를 잘못 이해 (강남에서 가로수길만 검색하고 싶으면 detailarea만 보내는건데 area도 같이 보냄)
+		- 서버 개발자분께 질문해 해결
+
+
+3. API 변동사항
+
+	- 피드 조회 API에서 식당이름, 위치 추가 요구
+	
+
+4. 서버 개발자와의 회의
+	기간이 얼마 남지 않아 아래 3가지로 개발 범위 정함
+
+		1. 맛집 상세 정보 조회 
+    		- 지도는 이미지로 대체
+
+
+		2. 리뷰 쓰기 기능
+ 			- 리뷰쓸 때 식당을 선택해야 돼서 모든 식당 목록 조회 API 추가 (식당 검색은 구현안하고 모든 식당에서 선택하는걸로 구현예정) 
+
+		3. 가고싶다 등록 기능
+
+
+
+```
+<img width="200" src="./image/10-1.gif"> <img width="200" src="./image/10-2.png"> <img width="200" src="./image/10-3.png"> <img width="200" src="./image/10-4.png"> <img width="200" src="./image/10-5.png"> <img width="200" src="./image/10-6.png">
 
 </div>
 </details>
