@@ -120,9 +120,9 @@ class RestaurantViewController: BaseViewController {
     // 전체 지역 선택하지 않았으면
     else {
       if locationServicesEnabled {
-        restuarantRequest = RestaurantRequest(page: nil, pagesize: nil, area: String(datas[0]), detailarea: String(datas[1]), x: latitude, y: longtitude)
+        restuarantRequest = RestaurantRequest(page: nil, pagesize: nil, area: nil, detailarea: String(datas[1]), x: latitude, y: longtitude)
       } else {
-        restuarantRequest = RestaurantRequest(page: nil, pagesize: nil, area: String(datas[0]), detailarea: String(datas[1]), x: nil, y: nil)
+        restuarantRequest = RestaurantRequest(page: nil, pagesize: nil, area: nil, detailarea: String(datas[1]), x: nil, y: nil)
       }
     }
     
