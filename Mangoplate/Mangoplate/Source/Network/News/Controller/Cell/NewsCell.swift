@@ -20,10 +20,10 @@ class NewsCell: UICollectionViewCell {
   @IBOutlet weak var commentLabel: UILabel!
   @IBOutlet weak var timeLabel: UILabel!
   @IBOutlet weak var imageCollectionView: UICollectionView!
-  
   @IBOutlet weak var pageLabel: UILabel!
   @IBOutlet weak var pageView: UIView!
-  let images = ["foodImage1", "foodImage2", "foodImage3"]
+  
+  var photos: [Photo] = []
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -32,7 +32,6 @@ class NewsCell: UICollectionViewCell {
     imageCollectionView.delegate = self
     imageCollectionView.dataSource = self
     pageView.layer.cornerRadius = 8
-    pageLabel.text = "1/\(images.count)"
     
   }
 
@@ -40,13 +39,14 @@ class NewsCell: UICollectionViewCell {
 
 extension NewsCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return images.count
+    return photos.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard let cell = imageCollectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath)
             as? ImageCell else { return UICollectionViewCell() }
-    cell.foodImageView.image = UIImage(named: images[indexPath.row])
+    pageLabel.text = "1/\(photos.count)"
+    cell.foodImageView.load(urlString: photos[indexPath.row].photoUrl)
     return cell
   }
   
@@ -62,14 +62,9 @@ extension NewsCell: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
   }
   
-//  func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-//    let page = Int(targetContentOffset.pointee.x / self.frame.width)
-//    self.pageLabel.text = "\(page+2)/\(images.count)"
-//  }
-  
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
     let page = scrollView.contentOffset.x/scrollView.frame.size.width
-    self.pageLabel.text = "\(Int(page+1))/\(images.count)"
+    self.pageLabel.text = "\(Int(page+1))/\(photos.count)"
   }
   
   

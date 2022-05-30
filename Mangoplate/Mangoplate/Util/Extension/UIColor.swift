@@ -25,5 +25,6 @@ extension UIColor {
     class var mainOrange: UIColor { UIColor(hex: 0xFE7000) }
   class var mainLightGray: UIColor { UIColor(hex: 0xDCDDDD) }
   class var mainLightGray2: UIColor { UIColor(hex: 0xF2F3F3) }
+  class var mainTasteBackground: UIColor { UIColor(hex: 0xFEE8D8) }
   
 }
