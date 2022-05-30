@@ -23,7 +23,8 @@ class NewsCell: UICollectionViewCell {
   @IBOutlet weak var pageLabel: UILabel!
   @IBOutlet weak var pageView: UIView!
   
-  var photos: [Photo] = []
+  let images = ["foodImage1", "foodImage2", "foodImage3"]
+  var photos: [Photo]?
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -32,6 +33,7 @@ class NewsCell: UICollectionViewCell {
     imageCollectionView.delegate = self
     imageCollectionView.dataSource = self
     pageView.layer.cornerRadius = 8
+   
     
   }
 
@@ -39,14 +41,26 @@ class NewsCell: UICollectionViewCell {
 
 extension NewsCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return photos.count
+    if let photos = photos {
+      return photos.count
+    } else {
+      return images.count
+    }
+    
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard let cell = imageCollectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath)
             as? ImageCell else { return UICollectionViewCell() }
-    pageLabel.text = "1/\(photos.count)"
-    cell.foodImageView.load(urlString: photos[indexPath.row].photoUrl)
+    
+    if let photos = photos {
+      pageLabel.text = "1/\(photos.count)"
+      cell.foodImageView.load(urlString: photos[indexPath.row].photoUrl)
+    } else {
+      pageLabel.text = "1/\(images.count)"
+      cell.foodImageView.image = UIImage(named: images[indexPath.row])
+    }
+    
     return cell
   }
   
@@ -64,7 +78,12 @@ extension NewsCell: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
   
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
     let page = scrollView.contentOffset.x/scrollView.frame.size.width
-    self.pageLabel.text = "\(Int(page+1))/\(photos.count)"
+    if let photos = photos {
+      self.pageLabel.text = "\(Int(page+1))/\(photos.count)"
+    } else {
+      self.pageLabel.text = "\(Int(page+1))/\(images.count)"
+    }
+    
   }
   
   

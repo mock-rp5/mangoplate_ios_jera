@@ -15,7 +15,10 @@ class DetailRestaurantViewController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setNavigaionItem()
+  
     detailRestaurantCollectionView.register(UINib(nibName: "FirstRestaurantDetailCell", bundle: .main), forCellWithReuseIdentifier: "FirstRestaurantDetailCell")
+    detailRestaurantCollectionView.register(UINib(nibName: "SecondRestaurantDetailCell", bundle: .main), forCellWithReuseIdentifier: "SecondRestaurantDetailCell")
+    detailRestaurantCollectionView.register(UINib(nibName: "ThirdRestaurantDetailCell", bundle: .main), forCellWithReuseIdentifier: "ThirdRestaurantDetailCell")
     detailRestaurantCollectionView.delegate = self
     detailRestaurantCollectionView.dataSource = self
   }
@@ -42,20 +45,44 @@ class DetailRestaurantViewController: BaseViewController {
 }
 
 extension DetailRestaurantViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+  
+  func numberOfSections(in collectionView: UICollectionView) -> Int {
+    return 3
+  }
+  
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return 1
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let cell = detailRestaurantCollectionView.dequeueReusableCell(withReuseIdentifier: "FirstRestaurantDetailCell", for: indexPath) as? FirstRestaurantDetailCell else {
-      print("cant")
-      return UICollectionViewCell() }
-    return cell
+    if indexPath.section == 0 {
+      guard let cell = detailRestaurantCollectionView.dequeueReusableCell(withReuseIdentifier: "FirstRestaurantDetailCell", for: indexPath) as? FirstRestaurantDetailCell else {
+        return UICollectionViewCell() }
+      return cell
+    }
+    else if indexPath.section == 1{
+      guard let cell = detailRestaurantCollectionView.dequeueReusableCell(withReuseIdentifier: "SecondRestaurantDetailCell", for: indexPath) as? SecondRestaurantDetailCell else {
+        return UICollectionViewCell() }
+      return cell
+    }
+    else {
+      guard let cell = detailRestaurantCollectionView.dequeueReusableCell(withReuseIdentifier: "ThirdRestaurantDetailCell", for: indexPath) as? ThirdRestaurantDetailCell else {
+        return UICollectionViewCell() }
+      return cell
+    }
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-   
-    return CGSize(width: collectionView.frame.size.width, height: 2000)
+    if indexPath.section == 0 {
+      return CGSize(width: collectionView.frame.size.width, height: 1320)
+    }
+    else if indexPath.section == 1 {
+      return CGSize(width: collectionView.frame.size.width, height: 1300)
+    }
+    else {
+      return CGSize(width: collectionView.frame.size.width, height: 1400)
+    }
+    
     
   }
   
