@@ -16,6 +16,10 @@ class ReviewWritingViewController: BaseViewController {
     storeTableView.register(UINib(nibName: "StoreCell", bundle: .main), forCellReuseIdentifier: "StoreCell")
     storeTableView.delegate = self
     storeTableView.dataSource = self
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     setNavigaionBar()
   }
   
@@ -48,6 +52,11 @@ extension ReviewWritingViewController: UITableViewDelegate, UITableViewDataSourc
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 50
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let vc = CustomGalleryViewController()
+    self.navigationController?.pushViewController(vc, animated: true)
   }
   
 }

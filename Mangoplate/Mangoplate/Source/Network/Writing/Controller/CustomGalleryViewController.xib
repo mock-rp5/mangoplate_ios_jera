@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomGalleryViewController" customModule="Mangoplate" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomView" destination="LAg-0w-Iav" id="n8U-cb-pHq"/>
+                <outlet property="customGalleryCollectionView" destination="NJm-ce-n9g" id="pke-3N-Bhc"/>
+                <outlet property="jumpButton" destination="lbb-vp-9C9" id="LAh-JH-bUG"/>
+                <outlet property="okButton" destination="X1p-KR-AlV" id="ida-U5-emv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NJm-ce-n9g">
+                    <rect key="frame" x="0.0" y="44" width="414" height="777"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="8kH-3P-dbi">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAg-0w-Iav">
+                    <rect key="frame" x="0.0" y="821" width="414" height="75"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbb-vp-9C9">
+                            <rect key="frame" x="10" y="11" width="73" height="31"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="건너뛰기"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1p-KR-AlV">
+                            <rect key="frame" x="311" y="11" width="93" height="31"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="확인 (0/30)"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray4Color"/>
+                    <constraints>
+                        <constraint firstItem="X1p-KR-AlV" firstAttribute="centerY" secondItem="LAg-0w-Iav" secondAttribute="centerY" multiplier="0.7" id="10x-zS-bCc"/>
+                        <constraint firstItem="lbb-vp-9C9" firstAttribute="leading" secondItem="LAg-0w-Iav" secondAttribute="leading" constant="10" id="3Za-Tt-mdI"/>
+                        <constraint firstAttribute="height" constant="75" id="Dxz-6K-a7A"/>
+                        <constraint firstItem="lbb-vp-9C9" firstAttribute="centerY" secondItem="LAg-0w-Iav" secondAttribute="centerY" multiplier="0.7" id="Ypf-pL-MHo"/>
+                        <constraint firstAttribute="trailing" secondItem="X1p-KR-AlV" secondAttribute="trailing" constant="10" id="kbV-tu-bK1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="LAg-0w-Iav" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="FcQ-k5-2Bx"/>
+                <constraint firstItem="NJm-ce-n9g" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="GVO-hN-7b7"/>
+                <constraint firstItem="LAg-0w-Iav" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IAp-Fl-ne6"/>
+                <constraint firstAttribute="bottom" secondItem="LAg-0w-Iav" secondAttribute="bottom" id="Nme-ka-kWr"/>
+                <constraint firstItem="LAg-0w-Iav" firstAttribute="top" secondItem="NJm-ce-n9g" secondAttribute="bottom" id="fgs-4j-teA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NJm-ce-n9g" secondAttribute="trailing" id="h9a-T3-gt4"/>
+                <constraint firstItem="NJm-ce-n9g" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wd8-tu-Hfd"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="79.6875"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

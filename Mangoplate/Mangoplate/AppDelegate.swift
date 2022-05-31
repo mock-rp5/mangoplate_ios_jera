@@ -6,13 +6,36 @@
 //
 
 import UIKit
+import Photos
 import KakaoSDKCommon
+
+var allPhotos: PHFetchResult<PHAsset>? = nil
+var photocount = Int()
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     KakaoSDK.initSDK(appKey: "9e0f03f667c2a87d4cabc3baed37769e")
+    
+    // 커스텀 갤러리를 위해 갤러리의 이미지들과 이미지 갯수 받아옴
+    PHPhotoLibrary.requestAuthorization { (status) in
+      switch status {
+      case .notDetermined:
+        print("notDetermined")
+      case .restricted:
+        print("restricted")
+      case .denied:
+        print("denied")
+      case .authorized:
+        print("good to proceed")
+        let fetchOptions = PHFetchOptions()
+        allPhotos = PHAsset.fetchAssets(with: .image, options: fetchOptions)
+        photocount = allPhotos?.count ?? 0
+      case .limited:
+        print("limited")
+      }
+    }
     return true
   }
 
