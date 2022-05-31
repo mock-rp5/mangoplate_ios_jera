@@ -7,6 +7,7 @@
 
 import UIKit
 
+// plus탭 클릭 시, circle 애니메이션
 class CircularTransition: NSObject{
     var circle = UIView()
     var startingPoint = CGPoint.zero{

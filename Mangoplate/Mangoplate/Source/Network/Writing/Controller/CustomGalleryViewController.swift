@@ -25,6 +25,8 @@ class CustomGalleryViewController: BaseViewController {
     customGalleryCollectionView.delegate = self
     customGalleryCollectionView.dataSource = self
     okButton.isEnabled = false
+    okButton.addTarget(self, action: #selector(okButtonTapped(_:)), for: .touchUpInside)
+    jumpButton.addTarget(self, action: #selector(jumpButtonTapped(_:)), for: .touchUpInside)
     
     // 사진 모두 선택 안한걸로 셋팅
     for _ in 0..<photocount {
@@ -40,6 +42,7 @@ class CustomGalleryViewController: BaseViewController {
   }
   
   // MARK: - Mehtods
+  
   // asset을 UIImage로 바꿔줌
   func assetToImage(asset: PHAsset) -> UIImage {
     var image = UIImage()
@@ -52,7 +55,30 @@ class CustomGalleryViewController: BaseViewController {
     return image
   }
   
-  @objc func 
+  // 확인버튼 클릭 : 선택된 사진을 asset -> UIImage -> Data로 형 변환해서 Review에 저장 (싱글턴패턴)
+  @objc func okButtonTapped(_ sender: UIButton) {
+    var images: [Data] = []
+    for (index, value) in isSelected.enumerated() {
+      // 선택된 사진이면
+      if value == true {
+        if let asset = allPhotos?.object(at: index) {
+          let image = assetToImage(asset: asset) // asset -> UIImage
+          guard let data = image.jpegData(compressionQuality: 0.1)  else { return }// UIImage -> Data
+          images.append(data)
+        }
+      }
+    }
+    
+    Review.shared.images = images
+    
+    let vc = ReviewWritingViewController()
+    self.navigationController?.pushViewController(vc, animated: true)
+  }
+  
+  @objc func jumpButtonTapped(_ sender: UIButton) {
+    let vc = ReviewWritingViewController()
+    self.navigationController?.pushViewController(vc, animated: true)
+  }
 
 }
 

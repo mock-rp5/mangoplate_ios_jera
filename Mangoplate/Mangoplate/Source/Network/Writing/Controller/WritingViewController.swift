@@ -53,7 +53,7 @@ class WritingViewController: BaseViewController {
   }
   
   @objc func reviewButtonTapped(_ sender: UIButton) {
-    let vc = ReviewWritingViewController()
+    let vc = ReviewStoresViewController()
     vc.modalPresentationStyle = .fullScreen
     self.navigationController?.pushViewController(vc, animated: true)
   }

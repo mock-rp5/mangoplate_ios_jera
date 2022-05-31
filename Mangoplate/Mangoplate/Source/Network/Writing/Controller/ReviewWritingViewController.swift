@@ -9,54 +9,84 @@ import UIKit
 
 class ReviewWritingViewController: BaseViewController {
 
-  @IBOutlet weak var storeTableView: UITableView!
+  // MARK: - Properties
+  @IBOutlet var buttons: [UIButton]!
+  @IBOutlet var labels: [UILabel]!
+  @IBOutlet weak var textView: UITextView!
+  @IBOutlet weak var okButton: UIButton!
+
+  // MARK: - LifeCycles
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    storeTableView.register(UINib(nibName: "StoreCell", bundle: .main), forCellReuseIdentifier: "StoreCell")
-    storeTableView.delegate = self
-    storeTableView.dataSource = self
+    setButtons()
+    self.dismissKeyboardWhenTappedAround()
+    textView.delegate = self
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    setNavigaionBar()
+    setNavigationTitle(title: "리뷰쓰기", color: .mainOrange)
+    setNavigationTintColor(color: .mainOrange)
+    setNavigationBarBackbuttonTitle(title: "")
   }
   
-  func setNavigaionBar() {
-    setNavigationTitle(title: "리뷰 쓰기", color: .mainOrange)
-    self.navigationItem.setHidesBackButton(true, animated: false) // 백버튼 지움
+  // MARK: - Methods
+  func setButtons() {
+    okButton.layer.cornerRadius = 25
+    okButton.addTarget(self, action: #selector(okButtonTapped(_:)), for: .touchUpInside)
     
-    self.navigationController?.navigationBar.isTransparent = true
+    buttons[0].setImage(UIImage(named: "selectedWritingBad"), for: .selected)
+    buttons[1].setImage(UIImage(named: "selectedWritingSoso"), for: .selected)
+    buttons[2].setImage(UIImage(named: "selectedWritingGood"), for: .selected)
+    buttons[0].setImage(UIImage(named: "writingBad"), for: .normal)
+    buttons[1].setImage(UIImage(named: "writingSoso"), for: .normal)
+    buttons[2].setImage(UIImage(named: "writingGood"), for: .normal)
     
-    let cancelButton = self.navigationItem.setNavigationItemButton(self, action: #selector(cancelButtonTapped), symbolName: nil, imageName: "xButton", tintColor: .mainLightGray2, width: 25, height: 25)
+    // 맛있다 눌러진 상태
+    buttons[2].isSelected = true
+    labels[2].textColor = .mainOrange
     
-    self.navigationItem.rightBarButtonItems = [cancelButton]
+    for button in buttons {
+      button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
+    }
   }
   
-  @objc func cancelButtonTapped(_ sender: UIButton) {
-    self.dismiss(animated: false, completion: nil)
+  // 평가버튼 클릭 (1개만 선택)
+  @objc func buttonTapped(_ sender: UIButton) {
+    // 선택안된 상태에서 클릭했을 때
+    if sender.isSelected == false {
+      for (index, button) in buttons.enumerated() {
+        if button == sender {
+          // 선택한 버튼은 주황색으로
+          sender.isSelected = true
+          labels[index].textColor = .mainOrange
+        }
+        else {
+          // 나머지 버튼은 회색으로
+          button.isSelected = false
+          labels[index].textColor = .lightGray
+        }
+      }
+    }
+  }
+  
+  // 입력완료 버튼 클릭
+  @objc func okButtonTapped(_ sender: UIButton) {
+    Review.shared.content = textView.text
+    for (index, button) in buttons.enumerated() {
+      if button.isSelected {
+        Review.shared.evaluation = index
+      }
+    }
+    print("Review 정보 : \(Review.shared.evaluation) \(Review.shared.content) \(Review.shared.images)")
+    dismiss(animated: false, completion: nil)
   }
 }
 
-extension ReviewWritingViewController: UITableViewDelegate, UITableViewDataSource {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 10
+// MARK: - UITextViewDelegate
+extension ReviewWritingViewController: UITextViewDelegate {
+  // textView 글자수 계산
+  func textViewDidChange(_ textView: UITextView) {
+    okButton.setTitle("입력완료 (\(textView.text.count)/1000)", for: .normal)
   }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = storeTableView.dequeueReusableCell(withIdentifier: "StoreCell")
-            as? StoreCell else { return UITableViewCell() }
-    return cell
-  }
-  
-  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 50
-  }
-  
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let vc = CustomGalleryViewController()
-    self.navigationController?.pushViewController(vc, animated: true)
-  }
-  
 }

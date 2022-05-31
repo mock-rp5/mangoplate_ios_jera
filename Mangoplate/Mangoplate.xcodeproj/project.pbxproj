@@ -75,6 +75,8 @@
 		FA6B08992845FAC4008639E4 /* CustomGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B08972845FAC4008639E4 /* CustomGalleryCell.swift */; };
 		FA6B089A2845FAC4008639E4 /* CustomGalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6B08982845FAC4008639E4 /* CustomGalleryCell.xib */; };
 		FA6B089C2846077C008639E4 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B089B2846077C008639E4 /* Review.swift */; };
+		FA6B089F28461329008639E4 /* ReviewWritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B089D28461329008639E4 /* ReviewWritingViewController.swift */; };
+		FA6B08A028461329008639E4 /* ReviewWritingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6B089E28461329008639E4 /* ReviewWritingViewController.xib */; };
 		FA785C262844B58C00E88303 /* FeedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C252844B58C00E88303 /* FeedRequest.swift */; };
 		FA785C282844B59500E88303 /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C272844B59500E88303 /* FeedResponse.swift */; };
 		FA785C2A2844B5A200E88303 /* NewsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C292844B5A200E88303 /* NewsDataManager.swift */; };
@@ -82,8 +84,8 @@
 		FA785C2E2844D6EC00E88303 /* SecondRestaurantDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA785C2C2844D6EC00E88303 /* SecondRestaurantDetailCell.xib */; };
 		FA785C312844E8AD00E88303 /* ThirdRestaurantDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C2F2844E8AD00E88303 /* ThirdRestaurantDetailCell.swift */; };
 		FA785C322844E8AD00E88303 /* ThirdRestaurantDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA785C302844E8AD00E88303 /* ThirdRestaurantDetailCell.xib */; };
-		FA785C362845146700E88303 /* ReviewWritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C342845146700E88303 /* ReviewWritingViewController.swift */; };
-		FA785C372845146700E88303 /* ReviewWritingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA785C352845146700E88303 /* ReviewWritingViewController.xib */; };
+		FA785C362845146700E88303 /* ReviewStoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C342845146700E88303 /* ReviewStoresViewController.swift */; };
+		FA785C372845146700E88303 /* ReviewStoresViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA785C352845146700E88303 /* ReviewStoresViewController.xib */; };
 		FA785C3B2845151C00E88303 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C392845151C00E88303 /* StoreCell.swift */; };
 		FA785C3C2845151C00E88303 /* StoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA785C3A2845151C00E88303 /* StoreCell.xib */; };
 		FA785C3F2845235E00E88303 /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C3D2845235E00E88303 /* SortViewController.swift */; };
@@ -220,6 +222,8 @@
 		FA6B08972845FAC4008639E4 /* CustomGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGalleryCell.swift; sourceTree = "<group>"; };
 		FA6B08982845FAC4008639E4 /* CustomGalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomGalleryCell.xib; sourceTree = "<group>"; };
 		FA6B089B2846077C008639E4 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		FA6B089D28461329008639E4 /* ReviewWritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWritingViewController.swift; sourceTree = "<group>"; };
+		FA6B089E28461329008639E4 /* ReviewWritingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewWritingViewController.xib; sourceTree = "<group>"; };
 		FA785C252844B58C00E88303 /* FeedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedRequest.swift; path = ../../../../../../../../Documents/FeedRequest.swift; sourceTree = "<group>"; };
 		FA785C272844B59500E88303 /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedResponse.swift; path = ../../../../../../../../Documents/FeedResponse.swift; sourceTree = "<group>"; };
 		FA785C292844B5A200E88303 /* NewsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDataManager.swift; sourceTree = "<group>"; };
@@ -227,8 +231,8 @@
 		FA785C2C2844D6EC00E88303 /* SecondRestaurantDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondRestaurantDetailCell.xib; sourceTree = "<group>"; };
 		FA785C2F2844E8AD00E88303 /* ThirdRestaurantDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdRestaurantDetailCell.swift; sourceTree = "<group>"; };
 		FA785C302844E8AD00E88303 /* ThirdRestaurantDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdRestaurantDetailCell.xib; sourceTree = "<group>"; };
-		FA785C342845146700E88303 /* ReviewWritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWritingViewController.swift; sourceTree = "<group>"; };
-		FA785C352845146700E88303 /* ReviewWritingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewWritingViewController.xib; sourceTree = "<group>"; };
+		FA785C342845146700E88303 /* ReviewStoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewStoresViewController.swift; sourceTree = "<group>"; };
+		FA785C352845146700E88303 /* ReviewStoresViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewStoresViewController.xib; sourceTree = "<group>"; };
 		FA785C392845151C00E88303 /* StoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
 		FA785C3A2845151C00E88303 /* StoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreCell.xib; sourceTree = "<group>"; };
 		FA785C3D2845235E00E88303 /* SortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewController.swift; sourceTree = "<group>"; };
@@ -368,13 +372,13 @@
 			path = DataManager;
 			sourceTree = "<group>";
 		};
-		FA4C3B7C2841387F003AFEF2 /* Model */ = {
+		FA4C3B7C2841387F003AFEF2 /* Class */ = {
 			isa = PBXGroup;
 			children = (
 				FA4C3B7D2841388C003AFEF2 /* CircularTransition.swift */,
 				FA6B089B2846077C008639E4 /* Review.swift */,
 			);
-			path = Model;
+			path = Class;
 			sourceTree = "<group>";
 		};
 		FA570AF1283A8AC100BA5049 /* Banner */ = {
@@ -579,11 +583,13 @@
 			children = (
 				FA785C382845150500E88303 /* Cell */,
 				FAD7C535283A26FD0093AF35 /* WritingViewController.swift */,
-				FA785C342845146700E88303 /* ReviewWritingViewController.swift */,
+				FA785C342845146700E88303 /* ReviewStoresViewController.swift */,
 				FA6B08932845F9FD008639E4 /* CustomGalleryViewController.swift */,
+				FA6B089D28461329008639E4 /* ReviewWritingViewController.swift */,
 				FAD7C536283A26FD0093AF35 /* WritingViewController.xib */,
-				FA785C352845146700E88303 /* ReviewWritingViewController.xib */,
+				FA785C352845146700E88303 /* ReviewStoresViewController.xib */,
 				FA6B08942845F9FD008639E4 /* CustomGalleryViewController.xib */,
+				FA6B089E28461329008639E4 /* ReviewWritingViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -622,7 +628,7 @@
 			isa = PBXGroup;
 			children = (
 				FA785C332845143800E88303 /* Controller */,
-				FA4C3B7C2841387F003AFEF2 /* Model */,
+				FA4C3B7C2841387F003AFEF2 /* Class */,
 			);
 			path = Writing;
 			sourceTree = "<group>";
@@ -926,7 +932,7 @@
 				FA3F3E522843AEB300CE48B9 /* RestaurantImageCell.xib in Resources */,
 				FA3F3E4928438C7500CE48B9 /* DetailRestaurantViewController.xib in Resources */,
 				FA666BD4284356DC00DAB919 /* NewsCell.xib in Resources */,
-				FA785C372845146700E88303 /* ReviewWritingViewController.xib in Resources */,
+				FA785C372845146700E88303 /* ReviewStoresViewController.xib in Resources */,
 				FAF60A352838D32800B2CD48 /* SignInHomeViewController.xib in Resources */,
 				FAF60A062838B6E000B2CD48 /* Assets.xcassets in Resources */,
 				FA597E0D2840BDF40072CA47 /* AreaTabmanViewController.xib in Resources */,
@@ -955,6 +961,7 @@
 				FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */,
 				FAD7C534283A26F00093AF35 /* MangoPickViewController.xib in Resources */,
 				FAF8FEF0283E38D800AE74AF /* StoryCell.xib in Resources */,
+				FA6B08A028461329008639E4 /* ReviewWritingViewController.xib in Resources */,
 				FA5C5C76283E61CE0071C7BF /* TopListCell.xib in Resources */,
 				FAF8FEDE283E1A9C00AE74AF /* EATDealViewController.xib in Resources */,
 				FA785C3C2845151C00E88303 /* StoreCell.xib in Resources */,
@@ -1020,6 +1027,7 @@
 				FAF60A012838B6DE00B2CD48 /* ViewController.swift in Sources */,
 				FA600B0F283F47790044F5BA /* AreasResponse.swift in Sources */,
 				FA6B08952845F9FD008639E4 /* CustomGalleryViewController.swift in Sources */,
+				FA6B089F28461329008639E4 /* ReviewWritingViewController.swift in Sources */,
 				FA666BD3284356DC00DAB919 /* NewsCell.swift in Sources */,
 				FAD7C533283A26F00093AF35 /* MangoPickViewController.swift in Sources */,
 				FA570AF5283A8BC200BA5049 /* BannerSubCell.swift in Sources */,
@@ -1094,7 +1102,7 @@
 				FA597E0828408AE00072CA47 /* DetailAreaViewController.swift in Sources */,
 				FAF8FED0283DFD5100AE74AF /* MyPageSettingsViewController.swift in Sources */,
 				FA3F3E4828438C7500CE48B9 /* DetailRestaurantViewController.swift in Sources */,
-				FA785C362845146700E88303 /* ReviewWritingViewController.swift in Sources */,
+				FA785C362845146700E88303 /* ReviewStoresViewController.swift in Sources */,
 				FAD7C542283A5A310093AF35 /* UINavigationItem.swift in Sources */,
 				FA551B6828426FD3009ADB01 /* StoryResponse.swift in Sources */,
 				FA785C2D2844D6EC00E88303 /* SecondRestaurantDetailCell.swift in Sources */,
