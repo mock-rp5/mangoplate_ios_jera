@@ -81,6 +81,10 @@
 		FA6B08A428462867008639E4 /* LogoutMyPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6B08A228462867008639E4 /* LogoutMyPageViewController.xib */; };
 		FA6B08A82846335D008639E4 /* StoreSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B08A72846335D008639E4 /* StoreSearchResponse.swift */; };
 		FA6B08AA284633C3008639E4 /* WritingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B08A9284633C3008639E4 /* WritingDataManager.swift */; };
+		FA6B08AC28466E9F008639E4 /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B08AB28466E9E008639E4 /* UICollectionViewCell.swift */; };
+		FA6B08AE28466EAF008639E4 /* UITableVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B08AD28466EAF008639E4 /* UITableVIewCell.swift */; };
+		FA6B08B028467543008639E4 /* TopListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B08AF28467543008639E4 /* TopListRequest.swift */; };
+		FA6B08B22846754E008639E4 /* StoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B08B12846754E008639E4 /* StoryRequest.swift */; };
 		FA785C262844B58C00E88303 /* FeedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C252844B58C00E88303 /* FeedRequest.swift */; };
 		FA785C282844B59500E88303 /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C272844B59500E88303 /* FeedResponse.swift */; };
 		FA785C2A2844B5A200E88303 /* NewsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C292844B5A200E88303 /* NewsDataManager.swift */; };
@@ -232,6 +236,10 @@
 		FA6B08A228462867008639E4 /* LogoutMyPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoutMyPageViewController.xib; sourceTree = "<group>"; };
 		FA6B08A72846335D008639E4 /* StoreSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoreSearchResponse.swift; path = ../../../../../../../../Documents/StoreSearchResponse.swift; sourceTree = "<group>"; };
 		FA6B08A9284633C3008639E4 /* WritingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingDataManager.swift; sourceTree = "<group>"; };
+		FA6B08AB28466E9E008639E4 /* UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
+		FA6B08AD28466EAF008639E4 /* UITableVIewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableVIewCell.swift; sourceTree = "<group>"; };
+		FA6B08AF28467543008639E4 /* TopListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListRequest.swift; sourceTree = "<group>"; };
+		FA6B08B12846754E008639E4 /* StoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryRequest.swift; sourceTree = "<group>"; };
 		FA785C252844B58C00E88303 /* FeedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedRequest.swift; path = ../../../../../../../../Documents/FeedRequest.swift; sourceTree = "<group>"; };
 		FA785C272844B59500E88303 /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedResponse.swift; path = ../../../../../../../../Documents/FeedResponse.swift; sourceTree = "<group>"; };
 		FA785C292844B5A200E88303 /* NewsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDataManager.swift; sourceTree = "<group>"; };
@@ -475,6 +483,8 @@
 				FA60386F2842658A00C0DFC4 /* EATDealResponse.swift */,
 				FA551B6728426FD3009ADB01 /* StoryResponse.swift */,
 				FA551B692842807F009ADB01 /* TopListResponse.swift */,
+				FA6B08AF28467543008639E4 /* TopListRequest.swift */,
+				FA6B08B12846754E008639E4 /* StoryRequest.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -775,6 +785,8 @@
 				FAF60A3A2838E14600B2CD48 /* UITextField.swift */,
 				FAD7C541283A5A310093AF35 /* UINavigationItem.swift */,
 				FA60386B28425BC500C0DFC4 /* UIImageView.swift */,
+				FA6B08AB28466E9E008639E4 /* UICollectionViewCell.swift */,
+				FA6B08AD28466EAF008639E4 /* UITableVIewCell.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1070,6 +1082,8 @@
 				FA551B6A2842807F009ADB01 /* TopListResponse.swift in Sources */,
 				FABCF0A2283BDE5D008D14F5 /* EmailCheckRequest.swift in Sources */,
 				FAF8FEE1283E1AAA00AE74AF /* StoryViewController.swift in Sources */,
+				FA6B08B22846754E008639E4 /* StoryRequest.swift in Sources */,
+				FA6B08AE28466EAF008639E4 /* UITableVIewCell.swift in Sources */,
 				FAD7C52B283A23F20093AF35 /* RestaurantViewController.swift in Sources */,
 				FA4C1CA8283C822C0089CDC8 /* SignInRequest.swift in Sources */,
 				FA785C282844B59500E88303 /* FeedResponse.swift in Sources */,
@@ -1110,6 +1124,7 @@
 				FA785C3B2845151C00E88303 /* StoreCell.swift in Sources */,
 				FA829C66284251CB009BB780 /* RestaurantRequest.swift in Sources */,
 				FA37E91F283CC857003FAE07 /* KakaoLoginRequest.swift in Sources */,
+				FA6B08AC28466E9F008639E4 /* UICollectionViewCell.swift in Sources */,
 				FAF60A2B2838CF2100B2CD48 /* UIFont.swift in Sources */,
 				FA597E0C2840BDF40072CA47 /* AreaTabmanViewController.swift in Sources */,
 				FA600B0B283F47320044F5BA /* RestaurantDataManager.swift in Sources */,
@@ -1118,6 +1133,7 @@
 				FAF60A1C2838CE7F00B2CD48 /* Device.swift in Sources */,
 				FA829C6828425780009BB780 /* RestaurantResponse.swift in Sources */,
 				FA570AEB283A885300BA5049 /* RestaurantCell.swift in Sources */,
+				FA6B08B028467543008639E4 /* TopListRequest.swift in Sources */,
 				FA785C312844E8AD00E88303 /* ThirdRestaurantDetailCell.swift in Sources */,
 				FABCF0A0283B5F70008D14F5 /* User.swift in Sources */,
 				FAF60A272838CF2100B2CD48 /* UIButton.swift in Sources */,

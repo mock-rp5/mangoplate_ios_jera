@@ -94,7 +94,7 @@
                     </constraints>
                 </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PNg-MT-EMS">
-                    <rect key="frame" x="10" y="179" width="394" height="448"/>
+                    <rect key="frame" x="10" y="179" width="394" height="179"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -115,7 +115,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fFK-yU-MRH" firstAttribute="top" secondItem="u8V-09-Qac" secondAttribute="bottom" constant="8" symbolic="YES" id="7I2-Yg-6rj"/>
-                <constraint firstItem="PNg-MT-EMS" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="8p0-FQ-e4B"/>
+                <constraint firstItem="PNg-MT-EMS" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.2" id="8p0-FQ-e4B"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pXe-5A-cn6" secondAttribute="bottom" constant="50" id="9em-mx-YQt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fFK-yU-MRH" secondAttribute="trailing" constant="10" id="BK6-c8-GVg"/>
                 <constraint firstItem="u8V-09-Qac" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="CDV-NK-zO6"/>

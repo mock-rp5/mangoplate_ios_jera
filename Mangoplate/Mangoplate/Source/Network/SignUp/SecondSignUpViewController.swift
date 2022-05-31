@@ -23,6 +23,7 @@ class SecondSignUpViewController: BaseViewController {
     super.viewDidLoad()
     setUI()
     picker.delegate = self
+    self.dismissKeyboardWhenTappedAround()
   }
   
   override func viewWillAppear(_ animated: Bool) {

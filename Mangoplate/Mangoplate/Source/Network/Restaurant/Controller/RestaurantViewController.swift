@@ -103,8 +103,7 @@ class RestaurantViewController: BaseViewController {
     let data = notication.object as! String
     let datas = data.split(separator: "|") // |를 기준으로 데이터 자름
     let restuarantRequest: RestaurantRequest
-    
-    print(datas)
+ 
     self.navigationItem.setLeftsubTitleAndTitle(title: String(datas[2]), subTitle: "지금 보고있는 지역은", target: self, action: #selector(navigationTitleTapped))
     
     // 전체지역 선택했으면 상세지역은 보내지 않음

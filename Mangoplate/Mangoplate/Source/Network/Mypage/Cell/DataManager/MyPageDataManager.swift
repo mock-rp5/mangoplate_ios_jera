@@ -15,7 +15,6 @@ class MyPageDataManager {
     AF.request("\(Constant.DEV_BASE_URL)/app/users", method: .delete, headers: Constant.HEADERS)
       .validate()
       .responseDecodable(of: DeleteUserResponse.self) { response in
-        print(response)
         print("jwt: \(Constant.HEADERS)")
         switch response.result {
         case .success(let data):

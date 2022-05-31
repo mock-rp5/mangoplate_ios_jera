@@ -79,9 +79,7 @@ class BaseTabBarController: TabmanViewController {
   }
   
   @objc func plusButtonTapped(_ sender: Any) {
-    print("plusButtonTapped")
     let vc = UINavigationController(rootViewController: WritingViewController())
-    //let vc = WritingViewController()
     vc.transitioningDelegate = self
     vc.modalPresentationStyle = .overCurrentContext
     present(vc, animated: true)

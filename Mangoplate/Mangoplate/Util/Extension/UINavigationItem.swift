@@ -43,7 +43,6 @@ extension UINavigationItem {
     }
     
     if let action = action {
-      print("action")
       button.addTarget(target, action: action, for: .touchUpInside)
     }
     button.tintColor = tintColor

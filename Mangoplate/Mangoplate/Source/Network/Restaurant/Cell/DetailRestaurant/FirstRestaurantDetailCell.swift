@@ -13,6 +13,25 @@ class FirstRestaurantDetailCell: UICollectionViewCell {
   @IBOutlet weak var menuImageCollectionView: UICollectionView!
   @IBOutlet weak var callButton: UIButton!
   @IBOutlet weak var addressView: UILabel!
+  @IBOutlet weak var storeLabel: UILabel!
+  @IBOutlet weak var scoreLabel: UILabel!
+  @IBOutlet weak var watchingLabel: UILabel!
+  @IBOutlet weak var reviewLabel: UILabel!
+  @IBOutlet weak var starLabel: UILabel!
+  @IBOutlet weak var starButton: UIButton!
+  @IBOutlet weak var addressLabel: UILabel!
+  @IBOutlet weak var detailAddressLabel: UILabel!
+  @IBOutlet weak var openTimeLabel: UILabel!
+  @IBOutlet weak var breakTimeLabel: UILabel!
+  @IBOutlet weak var breakDayLabel: UILabel!
+  @IBOutlet weak var priceLabel: UILabel!
+  @IBOutlet weak var menu1Label: UILabel!
+  @IBOutlet weak var menu2Label: UILabel!
+  @IBOutlet weak var menu1priceLabel: UILabel!
+  @IBOutlet weak var menu2priceLabel: UILabel!
+  
+  
+  
   let detailFoodImages = ["detailFood1", "detailFood2", "detailFood3"]
   let menuImages = ["menu1", "menu2"]
   

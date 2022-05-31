@@ -116,7 +116,6 @@ class DetailAreaViewController: UIViewController {
     } else {
       self.isSelectedCell[pageIndex][indexPath.row] = true
     }
-    print(isSelectedCell)
   }
   
 }

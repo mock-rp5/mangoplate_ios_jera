@@ -13,9 +13,12 @@ class ThirdRestaurantDetailCell: UICollectionViewCell {
   @IBOutlet weak var storyCollectionView: UICollectionView!
   @IBOutlet weak var restaurantCollectionView: UICollectionView!
   
+  var restaurants: [RestaurantResult]?
+  var topLists: [TopListResult]?
+  var stories: [StoryResult]?
+  
   override func awakeFromNib() {
     super.awakeFromNib()
-    
     
     topListCollectionView.register(UINib(nibName: "TopListCell", bundle: .main), forCellWithReuseIdentifier: "TopListCell")
     topListCollectionView.delegate = self
@@ -29,6 +32,15 @@ class ThirdRestaurantDetailCell: UICollectionViewCell {
     restaurantCollectionView.register(UINib(nibName: "RestaurantCell", bundle: .main), forCellWithReuseIdentifier: "restaurantCell")
     restaurantCollectionView.delegate = self
     restaurantCollectionView.dataSource = self
+    
+    let restaurantRequest = RestaurantRequest(page: nil, pagesize: 4, area: "1", detailarea: nil, x: nil, y: nil)
+    RestaurantDataManager().getRestaurant(parameters: restaurantRequest, viewController: self)
+    
+    let topListRequest = TopListRequest(page: nil, pagesize: 3)
+    MangoPickDataManager().getTopList(topListRequest, viewController: self)
+    
+    let storyRequest = StoryRequest(page: nil, pagesize: 2)
+    MangoPickDataManager().getStory(storyRequest, viewController: self)
   }
 }
 
@@ -51,16 +63,55 @@ extension ThirdRestaurantDetailCell: UICollectionViewDelegate, UICollectionViewD
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     if collectionView == topListCollectionView {
       guard let cell = topListCollectionView.dequeueReusableCell(withReuseIdentifier: "TopListCell", for: indexPath) as? TopListCell else { return UICollectionViewCell() }
+      
+      if let topLists = topLists {
+        cell.subTitleLabel.text = topLists[indexPath.row].topListSubTitle
+        cell.mainTitleLabel.text = topLists[indexPath.row].topListTitle
+        cell.watchingLabel.text = String(topLists[indexPath.row].viewCount).insertComma
+        cell.timeLabel.text = topLists[indexPath.row].createDate
+        
+        // 이미지가 있으면 섬네일 넣음
+        if let urlString = topLists[indexPath.row].topListThumbnailUrl {
+          cell.foodImageView.load(urlString: urlString)
+        } else {
+          cell.foodImageView.image = UIImage(named: "noImage")
+        }
+      }
       return cell
     }
     
     else if collectionView == storyCollectionView {
       guard let cell = storyCollectionView.dequeueReusableCell(withReuseIdentifier: "StoryCell", for: indexPath) as? StoryCell else { return UICollectionViewCell() }
+      
+      if let stories = stories {
+        cell.mainTitleLabel.text = stories[indexPath.row].storyTitle
+        cell.subTitleLabel.text = stories[indexPath.row].storySubTitle
+        
+        // 이미지가 있으면 섬네일 넣음
+        if let urlString = stories[indexPath.row].storythumbnailUrl {
+          cell.storyImageView.load(urlString: urlString)
+        } else {
+          cell.storyImageView.image = UIImage(named: "noImage")
+        }
+      }
       return cell
     }
     
     else {
       guard let cell = restaurantCollectionView.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath) as? RestaurantCell else { return UICollectionViewCell() }
+      if let restaurants = restaurants {
+        let restaurant = restaurants[indexPath.row]
+        cell.locationLabel.text = restaurant.areaName
+        cell.nameLabel.text = restaurant.storeName
+        cell.watchingCountLabel.text = String(restaurant.viewCount).insertComma
+        cell.reviewCountLabel.text = String(restaurant.reviewCount).insertComma
+        cell.ratingLabel.text = restaurant.score
+        
+        if let image = restaurant.thumbnailImgUrl {
+          cell.restaurantImageView.load(urlString: image)
+        }
+      }
+      
       return cell
     }
    
@@ -97,5 +148,51 @@ extension ThirdRestaurantDetailCell: UICollectionViewDelegate, UICollectionViewD
       
     }
     return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+  }
+}
+
+
+// MARK : - API
+extension ThirdRestaurantDetailCell {
+  // 식당 get
+  func successGetRestaurants(restaurantResult: [RestaurantResult]) {
+    print("successGetRestaurants")
+    self.restaurants = restaurantResult
+    restaurantCollectionView.reloadData()
+    dismissIndicator()
+  }
+  
+  
+  func failedGetRestaurants(message: String) {
+    print("failedGetRestaurants")
+    dismissIndicator()
+  }
+  
+  // 식당 get
+  func successGetStory(results: [StoryResult]) {
+    print("successGetStory")
+    self.stories = results
+    storyCollectionView.reloadData()
+    dismissIndicator()
+  }
+  
+  
+  func failedGetStory(message: String) {
+    print("failedGetStory")
+    dismissIndicator()
+  }
+  
+  // 식당 get
+  func successGetTopList(results: [TopListResult]) {
+    print("successGetTopList")
+    self.topLists = results
+    topListCollectionView.reloadData()
+    dismissIndicator()
+  }
+  
+  
+  func failedGetTopList(message: String) {
+    print("failedGetTopList")
+    dismissIndicator()
   }
 }

@@ -23,7 +23,6 @@ class SignUpDataManager {
       if let profile = parameters.profileImg {
         multipartFormData.append(profile, withName: "profileImg",
                                  fileName:"\(parameters.nickName).jpeg", mimeType: "image/jpeg")
-        print(multipartFormData)
       } else {
         multipartFormData.append("".data(using: .utf8)!, withName: "profileImg", fileName: "", mimeType: "")
       }

@@ -152,7 +152,6 @@ extension AllViewController: TasteButtonEventProtocol {
       sender.backgroundColor = .mainTasteBackground
       sender.layer.borderColor = UIColor.mainOrange.cgColor
     }
-    print(getSelectedTasteButtonString())
     showIndicator()
     let feedRequest = FeedRequest(evaluation: getSelectedTasteButtonString(), page: nil, pagesize: nil)
     NewsDataManager().getFeed(feedRequest, viewController: self)
@@ -175,7 +174,6 @@ extension AllViewController: TasteButtonEventProtocol {
       sender.backgroundColor = .mainTasteBackground
       sender.layer.borderColor = UIColor.mainOrange.cgColor
     }
-    print(getSelectedTasteButtonString())
     showIndicator()
     let feedRequest = FeedRequest(evaluation: getSelectedTasteButtonString(), page: nil, pagesize: nil)
     NewsDataManager().getFeed(feedRequest, viewController: self)
@@ -198,7 +196,6 @@ extension AllViewController: TasteButtonEventProtocol {
       sender.backgroundColor = .mainTasteBackground
       sender.layer.borderColor = UIColor.mainOrange.cgColor
     }
-    print(getSelectedTasteButtonString())
     showIndicator()
     let feedRequest = FeedRequest(evaluation: getSelectedTasteButtonString(), page: nil, pagesize: nil)
     NewsDataManager().getFeed(feedRequest, viewController: self)

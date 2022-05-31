@@ -155,7 +155,6 @@ class FirstSignUpViewController: BaseViewController {
   }
   
   @objc func xButtonTapped(_ sender: UIButton) {
-    print("xButtonTapped")
     self.navigationController?.popToRootViewController(animated: true)
   }
 }

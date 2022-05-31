@@ -17,6 +17,10 @@ class SecondRestaurantDetailCell: UICollectionViewCell {
   @IBOutlet weak var feedCollectionView: UICollectionView!
   @IBOutlet weak var blogSearchButton: UIButton!
   
+  
+  
+  
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     blogSearchButton.layer.borderColor = UIColor.mainOrange.cgColor

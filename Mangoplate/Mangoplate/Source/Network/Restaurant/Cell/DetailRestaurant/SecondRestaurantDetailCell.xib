@@ -198,8 +198,8 @@
                 <outlet property="badCountLabel" destination="GPp-0P-BPR" id="swo-0h-pDN"/>
                 <outlet property="blogSearchButton" destination="e4q-Em-EK6" id="33J-wN-ecn"/>
                 <outlet property="feedCollectionView" destination="YZ7-r5-odJ" id="ZJv-4q-5kb"/>
-                <outlet property="goodCountLabel" destination="L6A-hx-3ab" id="nvW-jm-hUK"/>
-                <outlet property="reviewCountLabel" destination="6e1-Ro-woF" id="HtW-Fz-NQN"/>
+                <outlet property="goodCountLabel" destination="L6A-hx-3ab" id="EGM-du-NY7"/>
+                <outlet property="reviewCountLabel" destination="6e1-Ro-woF" id="RRF-HD-N4A"/>
                 <outlet property="sosoCountLabel" destination="R2w-TK-eFe" id="zNd-rm-o6m"/>
             </connections>
             <point key="canvasLocation" x="339.13043478260875" y="501.5625"/>

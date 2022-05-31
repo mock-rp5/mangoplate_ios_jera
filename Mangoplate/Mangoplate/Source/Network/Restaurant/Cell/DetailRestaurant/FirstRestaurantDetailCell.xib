@@ -670,10 +670,26 @@
             </constraints>
             <size key="customSize" width="438" height="1321"/>
             <connections>
+                <outlet property="addressLabel" destination="ji3-th-FY9" id="KVC-sf-Fb2"/>
                 <outlet property="addressView" destination="KFp-JY-31w" id="OXH-k7-GWe"/>
+                <outlet property="breakDayLabel" destination="fY3-AY-V50" id="4DD-ZE-gQH"/>
+                <outlet property="breakTimeLabel" destination="eZq-Eu-z8L" id="qun-YK-euT"/>
                 <outlet property="callButton" destination="8Uo-tb-HZ6" id="ubQ-fV-S4m"/>
+                <outlet property="detailAddressLabel" destination="qlz-Ns-vpt" id="gwy-EK-Cvr"/>
+                <outlet property="menu1Label" destination="oZa-aG-i9G" id="xCm-R2-tOA"/>
+                <outlet property="menu1priceLabel" destination="AaW-Oo-8Ls" id="ErN-7Z-HHb"/>
+                <outlet property="menu2Label" destination="lVI-eu-gza" id="FyN-BV-aVM"/>
+                <outlet property="menu2priceLabel" destination="Ljk-my-CBw" id="oiX-JU-v0U"/>
                 <outlet property="menuImageCollectionView" destination="1ah-5b-yFV" id="yk5-Ww-YPb"/>
+                <outlet property="openTimeLabel" destination="CSX-sP-Szm" id="Yc4-jm-a5k"/>
+                <outlet property="priceLabel" destination="7QE-bQ-9r9" id="h7V-yh-qG2"/>
                 <outlet property="restaurantImageCollectionView" destination="pjK-xb-0Ow" id="nHk-6y-bur"/>
+                <outlet property="reviewLabel" destination="Ehl-uy-L8d" id="a9O-Ye-Iec"/>
+                <outlet property="scoreLabel" destination="h6F-EA-VzX" id="Awa-Cl-72Y"/>
+                <outlet property="starButton" destination="ctu-fy-8SZ" id="hWT-fi-x7D"/>
+                <outlet property="starLabel" destination="FuW-9z-1KA" id="8tO-y2-ju0"/>
+                <outlet property="storeLabel" destination="4mT-WJ-qlq" id="aSb-E6-h9P"/>
+                <outlet property="watchingLabel" destination="MBf-Y4-6Po" id="dY9-fQ-8Us"/>
             </connections>
             <point key="canvasLocation" x="413.04347826086962" y="533.37053571428567"/>
         </collectionViewCell>

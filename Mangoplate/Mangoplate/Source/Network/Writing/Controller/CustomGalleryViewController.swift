@@ -84,8 +84,6 @@ class CustomGalleryViewController: BaseViewController {
 
 extension CustomGalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    
-    print("photocount \(photocount)")
    return photocount
   }
   
@@ -94,7 +92,6 @@ extension CustomGalleryViewController: UICollectionViewDelegate, UICollectionVie
             as? CustomGalleryCell else { return UICollectionViewCell() }
     
     if let asset = allPhotos?.object(at: indexPath.row) {
-      print("asset")
       cell.imgView.image = assetToImage(asset: asset)
     }
     cell.countView.isHidden = true
