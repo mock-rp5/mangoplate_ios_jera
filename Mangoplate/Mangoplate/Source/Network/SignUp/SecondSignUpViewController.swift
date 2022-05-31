@@ -135,10 +135,11 @@ extension SecondSignUpViewController {
   func successSignUp(result: SignUpResult) {
     print("SignUpSuccess")
     print(result.userId)
-    self.navigationController?.popToRootViewController(animated: false)
-    let vc = BaseTabBarController()
-    vc.modalPresentationStyle = .fullScreen
-    present(vc, animated: false, completion: nil)
+//    self.navigationController?.popToRootViewController(animated: false)
+//    let vc = BaseTabBarController()
+//    vc.modalPresentationStyle = .fullScreen
+//    present(vc, animated: false, completion: nil)
+    self.navigationController?.popToRootViewController(animated: true)
   }
   
   func failedSignUp(message: String) {

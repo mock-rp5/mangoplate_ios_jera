@@ -71,10 +71,11 @@ class UserDeleteViewController: BaseViewController {
 extension UserDeleteViewController {
   // 회원 탈퇴 API
   func successDeleteUser(message: String) {
-    UserDefaults.standard.removeObject(forKey: "jwtKey") // 기기에 저장된 키 삭제
+    UserDefaults.standard.set("logout", forKey: "jwtKey") // 기기에 저장된 키 삭제
     self.presentBottomAlert(message: message)
     self.navigationController?.popToRootViewController(animated: false)
     let rootVC = UINavigationController(rootViewController: SignInHomeViewController())
+    rootVC.modalTransitionStyle = .crossDissolve
     rootVC.modalPresentationStyle = .fullScreen
     present(rootVC, animated: true)
   }

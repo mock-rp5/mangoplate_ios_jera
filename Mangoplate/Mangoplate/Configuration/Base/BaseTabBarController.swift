@@ -17,6 +17,7 @@ class BaseTabBarController: TabmanViewController {
   let writingVC = WritingViewController()
   let newsVC = NewsViewController()
   let mypageVC = MypageViewController()
+  let logoutMypageVC = LogoutMyPageViewController()
   
   
   static let tabBar = TMBar.TabBar()
@@ -37,13 +38,21 @@ class BaseTabBarController: TabmanViewController {
     let secondVC = UINavigationController(rootViewController: mangoPickVC)
     let thirdVC = UINavigationController(rootViewController: writingVC)
     let fourthVC = UINavigationController(rootViewController: newsVC)
-    let fifthVC = UINavigationController(rootViewController: mypageVC)
     
     viewControllers.append(firstVC)
     viewControllers.append(secondVC)
     viewControllers.append(thirdVC)
     viewControllers.append(fourthVC)
-    viewControllers.append(fifthVC)
+    
+    if UserDefaults.standard.object(forKey: "jwtKey") as! String == "logout" {
+      let fifthVC = UINavigationController(rootViewController: logoutMypageVC)
+      viewControllers.append(fifthVC)
+    }
+    else {
+      let fifthVC = UINavigationController(rootViewController: mypageVC)
+      viewControllers.append(fifthVC)
+    }
+    
     
     self.dataSource = self
     self.isScrollEnabled = false

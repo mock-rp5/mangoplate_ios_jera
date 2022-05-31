@@ -70,12 +70,16 @@ extension MyPageSettingsViewController: UITableViewDelegate, UITableViewDataSour
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    // 로그아웃 셀
     if indexPath.section == 3 {
+      UserDefaults.standard.set("logout", forKey: "jwtKey") // jwt키 지움
       self.navigationController?.popToRootViewController(animated: false)
       let rootVC = UINavigationController(rootViewController: SignInHomeViewController())
       rootVC.modalPresentationStyle = .fullScreen
       present(rootVC, animated: true)
     }
+    
+    // 회원탈퇴 셀
     else if indexPath.section == 4 {
       let vc = UserDeleteViewController()
       vc.modalPresentationStyle = .fullScreen

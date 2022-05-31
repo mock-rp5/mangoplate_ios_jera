@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogoutMyPageViewController" customModule="Mangoplate" customModuleProvider="target">
+            <connections>
+                <outlet property="loginButton" destination="msD-VW-ldO" id="PnI-bI-EKw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uc1-WB-jQG">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="252"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgI-Co-Kgy">
+                            <rect key="frame" x="18" y="173.5" width="169.5" height="38.5"/>
+                            <string key="text">나만의 맛집을 찾고 싶다면,
+지금 로그인 해보세요!</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msD-VW-ldO">
+                            <rect key="frame" x="292" y="170.5" width="99" height="45"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="99" id="a1r-9Q-T8U"/>
+                                <constraint firstAttribute="height" constant="45" id="bc9-Or-4c0"/>
+                            </constraints>
+                            <color key="tintColor" red="0.99607843139999996" green="0.43921568630000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="로그인"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.99607843139999996" green="0.43921568630000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="252" id="1wp-ub-9f9"/>
+                        <constraint firstItem="msD-VW-ldO" firstAttribute="centerY" secondItem="OgI-Co-Kgy" secondAttribute="centerY" id="CNM-zU-FDc"/>
+                        <constraint firstAttribute="bottom" secondItem="OgI-Co-Kgy" secondAttribute="bottom" constant="40" id="Vh2-LR-35m"/>
+                        <constraint firstItem="OgI-Co-Kgy" firstAttribute="leading" secondItem="Uc1-WB-jQG" secondAttribute="leading" constant="18" id="dED-Dk-wBD"/>
+                        <constraint firstAttribute="trailing" secondItem="msD-VW-ldO" secondAttribute="trailing" constant="23" id="p4b-wG-3af"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Uc1-WB-jQG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bU8-wk-3bZ"/>
+                <constraint firstItem="Uc1-WB-jQG" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="n2D-Nz-Qdl"/>
+                <constraint firstItem="Uc1-WB-jQG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="z09-mE-YRZ"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="79.6875"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

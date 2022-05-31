@@ -77,6 +77,8 @@
 		FA6B089C2846077C008639E4 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B089B2846077C008639E4 /* Review.swift */; };
 		FA6B089F28461329008639E4 /* ReviewWritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B089D28461329008639E4 /* ReviewWritingViewController.swift */; };
 		FA6B08A028461329008639E4 /* ReviewWritingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6B089E28461329008639E4 /* ReviewWritingViewController.xib */; };
+		FA6B08A328462867008639E4 /* LogoutMyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B08A128462867008639E4 /* LogoutMyPageViewController.swift */; };
+		FA6B08A428462867008639E4 /* LogoutMyPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6B08A228462867008639E4 /* LogoutMyPageViewController.xib */; };
 		FA785C262844B58C00E88303 /* FeedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C252844B58C00E88303 /* FeedRequest.swift */; };
 		FA785C282844B59500E88303 /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C272844B59500E88303 /* FeedResponse.swift */; };
 		FA785C2A2844B5A200E88303 /* NewsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C292844B5A200E88303 /* NewsDataManager.swift */; };
@@ -224,6 +226,8 @@
 		FA6B089B2846077C008639E4 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		FA6B089D28461329008639E4 /* ReviewWritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWritingViewController.swift; sourceTree = "<group>"; };
 		FA6B089E28461329008639E4 /* ReviewWritingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewWritingViewController.xib; sourceTree = "<group>"; };
+		FA6B08A128462867008639E4 /* LogoutMyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutMyPageViewController.swift; sourceTree = "<group>"; };
+		FA6B08A228462867008639E4 /* LogoutMyPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoutMyPageViewController.xib; sourceTree = "<group>"; };
 		FA785C252844B58C00E88303 /* FeedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedRequest.swift; path = ../../../../../../../../Documents/FeedRequest.swift; sourceTree = "<group>"; };
 		FA785C272844B59500E88303 /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedResponse.swift; path = ../../../../../../../../Documents/FeedResponse.swift; sourceTree = "<group>"; };
 		FA785C292844B5A200E88303 /* NewsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDataManager.swift; sourceTree = "<group>"; };
@@ -811,9 +815,11 @@
 				FAD7C53D283A27130093AF35 /* MypageViewController.swift */,
 				FAF8FECE283DFD5100AE74AF /* MyPageSettingsViewController.swift */,
 				FA617A5C283F9D3F00F8E59C /* UserDeleteViewController.swift */,
+				FA6B08A128462867008639E4 /* LogoutMyPageViewController.swift */,
 				FAD7C53E283A27130093AF35 /* MypageViewController.xib */,
 				FAF8FECF283DFD5100AE74AF /* MyPageSettingsViewController.xib */,
 				FA617A5D283F9D3F00F8E59C /* UserDeleteViewController.xib */,
+				FA6B08A228462867008639E4 /* LogoutMyPageViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -936,6 +942,7 @@
 				FAF60A352838D32800B2CD48 /* SignInHomeViewController.xib in Resources */,
 				FAF60A062838B6E000B2CD48 /* Assets.xcassets in Resources */,
 				FA597E0D2840BDF40072CA47 /* AreaTabmanViewController.xib in Resources */,
+				FA6B08A428462867008639E4 /* LogoutMyPageViewController.xib in Resources */,
 				FA570AFB283A9E5100BA5049 /* SortingCell.xib in Resources */,
 				FA617A5F283F9D3F00F8E59C /* UserDeleteViewController.xib in Resources */,
 				FAF60A392838E03B00B2CD48 /* EmailSignInViewController.xib in Resources */,
@@ -1030,6 +1037,7 @@
 				FA6B089F28461329008639E4 /* ReviewWritingViewController.swift in Sources */,
 				FA666BD3284356DC00DAB919 /* NewsCell.swift in Sources */,
 				FAD7C533283A26F00093AF35 /* MangoPickViewController.swift in Sources */,
+				FA6B08A328462867008639E4 /* LogoutMyPageViewController.swift in Sources */,
 				FA570AF5283A8BC200BA5049 /* BannerSubCell.swift in Sources */,
 				FAF8FEEF283E38D800AE74AF /* StoryCell.swift in Sources */,
 				FAD7C53B283A27080093AF35 /* NewsViewController.swift in Sources */,
