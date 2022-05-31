@@ -78,7 +78,7 @@ class ReviewWritingViewController: BaseViewController {
         Review.shared.evaluation = index
       }
     }
-    print("Review 정보 : \(Review.shared.evaluation) \(Review.shared.content) \(Review.shared.images)")
+    print("Review 정보 : 식당 번호 - \(Review.shared.storeId) 평가 인덱스 - \(Review.shared.evaluation) 글 내용 - \(Review.shared.content) 이미지 - \(Review.shared.images)")
     dismiss(animated: false, completion: nil)
   }
 }

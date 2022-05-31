@@ -79,6 +79,8 @@
 		FA6B08A028461329008639E4 /* ReviewWritingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6B089E28461329008639E4 /* ReviewWritingViewController.xib */; };
 		FA6B08A328462867008639E4 /* LogoutMyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B08A128462867008639E4 /* LogoutMyPageViewController.swift */; };
 		FA6B08A428462867008639E4 /* LogoutMyPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6B08A228462867008639E4 /* LogoutMyPageViewController.xib */; };
+		FA6B08A82846335D008639E4 /* StoreSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B08A72846335D008639E4 /* StoreSearchResponse.swift */; };
+		FA6B08AA284633C3008639E4 /* WritingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B08A9284633C3008639E4 /* WritingDataManager.swift */; };
 		FA785C262844B58C00E88303 /* FeedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C252844B58C00E88303 /* FeedRequest.swift */; };
 		FA785C282844B59500E88303 /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C272844B59500E88303 /* FeedResponse.swift */; };
 		FA785C2A2844B5A200E88303 /* NewsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C292844B5A200E88303 /* NewsDataManager.swift */; };
@@ -228,6 +230,8 @@
 		FA6B089E28461329008639E4 /* ReviewWritingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewWritingViewController.xib; sourceTree = "<group>"; };
 		FA6B08A128462867008639E4 /* LogoutMyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutMyPageViewController.swift; sourceTree = "<group>"; };
 		FA6B08A228462867008639E4 /* LogoutMyPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoutMyPageViewController.xib; sourceTree = "<group>"; };
+		FA6B08A72846335D008639E4 /* StoreSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoreSearchResponse.swift; path = ../../../../../../../../Documents/StoreSearchResponse.swift; sourceTree = "<group>"; };
+		FA6B08A9284633C3008639E4 /* WritingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingDataManager.swift; sourceTree = "<group>"; };
 		FA785C252844B58C00E88303 /* FeedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedRequest.swift; path = ../../../../../../../../Documents/FeedRequest.swift; sourceTree = "<group>"; };
 		FA785C272844B59500E88303 /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedResponse.swift; path = ../../../../../../../../Documents/FeedResponse.swift; sourceTree = "<group>"; };
 		FA785C292844B5A200E88303 /* NewsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDataManager.swift; sourceTree = "<group>"; };
@@ -565,6 +569,22 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		FA6B08A52846333C008639E4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FA6B08A72846335D008639E4 /* StoreSearchResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		FA6B08A628463342008639E4 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				FA6B08A9284633C3008639E4 /* WritingDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		FA785C232844B52400E88303 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -632,6 +652,8 @@
 			isa = PBXGroup;
 			children = (
 				FA785C332845143800E88303 /* Controller */,
+				FA6B08A628463342008639E4 /* DataManager */,
+				FA6B08A52846333C008639E4 /* Entity */,
 				FA4C3B7C2841387F003AFEF2 /* Class */,
 			);
 			path = Writing;
@@ -1064,8 +1086,10 @@
 				FAF60A2A2838CF2100B2CD48 /* String.swift in Sources */,
 				FA3F3E4D2843951800CE48B9 /* FirstRestaurantDetailCell.swift in Sources */,
 				FAF60A3B2838E14600B2CD48 /* UITextField.swift in Sources */,
+				FA6B08A82846335D008639E4 /* StoreSearchResponse.swift in Sources */,
 				FA617A5A283F83C500F8E59C /* AreasViewController.swift in Sources */,
 				FAF60A2C2838CF2100B2CD48 /* UINavigationBar.swift in Sources */,
+				FA6B08AA284633C3008639E4 /* WritingDataManager.swift in Sources */,
 				FA666BC628434B4300DAB919 /* AllViewController.swift in Sources */,
 				FA4C3B7E2841388C003AFEF2 /* CircularTransition.swift in Sources */,
 				FA37E923283CD043003FAE07 /* MyPageProfileCell.swift in Sources */,

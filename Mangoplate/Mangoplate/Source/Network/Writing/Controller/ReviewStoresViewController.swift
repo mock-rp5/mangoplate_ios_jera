@@ -10,12 +10,16 @@ import UIKit
 class ReviewStoresViewController: BaseViewController {
 
   @IBOutlet weak var storeTableView: UITableView!
+  var stores: [StoreSearchResult]?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    showIndicator()
     storeTableView.register(UINib(nibName: "StoreCell", bundle: .main), forCellReuseIdentifier: "StoreCell")
     storeTableView.delegate = self
     storeTableView.dataSource = self
+    WritingDataManager().getStores(viewController: self)
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -41,12 +45,20 @@ class ReviewStoresViewController: BaseViewController {
 
 extension ReviewStoresViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 10
+    if let stores = stores {
+      return stores.count
+    } else {
+      return 1
+    }
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = storeTableView.dequeueReusableCell(withIdentifier: "StoreCell")
             as? StoreCell else { return UITableViewCell() }
+    if let stores = stores {
+      cell.storeLabel.text = stores[indexPath.row].storeName
+      cell.locationLabel.text = stores[indexPath.row].description
+    }
     return cell
   }
   
@@ -55,8 +67,28 @@ extension ReviewStoresViewController: UITableViewDelegate, UITableViewDataSource
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    if let stores = stores {
+      Review.shared.storeId = stores[indexPath.row].storeId
+    }
+    
     let vc = CustomGalleryViewController()
     self.navigationController?.pushViewController(vc, animated: true)
   }
   
+}
+
+// MARK: - API
+extension ReviewStoresViewController {
+  func successGetStores(results: [StoreSearchResult]) {
+    print("successGetStores")
+    self.stores = results
+    storeTableView.reloadData()
+    dismissIndicator()
+  }
+  
+  func failedGetStores(message: String) {
+    print("failedGetStores")
+    self.presentBottomAlert(message: message)
+    dismissIndicator()
+  }
 }
