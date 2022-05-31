@@ -267,6 +267,7 @@
                 <outlet property="follwerLabel" destination="GTe-fy-lZx" id="6Df-DT-1NL"/>
                 <outlet property="goodLabel" destination="jfw-bb-6GU" id="oNm-bh-fhn"/>
                 <outlet property="imageCollectionView" destination="IjJ-c2-Sfm" id="t5Q-el-Le7"/>
+                <outlet property="likeButton" destination="sMY-T6-W9Z" id="E3a-yN-qty"/>
                 <outlet property="nicknameLabel" destination="Hf0-e2-bfU" id="14o-35-KKA"/>
                 <outlet property="pageLabel" destination="xMR-kq-Ivh" id="VW2-zy-hgJ"/>
                 <outlet property="pageView" destination="XeE-zm-4Tg" id="dSA-ca-SoS"/>

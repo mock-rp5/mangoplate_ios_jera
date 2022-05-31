@@ -22,6 +22,7 @@ class NewsCell: UICollectionViewCell {
   @IBOutlet weak var imageCollectionView: UICollectionView!
   @IBOutlet weak var pageLabel: UILabel!
   @IBOutlet weak var pageView: UIView!
+  @IBOutlet weak var likeButton: UIButton!
   
   let images = ["foodImage1", "foodImage2", "foodImage3"]
   var photos: [Photo]?
@@ -33,8 +34,22 @@ class NewsCell: UICollectionViewCell {
     imageCollectionView.delegate = self
     imageCollectionView.dataSource = self
     pageView.layer.cornerRadius = 8
+    
+    likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+    likeButton.setImage(UIImage(systemName: "heart.fill"), for: .selected)
    
     
+  }
+  
+  @objc func heartButtonTapped(_ sender: UIButton) {
+    if sender.isSelected == false {
+      sender.tintColor = .mainOrange
+      sender.isSelected = true
+    }
+    else {
+      sender.tintColor = .lightGray
+      sender.isSelected = false
+    }
   }
 
 }

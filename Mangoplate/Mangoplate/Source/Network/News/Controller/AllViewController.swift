@@ -43,6 +43,17 @@ class AllViewController: UIViewController {
     selectedTasteButtonString = selectedTasteButtonString.substring(from: 0,to: selectedTasteButtonString.count - 1) // 맨뒤 , 자름
     return selectedTasteButtonString
   }
+  
+  @objc func heartButtonTapped(_ sender: UIButton) {
+    if sender.isSelected == false {
+      sender.tintColor = .mainOrange
+      sender.isSelected = true
+    }
+    else {
+      sender.tintColor = .lightGray
+      sender.isSelected = false
+    }
+  }
 }
 
 
@@ -108,8 +119,6 @@ extension AllViewController: UICollectionViewDelegate, UICollectionViewDataSourc
         cell.timeLabel.text = feed.createDate
         cell.photos = feed.photos // 음식 사진 넘겨줌
         cell.imageCollectionView.reloadData()
-        
-       
       }
      
       return cell

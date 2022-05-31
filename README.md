@@ -339,13 +339,9 @@
 1. 구현한 기능
 
 	- 소식 - 피드 조회 API : 평가별로 조회 가능 (95%) (식당이름만 서버에서 보내주는걸로 API 수정하면 됨)
-	
 	- 식당 상세 - 리뷰, 관련 Top리스트, 스토리, 주변 식당 셀 (100%)
-
 	- plus탭 - 누르면 버튼들 페이드인 애니메이션 (100%)
-
 	- plus탭 - 리뷰 쓰기 식당 목록 UI (100%)
-
 	- 맛집 찾기 - 정렬 선택 UI (100%)
 	
 
@@ -387,6 +383,63 @@
 
 ```
 <img width="200" src="./image/10-1.gif"> <img width="200" src="./image/10-2.png"> <img width="200" src="./image/10-3.png"> <img width="200" src="./image/10-4.png"> <img width="200" src="./image/10-5.png"> <img width="200" src="./image/10-6.png">
+
+</div>
+</details>
+
+
+
+
+</br>
+<details>
+<summary>11일차_2022.05.31 (화) - 2차 피드백 </summary>
+<div markdown="1">
+
+```
+1. 구현한 기능
+
+	- 리뷰 쓰기 - 식당 검색 API (100%)
+	- 리뷰 쓰기 - 커스텀 갤러리에서 사진 선택 (100%)
+	- 리뷰 쓰기 - 리뷰 작성 UI (100%)
+	- 로그인 여부에 따라 마이페이지 화면 다르게 보여주기 (100%)
+	- 맛집 상세 - 기존에 있던 API에서 갯수만 선택해서 불러와 상세 페이지의 관련 Top리스트, 관련 스토리, 주변 인기 식당 구현 (100%) 
+	
+
+2. 발생한 이슈
+
+	- 리뷰 쓰기에서 갤러리에 있는 사진을 커스텀으로 꾸며야함
+
+    	- 갤러리에 있는 모든 이미지를 PHFetchResult로 받아 UIImage로 변환해서 collectionView의 셀로 넣어주며 구현
+             갤러리 이미지 콜렉션뷰로 받기 참고 (https://fomaios.tistory.com/entry/%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%9D%B4%EB%AF%B8%EC%A7%80%ED%94%BD%EC%BB%A4-%EB%B0%8F-%EB%A9%80%ED%8B%B0%ED%94%BDCustom-ImagePicker-and-MultiPick)
+
+   		 - PHAsset을 UIImage로 변환 참고 (https://fomaios.tistory.com/entry/%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%9D%B4%EB%AF%B8%EC%A7%80%ED%94%BD%EC%BB%A4-%EB%B0%8F-%EB%A9%80%ED%8B%B0%ED%94%BDCustom-ImagePicker-and-MultiPick)
+
+
+	- 피드 셀안에 있는 좋아요 버튼을 누르면 해당 피드 index를 알아야함
+		- NotificationCenter를 쓰려 했으나 좋아요 버튼이 있는 셀에선 자기가 몇번째 셀인지를 모름 -> 아직 고민중
+
+
+4. 서버 개발자와의 회의
+
+		1. 식당 정보 조회 API
+		2. 리뷰 작성 API
+		3. 게시글 좋아요 API
+		4. 가고싶다 등록 API
+		5. 가고싶다 삭제 API
+		6. 배너 이미지 API
+		7. 리뷰 상세 정보 조회 API
+	
+		위 순서대로 개발하기로 함
+
+
+5. 2차 피드백
+	- 지금까지 사용한 API가 12개인데 최소 18개까지 사용하면 우수수료 가능할 것 같다고 하심
+	- 지금처럼만 하면 될 것 같다고 피드백해주심
+
+
+
+```
+<img width="200" src="./image/11-1.png"> <img width="200" src="./image/11-2.png"> <img width="200" src="./image/11-3.png"> <img width="200" src="./image/11-4.png"> <img width="200" src="./image/11-5.png"> 
 
 </div>
 </details>
