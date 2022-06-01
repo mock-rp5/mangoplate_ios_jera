@@ -446,3 +446,65 @@
 
 
 
+
+
+
+
+</br>
+<details>
+<summary>12일차_2022.06.01 (수)  </summary>
+<div markdown="1">
+
+```
+1. 구현한 기능
+
+	- 식당 상세 정보 API (100%)
+	- 내정보 - 내 리뷰 UI (100%)
+	- 리뷰 조회 API - 평가별로 필터링 가능! (100%)
+	- 리뷰 작성 API (100%)
+	- 리뷰 삭제 API (100%)
+	- 게시글 좋아요 API (100%)
+	
+
+2. 발생한 이슈
+
+	- 리뷰 등록한 사진 화질이 너무 안좋음
+ 			- PHAsset을 UIImage로 바꾸는 코드에서 options.isSynchronous = true 을 추가해서 해결
+
+
+	- 피드 셀안에 있는 좋아요 버튼을 누르면 해당 피드 postId를 알아야함 -> 어제 이슈 해결!
+			- cell 내부에 postId 프로퍼티를 선언해 cell마다 자신의 postId 저장해놓음
+	
+	
+	- 리뷰 삭제하기 누르면 리뷰목록 collectionView에서 reload하며 리뷰를 다시 불러와야함 
+			- viewWillAppear는 호출이 안되기 때문에 NotificationCenter달아서 삭제된 순간에 reload함
+
+
+	- 리뷰 삭제 API에서 분명히 body 를 담아서 보냈는데 body가 없다고 뜸
+			- 종종 delete 요청에서 body를 담아 보내면 서버에서 이를 거절한다함 (처음 안 사실..)
+			- 서버 개발자분이 path variable 형태로 API를 수정해 해결
+			
+			
+	- 좋아요 버튼 클릭하면 리뷰 목록 다시 불러와야함
+			- NotificationCenter로 좋아요 버튼 눌렀다는걸 알리고 그때 피드 collectionView reload시킴
+
+	- 게시글 좋아요가 됐다가 안됐다함
+			- 좋아요를 누르고 다시 리뷰를 reload하는데 좋아요가 적용되기 전에 너무 빨리 불러와서 됐다가 안됐다가 한 것
+ 			- usleep으로 0.02초 딜레이를 줘서 해결
+
+
+4. API 변동사항
+	- 회원 정보 조회 API에 내 리뷰 개수, 가고싶다 개수 받을 수 있게 추가
+	- 리뷰 삭제 API body대신 path variable 형태로 수정
+	- 피드 조회 API 태그값 받을 수 있게 추가
+
+
+
+```
+<img width="200" src="./image/12-1.png"> <img width="200" src="./image/12-2.png"> <img width="200" src="./image/12-3.png"> <img width="200" src="./image/12-4.gif"> 
+
+</div>
+</details>
+
+
+

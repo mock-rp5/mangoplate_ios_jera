@@ -58,7 +58,7 @@ class AllViewController: UIViewController {
     
     do {
       showIndicator()
-      usleep(20000) // 좋아요 적용을 위한 딜레이 0.2초
+      usleep(30000) // 좋아요 적용을 위한 딜레이 0.2초
     }
     // 피드 다시 reload
     let feedRequest = FeedRequest(evaluation: getSelectedTasteButtonString(), page: nil, pagesize: nil)
