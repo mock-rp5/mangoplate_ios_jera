@@ -94,8 +94,9 @@ extension AllViewController: UICollectionViewDelegate, UICollectionViewDataSourc
             as? NewsCell else { return UICollectionViewCell() }
       if let feeds = feeds {
         let feed = feeds[indexPath.row]
+        cell.tagLabel.text = "@\(feed.storeName)"
         cell.nicknameLabel.text = feed.writer.userName
-        cell.writingLabel.text = String(feed.writer.postCount)
+        cell.writingLabel.text = String(feed.writer.reviewCount)
         cell.follwerLabel.text = String(feed.writer.follower)
         
         // 프로필 이미지

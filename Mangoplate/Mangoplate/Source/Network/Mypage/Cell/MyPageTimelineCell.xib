@@ -150,8 +150,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="reviewButton" destination="4qO-gq-sjk" id="u3k-r2-zu0"/>
-                <outlet property="reviewLabel" destination="Jog-5Z-ozM" id="bjX-Hg-nQ4"/>
+                <outlet property="reviewButton" destination="4qO-gq-sjk" id="C33-ZI-c4M"/>
+                <outlet property="reviewLabel" destination="Oe3-EM-8Mu" id="JNA-z5-HWo"/>
+                <outlet property="visitButton" destination="1Pe-9L-guO" id="yj8-Nh-9Rh"/>
+                <outlet property="visitLabel" destination="tWx-cW-jbK" id="fWx-6u-mGa"/>
             </connections>
             <point key="canvasLocation" x="138.40579710144928" y="137.61160714285714"/>
         </tableViewCell>

@@ -37,14 +37,14 @@ class MypageViewController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setUI()
-    showIndicator()
-    MyPageDataManager().getUser(viewController: self)
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     BaseTabBarController.showTabBar()
     setNavigationTitle(title: "", color: .clear)
+    showIndicator()
+    MyPageDataManager().getUser(viewController: self)
   }
   
   // MARK: - Methods
@@ -105,6 +105,12 @@ extension MypageViewController: UITableViewDelegate, UITableViewDataSource {
     case 3:
       guard let cell = myPageTableView.dequeueReusableCell(withIdentifier: "MyPageTimelineCell") as? MyPageTimelineCell else { return UITableViewCell() }
       cell.reviewButton.addTarget(self, action: #selector(myReviewTapped), for: .touchUpInside)
+      
+      if let user = user {
+        cell.visitLabel.text = String(user.visitCount).insertComma
+        cell.reviewLabel.text = String(user.reviewCount).insertComma
+      }
+      
       return cell
       
     default:

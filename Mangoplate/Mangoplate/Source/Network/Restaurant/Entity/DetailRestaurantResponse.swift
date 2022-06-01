@@ -77,6 +77,7 @@ struct StoreReview: Codable {
     let evaluation, isFavoriteStore, isLike, likeCount: Int
     let commentCount: Int
     let createDate: String
+    let writer: Writer
     let photos: [Photo]
 }
 

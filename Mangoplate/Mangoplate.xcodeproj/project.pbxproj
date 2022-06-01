@@ -35,6 +35,8 @@
 		FA50440828474C7F00A3A5E9 /* MyReviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA50440628474C7F00A3A5E9 /* MyReviewController.xib */; };
 		FA50440A284754F600A3A5E9 /* ReviewWritingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA504409284754F600A3A5E9 /* ReviewWritingRequest.swift */; };
 		FA50440C284755C600A3A5E9 /* ReviewWritingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50440B284755C600A3A5E9 /* ReviewWritingResponse.swift */; };
+		FA50440F2847771200A3A5E9 /* DeleteReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50440D2847771200A3A5E9 /* DeleteReviewController.swift */; };
+		FA5044102847771200A3A5E9 /* DeleteReviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA50440E2847771200A3A5E9 /* DeleteReviewController.xib */; };
 		FA551B6828426FD3009ADB01 /* StoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA551B6728426FD3009ADB01 /* StoryResponse.swift */; };
 		FA551B6A2842807F009ADB01 /* TopListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA551B692842807F009ADB01 /* TopListResponse.swift */; };
 		FA551B6C28428AB1009ADB01 /* GetUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA551B6B28428AB1009ADB01 /* GetUserResponse.swift */; };
@@ -195,6 +197,8 @@
 		FA50440628474C7F00A3A5E9 /* MyReviewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyReviewController.xib; sourceTree = "<group>"; };
 		FA504409284754F600A3A5E9 /* ReviewWritingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWritingRequest.swift; sourceTree = "<group>"; };
 		FA50440B284755C600A3A5E9 /* ReviewWritingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWritingResponse.swift; sourceTree = "<group>"; };
+		FA50440D2847771200A3A5E9 /* DeleteReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteReviewController.swift; sourceTree = "<group>"; };
+		FA50440E2847771200A3A5E9 /* DeleteReviewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteReviewController.xib; sourceTree = "<group>"; };
 		FA551B6728426FD3009ADB01 /* StoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryResponse.swift; sourceTree = "<group>"; };
 		FA551B692842807F009ADB01 /* TopListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListResponse.swift; sourceTree = "<group>"; };
 		FA551B6B28428AB1009ADB01 /* GetUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserResponse.swift; sourceTree = "<group>"; };
@@ -864,11 +868,13 @@
 				FA617A5C283F9D3F00F8E59C /* UserDeleteViewController.swift */,
 				FA6B08A128462867008639E4 /* LogoutMyPageViewController.swift */,
 				FA50440528474C7F00A3A5E9 /* MyReviewController.swift */,
+				FA50440D2847771200A3A5E9 /* DeleteReviewController.swift */,
 				FAD7C53E283A27130093AF35 /* MypageViewController.xib */,
 				FAF8FECF283DFD5100AE74AF /* MyPageSettingsViewController.xib */,
 				FA617A5D283F9D3F00F8E59C /* UserDeleteViewController.xib */,
 				FA6B08A228462867008639E4 /* LogoutMyPageViewController.xib */,
 				FA50440628474C7F00A3A5E9 /* MyReviewController.xib */,
+				FA50440E2847771200A3A5E9 /* DeleteReviewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1014,6 +1020,7 @@
 				FAF60A042838B6DE00B2CD48 /* Main.storyboard in Resources */,
 				FA37E928283CF606003FAE07 /* MyPageMainCell.xib in Resources */,
 				FA597E142840CC980072CA47 /* AreaCell.xib in Resources */,
+				FA5044102847771200A3A5E9 /* DeleteReviewController.xib in Resources */,
 				FA3F3E4E2843951800CE48B9 /* FirstRestaurantDetailCell.xib in Resources */,
 				FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */,
 				FAD7C534283A26F00093AF35 /* MangoPickViewController.xib in Resources */,
@@ -1170,6 +1177,7 @@
 				FAF8FED0283DFD5100AE74AF /* MyPageSettingsViewController.swift in Sources */,
 				FA3F3E4828438C7500CE48B9 /* DetailRestaurantViewController.swift in Sources */,
 				FA785C362845146700E88303 /* ReviewStoresViewController.swift in Sources */,
+				FA50440F2847771200A3A5E9 /* DeleteReviewController.swift in Sources */,
 				FAD7C542283A5A310093AF35 /* UINavigationItem.swift in Sources */,
 				FA551B6828426FD3009ADB01 /* StoryResponse.swift in Sources */,
 				FA785C2D2844D6EC00E88303 /* SecondRestaurantDetailCell.swift in Sources */,

@@ -21,9 +21,20 @@ class MyReviewController: BaseViewController {
     super.viewDidLoad()
     self.setNavigationBarBackbuttonTitle(title: "타임라인")
     self.setNavigationTintColor(color: .mainOrange)
+    
+    NotificationCenter.default.addObserver(self, selector: #selector(moreButtonTapped), name: .reviewMore, object: nil)
+    
     self.navigationController?.navigationBar.isTransparent = true
+    goodButton.layer.borderColor = UIColor.mainOrange.cgColor
+    goodButton.layer.borderWidth = 1
     goodButton.layer.cornerRadius = 14
+    
+    sosoButton.layer.borderColor = UIColor.mainOrange.cgColor
+    sosoButton.layer.borderWidth = 1
     sosoButton.layer.cornerRadius = 14
+    
+    badButton.layer.borderColor = UIColor.mainOrange.cgColor
+    badButton.layer.borderWidth = 1
     badButton.layer.cornerRadius = 14
     
     reviewCollectionView.register(UINib(nibName: "NewsCell", bundle: .main), forCellWithReuseIdentifier: "NewsCell")
@@ -34,7 +45,11 @@ class MyReviewController: BaseViewController {
     showIndicator()
     let reviewRequest = FeedRequest(evaluation: "0,1,2", page: nil, pagesize: nil)
     MyPageDataManager().getMyReview(reviewRequest, viewController: self)
-       
+  }
+  
+  @objc func moreButtonTapped(_ sender: Notification) {
+    let postId = sender.object as! Int
+    print("postId = \(postId)")
   }
 }
 
@@ -56,9 +71,11 @@ extension MyReviewController: UICollectionViewDelegate, UICollectionViewDataSour
           as? NewsCell else { return UICollectionViewCell() }
     if let reviews = reviews {
       let review = reviews[indexPath.row]
+      cell.tagLabel.text = "@\(review.storeName)"
       cell.nicknameLabel.text = review.writer.userName
-      cell.writingLabel.text = String(review.writer.postCount)
+      cell.writingLabel.text = String(review.writer.reviewCount)
       cell.follwerLabel.text = String(review.writer.follower)
+      cell.postId = review.postId
 
       // 프로필 이미지
       if let img = review.writer.userProfileImg {

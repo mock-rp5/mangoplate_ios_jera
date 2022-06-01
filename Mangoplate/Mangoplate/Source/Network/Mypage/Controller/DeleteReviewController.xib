@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeleteReviewController" customModule="Mangoplate" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="smY-GS-1rF" id="75J-eY-8cr"/>
+                <outlet property="deleteButton" destination="kLZ-Zr-svO" id="7ZW-qW-5jS"/>
+                <outlet property="updateButton" destination="M6Z-W6-nvf" id="5sO-vw-uwX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wN2-pM-jKy">
+                    <rect key="frame" x="0.0" y="586" width="414" height="310"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6Z-W6-nvf">
+                            <rect key="frame" x="109.5" y="32" width="195" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="195" id="FDG-Ec-DOB"/>
+                                <constraint firstAttribute="height" constant="60" id="vul-HC-N5f"/>
+                            </constraints>
+                            <color key="tintColor" red="0.99607843139999996" green="0.43921568630000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="리뷰 수정"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLZ-Zr-svO">
+                            <rect key="frame" x="109.5" y="125" width="195" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="195" id="5TV-bK-Pmz"/>
+                                <constraint firstAttribute="height" constant="60" id="IGP-Jy-thx"/>
+                            </constraints>
+                            <color key="tintColor" red="0.99607843139999996" green="0.43921568630000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="리뷰 삭제"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smY-GS-1rF">
+                            <rect key="frame" x="109.5" y="218" width="195" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="2hY-P7-l8m"/>
+                                <constraint firstAttribute="width" constant="195" id="Iyb-SS-qk0"/>
+                            </constraints>
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="취소"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="smY-GS-1rF" firstAttribute="centerY" secondItem="wN2-pM-jKy" secondAttribute="centerY" multiplier="1.6" id="BWO-Cu-yEy"/>
+                        <constraint firstItem="kLZ-Zr-svO" firstAttribute="centerX" secondItem="wN2-pM-jKy" secondAttribute="centerX" id="DgO-2M-EVy"/>
+                        <constraint firstItem="kLZ-Zr-svO" firstAttribute="centerY" secondItem="wN2-pM-jKy" secondAttribute="centerY" id="Gom-vQ-nIM"/>
+                        <constraint firstItem="smY-GS-1rF" firstAttribute="centerX" secondItem="wN2-pM-jKy" secondAttribute="centerX" id="IWt-dn-kg3"/>
+                        <constraint firstItem="M6Z-W6-nvf" firstAttribute="centerX" secondItem="wN2-pM-jKy" secondAttribute="centerX" id="bUP-b8-N5w"/>
+                        <constraint firstAttribute="height" constant="310" id="hUn-wv-evA"/>
+                        <constraint firstItem="M6Z-W6-nvf" firstAttribute="centerY" secondItem="wN2-pM-jKy" secondAttribute="centerY" multiplier="0.4" id="yrt-F5-hAS"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.76523696192052981" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wN2-pM-jKy" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Iro-se-Vw9"/>
+                <constraint firstAttribute="bottom" secondItem="wN2-pM-jKy" secondAttribute="bottom" id="Lqq-kR-90K"/>
+                <constraint firstItem="wN2-pM-jKy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="r3S-tX-ZPb"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="79.6875"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

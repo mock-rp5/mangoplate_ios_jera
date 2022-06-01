@@ -49,14 +49,15 @@ extension SecondRestaurantDetailCell: UICollectionViewDelegate, UICollectionView
       let storeReview = storeReviews[indexPath.row]
       cell.contentLabel.text = storeReview.feedContent
       
-//      cell.nicknameLabel.text = storeReview.writer.userName
-//      cell.writingLabel.text = String(storeReview.writer.postCount)
-//      cell.follwerLabel.text = String(storeReview.writer.follower)
-//
-//      // 프로필 이미지
-//      if let img = storeReview.writer.userProfileImg {
-//        cell.profileImageView.load(urlString: img)
-//      }
+      cell.nicknameLabel.text = storeReview.writer.userName
+      cell.writingLabel.text = String(storeReview.writer.reviewCount)
+      cell.follwerLabel.text = String(storeReview.writer.follower)
+      cell.tagLabel.isHidden = true
+
+      // 프로필 이미지
+      if let img = storeReview.writer.userProfileImg {
+        cell.profileImageView.load(urlString: img)
+      }
       
       // 평가 이미지
       switch storeReview.evaluation {

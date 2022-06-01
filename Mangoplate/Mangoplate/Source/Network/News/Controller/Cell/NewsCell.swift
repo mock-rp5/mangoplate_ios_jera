@@ -23,9 +23,11 @@ class NewsCell: UICollectionViewCell {
   @IBOutlet weak var pageLabel: UILabel!
   @IBOutlet weak var pageView: UIView!
   @IBOutlet weak var likeButton: UIButton!
+  @IBOutlet weak var dotButton: UIButton!
   
   let images = ["foodImage1", "foodImage2", "foodImage3"]
   var photos: [Photo]?
+  var postId: Int? // 현재 cell의 postId
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -37,8 +39,8 @@ class NewsCell: UICollectionViewCell {
     
     likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
     likeButton.setImage(UIImage(systemName: "heart.fill"), for: .selected)
-   
     
+    dotButton.addTarget(self, action: #selector(moreButtonTapped(_:)), for: .touchUpInside)
   }
   
   @objc func heartButtonTapped(_ sender: UIButton) {
@@ -50,6 +52,10 @@ class NewsCell: UICollectionViewCell {
       sender.tintColor = .lightGray
       sender.isSelected = false
     }
+  }
+  
+  @objc func moreButtonTapped(_ sender: UIButton) {
+    NotificationCenter.default.post(name: .reviewMore, object: postId!)
   }
 
 }
