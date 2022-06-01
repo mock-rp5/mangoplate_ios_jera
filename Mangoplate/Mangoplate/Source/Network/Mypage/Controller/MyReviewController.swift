@@ -47,9 +47,24 @@ class MyReviewController: BaseViewController {
     MyPageDataManager().getMyReview(reviewRequest, viewController: self)
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    BaseTabBarController.hideTabBar()
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    BaseTabBarController.showTabBar()
+  }
+  
   @objc func moreButtonTapped(_ sender: Notification) {
     let postId = sender.object as! Int
     print("postId = \(postId)")
+    let vc = DeleteReviewController()
+    vc.modalTransitionStyle = .crossDissolve
+    vc.modalPresentationStyle = .overCurrentContext
+    vc.postId = postId
+    present(vc, animated: true, completion: nil)
   }
 }
 

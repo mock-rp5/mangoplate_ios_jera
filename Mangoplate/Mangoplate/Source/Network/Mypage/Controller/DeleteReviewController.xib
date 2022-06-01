@@ -22,48 +22,51 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wN2-pM-jKy">
-                    <rect key="frame" x="0.0" y="586" width="414" height="310"/>
+                    <rect key="frame" x="0.0" y="696" width="414" height="200"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6Z-W6-nvf">
-                            <rect key="frame" x="109.5" y="32" width="195" height="60"/>
+                            <rect key="frame" x="132" y="17.5" width="150" height="35"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="195" id="FDG-Ec-DOB"/>
-                                <constraint firstAttribute="height" constant="60" id="vul-HC-N5f"/>
+                                <constraint firstAttribute="width" constant="150" id="FDG-Ec-DOB"/>
+                                <constraint firstAttribute="height" constant="35" id="vul-HC-N5f"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="tintColor" red="0.99607843139999996" green="0.43921568630000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="리뷰 수정"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="리뷰 수정"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLZ-Zr-svO">
-                            <rect key="frame" x="109.5" y="125" width="195" height="60"/>
+                            <rect key="frame" x="132" y="67.5" width="150" height="35"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="195" id="5TV-bK-Pmz"/>
-                                <constraint firstAttribute="height" constant="60" id="IGP-Jy-thx"/>
+                                <constraint firstAttribute="width" constant="150" id="5TV-bK-Pmz"/>
+                                <constraint firstAttribute="height" constant="35" id="IGP-Jy-thx"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="tintColor" red="0.99607843139999996" green="0.43921568630000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="리뷰 삭제"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="리뷰 삭제"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smY-GS-1rF">
-                            <rect key="frame" x="109.5" y="218" width="195" height="60"/>
+                            <rect key="frame" x="132" y="122.5" width="150" height="35"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="60" id="2hY-P7-l8m"/>
-                                <constraint firstAttribute="width" constant="195" id="Iyb-SS-qk0"/>
+                                <constraint firstAttribute="height" constant="35" id="2hY-P7-l8m"/>
+                                <constraint firstAttribute="width" constant="150" id="Iyb-SS-qk0"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="취소"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="취소"/>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="smY-GS-1rF" firstAttribute="centerY" secondItem="wN2-pM-jKy" secondAttribute="centerY" multiplier="1.6" id="BWO-Cu-yEy"/>
+                        <constraint firstItem="smY-GS-1rF" firstAttribute="centerY" secondItem="wN2-pM-jKy" secondAttribute="centerY" multiplier="1.4" id="BWO-Cu-yEy"/>
                         <constraint firstItem="kLZ-Zr-svO" firstAttribute="centerX" secondItem="wN2-pM-jKy" secondAttribute="centerX" id="DgO-2M-EVy"/>
-                        <constraint firstItem="kLZ-Zr-svO" firstAttribute="centerY" secondItem="wN2-pM-jKy" secondAttribute="centerY" id="Gom-vQ-nIM"/>
+                        <constraint firstItem="kLZ-Zr-svO" firstAttribute="centerY" secondItem="wN2-pM-jKy" secondAttribute="centerY" multiplier="0.85" id="Gom-vQ-nIM"/>
                         <constraint firstItem="smY-GS-1rF" firstAttribute="centerX" secondItem="wN2-pM-jKy" secondAttribute="centerX" id="IWt-dn-kg3"/>
                         <constraint firstItem="M6Z-W6-nvf" firstAttribute="centerX" secondItem="wN2-pM-jKy" secondAttribute="centerX" id="bUP-b8-N5w"/>
-                        <constraint firstAttribute="height" constant="310" id="hUn-wv-evA"/>
-                        <constraint firstItem="M6Z-W6-nvf" firstAttribute="centerY" secondItem="wN2-pM-jKy" secondAttribute="centerY" multiplier="0.4" id="yrt-F5-hAS"/>
+                        <constraint firstAttribute="height" constant="200" id="hUn-wv-evA"/>
+                        <constraint firstItem="M6Z-W6-nvf" firstAttribute="centerY" secondItem="wN2-pM-jKy" secondAttribute="centerY" multiplier="0.35" id="yrt-F5-hAS"/>
                     </constraints>
                 </view>
             </subviews>
