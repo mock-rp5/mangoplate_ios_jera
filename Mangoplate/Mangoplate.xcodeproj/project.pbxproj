@@ -37,6 +37,8 @@
 		FA50440C284755C600A3A5E9 /* ReviewWritingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50440B284755C600A3A5E9 /* ReviewWritingResponse.swift */; };
 		FA50440F2847771200A3A5E9 /* DeleteReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50440D2847771200A3A5E9 /* DeleteReviewController.swift */; };
 		FA5044102847771200A3A5E9 /* DeleteReviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA50440E2847771200A3A5E9 /* DeleteReviewController.xib */; };
+		FA50441228478DBF00A3A5E9 /* DeleteReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50441128478DBF00A3A5E9 /* DeleteReviewRequest.swift */; };
+		FA50441428478DCC00A3A5E9 /* DeleteReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50441328478DCC00A3A5E9 /* DeleteReviewResponse.swift */; };
 		FA551B6828426FD3009ADB01 /* StoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA551B6728426FD3009ADB01 /* StoryResponse.swift */; };
 		FA551B6A2842807F009ADB01 /* TopListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA551B692842807F009ADB01 /* TopListResponse.swift */; };
 		FA551B6C28428AB1009ADB01 /* GetUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA551B6B28428AB1009ADB01 /* GetUserResponse.swift */; };
@@ -199,6 +201,8 @@
 		FA50440B284755C600A3A5E9 /* ReviewWritingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWritingResponse.swift; sourceTree = "<group>"; };
 		FA50440D2847771200A3A5E9 /* DeleteReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteReviewController.swift; sourceTree = "<group>"; };
 		FA50440E2847771200A3A5E9 /* DeleteReviewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteReviewController.xib; sourceTree = "<group>"; };
+		FA50441128478DBF00A3A5E9 /* DeleteReviewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeleteReviewRequest.swift; path = ../../../../../../../../../Documents/DeleteReviewRequest.swift; sourceTree = "<group>"; };
+		FA50441328478DCC00A3A5E9 /* DeleteReviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteReviewResponse.swift; sourceTree = "<group>"; };
 		FA551B6728426FD3009ADB01 /* StoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryResponse.swift; sourceTree = "<group>"; };
 		FA551B692842807F009ADB01 /* TopListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListResponse.swift; sourceTree = "<group>"; };
 		FA551B6B28428AB1009ADB01 /* GetUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserResponse.swift; sourceTree = "<group>"; };
@@ -517,6 +521,8 @@
 			children = (
 				FA4FA60F283FBAB500DD836A /* DeleteUserResponse.swift */,
 				FA551B6B28428AB1009ADB01 /* GetUserResponse.swift */,
+				FA50441128478DBF00A3A5E9 /* DeleteReviewRequest.swift */,
+				FA50441328478DCC00A3A5E9 /* DeleteReviewResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1090,6 +1096,7 @@
 			files = (
 				FAF60A012838B6DE00B2CD48 /* ViewController.swift in Sources */,
 				FA600B0F283F47790044F5BA /* AreasResponse.swift in Sources */,
+				FA50441228478DBF00A3A5E9 /* DeleteReviewRequest.swift in Sources */,
 				FA50440A284754F600A3A5E9 /* ReviewWritingRequest.swift in Sources */,
 				FA6B08952845F9FD008639E4 /* CustomGalleryViewController.swift in Sources */,
 				FA6B089F28461329008639E4 /* ReviewWritingViewController.swift in Sources */,
@@ -1117,6 +1124,7 @@
 				FA4C3B7B2841112D003AFEF2 /* NotificationName.swift in Sources */,
 				FAD7C5272839ED000093AF35 /* BaseTabBarController.swift in Sources */,
 				FA666BCA28434B5000DAB919 /* FollowingViewController.swift in Sources */,
+				FA50441428478DCC00A3A5E9 /* DeleteReviewResponse.swift in Sources */,
 				FA6B08992845FAC4008639E4 /* CustomGalleryCell.swift in Sources */,
 				FA665A0A283B5A5E00E807F1 /* Constant.swift in Sources */,
 				FA60386C28425BC500C0DFC4 /* UIImageView.swift in Sources */,

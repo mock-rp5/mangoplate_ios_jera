@@ -39,6 +39,7 @@ class NewsCell: UICollectionViewCell {
     
     likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
     likeButton.setImage(UIImage(systemName: "heart.fill"), for: .selected)
+    likeButton.addTarget(self, action: #selector(heartButtonTapped), for: .touchUpInside)
     
     dotButton.addTarget(self, action: #selector(moreButtonTapped(_:)), for: .touchUpInside)
   }

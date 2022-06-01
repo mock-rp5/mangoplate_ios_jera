@@ -23,6 +23,7 @@ class MyReviewController: BaseViewController {
     self.setNavigationTintColor(color: .mainOrange)
     
     NotificationCenter.default.addObserver(self, selector: #selector(moreButtonTapped), name: .reviewMore, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(reloadReviews), name: .reviewReload, object: nil)
     
     self.navigationController?.navigationBar.isTransparent = true
     goodButton.layer.borderColor = UIColor.mainOrange.cgColor
@@ -65,6 +66,11 @@ class MyReviewController: BaseViewController {
     vc.modalPresentationStyle = .overCurrentContext
     vc.postId = postId
     present(vc, animated: true, completion: nil)
+  }
+  
+  @objc func reloadReviews(_ sender: Notification) {
+    let reviewRequest = FeedRequest(evaluation: "0,1,2", page: nil, pagesize: nil)
+    MyPageDataManager().getMyReview(reviewRequest, viewController: self)
   }
 }
 

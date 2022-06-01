@@ -13,4 +13,5 @@ extension Notification.Name {
   static let selectAreaString = Notification.Name("selectAreaString")
   static let reviewHeart = Notification.Name("reviewHeart")
   static let reviewMore = Notification.Name("reviewMore")
+  static let reviewReload = Notification.Name("reviewReload")
 }

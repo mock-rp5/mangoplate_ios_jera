@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeleteReviewController" customModule="Mangoplate" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundButton" destination="ttu-yG-EuI" id="Txl-fK-tlb"/>
                 <outlet property="cancelButton" destination="smY-GS-1rF" id="75J-eY-8cr"/>
                 <outlet property="deleteButton" destination="kLZ-Zr-svO" id="7ZW-qW-5jS"/>
                 <outlet property="updateButton" destination="M6Z-W6-nvf" id="5sO-vw-uwX"/>
@@ -69,13 +70,22 @@
                         <constraint firstItem="M6Z-W6-nvf" firstAttribute="centerY" secondItem="wN2-pM-jKy" secondAttribute="centerY" multiplier="0.35" id="yrt-F5-hAS"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttu-yG-EuI">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="688"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.76523696192052981" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="wN2-pM-jKy" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Iro-se-Vw9"/>
                 <constraint firstAttribute="bottom" secondItem="wN2-pM-jKy" secondAttribute="bottom" id="Lqq-kR-90K"/>
+                <constraint firstItem="wN2-pM-jKy" firstAttribute="top" secondItem="ttu-yG-EuI" secondAttribute="bottom" constant="8" symbolic="YES" id="Pst-Lt-ajH"/>
+                <constraint firstItem="ttu-yG-EuI" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="eEk-EV-MBI"/>
+                <constraint firstItem="ttu-yG-EuI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eeh-t0-4Th"/>
                 <constraint firstItem="wN2-pM-jKy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="r3S-tX-ZPb"/>
+                <constraint firstItem="ttu-yG-EuI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rdg-Bu-87r"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="79.6875"/>
         </view>

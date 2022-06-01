@@ -69,7 +69,7 @@ class MyPageDataManager {
   
   // 내가 쓴 리뷰 조회
   func getMyReview(_ parameters: FeedRequest, viewController: MyReviewController) {
-    AF.request("\(Constant.DEV_BASE_URL)/app/feeds/\(Constant.USER_ID)/reviews", method: .get, parameters: parameters, headers: Constant.HEADERS)
+    AF.request("\(Constant.DEV_BASE_URL)/app/feeds/\(Constant.USER_ID)/reviews", method: .get, parameters: parameters,  headers: Constant.HEADERS)
       .validate()
       .responseDecodable(of: FeedResponse.self) { response in
         switch response.result {
@@ -82,6 +82,31 @@ class MyPageDataManager {
           
         case .failure(let error):
           print("getMyReview failure \(error.localizedDescription)")
+          viewController.dismissIndicator()
+        }
+      }
+  }
+  
+  
+  // 리뷰 삭제
+  func deleteMyReview(postId: Int, viewController: DeleteReviewController) {
+    viewController.showIndicator()
+    AF.request("\(Constant.DEV_BASE_URL)/app/feeds/reviews/\(String(postId))",method: .delete, headers: Constant.HEADERS)
+      .validate()
+      .responseDecodable(of: DeleteReviewResponse.self) { response in
+        print(response)
+        switch response.result {
+        case .success(let result):
+          if result.isSuccess {
+            viewController.successDeleteReview()
+            viewController.dismissIndicator()
+          } else {
+            viewController.failedDeleteReview(message: result.message)
+            viewController.dismissIndicator()
+          }
+          
+        case .failure(let error):
+          print("deleteMyReview failure \(error.localizedDescription)")
           viewController.dismissIndicator()
         }
       }

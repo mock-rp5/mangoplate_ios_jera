@@ -12,6 +12,7 @@ class DeleteReviewController: UIViewController {
   @IBOutlet weak var updateButton: UIButton!
   @IBOutlet weak var deleteButton: UIButton!
   @IBOutlet weak var cancelButton: UIButton!
+  @IBOutlet weak var backgroundButton: UIButton!
   var postId: Int?
   
   override func viewDidLoad() {
@@ -30,6 +31,7 @@ class DeleteReviewController: UIViewController {
     cancelButton.layer.borderColor = UIColor.darkGray.cgColor
     cancelButton.layer.cornerRadius = 18
     cancelButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
+    backgroundButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
       
   }
   
@@ -42,6 +44,22 @@ class DeleteReviewController: UIViewController {
   }
   
   @objc func deleteButtonTapped(_ sender: UIButton) {
-    print(postId)
+    guard let postId = postId else { return }
+    MyPageDataManager().deleteMyReview(postId: postId, viewController: self)
+  }
+}
+
+extension DeleteReviewController {
+  func successDeleteReview() {
+    print("successDeleteReview")
+    self.presentAlert(title: "리뷰가 삭제되었습니다.")
+    // 리뷰 삭제하고 팝업뷰 사라지는 순간에 리뷰 reload알림 보냄
+    NotificationCenter.default.post(name: .reviewReload, object: nil)
+    self.dismiss(animated: true, completion: nil)
+  }
+  
+  func failedDeleteReview(message: String) {
+    print("failedDeleteReview")
+    self.presentAlert(title: message)
   }
 }
