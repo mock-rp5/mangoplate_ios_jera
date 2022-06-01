@@ -30,7 +30,8 @@ class FirstRestaurantDetailCell: UICollectionViewCell {
   @IBOutlet weak var menu1priceLabel: UILabel!
   @IBOutlet weak var menu2priceLabel: UILabel!
   
-  
+  var menuPhotos: [Menuphoto]?
+  var storePhotos: [StorePhoto]?
   
   let detailFoodImages = ["detailFood1", "detailFood2", "detailFood3"]
   let menuImages = ["menu1", "menu2"]
@@ -56,20 +57,50 @@ class FirstRestaurantDetailCell: UICollectionViewCell {
 
 extension FirstRestaurantDetailCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    // 식당 이미지 콜렉션뷰
     if collectionView == restaurantImageCollectionView {
-      return detailFoodImages.count
-    } else {
-      return menuImages.count
+      if let storePhotos = storePhotos {
+        return storePhotos.count
+      }
+      else {
+        return detailFoodImages.count
+      }
+    }
+    
+    // 메뉴 이미지 콜렉션뷰
+    else {
+      if let menuPhotos = menuPhotos {
+        return menuPhotos.count
+      }
+      else {
+        return menuImages.count
+      }
+
     }
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard let cell = restaurantImageCollectionView.dequeueReusableCell(withReuseIdentifier: "RestaurantImageCell", for: indexPath) as? RestaurantImageCell else { return UICollectionViewCell() }
+    // 식당 이미지 콜렉션뷰
     if collectionView == restaurantImageCollectionView {
-      cell.restaurantImageView.image = UIImage(named: detailFoodImages[indexPath.row])
+      if let storePhotos = storePhotos {
+        cell.restaurantImageView.load(urlString: storePhotos[indexPath.row].photoUrl)
+      }
+      else {
+        cell.restaurantImageView.image = UIImage(named: detailFoodImages[indexPath.row])
+      }
       return cell
-    } else {
-      cell.restaurantImageView.image = UIImage(named: menuImages[indexPath.row])
+    }
+    
+    // 메뉴 이미지 콜렉션뷰
+    else {
+      if let menuPhotos = menuPhotos {
+        cell.restaurantImageView.load(urlString: menuPhotos[indexPath.row].photoUrl)
+      }
+      else {
+        cell.restaurantImageView.image = UIImage(named: menuImages[indexPath.row])
+      }
+      
       return cell
     }
   }

@@ -30,6 +30,7 @@
 		FA4C3B7E2841388C003AFEF2 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C3B7D2841388C003AFEF2 /* CircularTransition.swift */; };
 		FA4FA60E283FBA0E00DD836A /* MyPageDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FA60D283FBA0E00DD836A /* MyPageDataManager.swift */; };
 		FA4FA610283FBAB500DD836A /* DeleteUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FA60F283FBAB500DD836A /* DeleteUserResponse.swift */; };
+		FA50440428472E4C00A3A5E9 /* DetailRestaurantResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50440328472E4C00A3A5E9 /* DetailRestaurantResponse.swift */; };
 		FA551B6828426FD3009ADB01 /* StoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA551B6728426FD3009ADB01 /* StoryResponse.swift */; };
 		FA551B6A2842807F009ADB01 /* TopListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA551B692842807F009ADB01 /* TopListResponse.swift */; };
 		FA551B6C28428AB1009ADB01 /* GetUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA551B6B28428AB1009ADB01 /* GetUserResponse.swift */; };
@@ -185,6 +186,7 @@
 		FA4C3B7D2841388C003AFEF2 /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 		FA4FA60D283FBA0E00DD836A /* MyPageDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageDataManager.swift; sourceTree = "<group>"; };
 		FA4FA60F283FBAB500DD836A /* DeleteUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserResponse.swift; sourceTree = "<group>"; };
+		FA50440328472E4C00A3A5E9 /* DetailRestaurantResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRestaurantResponse.swift; sourceTree = "<group>"; };
 		FA551B6728426FD3009ADB01 /* StoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryResponse.swift; sourceTree = "<group>"; };
 		FA551B692842807F009ADB01 /* TopListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListResponse.swift; sourceTree = "<group>"; };
 		FA551B6B28428AB1009ADB01 /* GetUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserResponse.swift; sourceTree = "<group>"; };
@@ -465,6 +467,7 @@
 				FA600B0E283F47790044F5BA /* AreasResponse.swift */,
 				FA829C65284251CB009BB780 /* RestaurantRequest.swift */,
 				FA829C6728425780009BB780 /* RestaurantResponse.swift */,
+				FA50440328472E4C00A3A5E9 /* DetailRestaurantResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1138,6 +1141,7 @@
 				FABCF0A0283B5F70008D14F5 /* User.swift in Sources */,
 				FAF60A272838CF2100B2CD48 /* UIButton.swift in Sources */,
 				FA811D4F2839299000CA29AF /* SecondSignUpViewController.swift in Sources */,
+				FA50440428472E4C00A3A5E9 /* DetailRestaurantResponse.swift in Sources */,
 				FA6B089C2846077C008639E4 /* Review.swift in Sources */,
 				FAF60A342838D32800B2CD48 /* SignInHomeViewController.swift in Sources */,
 				FA4C1CAD283C83130089CDC8 /* SignInDataManager.swift in Sources */,

@@ -16,9 +16,7 @@ class SecondRestaurantDetailCell: UICollectionViewCell {
   @IBOutlet weak var badCountLabel: UILabel!
   @IBOutlet weak var feedCollectionView: UICollectionView!
   @IBOutlet weak var blogSearchButton: UIButton!
-  
-  
-  
+  var storeReviews: [StoreReview]?
   
   
   override func awakeFromNib() {
@@ -38,11 +36,44 @@ class SecondRestaurantDetailCell: UICollectionViewCell {
 
 extension SecondRestaurantDetailCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 3
+    if let storeReviews = storeReviews {
+      return storeReviews.count
+    } else {
+      return 3
+    }
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard let cell = feedCollectionView.dequeueReusableCell(withReuseIdentifier: "NewsCell", for: indexPath) as? NewsCell else { return UICollectionViewCell() }
+    if let storeReviews = storeReviews {
+      let storeReview = storeReviews[indexPath.row]
+      cell.contentLabel.text = storeReview.feedContent
+      
+//      cell.nicknameLabel.text = storeReview.writer.userName
+//      cell.writingLabel.text = String(storeReview.writer.postCount)
+//      cell.follwerLabel.text = String(storeReview.writer.follower)
+//
+//      // 프로필 이미지
+//      if let img = storeReview.writer.userProfileImg {
+//        cell.profileImageView.load(urlString: img)
+//      }
+      
+      // 평가 이미지
+      switch storeReview.evaluation {
+      case 0:
+        cell.scoreImageView.image = UIImage(named: "bad")
+      case 1:
+        cell.scoreImageView.image = UIImage(named: "soso")
+      default:
+        cell.scoreImageView.image = UIImage(named: "good")
+      }
+      
+      cell.contentLabel.text = storeReview.feedContent
+      cell.goodLabel.text = "좋아요 \(String(storeReview.likeCount))개"
+      cell.commentLabel.text = "댓글 \(String(storeReview.commentCount))개"
+      cell.timeLabel.text = storeReview.createDate
+      cell.photos = storeReview.photos // 음식 사진 넘겨줌
+    }
     return cell
   }
   

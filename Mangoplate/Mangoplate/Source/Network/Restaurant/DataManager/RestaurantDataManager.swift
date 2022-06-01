@@ -41,6 +41,7 @@ class RestaurantDataManager {
           }
         case .failure(let error):
           print("getRestaurant failure \(error.localizedDescription)")
+          viewController.dismissIndicator()
         }
       }
   }
@@ -58,6 +59,26 @@ class RestaurantDataManager {
           }
         case .failure(let error):
           print("getRestaurant failure \(error.localizedDescription)")
+        }
+      }
+  }
+  
+  func getDetailRestaurant(storeId: Int, viewController: RestaurantViewController) {
+    AF.request("\(Constant.DEV_BASE_URL)/app/stores/\(storeId)/info", method: .get, headers: Constant.HEADERS)
+      .validate()
+      .responseDecodable(of: DetailRestaurantResponse.self) { response in
+        switch response.result {
+        case .success(let result):
+          if result.isSuccess {
+            guard let detailresult = result.result else { return }
+            viewController.successGetDetailRestaurants(detailrestaurantResult: detailresult)
+          } else {
+            viewController.failedGetDetailRestaurants(message: result.message)
+          }
+        case .failure(let error):
+          print("getDetailRestaurant failure \(error.localizedDescription)")
+          viewController.dismissIndicator()
+          viewController.presentAlert(title: "아직 데이터가 없어요!")
         }
       }
   }

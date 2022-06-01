@@ -19,6 +19,7 @@ class RestaurantViewController: BaseViewController {
   @IBOutlet weak var collectionView: UICollectionView!
   var locationManager = CLLocationManager()
   var resturants: [RestaurantResult]?
+  var detailRestaurant: DetailRestaurantResult?
   var latitude: Float?
   var longtitude: Float?
   var locationServicesEnabled = false
@@ -234,17 +235,21 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
     }
   }
   
+  // 셀 클릭하면 해당 식당 상세 정보로 이동
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     if indexPath.section == 2 {
-      let vc = DetailRestaurantViewController()
-      vc.modalPresentationStyle = .fullScreen
-      
-      if let restaurants = resturants {
-        vc.navigationTitle = restaurants[indexPath.row].storeName
-      }
+      showIndicator()
+      RestaurantDataManager().getDetailRestaurant(storeId: indexPath.row+1, viewController: self)
      
-      BaseTabBarController.hideTabBar()
-      self.navigationController?.pushViewController(vc, animated: true)
+      
+      print(" vc.detailRestaurant =\(detailRestaurant)")
+     // vc.detailRestaurantCollectionView.reloadData()
+//      if let detailRestaurant = detailRestaurant {
+//        vc.detailRestaurant = detailRestaurant
+//        vc.detailRestaurantCollectionView.reloadData()
+//      }
+    
+     
     }
    
   }
@@ -271,6 +276,26 @@ extension RestaurantViewController {
     print("successGetRestaurants")
     self.resturants = restaurantResult
     collectionView.reloadData()
+    dismissIndicator()
+  }
+  
+  // 식당 상세정보 get
+  func successGetDetailRestaurants(detailrestaurantResult: DetailRestaurantResult) {
+    print("successGetDetailRestaurants")
+    self.detailRestaurant = detailrestaurantResult
+   
+    dismissIndicator()
+    BaseTabBarController.hideTabBar()
+    let vc = DetailRestaurantViewController()
+    vc.detailRestaurant = self.detailRestaurant
+    vc.modalPresentationStyle = .fullScreen
+    self.navigationController?.pushViewController(vc, animated: true)
+  }
+  
+  
+  func failedGetDetailRestaurants(message: String) {
+    print("failedGetDetailRestaurants")
+    self.presentAlert(title: message)
     dismissIndicator()
   }
 }
