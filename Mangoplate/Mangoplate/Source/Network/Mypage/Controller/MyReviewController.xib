@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyReviewController" customModule="Mangoplate" customModuleProvider="target">
+            <connections>
+                <outlet property="badButton" destination="UOp-sr-O1s" id="aQO-DE-KGY"/>
+                <outlet property="goodButton" destination="bQR-hw-cXN" id="vBO-IR-Jb0"/>
+                <outlet property="reviewCollectionView" destination="iwZ-0K-LoX" id="bjf-jd-rqZ"/>
+                <outlet property="sosoButton" destination="nyf-iP-Rna" id="fe3-WF-oPZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zc-Bg-ND0">
+                    <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                    <color key="backgroundColor" red="0.94509804249999996" green="0.9529411793" blue="0.94901961089999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="KrJ-cq-1Lj"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQR-hw-cXN">
+                    <rect key="frame" x="10" y="60" width="70" height="28"/>
+                    <color key="backgroundColor" red="0.99607843139999996" green="0.90980392160000001" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="ptp-nl-FJm"/>
+                        <constraint firstAttribute="width" constant="70" id="sZ8-y0-J9M"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="tintColor" red="0.4744515567" green="0.4744515567" blue="0.4744515567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="맛있다" image="selectedGoodIcon">
+                        <color key="titleColor" red="0.99607843139999996" green="0.43921568630000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="10"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOp-sr-O1s">
+                    <rect key="frame" x="170" y="60" width="66" height="28"/>
+                    <color key="backgroundColor" red="0.99607843139999996" green="0.90980392160000001" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="66" id="AIP-Ie-8Qz"/>
+                        <constraint firstAttribute="height" constant="28" id="Sl5-Md-4KK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="tintColor" red="0.4744515567" green="0.4744515567" blue="0.4744515567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="별로" image="selectedBadIcon">
+                        <color key="titleColor" red="0.99607843139999996" green="0.43921568630000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="10"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyf-iP-Rna">
+                    <rect key="frame" x="90" y="60" width="70" height="28"/>
+                    <color key="backgroundColor" red="0.9976019263" green="0.90924173590000001" blue="0.848302424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="R4v-N7-9vm"/>
+                        <constraint firstAttribute="height" constant="28" id="mj3-6D-4XY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="tintColor" red="0.4744515567" green="0.4744515567" blue="0.4744515567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title=" 괜찮다" image="selectedSosoIcon">
+                        <color key="titleColor" red="0.99607843139999996" green="0.43921568630000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="10"/>
+                    </state>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="iwZ-0K-LoX">
+                    <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="At8-iF-Qjo">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iwZ-0K-LoX" secondAttribute="bottom" id="0ej-56-gSs"/>
+                <constraint firstItem="7zc-Bg-ND0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4lB-Ua-CuM"/>
+                <constraint firstItem="UOp-sr-O1s" firstAttribute="centerY" secondItem="nyf-iP-Rna" secondAttribute="centerY" id="6oH-1A-UiZ"/>
+                <constraint firstItem="7zc-Bg-ND0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Q39-tU-lFW"/>
+                <constraint firstItem="UOp-sr-O1s" firstAttribute="leading" secondItem="nyf-iP-Rna" secondAttribute="trailing" constant="10" id="Rh0-3E-ZVg"/>
+                <constraint firstItem="iwZ-0K-LoX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Vab-c0-gN2"/>
+                <constraint firstItem="iwZ-0K-LoX" firstAttribute="top" secondItem="7zc-Bg-ND0" secondAttribute="bottom" id="Vr6-xd-HgU"/>
+                <constraint firstItem="bQR-hw-cXN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="aP3-Rw-pIO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iwZ-0K-LoX" secondAttribute="trailing" id="bWX-LW-lrH"/>
+                <constraint firstItem="nyf-iP-Rna" firstAttribute="centerY" secondItem="bQR-hw-cXN" secondAttribute="centerY" id="dMt-98-MCD"/>
+                <constraint firstItem="nyf-iP-Rna" firstAttribute="leading" secondItem="bQR-hw-cXN" secondAttribute="trailing" constant="10" id="ozS-Ku-ygX"/>
+                <constraint firstItem="bQR-hw-cXN" firstAttribute="centerY" secondItem="7zc-Bg-ND0" secondAttribute="centerY" id="qBB-Px-l91"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7zc-Bg-ND0" secondAttribute="trailing" id="w6b-JJ-pFd"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="79.6875"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="selectedBadIcon" width="20" height="21"/>
+        <image name="selectedGoodIcon" width="20" height="21"/>
+        <image name="selectedSosoIcon" width="20" height="22"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

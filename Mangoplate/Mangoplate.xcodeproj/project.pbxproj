@@ -31,6 +31,8 @@
 		FA4FA60E283FBA0E00DD836A /* MyPageDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FA60D283FBA0E00DD836A /* MyPageDataManager.swift */; };
 		FA4FA610283FBAB500DD836A /* DeleteUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FA60F283FBAB500DD836A /* DeleteUserResponse.swift */; };
 		FA50440428472E4C00A3A5E9 /* DetailRestaurantResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50440328472E4C00A3A5E9 /* DetailRestaurantResponse.swift */; };
+		FA50440728474C7F00A3A5E9 /* MyReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50440528474C7F00A3A5E9 /* MyReviewController.swift */; };
+		FA50440828474C7F00A3A5E9 /* MyReviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA50440628474C7F00A3A5E9 /* MyReviewController.xib */; };
 		FA551B6828426FD3009ADB01 /* StoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA551B6728426FD3009ADB01 /* StoryResponse.swift */; };
 		FA551B6A2842807F009ADB01 /* TopListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA551B692842807F009ADB01 /* TopListResponse.swift */; };
 		FA551B6C28428AB1009ADB01 /* GetUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA551B6B28428AB1009ADB01 /* GetUserResponse.swift */; };
@@ -187,6 +189,8 @@
 		FA4FA60D283FBA0E00DD836A /* MyPageDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageDataManager.swift; sourceTree = "<group>"; };
 		FA4FA60F283FBAB500DD836A /* DeleteUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserResponse.swift; sourceTree = "<group>"; };
 		FA50440328472E4C00A3A5E9 /* DetailRestaurantResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRestaurantResponse.swift; sourceTree = "<group>"; };
+		FA50440528474C7F00A3A5E9 /* MyReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReviewController.swift; sourceTree = "<group>"; };
+		FA50440628474C7F00A3A5E9 /* MyReviewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyReviewController.xib; sourceTree = "<group>"; };
 		FA551B6728426FD3009ADB01 /* StoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryResponse.swift; sourceTree = "<group>"; };
 		FA551B692842807F009ADB01 /* TopListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListResponse.swift; sourceTree = "<group>"; };
 		FA551B6B28428AB1009ADB01 /* GetUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserResponse.swift; sourceTree = "<group>"; };
@@ -853,10 +857,12 @@
 				FAF8FECE283DFD5100AE74AF /* MyPageSettingsViewController.swift */,
 				FA617A5C283F9D3F00F8E59C /* UserDeleteViewController.swift */,
 				FA6B08A128462867008639E4 /* LogoutMyPageViewController.swift */,
+				FA50440528474C7F00A3A5E9 /* MyReviewController.swift */,
 				FAD7C53E283A27130093AF35 /* MypageViewController.xib */,
 				FAF8FECF283DFD5100AE74AF /* MyPageSettingsViewController.xib */,
 				FA617A5D283F9D3F00F8E59C /* UserDeleteViewController.xib */,
 				FA6B08A228462867008639E4 /* LogoutMyPageViewController.xib */,
+				FA50440628474C7F00A3A5E9 /* MyReviewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -976,6 +982,7 @@
 				FA3F3E4928438C7500CE48B9 /* DetailRestaurantViewController.xib in Resources */,
 				FA666BD4284356DC00DAB919 /* NewsCell.xib in Resources */,
 				FA785C372845146700E88303 /* ReviewStoresViewController.xib in Resources */,
+				FA50440828474C7F00A3A5E9 /* MyReviewController.xib in Resources */,
 				FAF60A352838D32800B2CD48 /* SignInHomeViewController.xib in Resources */,
 				FAF60A062838B6E000B2CD48 /* Assets.xcassets in Resources */,
 				FA597E0D2840BDF40072CA47 /* AreaTabmanViewController.xib in Resources */,
@@ -1075,6 +1082,7 @@
 				FA666BD3284356DC00DAB919 /* NewsCell.swift in Sources */,
 				FAD7C533283A26F00093AF35 /* MangoPickViewController.swift in Sources */,
 				FA6B08A328462867008639E4 /* LogoutMyPageViewController.swift in Sources */,
+				FA50440728474C7F00A3A5E9 /* MyReviewController.swift in Sources */,
 				FA570AF5283A8BC200BA5049 /* BannerSubCell.swift in Sources */,
 				FAF8FEEF283E38D800AE74AF /* StoryCell.swift in Sources */,
 				FAD7C53B283A27080093AF35 /* NewsViewController.swift in Sources */,

@@ -9,7 +9,10 @@ import UIKit
 
 class MyPageTimelineCell: UITableViewCell {
 
-    override func awakeFromNib() {
+  @IBOutlet weak var reviewLabel: NSLayoutConstraint!
+  @IBOutlet weak var reviewButton: UIButton!
+  
+  override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }

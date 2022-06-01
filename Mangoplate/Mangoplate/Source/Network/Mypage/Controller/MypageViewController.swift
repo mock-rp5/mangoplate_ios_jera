@@ -61,6 +61,11 @@ class MypageViewController: BaseViewController {
     myPageTableView.register(UINib(nibName: "MyPageMainCell", bundle: .main), forCellReuseIdentifier: "MyPageMainCell")
     myPageTableView.register(UINib(nibName: "MyPageTimelineCell", bundle: .main), forCellReuseIdentifier: "MyPageTimelineCell")
   }
+  
+  @objc func myReviewTapped(_ sender: UIButton) {
+    let vc = MyReviewController()
+    self.navigationController?.pushViewController(vc, animated: true)
+  }
 }
 
 // MARK: UITableViewDelegate, UITableViewDataSource
@@ -99,6 +104,7 @@ extension MypageViewController: UITableViewDelegate, UITableViewDataSource {
       return cell
     case 3:
       guard let cell = myPageTableView.dequeueReusableCell(withIdentifier: "MyPageTimelineCell") as? MyPageTimelineCell else { return UITableViewCell() }
+      cell.reviewButton.addTarget(self, action: #selector(myReviewTapped), for: .touchUpInside)
       return cell
       
     default:

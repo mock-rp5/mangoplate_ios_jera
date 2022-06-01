@@ -1,0 +1,95 @@
+//
+//  MyReviewController.swift
+//  Mangoplate
+//
+//  Created by 임영선 on 2022/06/01.
+//
+
+import UIKit
+
+class MyReviewController: BaseViewController {
+  
+  // MARK: - Properties
+  @IBOutlet weak var goodButton: UIButton!
+  @IBOutlet weak var sosoButton: UIButton!
+  @IBOutlet weak var badButton: UIButton!
+  @IBOutlet weak var reviewCollectionView: UICollectionView!
+  
+  // MARK: - LifeCycles
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    self.setNavigationBarBackbuttonTitle(title: "타임라인")
+    self.setNavigationTintColor(color: .mainOrange)
+    self.navigationController?.navigationBar.isTransparent = true
+    goodButton.layer.cornerRadius = 14
+    sosoButton.layer.cornerRadius = 14
+    badButton.layer.cornerRadius = 14
+    
+    reviewCollectionView.register(UINib(nibName: "NewsCell", bundle: .main), forCellWithReuseIdentifier: "NewsCell")
+    reviewCollectionView.backgroundColor = .mainLightGray2
+    reviewCollectionView.delegate = self
+    reviewCollectionView.dataSource = self
+       
+  }
+}
+
+extension MyReviewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+  
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//    if let reviews = reviews {
+//      return reviews.count
+//    }
+    return 2
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+   
+    guard let cell = reviewCollectionView.dequeueReusableCell(withReuseIdentifier: "NewsCell", for: indexPath)
+          as? NewsCell else { return UICollectionViewCell() }
+//    if let reviews = reviews {
+//      let review = reviews[indexPath.row]
+//      cell.nicknameLabel.text = review.writer.userName
+//      cell.writingLabel.text = String(review.writer.postCount)
+//      cell.follwerLabel.text = String(review.writer.follower)
+//
+//      // 프로필 이미지
+//      if let img = review.writer.userProfileImg {
+//        cell.profileImageView.load(urlString: img)
+//      }
+//
+//      // 평가 이미지
+//      switch review.evaluation {
+//      case 0:
+//        cell.scoreImageView.image = UIImage(named: "bad")
+//      case 1:
+//        cell.scoreImageView.image = UIImage(named: "soso")
+//      default:
+//        cell.scoreImageView.image = UIImage(named: "good")
+//      }
+//
+//      cell.contentLabel.text = review.feedContent
+//      cell.goodLabel.text = "좋아요 \(String(review.likeCount))개"
+//      cell.commentLabel.text = "댓글 \(String(review.commentCount))개"
+//      cell.timeLabel.text = review.createDate
+//      cell.photos = review.photos // 음식 사진 넘겨줌
+//      cell.imageCollectionView.reloadData()
+//    }
+   
+    return cell
+    
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    return 10
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+  
+    return CGSize(width: collectionView.frame.width - 20, height: 335)
+    
+  }
+}
