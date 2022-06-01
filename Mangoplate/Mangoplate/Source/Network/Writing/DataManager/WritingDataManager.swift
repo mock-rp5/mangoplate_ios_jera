@@ -30,6 +30,7 @@ class WritingDataManager {
   }
   
   func postReview(_ parameters: reviewWritingRequest, viewController: ReviewWritingViewController) {
+    viewController.showIndicator()
     
     let header: HTTPHeaders = [
       "Content-Type": "multipart/form-data",
@@ -56,12 +57,16 @@ class WritingDataManager {
           case .success(let response):
             if response.isSuccess {
               print("success postReivew \(response)")
+              viewController.successPostReview()
+              viewController.dismissIndicator()
             } else {
               viewController.faliedPostReview(message: response.message)
+              viewController.dismissIndicator()
             }
           
           case .failure(let error):
             print("failure postReview \(error.localizedDescription)")
+            viewController.dismissIndicator()
           }
         }
   }

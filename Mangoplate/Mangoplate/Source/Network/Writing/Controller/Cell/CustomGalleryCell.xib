@@ -11,21 +11,20 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomGalleryCell" id="gTV-IL-0wX" customClass="CustomGalleryCell" customModule="Mangoplate" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="184" height="155"/>
+            <rect key="frame" x="0.0" y="0.0" width="114" height="99"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="184" height="155"/>
+                <rect key="frame" x="0.0" y="0.0" width="114" height="99"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OV2-Ca-ng2">
-                        <rect key="frame" x="0.0" y="0.0" width="184" height="155"/>
+                        <rect key="frame" x="0.0" y="0.0" width="114" height="99"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="detailFood2" translatesAutoresizingMaskIntoConstraints="NO" id="UXE-Rb-s7X">
-                                <rect key="frame" x="0.0" y="0.0" width="184" height="155"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detailFood2" translatesAutoresizingMaskIntoConstraints="NO" id="UXE-Rb-s7X">
+                                <rect key="frame" x="0.0" y="0.0" width="114" height="99"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0t5-FX-nz7">
-                                <rect key="frame" x="156" y="9" width="20" height="20"/>
+                                <rect key="frame" x="86" y="9" width="20" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsa-Lw-UsE">
                                         <rect key="frame" x="7" y="3.5" width="6" height="13.5"/>
@@ -46,7 +45,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="0t5-FX-nz7" secondAttribute="trailing" constant="8" id="D6j-WJ-VQr"/>
+                            <constraint firstAttribute="bottom" secondItem="UXE-Rb-s7X" secondAttribute="bottom" id="GfR-zK-3mp"/>
+                            <constraint firstItem="UXE-Rb-s7X" firstAttribute="top" secondItem="OV2-Ca-ng2" secondAttribute="top" id="b4c-Yz-zFC"/>
                             <constraint firstItem="0t5-FX-nz7" firstAttribute="top" secondItem="OV2-Ca-ng2" secondAttribute="top" constant="9" id="tvf-UJ-AHL"/>
+                            <constraint firstAttribute="trailing" secondItem="UXE-Rb-s7X" secondAttribute="trailing" id="vs3-fi-YMA"/>
+                            <constraint firstItem="UXE-Rb-s7X" firstAttribute="leading" secondItem="OV2-Ca-ng2" secondAttribute="leading" id="xjA-NX-zKB"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -58,13 +61,13 @@
                 <constraint firstItem="OV2-Ca-ng2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sZA-zC-72I"/>
                 <constraint firstAttribute="bottom" secondItem="OV2-Ca-ng2" secondAttribute="bottom" id="tyb-kv-l2S"/>
             </constraints>
-            <size key="customSize" width="184" height="155"/>
+            <size key="customSize" width="114" height="99"/>
             <connections>
                 <outlet property="countLabel" destination="qsa-Lw-UsE" id="rXs-cL-yEf"/>
                 <outlet property="countView" destination="0t5-FX-nz7" id="5rV-8V-AdG"/>
                 <outlet property="imgView" destination="UXE-Rb-s7X" id="t2f-n4-UOq"/>
             </connections>
-            <point key="canvasLocation" x="228.98550724637684" y="114.84375"/>
+            <point key="canvasLocation" x="178.2608695652174" y="131.58482142857142"/>
         </collectionViewCell>
     </objects>
     <resources>

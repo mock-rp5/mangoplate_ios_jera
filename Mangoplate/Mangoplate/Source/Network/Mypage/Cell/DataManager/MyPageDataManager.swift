@@ -66,4 +66,24 @@ class MyPageDataManager {
         }
       }
     }
+  
+  // 내가 쓴 리뷰 조회
+  func getMyReview(_ parameters: FeedRequest, viewController: MyReviewController) {
+    AF.request("\(Constant.DEV_BASE_URL)/app/feeds/\(Constant.USER_ID)/reviews", method: .get, parameters: parameters, headers: Constant.HEADERS)
+      .validate()
+      .responseDecodable(of: FeedResponse.self) { response in
+        switch response.result {
+        case .success(let result):
+          if result.isSuccess {
+            viewController.successGetMyReview(results: result.result ?? [])
+          } else {
+            viewController.failedGetMyReview(message: result.message)
+          }
+          
+        case .failure(let error):
+          print("getMyReview failure \(error.localizedDescription)")
+          viewController.dismissIndicator()
+        }
+      }
+  }
 }

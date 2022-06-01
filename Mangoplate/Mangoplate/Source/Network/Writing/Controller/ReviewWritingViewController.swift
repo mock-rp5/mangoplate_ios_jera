@@ -107,6 +107,10 @@ extension ReviewWritingViewController: UITextViewDelegate {
 
 // MARK: - API
 extension ReviewWritingViewController {
+  func successPostReview() {
+    self.presentAlert(title: "리뷰가 작성되었습니다.")
+  }
+  
   func faliedPostReview(message: String) {
     self.presentAlert(title: message)
   }

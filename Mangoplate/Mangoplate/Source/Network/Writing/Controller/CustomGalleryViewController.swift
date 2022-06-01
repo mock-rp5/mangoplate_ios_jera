@@ -48,7 +48,8 @@ class CustomGalleryViewController: BaseViewController {
     var image = UIImage()
     let manager = PHImageManager.default()
     let options = PHImageRequestOptions()
-    options.deliveryMode = .opportunistic
+    //options.deliveryMode = .opportunistic
+    options.isSynchronous = true
     manager.requestImage(for: asset, targetSize: CGSize(width: 300, height: 300), contentMode: .aspectFill, options: options, resultHandler: {(result, info)->Void in
         image = result!
     })
