@@ -26,7 +26,6 @@ class MyReviewController: BaseViewController {
     
     self.navigationController?.navigationBar.isTransparent = true
  
-    
     reviewCollectionView.register(UINib(nibName: "NewsCell", bundle: .main), forCellWithReuseIdentifier: "NewsCell")
     reviewCollectionView.register(UINib(nibName: "TasteCell", bundle: .main), forCellWithReuseIdentifier: "TasteCell")
     reviewCollectionView.backgroundColor = .mainLightGray2

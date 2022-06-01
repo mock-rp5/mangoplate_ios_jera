@@ -44,17 +44,12 @@ class NewsCell: UICollectionViewCell {
     dotButton.addTarget(self, action: #selector(moreButtonTapped(_:)), for: .touchUpInside)
   }
   
+  // 좋아요 버튼 클릭 이벤트
   @objc func heartButtonTapped(_ sender: UIButton) {
-    if sender.isSelected == false {
-      sender.tintColor = .mainOrange
-      sender.isSelected = true
-    }
-    else {
-      sender.tintColor = .lightGray
-      sender.isSelected = false
-    }
+    NotificationCenter.default.post(name: .reviewHeart, object: postId!)
   }
   
+  // 더보기 버튼 클릭 이벤트 -> 리뷰 삭제, 수정 팝업창 보여줌
   @objc func moreButtonTapped(_ sender: UIButton) {
     NotificationCenter.default.post(name: .reviewMore, object: postId!)
   }
@@ -107,8 +102,6 @@ extension NewsCell: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     }
     
   }
-  
-  
 }
 
 

@@ -18,16 +18,21 @@ class AllViewController: UIViewController {
   // MARK: - LifeCycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    showIndicator()
+    
     newsCollectionView.register(UINib(nibName: "NewsCell", bundle: .main), forCellWithReuseIdentifier: "NewsCell")
     newsCollectionView.register(UINib(nibName: "TasteCell", bundle: .main), forCellWithReuseIdentifier: "TasteCell")
     newsCollectionView.backgroundColor = .mainLightGray2
     newsCollectionView.delegate = self
     newsCollectionView.dataSource = self
     
+    NotificationCenter.default.addObserver(self, selector: #selector(likeButtonTapped), name: .reviewHeart, object: nil)
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    showIndicator()
     let feedRequest = FeedRequest(evaluation: selectedTasteButtonString, page: nil, pagesize: nil)
     NewsDataManager().getFeed(feedRequest, viewController: self)
-    
   }
   
   // MARK: - Methods
@@ -44,15 +49,20 @@ class AllViewController: UIViewController {
     return selectedTasteButtonString
   }
   
-  @objc func heartButtonTapped(_ sender: UIButton) {
-    if sender.isSelected == false {
-      sender.tintColor = .mainOrange
-      sender.isSelected = true
+  // 좋아요버튼 누르면 피드 다시 불러옴
+  @objc func likeButtonTapped(_ sender: Notification) {
+    // 게시글 좋아요 POST
+    let likeRequest = LikeRequest(postId: sender.object as! Int)
+    NewsDataManager().postLikes(likeRequest, viewController: self)
+    
+    
+    do {
+      showIndicator()
+      usleep(20000) // 좋아요 적용을 위한 딜레이 0.2초
     }
-    else {
-      sender.tintColor = .lightGray
-      sender.isSelected = false
-    }
+    // 피드 다시 reload
+    let feedRequest = FeedRequest(evaluation: getSelectedTasteButtonString(), page: nil, pagesize: nil)
+    NewsDataManager().getFeed(feedRequest, viewController: self)
   }
 }
 
@@ -119,7 +129,20 @@ extension AllViewController: UICollectionViewDelegate, UICollectionViewDataSourc
         cell.commentLabel.text = "댓글 \(String(feed.commentCount))개"
         cell.timeLabel.text = feed.createDate
         cell.photos = feed.photos // 음식 사진 넘겨줌
+        cell.postId = feed.postId
         cell.imageCollectionView.reloadData()
+     
+        // 좋아요 누른 상태면
+        if feed.isLike == 1 {
+          cell.likeButton.tintColor = .mainOrange
+          cell.likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        }
+        
+        // 좋아요 안누른 상태면
+        else {
+          cell.likeButton.tintColor = .lightGray
+          cell.likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
       }
      
       return cell
@@ -214,6 +237,7 @@ extension AllViewController: TasteButtonEventProtocol {
 
 // MARK: - API
 extension AllViewController {
+  // 피드 조회
   func successGetFeed(results: [FeedResult]) {
     self.feeds = results
     newsCollectionView.reloadData()
@@ -224,4 +248,16 @@ extension AllViewController {
     self.presentBottomAlert(message: message)
     dismissIndicator()
   }
+  
+ // 게시글 좋아요
+  func successPostLike(action: String) {
+    print("successPostLike")
+    dismissIndicator()
+  }
+  
+  func failedPostLike(message: String) {
+    print("failedPostLike \(message)")
+    dismissIndicator()
+  }
+  
 }

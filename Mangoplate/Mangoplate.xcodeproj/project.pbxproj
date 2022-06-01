@@ -42,6 +42,10 @@
 		FA551B6828426FD3009ADB01 /* StoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA551B6728426FD3009ADB01 /* StoryResponse.swift */; };
 		FA551B6A2842807F009ADB01 /* TopListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA551B692842807F009ADB01 /* TopListResponse.swift */; };
 		FA551B6C28428AB1009ADB01 /* GetUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA551B6B28428AB1009ADB01 /* GetUserResponse.swift */; };
+		FA55602D2847B6CD00E2B096 /* NewsNoImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55602B2847B6CD00E2B096 /* NewsNoImageCell.swift */; };
+		FA55602E2847B6CD00E2B096 /* NewsNoImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA55602C2847B6CD00E2B096 /* NewsNoImageCell.xib */; };
+		FA5560302847CBF600E2B096 /* LikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55602F2847CBF600E2B096 /* LikeResponse.swift */; };
+		FA5560322847CBFE00E2B096 /* LikeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5560312847CBFE00E2B096 /* LikeRequest.swift */; };
 		FA570AEB283A885300BA5049 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA570AE9283A885300BA5049 /* RestaurantCell.swift */; };
 		FA570AEC283A885300BA5049 /* RestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA570AEA283A885300BA5049 /* RestaurantCell.xib */; };
 		FA570AF5283A8BC200BA5049 /* BannerSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA570AF3283A8BC200BA5049 /* BannerSubCell.swift */; };
@@ -206,6 +210,10 @@
 		FA551B6728426FD3009ADB01 /* StoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryResponse.swift; sourceTree = "<group>"; };
 		FA551B692842807F009ADB01 /* TopListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListResponse.swift; sourceTree = "<group>"; };
 		FA551B6B28428AB1009ADB01 /* GetUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserResponse.swift; sourceTree = "<group>"; };
+		FA55602B2847B6CD00E2B096 /* NewsNoImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsNoImageCell.swift; sourceTree = "<group>"; };
+		FA55602C2847B6CD00E2B096 /* NewsNoImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsNoImageCell.xib; sourceTree = "<group>"; };
+		FA55602F2847CBF600E2B096 /* LikeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeResponse.swift; sourceTree = "<group>"; };
+		FA5560312847CBFE00E2B096 /* LikeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeRequest.swift; sourceTree = "<group>"; };
 		FA570AE9283A885300BA5049 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		FA570AEA283A885300BA5049 /* RestaurantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantCell.xib; sourceTree = "<group>"; };
 		FA570AF3283A8BC200BA5049 /* BannerSubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSubCell.swift; sourceTree = "<group>"; };
@@ -591,9 +599,11 @@
 			isa = PBXGroup;
 			children = (
 				FA666BD1284356DC00DAB919 /* NewsCell.swift */,
+				FA55602B2847B6CD00E2B096 /* NewsNoImageCell.swift */,
 				FA666BD5284366B200DAB919 /* ImageCell.swift */,
 				FA3F3E422843778800CE48B9 /* TasteCell.swift */,
 				FA666BD2284356DC00DAB919 /* NewsCell.xib */,
+				FA55602C2847B6CD00E2B096 /* NewsNoImageCell.xib */,
 				FA666BD6284366B200DAB919 /* ImageCell.xib */,
 				FA3F3E432843778800CE48B9 /* TasteCell.xib */,
 			);
@@ -631,6 +641,8 @@
 			children = (
 				FA785C252844B58C00E88303 /* FeedRequest.swift */,
 				FA785C272844B59500E88303 /* FeedResponse.swift */,
+				FA55602F2847CBF600E2B096 /* LikeResponse.swift */,
+				FA5560312847CBFE00E2B096 /* LikeRequest.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1018,6 +1030,7 @@
 				FA37E924283CD043003FAE07 /* MyPageProfileCell.xib in Resources */,
 				FAF8FED9283E143600AE74AF /* MyPageSettingsCell.xib in Resources */,
 				FA6B089A2845FAC4008639E4 /* CustomGalleryCell.xib in Resources */,
+				FA55602E2847B6CD00E2B096 /* NewsNoImageCell.xib in Resources */,
 				FAF8FEEC283E280F00AE74AF /* EATDealCell.xib in Resources */,
 				FA617A5B283F83C500F8E59C /* AreasViewController.xib in Resources */,
 				FAD7C540283A27130093AF35 /* MypageViewController.xib in Resources */,
@@ -1112,9 +1125,11 @@
 				FA666BCE28434B6100DAB919 /* HolicViewController.swift in Sources */,
 				FA3F3E512843AEB300CE48B9 /* RestaurantImageCell.swift in Sources */,
 				FA551B6A2842807F009ADB01 /* TopListResponse.swift in Sources */,
+				FA5560302847CBF600E2B096 /* LikeResponse.swift in Sources */,
 				FABCF0A2283BDE5D008D14F5 /* EmailCheckRequest.swift in Sources */,
 				FAF8FEE1283E1AAA00AE74AF /* StoryViewController.swift in Sources */,
 				FA6B08B22846754E008639E4 /* StoryRequest.swift in Sources */,
+				FA5560322847CBFE00E2B096 /* LikeRequest.swift in Sources */,
 				FA6B08AE28466EAF008639E4 /* UITableVIewCell.swift in Sources */,
 				FAD7C52B283A23F20093AF35 /* RestaurantViewController.swift in Sources */,
 				FA4C1CA8283C822C0089CDC8 /* SignInRequest.swift in Sources */,
@@ -1191,6 +1206,7 @@
 				FA785C2D2844D6EC00E88303 /* SecondRestaurantDetailCell.swift in Sources */,
 				FA829C6328424057009BB780 /* LocationAgreeViewController.swift in Sources */,
 				FA6038722842660100C0DFC4 /* MangoPickDataManager.swift in Sources */,
+				FA55602D2847B6CD00E2B096 /* NewsNoImageCell.swift in Sources */,
 				FAF60A382838E03B00B2CD48 /* EmailSignInViewController.swift in Sources */,
 				FA811D4B28391EE400CA29AF /* FirstSignUpViewController.swift in Sources */,
 				FA665A08283B596100E807F1 /* SignUpDataManager.swift in Sources */,

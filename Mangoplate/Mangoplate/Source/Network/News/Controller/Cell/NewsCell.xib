@@ -280,7 +280,7 @@
                 <outlet property="timeLabel" destination="QPD-Gz-df8" id="lm5-ob-uYR"/>
                 <outlet property="writingLabel" destination="inI-MM-ghh" id="7B1-bG-Gop"/>
             </connections>
-            <point key="canvasLocation" x="301.44927536231887" y="85.379464285714278"/>
+            <point key="canvasLocation" x="252" y="57"/>
         </collectionViewCell>
     </objects>
     <resources>
