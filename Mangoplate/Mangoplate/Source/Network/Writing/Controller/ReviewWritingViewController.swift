@@ -79,6 +79,20 @@ class ReviewWritingViewController: BaseViewController {
       }
     }
     print("Review 정보 : 식당 번호 - \(Review.shared.storeId) 평가 인덱스 - \(Review.shared.evaluation) 글 내용 - \(Review.shared.content) 이미지 - \(Review.shared.images)")
+    if let storeId = Review.shared.storeId,
+       let content = Review.shared.content,
+       let evaluation = Review.shared.evaluation {
+      if let images = Review.shared.images {
+        let reviewWritingRequest = reviewWritingRequest(storeId: storeId, feedContent: content, evaluation: evaluation, reviewImg: images)
+        WritingDataManager().postReview(reviewWritingRequest, viewController: self)
+      } else {
+        let reviewWritingRequest = reviewWritingRequest(storeId: storeId, feedContent: content, evaluation: evaluation, reviewImg: nil)
+        WritingDataManager().postReview(reviewWritingRequest, viewController: self)
+      }
+      
+      
+    }
+   
     dismiss(animated: false, completion: nil)
   }
 }
@@ -88,5 +102,12 @@ extension ReviewWritingViewController: UITextViewDelegate {
   // textView 글자수 계산
   func textViewDidChange(_ textView: UITextView) {
     okButton.setTitle("입력완료 (\(textView.text.count)/1000)", for: .normal)
+  }
+}
+
+// MARK: - API
+extension ReviewWritingViewController {
+  func faliedPostReview(message: String) {
+    self.presentAlert(title: message)
   }
 }

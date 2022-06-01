@@ -20,8 +20,9 @@ class SignInDataManger {
         switch response.result {
         case .success(let response):
           if response.isSuccess {
-            if let jwt = response.result?.jwt {
-              viewController.successSignIn(jwtKey: jwt)
+            if let jwt = response.result?.jwt,
+               let userID = response.result?.userId {
+              viewController.successSignIn(jwtKey: jwt, userID: String(userID))
             }
           } else {
             viewController.failedSignIn(message: response.message, code: response.code)

@@ -70,7 +70,7 @@ class EmailSignInViewController: BaseViewController {
 }
 
 extension EmailSignInViewController {
-  func successSignIn(jwtKey: String) {
+  func successSignIn(jwtKey: String, userID: String) {
     emailTextField.removeAllSubLayers()
     emailTextField.addBottomBorderWithColor(color: .mainOrange, height: 1, width: 5)
     
@@ -81,7 +81,9 @@ extension EmailSignInViewController {
     passwordCheckLabel.text = ""
     print("login jwtKey = \(jwtKey)")
     UserDefaults.standard.set(jwtKey, forKey: "jwtKey") // jwtKey 기기에 저장
+    UserDefaults.standard.set(userID, forKey: "userID") // userID 기기에 저장
     print("UserDefaults jwtKey- \(Constant.HEADERS)")
+    print("UserDefaults userID- \(Constant.USER_ID)")
     
     // 위치 동의 뷰로 이동
     let vc = LocationAgreeViewController()

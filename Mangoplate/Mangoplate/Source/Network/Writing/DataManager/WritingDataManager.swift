@@ -28,4 +28,44 @@ class WritingDataManager {
         }
       }
   }
+  
+  func postReview(_ parameters: reviewWritingRequest, viewController: ReviewWritingViewController) {
+    
+    let header: HTTPHeaders = [
+      "Content-Type": "multipart/form-data",
+      "x-access-token": UserDefaults.standard.object(forKey: "jwtKey") as! String
+    ]
+    
+    AF.upload(multipartFormData: { multipartFormData in
+      //multipartFormData.append("\(parameters.storeId)".dataUsingEncoding(String.Encoding.utf8)!, withName: "")
+      multipartFormData.append("\(parameters.storeId)".data(using: .utf8)!, withName: "storeId")
+      multipartFormData.append(parameters.feedContent.data(using: .utf8)!, withName: "feedContent")
+      multipartFormData.append("\(parameters.evaluation)".data(using: .utf8)!, withName: "evaluation")
+      
+      if let reviewImg = parameters.reviewImg {
+        for img in reviewImg {
+          multipartFormData.append(img, withName: "reviewImg",
+                                   fileName:"review.jpeg", mimeType: "image/jpeg")
+        }
+      }
+      
+    }, to: "\(Constant.DEV_BASE_URL)/app/feeds/reviews",usingThreshold: UInt64.init(), method: .post, headers: header)
+        .responseDecodable(of: ReviewWritingResponse.self) { response in
+          print("postReview \(response)")
+          switch response.result {
+          case .success(let response):
+            if response.isSuccess {
+              print("success postReivew \(response)")
+            } else {
+              viewController.faliedPostReview(message: response.message)
+            }
+          
+          case .failure(let error):
+            print("failure postReview \(error.localizedDescription)")
+          }
+        }
+  }
+  
+  
+  
 }
