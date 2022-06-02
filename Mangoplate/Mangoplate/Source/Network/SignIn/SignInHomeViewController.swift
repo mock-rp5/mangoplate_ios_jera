@@ -63,7 +63,9 @@ class SignInHomeViewController: BaseViewController {
 }
 
 extension SignInHomeViewController {
-  func successKakaoLogin() {
+  func successKakaoLogin(jwtKey: String) {
+    UserDefaults.standard.set(jwtKey, forKey: "jwtKey")
+    print(UserDefaults.standard.object(forKey: "jwtKey"))
     let vc = BaseTabBarController()
     vc.modalPresentationStyle = .fullScreen
     present(vc, animated: true)

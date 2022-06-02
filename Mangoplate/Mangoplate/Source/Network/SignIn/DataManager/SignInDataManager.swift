@@ -42,7 +42,7 @@ class SignInDataManger {
         switch response.result {
         case .success(let response):
           if response.isSuccess {
-            viewController.successKakaoLogin()
+            viewController.successKakaoLogin(jwtKey: response.result?.jwt ?? "")
           }
         
         case .failure(let error):
