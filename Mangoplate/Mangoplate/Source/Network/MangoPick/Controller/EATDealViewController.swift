@@ -19,6 +19,7 @@ class EATDealViewController: BaseViewController {
     locationButton.layer.borderColor = UIColor.mainOrange.cgColor
     locationButton.layer.borderWidth = 1
     locationButton.layer.cornerRadius = 15
+    locationButton.setTitleColor(.mainOrange, for: .normal)
     locationButton.tintColor = .mainOrange
     eatDealTableView.register(UINib(nibName: "EATDealCell", bundle: .main), forCellReuseIdentifier: "EATDealCell")
     eatDealTableView.dataSource = self

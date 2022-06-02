@@ -154,16 +154,16 @@ class RestaurantViewController: BaseViewController {
   }
   
   
-  // 좋아요버튼 누르면 피드 다시 불러옴
+  // 가고싶다 버튼 누르면 식당 다시 불러옴
   @objc func starButtonTapped(_ sender: Notification) {
-    // 게시글 좋아요 POST
+    // 가고싶다 POST
     showIndicator()
     let storeId = sender.object as! Int
     RestaurantDataManager().postStar(storeId: storeId, viewController: self)
     
     
     do {
-      usleep(100000) // 가고싶다 적용을 위한 딜레이 1초
+      usleep(30000) // 가고싶다 적용을 위한 딜레이 1초
     }
     // 식당 다시 reload
     if locationServicesEnabled {

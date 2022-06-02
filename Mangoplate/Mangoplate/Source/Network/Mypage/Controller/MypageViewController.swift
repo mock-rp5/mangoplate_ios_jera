@@ -180,6 +180,7 @@ extension MypageViewController: UITableViewDelegate, UITableViewDataSource {
 extension MypageViewController {
   // 회원 조회
   func successGetUser(user: GetUserResult) {
+    print("successGetUser")
     self.user = user
     print(user)
     myPageTableView.reloadData()
@@ -187,6 +188,7 @@ extension MypageViewController {
   }
   
   func failedGetUser(message: String) {
+    print("failedGetUser")
     self.presentBottomAlert(message: message)
     dismissIndicator()
   }
