@@ -15,19 +15,19 @@ class BannerCell: UICollectionViewCell {
   @IBOutlet weak var collectionView: UICollectionView!
   @IBOutlet weak var pageControl: UIPageControl!
   
-  let bannerImageName = ["banner1", "banner2", "banner3", "banner4", "banner5"]
+  //let bannerImageName = ["banner1", "banner2", "banner3", "banner4", "banner5"]
+  var banners: [BannerResult]?
   var nowPageIndex = 0 // 현재 페이지 index
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    pageControl.numberOfPages = bannerImageName.count
-    
     collectionView.delegate = self
     collectionView.dataSource = self
     collectionView.showsHorizontalScrollIndicator = false
     collectionView.register(UINib(nibName: "BannerSubCell", bundle: .main), forCellWithReuseIdentifier: "bannerSubCell")
     
     bannerTimer()
+    RestaurantDataManager().getBanner(cell: self)
   }
   
   // MARK: - Methods
@@ -40,7 +40,11 @@ class BannerCell: UICollectionViewCell {
   
   func bannerMove() {
     // 현재 페이지가 마지막 페이지라면 처음 페이지로 돌아감
-    if nowPageIndex == bannerImageName.count - 1 {
+    guard let banners = banners else {
+      return
+    }
+
+    if nowPageIndex == banners.count - 1 {
       collectionView.scrollToItem(at: NSIndexPath(item: 0, section: 0) as IndexPath, at: .right, animated: true)
       nowPageIndex = 0
       pageControl.currentPage = nowPageIndex
@@ -55,13 +59,15 @@ class BannerCell: UICollectionViewCell {
 // MARK: - UICollectionView
 extension BannerCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return bannerImageName.count
+    guard let banners = banners else { return 0 }
+    return banners.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bannerSubCell", for: indexPath)
             as? BannerSubCell else { return UICollectionViewCell() }
-    cell.bannerImageView.image = UIImage(named: bannerImageName[indexPath.row])
+    guard let banners = banners else { return UICollectionViewCell() }
+    cell.bannerImageView.load(urlString: banners[indexPath.row].adBannerImgUrl)
     return cell
   }
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -79,4 +85,21 @@ extension BannerCell: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     pageControl.currentPage = nowPageIndex
   }
   
+}
+
+// MARK: API
+extension BannerCell {
+  func successGetBanner(results: [BannerResult]) {
+    self.banners = results
+    collectionView.reloadData()
+    
+    if let banners = banners {
+      pageControl.numberOfPages = banners.count
+    }
+    print("successGetBanner")
+  }
+  
+  func failedGetBanner(message: String) {
+    print("failedGetBanner \(message)")
+  }
 }

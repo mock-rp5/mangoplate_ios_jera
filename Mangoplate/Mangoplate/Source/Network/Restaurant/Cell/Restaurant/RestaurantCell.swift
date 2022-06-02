@@ -41,7 +41,6 @@ class RestaurantCell: UICollectionViewCell {
     guard let storeId = storeId else {
       return
     }
-    print("starButtonTapped")
     NotificationCenter.default.post(name: .storeStar, object: storeId)
   }
 

@@ -104,4 +104,25 @@ class RestaurantDataManager {
       }
   }
   
+  func getBanner(cell: BannerCell) {
+    cell.showIndicator()
+    AF.request("\(Constant.DEV_BASE_URL)/app/banners", method: .get, headers: Constant.HEADERS)
+      .validate()
+      .responseDecodable(of: BannerResponse.self) { response in
+        switch response.result {
+        case .success(let result):
+          if result.isSuccess {
+            cell.successGetBanner(results: result.result)
+          }
+          else {
+            cell.failedGetBanner(message: result.message)
+          }
+          
+        case .failure(let error):
+          print("getBanner \(error.localizedDescription)")
+        }
+      }
+    cell.dismissIndicator()
+  }
+  
 }

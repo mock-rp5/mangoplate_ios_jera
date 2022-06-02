@@ -111,6 +111,7 @@
 		FA785C3C2845151C00E88303 /* StoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA785C3A2845151C00E88303 /* StoreCell.xib */; };
 		FA785C3F2845235E00E88303 /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C3D2845235E00E88303 /* SortViewController.swift */; };
 		FA785C402845235E00E88303 /* SortViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA785C3E2845235E00E88303 /* SortViewController.xib */; };
+		FA78CF952848860F00523365 /* BannerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA78CF942848860E00523365 /* BannerResponse.swift */; };
 		FA811D4B28391EE400CA29AF /* FirstSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */; };
 		FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */; };
 		FA811D4F2839299000CA29AF /* SecondSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */; };
@@ -279,6 +280,7 @@
 		FA785C3A2845151C00E88303 /* StoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreCell.xib; sourceTree = "<group>"; };
 		FA785C3D2845235E00E88303 /* SortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewController.swift; sourceTree = "<group>"; };
 		FA785C3E2845235E00E88303 /* SortViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortViewController.xib; sourceTree = "<group>"; };
+		FA78CF942848860E00523365 /* BannerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerResponse.swift; sourceTree = "<group>"; };
 		FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpViewController.swift; sourceTree = "<group>"; };
 		FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstSignUpViewController.xib; sourceTree = "<group>"; };
 		FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpViewController.swift; sourceTree = "<group>"; };
@@ -492,6 +494,7 @@
 				FA829C65284251CB009BB780 /* RestaurantRequest.swift */,
 				FA829C6728425780009BB780 /* RestaurantResponse.swift */,
 				FA50440328472E4C00A3A5E9 /* DetailRestaurantResponse.swift */,
+				FA78CF942848860E00523365 /* BannerResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1144,6 +1147,7 @@
 				FA665A0A283B5A5E00E807F1 /* Constant.swift in Sources */,
 				FA60386C28425BC500C0DFC4 /* UIImageView.swift in Sources */,
 				FAF8FEEB283E280F00AE74AF /* EATDealCell.swift in Sources */,
+				FA78CF952848860F00523365 /* BannerResponse.swift in Sources */,
 				FA597E132840CC980072CA47 /* AreaCell.swift in Sources */,
 				FAF60A2A2838CF2100B2CD48 /* String.swift in Sources */,
 				FA3F3E4D2843951800CE48B9 /* FirstRestaurantDetailCell.swift in Sources */,
