@@ -59,7 +59,7 @@ class AllViewController: UIViewController {
     
     do {
       showIndicator()
-      usleep(30000) // 좋아요 적용을 위한 딜레이 0.3초
+      usleep(90000) // 좋아요 적용을 위한 딜레이 0.9초
     }
     // 피드 다시 reload
     let feedRequest = FeedRequest(evaluation: getSelectedTasteButtonString(), page: nil, pagesize: nil)
@@ -143,6 +143,18 @@ extension AllViewController: UICollectionViewDelegate, UICollectionViewDataSourc
         else {
           cell.likeButton.tintColor = .lightGray
           cell.likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
+        
+        // 가고싶다 누른 상태면
+        if feed.isFavoriteStore == 1 {
+          cell.starButton.tintColor = .mainOrange
+          cell.starButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        }
+        
+        // 가고싶다 안누른 상태면
+        else {
+          cell.starButton.tintColor = .lightGray
+          cell.starButton.setImage(UIImage(systemName: "star"), for: .normal)
         }
       }
      
@@ -252,7 +264,7 @@ extension AllViewController {
   
  // 게시글 좋아요
   func successPostLike(action: String) {
-    print("successPostLike")
+    print("successPostLike \(action)")
     dismissIndicator()
   }
   

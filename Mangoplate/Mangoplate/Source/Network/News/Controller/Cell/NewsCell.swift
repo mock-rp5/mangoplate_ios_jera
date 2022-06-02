@@ -24,6 +24,7 @@ class NewsCell: UICollectionViewCell {
   @IBOutlet weak var pageView: UIView!
   @IBOutlet weak var likeButton: UIButton!
   @IBOutlet weak var dotButton: UIButton!
+  @IBOutlet weak var starButton: UIButton!
   
   let images = ["foodImage1", "foodImage2", "foodImage3"]
   var photos: [Photo]?

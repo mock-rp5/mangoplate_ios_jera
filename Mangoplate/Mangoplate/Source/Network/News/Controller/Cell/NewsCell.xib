@@ -276,6 +276,7 @@
                 <outlet property="pageView" destination="XeE-zm-4Tg" id="dSA-ca-SoS"/>
                 <outlet property="profileImageView" destination="Hsz-YC-Lty" id="gbR-4x-yeB"/>
                 <outlet property="scoreImageView" destination="WgW-cW-HTZ" id="n8D-Z0-gIG"/>
+                <outlet property="starButton" destination="uVa-lG-Fi8" id="fkH-bc-azM"/>
                 <outlet property="tagLabel" destination="BDV-JX-sc0" id="0B1-6v-aFZ"/>
                 <outlet property="timeLabel" destination="QPD-Gz-df8" id="lm5-ob-uYR"/>
                 <outlet property="writingLabel" destination="inI-MM-ghh" id="7B1-bG-Gop"/>

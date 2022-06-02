@@ -92,7 +92,6 @@ class RestaurantViewController: BaseViewController {
   }
   
   private func imagesLoad() {
-    showIndicator()
     storesImage = []
     if let resturants = resturants {
       for restaurant in resturants {
@@ -115,6 +114,7 @@ class RestaurantViewController: BaseViewController {
   
   // 선택한 지역과 navigaionTitle 받아옴
   @objc func didRecieveAreasString(_ notication: Notification) {
+    showIndicator()
     let data = notication.object as! String
     let datas = data.split(separator: "|") // |를 기준으로 데이터 자름
     let restuarantRequest: RestaurantRequest
@@ -141,7 +141,6 @@ class RestaurantViewController: BaseViewController {
     }
     
     // 선택한 지역들 조회
-    showIndicator()
     RestaurantDataManager().getRestaurant(parameters: restuarantRequest, viewController: self)
   }
   
@@ -158,13 +157,13 @@ class RestaurantViewController: BaseViewController {
   // 좋아요버튼 누르면 피드 다시 불러옴
   @objc func starButtonTapped(_ sender: Notification) {
     // 게시글 좋아요 POST
+    showIndicator()
     let storeId = sender.object as! Int
     RestaurantDataManager().postStar(storeId: storeId, viewController: self)
     
     
     do {
-      showIndicator()
-      usleep(30000) // 가고싶다 적용을 위한 딜레이 0.3초
+      usleep(100000) // 가고싶다 적용을 위한 딜레이 1초
     }
     // 식당 다시 reload
     if locationServicesEnabled {
@@ -235,17 +234,19 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
           cell.distanceLabel.text = "\(String(distance))km"
         }
         
-        
-        // 이미지가 있으면 섬네일 넣음
-//        if let urlString = restaurants[indexPath.row].thumbnailImgUrl {
-//          DispatchQueue.main.async {
-//            cell.restaurantImageView.load(urlString: urlString)
-//          }
-//
-//        } else {
-//          cell.restaurantImageView.image = UIImage(named: "noImage")
-//        }
         cell.restaurantImageView.image = storesImage[indexPath.row]
+        
+        // 가고싶다 누른 상태면
+        if restaurants[indexPath.row].isFavoriteStore == 1 {
+          cell.starButton.tintColor = .mainOrange
+          cell.starButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        }
+        
+        // 가고싶다 안누른 상태면
+        else {
+          cell.starButton.tintColor = .white
+          cell.starButton.setImage(UIImage(systemName: "star"), for: .normal)
+        }
       }
       return cell
       
@@ -280,18 +281,7 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
   // 셀 클릭하면 해당 식당 상세 정보로 이동
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     if indexPath.section == 2 {
-      showIndicator()
       RestaurantDataManager().getDetailRestaurant(storeId: indexPath.row+1, viewController: self)
-     
-      
-      print(" vc.detailRestaurant =\(detailRestaurant)")
-     // vc.detailRestaurantCollectionView.reloadData()
-//      if let detailRestaurant = detailRestaurant {
-//        vc.detailRestaurant = detailRestaurant
-//        vc.detailRestaurantCollectionView.reloadData()
-//      }
-    
-     
     }
    
   }
@@ -338,19 +328,16 @@ extension RestaurantViewController {
   func failedGetDetailRestaurants(message: String) {
     print("failedGetDetailRestaurants")
     self.presentAlert(title: message)
-    dismissIndicator()
   }
   
   // 식당 가고싶다 등록
    func successPostStar(action: String) {
      print("successPostStar")
-     dismissIndicator()
    }
    
    func failedPostStar(message: String) {
      print("failedPostStar")
      self.presentAlert(title: message)
-     dismissIndicator()
    }
 }
 

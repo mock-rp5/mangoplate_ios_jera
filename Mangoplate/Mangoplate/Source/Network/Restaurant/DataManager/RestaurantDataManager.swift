@@ -41,7 +41,7 @@ class RestaurantDataManager {
           }
         case .failure(let error):
           print("getRestaurant failure \(error.localizedDescription)")
-          viewController.dismissIndicator()
+          //viewController.dismissIndicator()
         }
       }
   }
@@ -99,13 +99,11 @@ class RestaurantDataManager {
           
         case .failure(let error):
           print("postStar failure \(error.localizedDescription)")
-          viewController.dismissIndicator()
         }
       }
   }
   
   func getBanner(cell: BannerCell) {
-    cell.showIndicator()
     AF.request("\(Constant.DEV_BASE_URL)/app/banners", method: .get, headers: Constant.HEADERS)
       .validate()
       .responseDecodable(of: BannerResponse.self) { response in
@@ -122,7 +120,6 @@ class RestaurantDataManager {
           print("getBanner \(error.localizedDescription)")
         }
       }
-    cell.dismissIndicator()
   }
   
 }

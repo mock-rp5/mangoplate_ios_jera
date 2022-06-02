@@ -23,4 +23,5 @@ struct GetUserResult: Codable {
   let userEmail: String?
   let userPhone: String?
   let status: String?
+  let userFavCount: Int
 }

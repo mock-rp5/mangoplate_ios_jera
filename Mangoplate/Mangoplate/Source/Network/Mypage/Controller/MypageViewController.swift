@@ -120,7 +120,10 @@ extension MypageViewController: UITableViewDelegate, UITableViewDataSource {
       
       // 가고싶다 셀은 가고싶다 개수 보여줌
       if indexPath.section == 4, indexPath.row == 0 {
-        cell.starCountLabel.text = "100"
+        if let user = user {
+          cell.starCountLabel.text = String(user.userFavCount)
+        }
+        
       }
       return cell
     }
