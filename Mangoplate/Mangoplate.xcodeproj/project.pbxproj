@@ -112,6 +112,10 @@
 		FA785C3F2845235E00E88303 /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C3D2845235E00E88303 /* SortViewController.swift */; };
 		FA785C402845235E00E88303 /* SortViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA785C3E2845235E00E88303 /* SortViewController.xib */; };
 		FA78CF952848860F00523365 /* BannerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA78CF942848860E00523365 /* BannerResponse.swift */; };
+		FA78CF982848A43F00523365 /* StarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA78CF962848A43F00523365 /* StarViewController.swift */; };
+		FA78CF992848A43F00523365 /* StarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA78CF972848A43F00523365 /* StarViewController.xib */; };
+		FA78CF9C2848A45100523365 /* StarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA78CF9A2848A45100523365 /* StarCell.swift */; };
+		FA78CF9D2848A45100523365 /* StarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA78CF9B2848A45100523365 /* StarCell.xib */; };
 		FA811D4B28391EE400CA29AF /* FirstSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */; };
 		FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */; };
 		FA811D4F2839299000CA29AF /* SecondSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */; };
@@ -281,6 +285,10 @@
 		FA785C3D2845235E00E88303 /* SortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewController.swift; sourceTree = "<group>"; };
 		FA785C3E2845235E00E88303 /* SortViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortViewController.xib; sourceTree = "<group>"; };
 		FA78CF942848860E00523365 /* BannerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerResponse.swift; sourceTree = "<group>"; };
+		FA78CF962848A43F00523365 /* StarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarViewController.swift; sourceTree = "<group>"; };
+		FA78CF972848A43F00523365 /* StarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarViewController.xib; sourceTree = "<group>"; };
+		FA78CF9A2848A45100523365 /* StarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarCell.swift; sourceTree = "<group>"; };
+		FA78CF9B2848A45100523365 /* StarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarCell.xib; sourceTree = "<group>"; };
 		FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpViewController.swift; sourceTree = "<group>"; };
 		FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstSignUpViewController.xib; sourceTree = "<group>"; };
 		FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpViewController.swift; sourceTree = "<group>"; };
@@ -383,10 +391,12 @@
 				FA37E925283CF606003FAE07 /* MyPageMainCell.swift */,
 				FA1DE1DE283CFE0300A7EAEC /* MyPageTimelineCell.swift */,
 				FAF8FED6283E143600AE74AF /* MyPageSettingsCell.swift */,
+				FA78CF9A2848A45100523365 /* StarCell.swift */,
 				FA37E922283CD043003FAE07 /* MyPageProfileCell.xib */,
 				FA37E926283CF606003FAE07 /* MyPageMainCell.xib */,
 				FA1DE1DF283CFE0300A7EAEC /* MyPageTimelineCell.xib */,
 				FAF8FED7283E143600AE74AF /* MyPageSettingsCell.xib */,
+				FA78CF9B2848A45100523365 /* StarCell.xib */,
 				FA617A60283FAC2800F8E59C /* Entity */,
 				FA617A61283FAC3100F8E59C /* DataManager */,
 			);
@@ -813,9 +823,9 @@
 			isa = PBXGroup;
 			children = (
 				FA4C3B7A2841112D003AFEF2 /* NotificationName.swift */,
+				FAF60A202838CF2100B2CD48 /* UIButton.swift */,
 				FAF60A212838CF2100B2CD48 /* Date.swift */,
 				FAF60A232838CF2100B2CD48 /* String.swift */,
-				FAF60A202838CF2100B2CD48 /* UIButton.swift */,
 				FAF60A222838CF2100B2CD48 /* UIColor.swift */,
 				FAF60A242838CF2100B2CD48 /* UIFont.swift */,
 				FAF60A252838CF2100B2CD48 /* UINavigationBar.swift */,
@@ -890,12 +900,14 @@
 				FA6B08A128462867008639E4 /* LogoutMyPageViewController.swift */,
 				FA50440528474C7F00A3A5E9 /* MyReviewController.swift */,
 				FA50440D2847771200A3A5E9 /* DeleteReviewController.swift */,
+				FA78CF962848A43F00523365 /* StarViewController.swift */,
 				FAD7C53E283A27130093AF35 /* MypageViewController.xib */,
 				FAF8FECF283DFD5100AE74AF /* MyPageSettingsViewController.xib */,
 				FA617A5D283F9D3F00F8E59C /* UserDeleteViewController.xib */,
 				FA6B08A228462867008639E4 /* LogoutMyPageViewController.xib */,
 				FA50440628474C7F00A3A5E9 /* MyReviewController.xib */,
 				FA50440E2847771200A3A5E9 /* DeleteReviewController.xib */,
+				FA78CF972848A43F00523365 /* StarViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1035,6 +1047,7 @@
 				FA6B089A2845FAC4008639E4 /* CustomGalleryCell.xib in Resources */,
 				FA55602E2847B6CD00E2B096 /* NewsNoImageCell.xib in Resources */,
 				FAF8FEEC283E280F00AE74AF /* EATDealCell.xib in Resources */,
+				FA78CF9D2848A45100523365 /* StarCell.xib in Resources */,
 				FA617A5B283F83C500F8E59C /* AreasViewController.xib in Resources */,
 				FAD7C540283A27130093AF35 /* MypageViewController.xib in Resources */,
 				FA666BD8284366B200DAB919 /* ImageCell.xib in Resources */,
@@ -1050,6 +1063,7 @@
 				FA6B08A028461329008639E4 /* ReviewWritingViewController.xib in Resources */,
 				FA5C5C76283E61CE0071C7BF /* TopListCell.xib in Resources */,
 				FAF8FEDE283E1A9C00AE74AF /* EATDealViewController.xib in Resources */,
+				FA78CF992848A43F00523365 /* StarViewController.xib in Resources */,
 				FA785C3C2845151C00E88303 /* StoreCell.xib in Resources */,
 				FAD7C538283A26FD0093AF35 /* WritingViewController.xib in Resources */,
 				FA6B08962845F9FD008639E4 /* CustomGalleryViewController.xib in Resources */,
@@ -1132,6 +1146,7 @@
 				FABCF0A2283BDE5D008D14F5 /* EmailCheckRequest.swift in Sources */,
 				FAF8FEE1283E1AAA00AE74AF /* StoryViewController.swift in Sources */,
 				FA6B08B22846754E008639E4 /* StoryRequest.swift in Sources */,
+				FA78CF9C2848A45100523365 /* StarCell.swift in Sources */,
 				FA5560322847CBFE00E2B096 /* LikeRequest.swift in Sources */,
 				FA6B08AE28466EAF008639E4 /* UITableVIewCell.swift in Sources */,
 				FAD7C52B283A23F20093AF35 /* RestaurantViewController.swift in Sources */,
@@ -1154,6 +1169,7 @@
 				FAF60A3B2838E14600B2CD48 /* UITextField.swift in Sources */,
 				FA6B08A82846335D008639E4 /* StoreSearchResponse.swift in Sources */,
 				FA617A5A283F83C500F8E59C /* AreasViewController.swift in Sources */,
+				FA78CF982848A43F00523365 /* StarViewController.swift in Sources */,
 				FAF60A2C2838CF2100B2CD48 /* UINavigationBar.swift in Sources */,
 				FA6B08AA284633C3008639E4 /* WritingDataManager.swift in Sources */,
 				FA666BC628434B4300DAB919 /* AllViewController.swift in Sources */,

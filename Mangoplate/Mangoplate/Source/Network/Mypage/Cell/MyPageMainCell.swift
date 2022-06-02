@@ -11,10 +11,14 @@ class MyPageMainCell: UITableViewCell {
 
   @IBOutlet weak var symbolImageView: UIImageView!
   @IBOutlet weak var label: UILabel!
+  @IBOutlet weak var starCountLabel: UILabel!
   
   override func awakeFromNib() {
     super.awakeFromNib()
-
+  }
+  
+  override func prepareForReuse() {
+    starCountLabel.text = ""
   }
 
   override func setSelected(_ selected: Bool, animated: Bool) {

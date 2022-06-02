@@ -38,10 +38,18 @@
                             <constraint firstAttribute="height" constant="20" id="x0f-0g-YkF"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ov-hY-Nm5">
+                        <rect key="frame" x="283" y="37" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="9ov-hY-Nm5" firstAttribute="centerY" secondItem="Dt4-q1-lMl" secondAttribute="centerY" id="2GX-hx-wvj"/>
                     <constraint firstItem="JZX-6b-ae9" firstAttribute="leading" secondItem="dVs-5x-vhh" secondAttribute="trailing" constant="11" id="Dj4-TT-9tq"/>
                     <constraint firstItem="dVs-5x-vhh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FBX-m3-bD4"/>
+                    <constraint firstItem="Dt4-q1-lMl" firstAttribute="leading" secondItem="9ov-hY-Nm5" secondAttribute="trailing" constant="2" id="NAP-zn-Wj3"/>
                     <constraint firstItem="JZX-6b-ae9" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ec4-c7-LmT"/>
                     <constraint firstAttribute="trailing" secondItem="Dt4-q1-lMl" secondAttribute="trailing" constant="10" id="jKJ-RF-8PX"/>
                     <constraint firstItem="dVs-5x-vhh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="xlP-XE-8mE"/>
@@ -51,6 +59,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="label" destination="JZX-6b-ae9" id="2c0-nv-E8n"/>
+                <outlet property="starCountLabel" destination="9ov-hY-Nm5" id="LEY-tB-FiM"/>
                 <outlet property="symbolImageView" destination="dVs-5x-vhh" id="wKk-Qp-yQq"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="123.88392857142857"/>

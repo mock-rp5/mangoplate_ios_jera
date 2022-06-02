@@ -117,6 +117,11 @@ extension MypageViewController: UITableViewDelegate, UITableViewDataSource {
       guard let cell = myPageTableView.dequeueReusableCell(withIdentifier: "MyPageMainCell") as? MyPageMainCell else { return UITableViewCell() }
       cell.label.text = labels[indexPath.section][indexPath.row]
       cell.symbolImageView.image = UIImage(named: images[indexPath.section][indexPath.row])
+      
+      // 가고싶다 셀은 가고싶다 개수 보여줌
+      if indexPath.section == 4, indexPath.row == 0 {
+        cell.starCountLabel.text = "100"
+      }
       return cell
     }
   }
@@ -156,6 +161,13 @@ extension MypageViewController: UITableViewDelegate, UITableViewDataSource {
     if indexPath.section == 5 {
       BaseTabBarController.hideTabBar()  // 탭바 숨김
       let vc = MyPageSettingsViewController()
+      self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    // 가고싶다 셀 클릭
+    if indexPath.section == 4, indexPath.row == 0 {
+      BaseTabBarController.hideTabBar()
+      let vc = StarViewController()
       self.navigationController?.pushViewController(vc, animated: true)
     }
   }

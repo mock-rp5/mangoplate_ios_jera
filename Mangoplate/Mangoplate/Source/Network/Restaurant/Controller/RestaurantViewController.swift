@@ -92,6 +92,7 @@ class RestaurantViewController: BaseViewController {
   }
   
   private func imagesLoad() {
+    showIndicator()
     storesImage = []
     if let resturants = resturants {
       for restaurant in resturants {

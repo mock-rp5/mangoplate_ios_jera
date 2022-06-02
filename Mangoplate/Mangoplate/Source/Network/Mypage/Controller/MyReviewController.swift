@@ -128,7 +128,7 @@ extension MyReviewController: UICollectionViewDelegate, UICollectionViewDataSour
             as? NewsCell else { return UICollectionViewCell() }
       if let reviews = reviews {
         let review = reviews[indexPath.row]
-        cell.tagLabel.text = "@\(review.storeName)"
+        cell.tagLabel.attributedText = "@\(review.storeName)".underLine()
         cell.nicknameLabel.text = review.writer.userName
         cell.writingLabel.text = String(review.writer.reviewCount)
         cell.follwerLabel.text = String(review.writer.follower)

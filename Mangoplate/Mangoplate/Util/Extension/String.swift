@@ -100,4 +100,10 @@ extension String {
     attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSMakeRange(0, attributeString.length))
     return attributeString
   }
+  
+  func underLine() -> NSAttributedString {
+    let underlineAttribute = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue]
+    let underlineAttributedString = NSAttributedString(string: self, attributes: underlineAttribute)
+    return underlineAttributedString
+  }
 }
