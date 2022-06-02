@@ -11,8 +11,8 @@ class AllViewController: UIViewController {
 
   // MARK: - Properties
   @IBOutlet weak var newsCollectionView: UICollectionView!
-  var isSelectedTasteButton = [false, false, true] // 별로, 괜찮다, 맛있다 버튼 선택 여부
-  var selectedTasteButtonString = "2"
+  var isSelectedTasteButton = [true, true, true] // 별로, 괜찮다, 맛있다 버튼 선택 여부
+  var selectedTasteButtonString = "0,1,2"
   var feeds: [FeedResult]?
   
   // MARK: - LifeCycle
@@ -31,7 +31,7 @@ class AllViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     showIndicator()
-    let feedRequest = FeedRequest(evaluation: selectedTasteButtonString, page: nil, pagesize: nil)
+    let feedRequest = FeedRequest(evaluation: getSelectedTasteButtonString(), page: nil, pagesize: nil)
     NewsDataManager().getFeed(feedRequest, viewController: self)
   }
   
@@ -46,6 +46,7 @@ class AllViewController: UIViewController {
       }
     }
     selectedTasteButtonString = selectedTasteButtonString.substring(from: 0,to: selectedTasteButtonString.count - 1) // 맨뒤 , 자름
+    print("selectedTasteButtonString \(selectedTasteButtonString)")
     return selectedTasteButtonString
   }
   
@@ -58,7 +59,7 @@ class AllViewController: UIViewController {
     
     do {
       showIndicator()
-      usleep(30000) // 좋아요 적용을 위한 딜레이 0.2초
+      usleep(30000) // 좋아요 적용을 위한 딜레이 0.3초
     }
     // 피드 다시 reload
     let feedRequest = FeedRequest(evaluation: getSelectedTasteButtonString(), page: nil, pagesize: nil)
@@ -256,7 +257,7 @@ extension AllViewController {
   }
   
   func failedPostLike(message: String) {
-    print("failedPostLike \(message)")
+    self.presentAlert(title: message)
     dismissIndicator()
   }
   

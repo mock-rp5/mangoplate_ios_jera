@@ -12,8 +12,8 @@ class MyReviewController: BaseViewController {
   // MARK: - Properties
   @IBOutlet weak var reviewCollectionView: UICollectionView!
   var reviews: [FeedResult]?
-  var isSelectedTasteButton = [false, false, true] // 별로, 괜찮다, 맛있다 버튼 선택 여부
-  var selectedTasteButtonString = "2"
+  var isSelectedTasteButton = [true, true, true] // 별로, 괜찮다, 맛있다 버튼 선택 여부
+  var selectedTasteButtonString = "0,1,2"
   
   // MARK: - LifeCycles
   override func viewDidLoad() {
@@ -33,7 +33,7 @@ class MyReviewController: BaseViewController {
     reviewCollectionView.dataSource = self
     
     showIndicator()
-    let reviewRequest = FeedRequest(evaluation: "2", page: nil, pagesize: nil)
+    let reviewRequest = FeedRequest(evaluation: selectedTasteButtonString, page: nil, pagesize: nil)
     MyPageDataManager().getMyReview(reviewRequest, viewController: self)
   }
   
@@ -58,7 +58,7 @@ class MyReviewController: BaseViewController {
   }
   
   @objc func reloadReviews(_ sender: Notification) {
-    let reviewRequest = FeedRequest(evaluation: "0,1,2", page: nil, pagesize: nil)
+    let reviewRequest = FeedRequest(evaluation: selectedTasteButtonString, page: nil, pagesize: nil)
     MyPageDataManager().getMyReview(reviewRequest, viewController: self)
   }
   

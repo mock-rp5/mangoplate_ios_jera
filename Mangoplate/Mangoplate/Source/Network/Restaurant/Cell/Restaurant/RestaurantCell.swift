@@ -17,11 +17,14 @@ class RestaurantCell: UICollectionViewCell {
   @IBOutlet weak var watchingCountLabel: UILabel!
   @IBOutlet weak var reviewCountLabel: UILabel!
   @IBOutlet weak var distanceLabel: UILabel!
+  @IBOutlet weak var starButton: UIButton!
+  var storeId: Int?
   
   override func awakeFromNib() {
     super.awakeFromNib()
     
     watchingCountLabel.text = watchingCountLabel.text?.insertComma
+    starButton.addTarget(self, action: #selector(starButtonTapped), for: .touchUpInside)
   }
   
   override func prepareForReuse() {
@@ -31,6 +34,15 @@ class RestaurantCell: UICollectionViewCell {
     reviewCountLabel.text = "0"
     restaurantImageView.image = nil
     distanceLabel.text = ""
+  }
+  
+  // 좋아요 버튼 클릭 이벤트
+  @objc func starButtonTapped(_ sender: UIButton) {
+    guard let storeId = storeId else {
+      return
+    }
+    print("starButtonTapped")
+    NotificationCenter.default.post(name: .storeStar, object: storeId)
   }
 
 }

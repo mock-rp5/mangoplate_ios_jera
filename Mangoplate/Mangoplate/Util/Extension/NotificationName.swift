@@ -14,4 +14,5 @@ extension Notification.Name {
   static let reviewHeart = Notification.Name("reviewHeart")
   static let reviewMore = Notification.Name("reviewMore")
   static let reviewReload = Notification.Name("reviewReload")
+  static let storeStar = Notification.Name("storeStar")
 }

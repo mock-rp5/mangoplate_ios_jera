@@ -25,10 +25,10 @@ class TasteCell: UICollectionViewCell {
     goodButton.layer.borderColor = UIColor.mainOrange.cgColor
     goodButton.layer.borderWidth = 1
     goodButton.layer.cornerRadius = 14
-    sosoButton.layer.borderColor = UIColor.mainLightGray.cgColor
+    sosoButton.layer.borderColor = UIColor.mainOrange.cgColor
     sosoButton.layer.borderWidth = 1
     sosoButton.layer.cornerRadius = 14
-    badButton.layer.borderColor = UIColor.mainLightGray.cgColor
+    badButton.layer.borderColor = UIColor.mainOrange.cgColor
     badButton.layer.borderWidth = 1
     badButton.layer.cornerRadius = 14
     
@@ -43,12 +43,14 @@ class TasteCell: UICollectionViewCell {
     sosoButton.setImage(UIImage(named: "sosoIcon"), for: .normal)
     sosoButton.setTitleColor(.mainOrange, for: .selected)
     sosoButton.setTitleColor(.lightGray, for: .normal)
+    sosoButton.isSelected = true
     sosoButton.addTarget(self, action: #selector(sosoButtonClicked), for: .touchUpInside)
     
     badButton.setImage(UIImage(named: "selectedBadIcon"), for: .selected)
     badButton.setImage(UIImage(named: "badIcon"), for: .normal)
     badButton.setTitleColor(.mainOrange, for: .selected)
     badButton.setTitleColor(.lightGray, for: .normal)
+    badButton.isSelected = true
     badButton.addTarget(self, action: #selector(badButtonClicked), for: .touchUpInside)
     
   }

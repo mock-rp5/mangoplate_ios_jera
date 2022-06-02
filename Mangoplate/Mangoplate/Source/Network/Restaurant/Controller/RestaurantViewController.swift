@@ -51,6 +51,8 @@ class RestaurantViewController: BaseViewController {
     // 지역 선택 시, 선택한 지역과 nvigationTitle 받아올 NotificationCenter 등록
     NotificationCenter.default.addObserver(self, selector: #selector(didRecieveAreasString), name: .selectAreaString, object: nil)
     
+    NotificationCenter.default.addObserver(self, selector: #selector(starButtonTapped), name: .storeStar, object: nil)
+    
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -140,6 +142,32 @@ class RestaurantViewController: BaseViewController {
     present(vc, animated: true)
   }
   
+  
+  // 좋아요버튼 누르면 피드 다시 불러옴
+  @objc func starButtonTapped(_ sender: Notification) {
+    // 게시글 좋아요 POST
+    let storeId = sender.object as! Int
+    RestaurantDataManager().postStar(storeId: storeId, viewController: self)
+    
+    
+    do {
+      showIndicator()
+      usleep(30000) // 가고싶다 적용을 위한 딜레이 0.3초
+    }
+    // 식당 다시 reload
+    if locationServicesEnabled {
+      let restuarantRequest = RestaurantRequest(page: nil, pagesize: nil, area: "1", detailarea: nil, x: latitude, y: longtitude)
+      RestaurantDataManager().getRestaurant(parameters: restuarantRequest, viewController: self)
+    } else {
+      let restuarantRequest = RestaurantRequest(page: nil, pagesize: nil, area: "1", detailarea: nil, x: nil, y: nil)
+      RestaurantDataManager().getRestaurant(parameters: restuarantRequest, viewController: self)
+    }
+    
+    collectionView.reloadData()
+    self.navigationItem.setLeftsubTitleAndTitle(title: "서울-강남 ∨", subTitle: "지금 보고있는 지역은", target: self, action: #selector(navigationTitleTapped))
+  }
+
+  
 }
 
 extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -183,6 +211,8 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
       guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath)
               as? RestaurantCell else { return UICollectionViewCell() }
       if let restaurants = resturants {
+        cell.storeId = restaurants[indexPath.row].storeId // 가고싶다 클릭하면 storeId보내기 위해 storeId 저장 해놓음
+        
         cell.nameLabel.text = restaurants[indexPath.row].storeName
         cell.locationLabel.text = restaurants[indexPath.row].areaName
         cell.ratingLabel.text = restaurants[indexPath.row].score
@@ -298,6 +328,18 @@ extension RestaurantViewController {
     self.presentAlert(title: message)
     dismissIndicator()
   }
+  
+  // 식당 가고싶다 등록
+   func successPostStar(action: String) {
+     print("successPostStar")
+     dismissIndicator()
+   }
+   
+   func failedPostStar(message: String) {
+     print("failedPostStar")
+     self.presentAlert(title: message)
+     dismissIndicator()
+   }
 }
 
 

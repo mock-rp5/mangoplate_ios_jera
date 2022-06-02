@@ -133,6 +133,7 @@
                 <outlet property="ratingLabel" destination="Tbq-o1-uo7" id="8Pa-oq-pd0"/>
                 <outlet property="restaurantImageView" destination="Chm-wR-NPU" id="R5p-cE-mwo"/>
                 <outlet property="reviewCountLabel" destination="9jc-NO-Ddv" id="64c-VQ-IZd"/>
+                <outlet property="starButton" destination="uvl-AS-vXO" id="Qq5-Bg-ZhP"/>
                 <outlet property="watchingCountLabel" destination="oyO-8B-pWA" id="ob4-x0-UEm"/>
             </connections>
             <point key="canvasLocation" x="-66.666666666666671" y="74.665178571428569"/>
