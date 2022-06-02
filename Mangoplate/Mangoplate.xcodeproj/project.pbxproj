@@ -116,6 +116,7 @@
 		FA78CF992848A43F00523365 /* StarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA78CF972848A43F00523365 /* StarViewController.xib */; };
 		FA78CF9C2848A45100523365 /* StarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA78CF9A2848A45100523365 /* StarCell.swift */; };
 		FA78CF9D2848A45100523365 /* StarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA78CF9B2848A45100523365 /* StarCell.xib */; };
+		FA78CF9F2848F91400523365 /* WantedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA78CF9E2848F91400523365 /* WantedResponse.swift */; };
 		FA811D4B28391EE400CA29AF /* FirstSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */; };
 		FA811D4C28391EE400CA29AF /* FirstSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */; };
 		FA811D4F2839299000CA29AF /* SecondSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */; };
@@ -289,6 +290,7 @@
 		FA78CF972848A43F00523365 /* StarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarViewController.xib; sourceTree = "<group>"; };
 		FA78CF9A2848A45100523365 /* StarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarCell.swift; sourceTree = "<group>"; };
 		FA78CF9B2848A45100523365 /* StarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarCell.xib; sourceTree = "<group>"; };
+		FA78CF9E2848F91400523365 /* WantedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedResponse.swift; sourceTree = "<group>"; };
 		FA811D4928391EE400CA29AF /* FirstSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpViewController.swift; sourceTree = "<group>"; };
 		FA811D4A28391EE400CA29AF /* FirstSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstSignUpViewController.xib; sourceTree = "<group>"; };
 		FA811D4D2839299000CA29AF /* SecondSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpViewController.swift; sourceTree = "<group>"; };
@@ -544,6 +546,7 @@
 				FA551B6B28428AB1009ADB01 /* GetUserResponse.swift */,
 				FA50441128478DBF00A3A5E9 /* DeleteReviewRequest.swift */,
 				FA50441328478DCC00A3A5E9 /* DeleteReviewResponse.swift */,
+				FA78CF9E2848F91400523365 /* WantedResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1125,6 +1128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF60A012838B6DE00B2CD48 /* ViewController.swift in Sources */,
+				FA78CF9F2848F91400523365 /* WantedResponse.swift in Sources */,
 				FA600B0F283F47790044F5BA /* AreasResponse.swift in Sources */,
 				FA50441228478DBF00A3A5E9 /* DeleteReviewRequest.swift in Sources */,
 				FA50440A284754F600A3A5E9 /* ReviewWritingRequest.swift in Sources */,

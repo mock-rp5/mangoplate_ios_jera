@@ -111,4 +111,24 @@ class MyPageDataManager {
         }
       }
   }
+  
+  // 내 가고싶다 조회
+  func getMyStar(viewController: StarViewController) {
+    AF.request("\(Constant.DEV_BASE_URL)/app/users/\(Constant.USER_ID)/wanted", method: .get, headers: Constant.HEADERS)
+      .validate()
+      .responseDecodable(of: WantedResponse.self) { response in
+        switch response.result {
+        case .success(let result):
+          if result.isSuccess {
+            viewController.successGetStars(results: result.result)
+          } else {
+            viewController.failedGetStars(message: result.message)
+          }
+          
+        case .failure(let error):
+          print("getMyReview failure \(error.localizedDescription)")
+          viewController.dismissIndicator()
+        }
+      }
+  }
 }

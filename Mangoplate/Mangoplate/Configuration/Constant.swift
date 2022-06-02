@@ -23,7 +23,7 @@ struct Constant {
     let jwtKey = UserDefaults.standard.object(forKey: "jwtKey") as! String
     if jwtKey == "logout" {
       let logoutKey = """
-      eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMxLCJpYXQiOjE2NTM5OTQzNDksImV4cCI6MTY4NTUzMDM0OSwic3ViIjoidXNlckluZm8ifQ.y3Q_Q2kwf3aSPJqbZPw7IffRiODbGcE8vjbEONT8Ns0
+      eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjM4LCJpYXQiOjE2NTQxNzY4NDUsImV4cCI6MTY4NTcxMjg0NSwic3ViIjoidXNlckluZm8ifQ.R39PJAzsXL-6YcwAF9bpG19YqopegbwOm3Ulm1JVdZ8
       """
       return logoutKey
     }
