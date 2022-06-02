@@ -23,6 +23,7 @@ class RestaurantViewController: BaseViewController {
   var latitude: Float?
   var longtitude: Float?
   var locationServicesEnabled = false
+  var storesImage: [UIImage] = []
   
   // MARK: - LifeCycle
   override func viewDidLoad() {
@@ -88,6 +89,16 @@ class RestaurantViewController: BaseViewController {
     let mapButton = self.navigationItem.setNavigationItemButton(nil, action: nil, symbolName: "map", imageName: nil, tintColor: .darkGray, width: 25, height: 25)
     
     self.navigationItem.rightBarButtonItems = [mapButton, searchButton]
+  }
+  
+  private func imagesLoad() {
+    storesImage = []
+    if let resturants = resturants {
+      for restaurant in resturants {
+        storesImage.append(convertURLtoImage(urlString: restaurant.thumbnailImgUrl ?? ""))
+      }
+    }
+    dismissIndicator()
   }
   
   @objc func navigationTitleTapped(_ sender: UIButton) {
@@ -184,7 +195,7 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
       if let resturants = resturants {
         return resturants.count
       } else {
-        return 4
+        return 0
       }
     
     default:
@@ -225,15 +236,15 @@ extension RestaurantViewController: UICollectionViewDelegate, UICollectionViewDa
         
         
         // 이미지가 있으면 섬네일 넣음
-        if let urlString = restaurants[indexPath.row].thumbnailImgUrl {
-          DispatchQueue.main.async {
-            cell.restaurantImageView.load(urlString: urlString)
-          }
-          
-        } else {
-          cell.restaurantImageView.image = UIImage(named: "noImage")
-        }
-        
+//        if let urlString = restaurants[indexPath.row].thumbnailImgUrl {
+//          DispatchQueue.main.async {
+//            cell.restaurantImageView.load(urlString: urlString)
+//          }
+//
+//        } else {
+//          cell.restaurantImageView.image = UIImage(named: "noImage")
+//        }
+        cell.restaurantImageView.image = storesImage[indexPath.row]
       }
       return cell
       
@@ -306,7 +317,7 @@ extension RestaurantViewController {
     print("successGetRestaurants")
     self.resturants = restaurantResult
     collectionView.reloadData()
-    dismissIndicator()
+    imagesLoad()
   }
   
   // 식당 상세정보 get

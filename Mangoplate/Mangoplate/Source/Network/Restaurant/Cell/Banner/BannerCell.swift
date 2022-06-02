@@ -17,6 +17,7 @@ class BannerCell: UICollectionViewCell {
   
   //let bannerImageName = ["banner1", "banner2", "banner3", "banner4", "banner5"]
   var banners: [BannerResult]?
+  var bannerImages: [UIImage] = []
   var nowPageIndex = 0 // 현재 페이지 index
   
   override func awakeFromNib() {
@@ -53,6 +54,17 @@ class BannerCell: UICollectionViewCell {
       collectionView.scrollToItem(at: NSIndexPath(item: nowPageIndex, section: 0) as IndexPath, at: .right, animated: true)
       pageControl.currentPage = nowPageIndex
     }
+  }
+  
+  // URL 모두 이미지로 로드
+  private func imagesLoad() {
+    if let banners = banners {
+      for banner in banners {
+        bannerImages.append(convertURLtoImage(urlString: banner.adBannerImgUrl))
+      }
+      pageControl.numberOfPages = bannerImages.count
+    }
+    
   }
 }
 
@@ -91,11 +103,8 @@ extension BannerCell: UICollectionViewDelegate, UICollectionViewDataSource, UICo
 extension BannerCell {
   func successGetBanner(results: [BannerResult]) {
     self.banners = results
+    imagesLoad()
     collectionView.reloadData()
-    
-    if let banners = banners {
-      pageControl.numberOfPages = banners.count
-    }
     print("successGetBanner")
   }
   

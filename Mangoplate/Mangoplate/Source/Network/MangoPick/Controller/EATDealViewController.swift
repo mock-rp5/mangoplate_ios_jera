@@ -7,17 +7,19 @@
 
 import UIKit
 
-class EATDealViewController: UIViewController {
+class EATDealViewController: BaseViewController {
 
   @IBOutlet weak var locationButton: UIButton!
   @IBOutlet weak var eatDealTableView: UITableView!
   var eatDeals: [EATDealResult]?
+  var images: [UIImage]  = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
     locationButton.layer.borderColor = UIColor.mainOrange.cgColor
     locationButton.layer.borderWidth = 1
     locationButton.layer.cornerRadius = 15
+    locationButton.tintColor = .mainOrange
     eatDealTableView.register(UINib(nibName: "EATDealCell", bundle: .main), forCellReuseIdentifier: "EATDealCell")
     eatDealTableView.dataSource = self
     eatDealTableView.delegate = self
@@ -25,6 +27,16 @@ class EATDealViewController: UIViewController {
     showIndicator()
     MangoPickDataManager().getEATDeal(viewController: self)
   }
+  
+  // 이미지 미리 로드
+  private func imagesLoad() {
+    if let eatDeals = eatDeals {
+      for eatDeal in eatDeals {
+        images.append(convertURLtoImage(urlString: eatDeal.thumbnailPhotoUrl ?? ""))
+      }
+    }
+  }
+
 }
 
 extension EATDealViewController: UITableViewDelegate, UITableViewDataSource {
@@ -55,12 +67,8 @@ extension EATDealViewController: UITableViewDelegate, UITableViewDataSource {
         cell.newView.isHidden = true
       }
       
-      // 이미지가 있으면 섬네일 넣음
-      if let urlString = eatDeals[indexPath.row].thumbnailPhotoUrl {
-        cell.foodImageView.load(urlString: urlString)
-      } else {
-        cell.foodImageView.image = UIImage(named: "noImage")
-      }
+      // 이미지가 삽입
+      cell.foodImageView.image = images[indexPath.row]
 
     }
     return cell
@@ -76,6 +84,7 @@ extension EATDealViewController {
   func succeessGetEATDeal(results: [EATDealResult]) {
     self.eatDeals = results
     eatDealTableView.reloadData()
+    imagesLoad()
     dismissIndicator()
   }
   

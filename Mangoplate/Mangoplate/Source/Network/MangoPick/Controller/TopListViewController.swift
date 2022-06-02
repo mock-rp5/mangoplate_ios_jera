@@ -7,10 +7,11 @@
 
 import UIKit
 
-class TopListViewController: UIViewController {
+class TopListViewController: BaseViewController {
 
   @IBOutlet weak var topListCollectionView: UICollectionView!
   var topLists: [TopListResult]?
+  var images: [UIImage]  = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -20,6 +21,15 @@ class TopListViewController: UIViewController {
     
     showIndicator()
     MangoPickDataManager().getTopList(viewController: self)
+  }
+  
+  // 이미지 미리 로드
+  private func imagesLoad() {
+    if let topLists = topLists {
+      for topList in topLists {
+        images.append(convertURLtoImage(urlString: topList.topListThumbnailUrl ?? ""))
+      }
+    }
   }
 
 }
@@ -45,12 +55,8 @@ extension TopListViewController: UICollectionViewDelegate, UICollectionViewDataS
       cell.watchingLabel.text = String(topLists[indexPath.row].viewCount).insertComma
       cell.timeLabel.text = topLists[indexPath.row].createDate
       
-      // 이미지가 있으면 섬네일 넣음
-      if let urlString = topLists[indexPath.row].topListThumbnailUrl {
-        cell.foodImageView.load(urlString: urlString)
-      } else {
-        cell.foodImageView.image = UIImage(named: "noImage")
-      }
+      // 이미지 넣음
+      cell.foodImageView.image = images[indexPath.row]
     }
     return cell
   }
@@ -73,6 +79,7 @@ extension TopListViewController {
   func successGetTopList(results: [TopListResult]) {
     self.topLists = results
     topListCollectionView.reloadData()
+    imagesLoad()
     dismissIndicator()
   }
   

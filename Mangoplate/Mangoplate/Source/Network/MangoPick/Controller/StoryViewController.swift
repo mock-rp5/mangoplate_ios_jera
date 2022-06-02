@@ -7,10 +7,11 @@
 
 import UIKit
 
-class StoryViewController: UIViewController {
+class StoryViewController: BaseViewController {
 
   @IBOutlet weak var storyCollectionView: UICollectionView!
   var stories: [StoryResult]?
+  var images: [UIImage]  = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -22,6 +23,16 @@ class StoryViewController: UIViewController {
     showIndicator()
     MangoPickDataManager().getStory(viewController: self)
   }
+  
+  // 이미지 미리 로드
+  private func imagesLoad() {
+    if let stories = stories {
+      for story in stories {
+        images.append(convertURLtoImage(urlString: story.storythumbnailUrl ?? ""))
+      }
+    }
+  }
+
 }
 
 extension StoryViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -41,12 +52,8 @@ extension StoryViewController: UICollectionViewDelegate, UICollectionViewDataSou
       cell.mainTitleLabel.text = stories[indexPath.row].storyTitle
       cell.subTitleLabel.text = stories[indexPath.row].storySubTitle
       
-      // 이미지가 있으면 섬네일 넣음
-      if let urlString = stories[indexPath.row].storythumbnailUrl {
-        cell.storyImageView.load(urlString: urlString)
-      } else {
-        cell.storyImageView.image = UIImage(named: "noImage")
-      }
+      // 이미지 넣음
+      cell.storyImageView.image = images[indexPath.row]
     }
     
     return cell
@@ -72,6 +79,7 @@ extension StoryViewController {
   func successGetStory(results: [StoryResult]) {
     self.stories = results
     self.storyCollectionView.reloadData()
+    imagesLoad()
     dismissIndicator()
   }
   
