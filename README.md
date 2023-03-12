@@ -5,6 +5,12 @@
 
 https://youtu.be/IF6Fj2cnl7k
 
+## 기능
+<img width="666" alt="스크린샷 2023-03-12 오후 9 40 07" src="https://user-images.githubusercontent.com/77915491/224552237-3b4b3aee-df30-4ad3-aade-a489b18113b6.png">
+<img width="677" alt="스크린샷 2023-03-12 오후 9 40 17" src="https://user-images.githubusercontent.com/77915491/224552242-9fba3c98-2a60-4150-bd26-8826e0a25038.png">
+<img width="675" alt="스크린샷 2023-03-12 오후 9 40 29" src="https://user-images.githubusercontent.com/77915491/224552247-d297ca84-9cc7-4a36-bfd5-730970532118.png">
+<img width="677" alt="스크린샷 2023-03-12 오후 9 40 40" src="https://user-images.githubusercontent.com/77915491/224552256-a357c83a-ebc1-4c12-b68e-1df0284bbd87.png">
+
 
 ## 사용한 API
 ```
